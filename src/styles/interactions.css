@@ -1,0 +1,15 @@
+/* React owns menu and slider state; CSS handles transitions. */
+.nav-item.is-open>.dropdown{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
+.mxr-service-nav:focus-within .mxr-service-dropdown{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto}
+@media(max-width:850px){.main-nav .nav-item .dropdown{display:none}.main-nav .nav-item.is-open .dropdown{display:block;position:static;opacity:1;visibility:visible;transform:none;box-shadow:none}}
+.site-header .nav-item:not(.is-open)>.dropdown{opacity:0;visibility:hidden;pointer-events:none}
+/* Native browser button backgrounds and global link rules must not obscure hero navigation. */
+.mxr-hero-nav button{background:transparent;border:0;color:rgba(255,255,255,.88);font:inherit;cursor:pointer}
+.mxr-hero-nav button:hover{background:rgba(255,255,255,.1);color:white}
+.mxr-immersive-hero .mxr-hero-contact{color:#10263d;background:#fff}
+.mxr-immersive-hero .mxr-hero-contact:hover{color:#10263d;background:#eef5fb}
+.mxr-hero-contact svg{color:currentColor}
+.mxr-hero-nav a:not(.mxr-hero-contact){color:rgba(255,255,255,.88)}
+.mxr-hero-nav .mxr-service-dropdown a:hover{color:white}
+/* Component visibility must win over legacy grid and flex display rules. */
+.mxr-react-page [hidden]{display:none!important}

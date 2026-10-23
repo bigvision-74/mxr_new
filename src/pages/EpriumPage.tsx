@@ -256,7 +256,7 @@ export default function EpriumPage() {
       </div>
       <div className={"epr-gap-grid"}>
         <article className={"epr-gap-main"}>
-          <img src={"/eprium/clinical-learning.jpg"} alt={"Clinician using a laptop beside a stethoscope"} loading={"lazy"} />
+          <img src={"/assets/eprium/clinical-learning.jpg"} alt={"Clinician using a laptop beside a stethoscope"} loading={"lazy"} />
           <div className={"epr-gap-top"}>
             <span className={"epr-gap-number"}>
               {"01"}
@@ -392,7 +392,7 @@ export default function EpriumPage() {
             </div>
           </div>
           <div className={"epr-gap-photo"}>
-            <img src={"/eprium/clinical-practice.jpg"} alt={"Healthcare professional using a digital device"} loading={"lazy"} />
+            <img src={"/assets/eprium/clinical-practice.jpg"} alt={"Healthcare professional using a digital device"} loading={"lazy"} />
             <span>
               {"Learning"}
               <br />
@@ -575,7 +575,7 @@ export default function EpriumPage() {
         </div>
         <div className={"ep-journey-grid"}>
           <figure>
-            <img src={"/eprium/clinical-learning.jpg"} alt={"Clinical documentation on a laptop beside a stethoscope"} loading={"lazy"} />
+            <img src={"/assets/eprium/clinical-learning.jpg"} alt={"Clinical documentation on a laptop beside a stethoscope"} loading={"lazy"} />
             <figcaption>
               {"Digital confidence."}
               <br />

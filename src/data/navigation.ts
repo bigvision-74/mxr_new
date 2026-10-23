@@ -20,3 +20,25 @@ export const services = [
     "slug": "platform-development"
   }
 ] as const
+export const products = [
+  [
+    "MODAL3D",
+    "modal3d"
+  ],
+  [
+    "EPRium",
+    "eprium"
+  ],
+  [
+    "DriveXR",
+    "drivexr"
+  ],
+  [
+    "InsightXR",
+    "insightxr"
+  ],
+  [
+    "InsightXR \u2014 Platform version",
+    "insightxr-platform"
+  ]
+] as const

@@ -22,7 +22,7 @@ export default function SimulatorDevelopmentPage() {
         </a>
       </div>
       <div className={"service-detail-image"}>
-        <img src={"/drivexr/simulator.webp"} alt={"Simulator Development at MXR"} />
+        <img src={"/assets/drivexr/simulator.webp"} alt={"Simulator Development at MXR"} />
         <span>
           {"DESIGNED AROUND REAL OUTCOMES"}
         </span>

@@ -22,7 +22,7 @@ export default function AiSolutionsPage() {
         </a>
       </div>
       <div className={"service-detail-image"}>
-        <img src={"/drivexr/analytics.webp"} alt={"AI Solutions at MXR"} />
+        <img src={"/assets/drivexr/analytics.webp"} alt={"AI Solutions at MXR"} />
         <span>
           {"DESIGNED AROUND REAL OUTCOMES"}
         </span>

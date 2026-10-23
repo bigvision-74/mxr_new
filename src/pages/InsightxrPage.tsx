@@ -129,7 +129,7 @@ export default function InsightxrPage() {
     </section>
     <section className={"pp-experience"}>
       <div className={"pp-experience-visual"}>
-        <img src={"/insightxr/insightxr-platform.png"} alt={"InsightXR connects immersive experiences across devices"} loading={"lazy"} />
+        <img src={"/assets/insightxr-platform.png"} alt={"InsightXR connects immersive experiences across devices"} loading={"lazy"} />
       </div>
       <div>
         <p className={"eyebrow"}>

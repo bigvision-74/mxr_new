@@ -22,7 +22,7 @@ export default function ImmersiveRoomsPage() {
         </a>
       </div>
       <div className={"service-detail-image"}>
-        <img src={"/drivexr/use-cases.webp"} alt={"Immersive Rooms at MXR"} />
+        <img src={"/assets/drivexr/use-cases.webp"} alt={"Immersive Rooms at MXR"} />
         <span>
           {"DESIGNED AROUND REAL OUTCOMES"}
         </span>

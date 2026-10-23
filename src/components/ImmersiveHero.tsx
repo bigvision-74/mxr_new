@@ -1,8 +1,44 @@
-import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
-import { ShinyText } from './ShinyText'
+import { useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
+import { ArrowRight, Menu, X } from 'lucide-react'
+import { services } from '../data/navigation'
+
+type ShinyTextProps = {
+  children: string
+  duration?: number
+  spread?: number
+}
+
+function ShinyText({ children, duration = 3, spread = 100 }: ShinyTextProps) {
+  return (
+    <motion.span
+      className="block bg-clip-text text-transparent"
+      style={{
+        backgroundImage: `linear-gradient(${spread}deg, #64CEFB 0%, #64CEFB 35%, #ffffff 50%, #64CEFB 65%, #64CEFB 100%)`,
+        backgroundSize: '250% 100%',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+      }}
+      initial={{ backgroundPosition: '-100% 0%' }}
+      animate={{ backgroundPosition: '200% 0%' }}
+      transition={{ duration, ease: 'linear', repeat: Infinity }}
+    >
+      {children}
+    </motion.span>
+  )
+}
+
+const navLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about.html' },
+  { label: 'Services', href: '#services' },
+  { label: 'Products', href: '#products' },
+  { label: 'Resources', href: '/case-study-xr-readiness.html' },
+]
 
 export function ImmersiveHero() {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
     <section className="mxr-immersive-hero relative h-screen min-h-[700px] overflow-hidden bg-black text-white">
       <video
@@ -25,8 +61,82 @@ export function ImmersiveHero() {
       <div className="mxr-immersive-hero__grid absolute inset-0 opacity-40" />
       <div className="absolute -left-36 top-1/3 h-96 w-96 rounded-full bg-[#0B66C3]/20 blur-[120px]" />
 
-      <div className="relative z-10 flex h-full flex-col px-[8vw]">
-        <div className="h-[96px] shrink-0" />
+      <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col px-5 sm:px-8 lg:px-10 xl:px-0">
+        <nav className="mxr-hero-nav flex h-24 items-center justify-between gap-6" aria-label="Main navigation">
+          <a href="/" className="flex shrink-0 items-center" aria-label="MXR home">
+            <img
+              src="/assets/mxr-logo.png"
+              alt="MXR — Where vision becomes reality"
+              className="h-11 w-auto object-contain sm:h-12"
+            />
+          </a>
+
+          <div className="hidden items-center rounded-full border border-gray-700/80 bg-black/20 p-1.5 backdrop-blur-md lg:flex">
+            {navLinks.map((link) => (
+              link.label === 'Products' ? <div className="mxr-service-nav" key={link.label}><button type="button" className="rounded-full px-4 py-2 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white">Products</button><div className="mxr-service-dropdown">{[['MODAL3D','modal3d'],['EPRium','eprium'],['DriveXR','drivexr'],['InsightXR — Existing','insightxr'],['InsightXR — Platform version','insightxr-platform']].map(([label, slug]) => <a href={`/${slug}.html`} key={slug}>{label}</a>)}</div></div> :
+              link.label === 'Services' ? <div className="mxr-service-nav" key={link.label}><button type="button" className="rounded-full px-4 py-2 text-sm font-medium text-white/80 hover:bg-white/10 hover:text-white">Services</button><div className="mxr-service-dropdown">{services.map(s => <a href={`/${s.slug}.html`} key={s.slug}>{s.title}</a>)}</div></div> :
+              <a
+                key={link.label}
+                href={link.href}
+                className="rounded-full px-4 py-2 text-sm font-medium text-white/80 transition-all duration-300 hover:bg-white/10 hover:text-white"
+              >
+                {link.label}
+              </a>
+            ))}
+            <a
+              href="#contact"
+              className="mxr-hero-contact group ml-1 flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-[#10263D] transition-all duration-300 hover:bg-[#EEF5FB]"
+            >
+              Contact us
+              <ArrowRight
+                aria-hidden="true"
+                className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+              />
+            </a>
+          </div>
+
+          <button
+            type="button"
+            className="grid h-11 w-11 place-items-center rounded-full border border-white/30 bg-black/20 text-white backdrop-blur-md transition hover:bg-white/10 lg:hidden"
+            aria-expanded={menuOpen}
+            aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            onClick={() => setMenuOpen((open) => !open)}
+          >
+            {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </nav>
+
+        <AnimatePresence>
+          {menuOpen && (
+            <motion.div
+              className="absolute left-5 right-5 top-24 z-30 rounded-3xl border border-white/15 bg-black/90 p-4 shadow-2xl backdrop-blur-xl lg:hidden"
+              initial={{ opacity: 0, y: -12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.22 }}
+            >
+              {navLinks.map((link) => (
+                link.label === 'Products' ? <details className="mxr-mobile-services" key={link.label}><summary>Products</summary>{[['MODAL3D','modal3d'],['EPRium','eprium'],['DriveXR','drivexr'],['InsightXR — Existing','insightxr'],['InsightXR — Platform version','insightxr-platform']].map(([label, slug]) => <a href={`/${slug}.html`} key={slug}>{label}</a>)}</details> :
+                link.label === 'Services' ? <details className="mxr-mobile-services" key={link.label}><summary>Services</summary>{services.map(s => <a href={`/${s.slug}.html`} key={s.slug}>{s.title}</a>)}</details> :
+                <a
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="block rounded-2xl px-4 py-3 text-sm font-medium text-white/80 transition hover:bg-white/10 hover:text-white"
+                >
+                  {link.label}
+                </a>
+              ))}
+              <a
+                href="#contact"
+                onClick={() => setMenuOpen(false)}
+                className="mxr-hero-contact mt-2 flex items-center justify-between rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-[#10263D]"
+              >
+                Contact us <ArrowRight className="h-4 w-4" />
+              </a>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         <div className="flex flex-1 flex-col justify-start border-t border-white/15 pb-10 pt-[2.5vh] sm:pt-[3.5vh] lg:pt-[4.5vh]">
           <motion.h1
@@ -75,3 +185,4 @@ export function ImmersiveHero() {
     </section>
   )
 }
+

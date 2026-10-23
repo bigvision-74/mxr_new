@@ -130,7 +130,7 @@ export default function InsightxrPlatformPage() {
       <div className={"ix-sales-grid"}>
         <article>
           <div className={"ix-sales-card-image"}>
-            <img src={"/insightxr/insightxr-platform.png"} alt={"InsightXR connects content and experiences across a network of devices"} loading={"lazy"} />
+            <img src={"/assets/insightxr-platform.png"} alt={"InsightXR connects content and experiences across a network of devices"} loading={"lazy"} />
             <span>
               {"01 / DEPLOY"}
             </span>

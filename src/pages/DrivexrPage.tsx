@@ -5,7 +5,7 @@ export default function DrivexrPage() {
   <main className={"dx-page"}>
     <section className={"dx-hero"}>
       <div className={"dx-hero-image"}>
-        <img src={"/drivexr/brochure-response.webp"} alt={"Emergency ambulance response scene from the DriveXR brochure"} fetchPriority={"high"} />
+        <img src={"/assets/drivexr/brochure-response.webp"} alt={"Emergency ambulance response scene from the DriveXR brochure"} fetchPriority={"high"} />
       </div>
       <div className={"dx-hero-copy"}>
         <a className={"dx-breadcrumb"} href={"/index.html"}>
@@ -155,7 +155,7 @@ export default function DrivexrPage() {
         </div>
         <div className={"dx-bento"}>
           <figure className={"dx-bento-photo"}>
-            <img src={"/drivexr/brochure-instructors.webp"} alt={"Driver and instructor using a multi-screen training environment"} loading={"lazy"} />
+            <img src={"/assets/drivexr/brochure-instructors.webp"} alt={"Driver and instructor using a multi-screen training environment"} loading={"lazy"} />
             <figcaption>
               {"Realistic environments."}
               <br />
@@ -297,7 +297,7 @@ export default function DrivexrPage() {
           </div>
         </div>
         <figure>
-          <img src={"/drivexr/brochure-training.webp"} alt={"DriveXR immersive emergency driving training environment from the brochure"} loading={"lazy"} />
+          <img src={"/assets/drivexr/brochure-training.webp"} alt={"DriveXR immersive emergency driving training environment from the brochure"} loading={"lazy"} />
           <figcaption>
             <span>
               {"TRAIN → MEASURE → IMPROVE"}
@@ -313,7 +313,7 @@ export default function DrivexrPage() {
     </section>
     <section className={"dx-delivery dx-wrap"}>
       <div className={"dx-delivery-image"}>
-        <img src={"/drivexr/brochure-simulator.webp"} alt={"DriveXR simulator with seat, controls and multi-screen displays"} loading={"lazy"} />
+        <img src={"/assets/drivexr/brochure-simulator.webp"} alt={"DriveXR simulator with seat, controls and multi-screen displays"} loading={"lazy"} />
         <span>
           {"ONE CONNECTED TRAINING SYSTEM"}
         </span>

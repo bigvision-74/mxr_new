@@ -23,7 +23,7 @@ const pages = [
 export default defineConfig({
   server: { allowedHosts: ['terminal.local'] },
   plugins: [react(), tailwindcss()],
-  publicDir: 'src/assets',
+  publicDir: 'public',
   build: {
     outDir: 'build',
     emptyOutDir: true,

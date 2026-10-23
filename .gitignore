@@ -2,6 +2,5 @@ node_modules/
 build/
 .sites-runtime/
 *.tar.gz
-
-# Optional headset model is supplied separately.
-src/assets/quest-3.glb
+# Optional 3D asset is distributed separately from GitHub.
+public/assets/quest-3.glb
