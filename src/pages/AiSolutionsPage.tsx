@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react'
+﻿import type { CSSProperties } from 'react'
 import analyticsImg from '../assets/images/drivexr/analytics.webp'
 
 export default function AiSolutionsPage() {
@@ -189,25 +189,25 @@ export default function AiSolutionsPage() {
         {"Explore our other services."}
       </h2>
       <div>
-        <a href={"/simulator-development.html"}>
+        <a href={"/simulator-development"}>
           {"Simulator Development"}
           <span>
             {"↗"}
           </span>
         </a>
-        <a href={"/xr-development.html"}>
+        <a href={"/xr-development"}>
           {"XR Development"}
           <span>
             {"↗"}
           </span>
         </a>
-        <a href={"/immersive-rooms.html"}>
+        <a href={"/immersive-rooms"}>
           {"Immersive Rooms"}
           <span>
             {"↗"}
           </span>
         </a>
-        <a href={"/platform-development.html"}>
+        <a href={"/platform-development"}>
           {"Platform Development"}
           <span>
             {"↗"}

@@ -3,34 +3,40 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { resolve } from 'node:path'
 
-const pages = [
-  'index.html',
-  'about.html',
-  'simulator-development.html',
-  'xr-development.html',
-  'immersive-rooms.html',
-  'ai-solutions.html',
-  'platform-development.html',
-  'modal3d.html',
-  'eprium.html',
-  'drivexr.html',
-  'insightxr.html',
-  'insightxr-platform.html',
-  'defence-security.html',
-  'case-study-xr-readiness.html',
-]
+function cleanUrlsPlugin() {
+  const redirect = (req: any, res: any, next: any) => {
+    if (!req.url) return next()
+    // Redirect any /*.html URL to its clean equivalent
+    if (req.url.endsWith('.html')) {
+      const clean = req.url === '/index.html' ? '/' : req.url.replace(/\.html$/, '')
+      res.writeHead(301, { Location: clean })
+      res.end()
+      return
+    }
+    next()
+  }
+  return {
+    name: 'clean-urls',
+    configureServer: (s: any) => s.middlewares.use(redirect),
+    configurePreviewServer: (s: any) => s.middlewares.use(redirect),
+  }
+}
 
 export default defineConfig({
-  server: { allowedHosts: ['terminal.local'] },
-  plugins: [react(), tailwindcss()],
+  server: {
+    allowedHosts: ['terminal.local'],
+    historyApiFallback: true,
+  },
+  preview: {
+    historyApiFallback: true,
+  },
+  plugins: [react(), tailwindcss(), cleanUrlsPlugin()],
   publicDir: 'public',
   build: {
     outDir: 'build',
     emptyOutDir: true,
     rollupOptions: {
-      input: Object.fromEntries(
-        pages.map((page) => [page.replace('.html', ''), resolve(process.cwd(), page)]),
-      ),
+      input: resolve(process.cwd(), 'index.html'),
     },
   },
 })

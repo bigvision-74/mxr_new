@@ -5,7 +5,7 @@ export function Footer() { return (
   <footer>
     <div className={"footer-top"}>
       <div className={"footer-brand"}>
-        <a className={"brand brand-light brand-logo"} href={"index.html"}>
+        <a className={"brand brand-light brand-logo"} href={"/"}>
           <img src={mxrLogo} alt={"MXR — Where vision becomes reality"} />
         </a>
         <p>
@@ -17,13 +17,13 @@ export function Footer() { return (
           <h3>
             {"Solutions"}
           </h3>
-          <a href={"defence-security.html"}>
+          <a href={"/defence-security"}>
             {"Defence"}
           </a>
-          <a href={"eprium.html"}>
+          <a href={"/eprium"}>
             {"Healthcare"}
           </a>
-          <a href={"index.html#solutions"}>
+          <a href={"/#solutions"}>
             {"Enterprise"}
           </a>
         </div>
@@ -31,19 +31,19 @@ export function Footer() { return (
           <h3>
             {"Products"}
           </h3>
-          <a href={"modal3d.html"}>
+          <a href={"/modal3d"}>
             {"MODAL3D"}
           </a>
-          <a href={"eprium.html"}>
+          <a href={"/eprium"}>
             {"EPRium"}
           </a>
-          <a href={"drivexr.html"}>
+          <a href={"/drivexr"}>
             {"DriveXR"}
           </a>
-          <a href={"insightxr.html"}>
+          <a href={"/insightxr"}>
             {"InsightXR"}
           </a>
-          <a href={"/insightxr-platform.html"}>
+          <a href={"/insightxr-platform"}>
             {"InsightXR — Platform version"}
           </a>
         </div>
@@ -51,7 +51,7 @@ export function Footer() { return (
           <h3>
             {"Company"}
           </h3>
-          <a href={"about.html"}>
+          <a href={"/about"}>
             {"About"}
           </a>
           <a href={"mailto:hello@mxr.ai"}>
@@ -62,7 +62,7 @@ export function Footer() { return (
           <h3>
             {"Resources"}
           </h3>
-          <a href={"case-study-xr-readiness.html"}>
+          <a href={"/case-study-xr-readiness"}>
             {"Case Studies"}
           </a>
           <a href={"mailto:hello@mxr.ai"}>

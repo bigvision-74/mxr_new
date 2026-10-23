@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react'
+﻿import type { CSSProperties } from 'react'
 import simulatorImg from '../assets/images/drivexr/simulator.webp'
 
 export default function SimulatorDevelopmentPage() {
@@ -189,25 +189,25 @@ export default function SimulatorDevelopmentPage() {
         {"Explore our other services."}
       </h2>
       <div>
-        <a href={"/xr-development.html"}>
+        <a href={"/xr-development"}>
           {"XR Development"}
           <span>
             {"↗"}
           </span>
         </a>
-        <a href={"/immersive-rooms.html"}>
+        <a href={"/immersive-rooms"}>
           {"Immersive Rooms"}
           <span>
             {"↗"}
           </span>
         </a>
-        <a href={"/ai-solutions.html"}>
+        <a href={"/ai-solutions"}>
           {"AI Solutions"}
           <span>
             {"↗"}
           </span>
         </a>
-        <a href={"/platform-development.html"}>
+        <a href={"/platform-development"}>
           {"Platform Development"}
           <span>
             {"↗"}

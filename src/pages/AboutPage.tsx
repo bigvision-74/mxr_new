@@ -1,13 +1,23 @@
-import type { CSSProperties } from 'react'
-import { HeadsetHero } from '../components/HeadsetHero'
-import aboutHero from '../assets/images/about/about-hero.webp'
+﻿import type { CSSProperties } from 'react'
 import aboutValues from '../assets/images/about/about-values.webp'
+import aboutHero from '../assets/images/about/about-hero.webp'
 
 export default function AboutPage() {
   return (
   <main className={"about-page"}>
     <section className={"about-hero"}>
-      <img src={aboutHero} alt={"A multidisciplinary technology team collaborating on an immersive technology project"} />
+      <video
+        className="about-hero-video"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="metadata"
+        poster={aboutHero}
+        aria-hidden="true"
+      >
+        <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_105406_16f4600d-7a92-4292-b96e-b19156c7830a.mp4" type="video/mp4" />
+      </video>
       <div className={"about-hero-overlay"}>
 
       </div>
@@ -43,7 +53,6 @@ export default function AboutPage() {
           </a>
         </div>
       </div>
-      <HeadsetHero />
     </section>
     <section className={"section about-story"} id={"our-story"}>
       <div className={"about-story-lead reveal visible"}>
@@ -405,7 +414,7 @@ export default function AboutPage() {
         <a className={"btn btn-primary"} href={"mailto:hello@mxr.ai?subject=New%20MXR%20Project"}>
           {"Talk to Our Team"}
         </a>
-        <a className={"btn btn-secondary"} href={"index.html#services"}>
+        <a className={"btn btn-secondary"} href={"/#services"}>
           {"Explore Services"}
         </a>
       </div>

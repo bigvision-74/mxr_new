@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react'
+﻿import type { CSSProperties } from 'react'
 import { useState } from 'react'
 import { ImmersiveHero } from '../components/ImmersiveHero'
 
@@ -36,7 +36,7 @@ export default function HomePage() {
             <p>
               {"Mission-ready training for a safer world."}
             </p>
-            <a href={"defence-security.html"}>
+            <a href={"/defence-security"}>
               {"Explore solution "}
               <span>
                 {"↗"}
@@ -58,7 +58,7 @@ export default function HomePage() {
             <p>
               {"Better practice. Brighter outcomes."}
             </p>
-            <a href={"eprium.html"}>
+            <a href={"/eprium"}>
               {"Explore solution "}
               <span>
                 {"↗"}
@@ -156,7 +156,7 @@ export default function HomePage() {
               </span>
             </div>
           </div>
-          <a href={"/simulator-development.html"}>
+          <a href={"/simulator-development"}>
             {"Explore Simulator Development →"}
           </a>
         </article>
@@ -176,7 +176,7 @@ export default function HomePage() {
             <p>
               {"Bespoke AR, VR and mixed reality experiences for training, visualisation and operational support."}
             </p>
-            <a href={"/xr-development.html"}>
+            <a href={"/xr-development"}>
               {"Explore service →"}
             </a>
           </article>
@@ -195,7 +195,7 @@ export default function HomePage() {
             <p>
               {"Shared projection-led environments for collaborative simulation, learning and decision-making."}
             </p>
-            <a href={"/immersive-rooms.html"}>
+            <a href={"/immersive-rooms"}>
               {"Explore service →"}
             </a>
           </article>
@@ -214,7 +214,7 @@ export default function HomePage() {
             <p>
               {"Practical AI for intelligent assistants, adaptive simulations and content workflows."}
             </p>
-            <a href={"/ai-solutions.html"}>
+            <a href={"/ai-solutions"}>
               {"Explore service →"}
             </a>
           </article>
@@ -233,7 +233,7 @@ export default function HomePage() {
             <p>
               {"Secure web, mobile and desktop platforms designed around real operational workflows."}
             </p>
-            <a href={"/platform-development.html"}>
+            <a href={"/platform-development"}>
               {"Explore service →"}
             </a>
           </article>
@@ -482,7 +482,7 @@ export default function HomePage() {
           <p>
             {"Explore highly accurate 3D models with AR access, detailed specifications and training resources."}
           </p>
-          <a className={"btn btn-white"} href={"modal3d.html"}>
+          <a className={"btn btn-white"} href={"/modal3d"}>
             {"Explore MODAL3D →"}
           </a>
         </div>
@@ -552,7 +552,7 @@ export default function HomePage() {
           <p>
             {"Give healthcare learners a safe, realistic way to practise patient encounters, clinical reasoning and electronic patient records."}
           </p>
-          <a className={"btn btn-white"} href={"eprium.html"}>
+          <a className={"btn btn-white"} href={"/eprium"}>
             {"Explore EPRium →"}
           </a>
         </div>

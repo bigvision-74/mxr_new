@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react'
+﻿import type { CSSProperties } from 'react'
 
 export default function DefenceSecurityPage() {
   return (
@@ -6,13 +6,13 @@ export default function DefenceSecurityPage() {
     <section className={"detail-hero solution-hero"}>
       <div className={"detail-hero-copy reveal visible"}>
         <nav className={"breadcrumbs"} aria-label={"Breadcrumb"}>
-          <a href={"index.html"}>
+          <a href={"/"}>
             {"Home"}
           </a>
           <span>
             {"/"}
           </span>
-          <a href={"index.html#solutions"}>
+          <a href={"/#solutions"}>
             {"Solutions"}
           </a>
           <span>
@@ -222,7 +222,7 @@ export default function DefenceSecurityPage() {
         <p>
           {"A digital ammunition and ordnance library that turns detailed 3D visualisation into accessible, structured knowledge across web, mobile and AR."}
         </p>
-        <a className={"btn btn-white"} href={"modal3d.html"}>
+        <a className={"btn btn-white"} href={"/modal3d"}>
           {"Explore MODAL3D →"}
         </a>
       </div>

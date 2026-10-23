@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react'
+﻿import type { CSSProperties } from 'react'
 import aboutHero from '../assets/images/about/about-hero.webp'
 
 export default function XrDevelopmentPage() {
@@ -189,25 +189,25 @@ export default function XrDevelopmentPage() {
         {"Explore our other services."}
       </h2>
       <div>
-        <a href={"/simulator-development.html"}>
+        <a href={"/simulator-development"}>
           {"Simulator Development"}
           <span>
             {"↗"}
           </span>
         </a>
-        <a href={"/immersive-rooms.html"}>
+        <a href={"/immersive-rooms"}>
           {"Immersive Rooms"}
           <span>
             {"↗"}
           </span>
         </a>
-        <a href={"/ai-solutions.html"}>
+        <a href={"/ai-solutions"}>
           {"AI Solutions"}
           <span>
             {"↗"}
           </span>
         </a>
-        <a href={"/platform-development.html"}>
+        <a href={"/platform-development"}>
           {"Platform Development"}
           <span>
             {"↗"}

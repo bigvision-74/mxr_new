@@ -34,6 +34,10 @@ export const products = [
     "drivexr"
   ],
   [
+    "DriveXR 2",
+    "drivexr-2"
+  ],
+  [
     "InsightXR",
     "insightxr"
   ],

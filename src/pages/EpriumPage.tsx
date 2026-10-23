@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react'
+﻿import type { CSSProperties } from 'react'
 import clinicalLearning from '../assets/images/eprium/clinical-learning.jpg'
 import clinicalPractice from '../assets/images/eprium/clinical-practice.jpg'
 
@@ -8,7 +8,7 @@ export default function EpriumPage() {
     <section className={"ep-hero"}>
       <div className={"ep-hero-inner"}>
         <div className={"ep-hero-copy"}>
-          <a className={"ep-breadcrumb"} href={"/index.html"}>
+          <a className={"ep-breadcrumb"} href={"/index"}>
             {"MXR / PRODUCTS / EPRIUM"}
           </a>
           <p className={"eyebrow"}>

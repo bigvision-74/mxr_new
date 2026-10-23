@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react'
+﻿import type { CSSProperties } from 'react'
 import aboutValues from '../assets/images/about/about-values.webp'
 
 export default function PlatformDevelopmentPage() {
@@ -189,25 +189,25 @@ export default function PlatformDevelopmentPage() {
         {"Explore our other services."}
       </h2>
       <div>
-        <a href={"/simulator-development.html"}>
+        <a href={"/simulator-development"}>
           {"Simulator Development"}
           <span>
             {"↗"}
           </span>
         </a>
-        <a href={"/xr-development.html"}>
+        <a href={"/xr-development"}>
           {"XR Development"}
           <span>
             {"↗"}
           </span>
         </a>
-        <a href={"/immersive-rooms.html"}>
+        <a href={"/immersive-rooms"}>
           {"Immersive Rooms"}
           <span>
             {"↗"}
           </span>
         </a>
-        <a href={"/ai-solutions.html"}>
+        <a href={"/ai-solutions"}>
           {"AI Solutions"}
           <span>
             {"↗"}

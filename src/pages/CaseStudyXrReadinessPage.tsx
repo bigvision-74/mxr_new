@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react'
+﻿import type { CSSProperties } from 'react'
 
 export default function CaseStudyXrReadinessPage() {
   return (
@@ -6,13 +6,13 @@ export default function CaseStudyXrReadinessPage() {
     <section className={"case-hero"}>
       <div className={"case-hero-copy reveal visible"}>
         <nav className={"breadcrumbs"} aria-label={"Breadcrumb"}>
-          <a href={"index.html"}>
+          <a href={"/"}>
             {"Home"}
           </a>
           <span>
             {"/"}
           </span>
-          <a href={"case-study-xr-readiness.html"}>
+          <a href={"/case-study-xr-readiness"}>
             {"Case Studies"}
           </a>
           <span>
@@ -388,7 +388,7 @@ export default function CaseStudyXrReadinessPage() {
         <a className={"btn btn-primary"} href={"mailto:hello@mxr.ai?subject=Training%20Solution%20Enquiry"}>
           {"Talk to Our Team →"}
         </a>
-        <a className={"btn btn-secondary"} href={"index.html#services"}>
+        <a className={"btn btn-secondary"} href={"/#services"}>
           {"Explore Services"}
         </a>
       </div>

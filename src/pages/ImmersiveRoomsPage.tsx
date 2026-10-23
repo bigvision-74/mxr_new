@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react'
+﻿import type { CSSProperties } from 'react'
 import useCasesImg from '../assets/images/drivexr/use-cases.webp'
 
 export default function ImmersiveRoomsPage() {
@@ -189,25 +189,25 @@ export default function ImmersiveRoomsPage() {
         {"Explore our other services."}
       </h2>
       <div>
-        <a href={"/simulator-development.html"}>
+        <a href={"/simulator-development"}>
           {"Simulator Development"}
           <span>
             {"↗"}
           </span>
         </a>
-        <a href={"/xr-development.html"}>
+        <a href={"/xr-development"}>
           {"XR Development"}
           <span>
             {"↗"}
           </span>
         </a>
-        <a href={"/ai-solutions.html"}>
+        <a href={"/ai-solutions"}>
           {"AI Solutions"}
           <span>
             {"↗"}
           </span>
         </a>
-        <a href={"/platform-development.html"}>
+        <a href={"/platform-development"}>
           {"Platform Development"}
           <span>
             {"↗"}
