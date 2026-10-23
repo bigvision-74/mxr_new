@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react'
+import aboutHero from '../assets/images/about/about-hero.webp'
 
 export default function XrDevelopmentPage() {
   return (
@@ -22,7 +23,7 @@ export default function XrDevelopmentPage() {
         </a>
       </div>
       <div className={"service-detail-image"}>
-        <img src={"/assets/about/about-hero.webp"} alt={"XR Development at MXR"} />
+        <img src={aboutHero} alt={"XR Development at MXR"} />
         <span>
           {"DESIGNED AROUND REAL OUTCOMES"}
         </span>

@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react'
+import aboutValues from '../assets/images/about/about-values.webp'
 
 export default function PlatformDevelopmentPage() {
   return (
@@ -22,7 +23,7 @@ export default function PlatformDevelopmentPage() {
         </a>
       </div>
       <div className={"service-detail-image"}>
-        <img src={"/assets/about/about-values.webp"} alt={"Platform Development at MXR"} />
+        <img src={aboutValues} alt={"Platform Development at MXR"} />
         <span>
           {"DESIGNED AROUND REAL OUTCOMES"}
         </span>

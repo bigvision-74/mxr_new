@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react'
+import simulatorImg from '../assets/images/drivexr/simulator.webp'
 
 export default function SimulatorDevelopmentPage() {
   return (
@@ -22,7 +23,7 @@ export default function SimulatorDevelopmentPage() {
         </a>
       </div>
       <div className={"service-detail-image"}>
-        <img src={"/assets/drivexr/simulator.webp"} alt={"Simulator Development at MXR"} />
+        <img src={simulatorImg} alt={"Simulator Development at MXR"} />
         <span>
           {"DESIGNED AROUND REAL OUTCOMES"}
         </span>

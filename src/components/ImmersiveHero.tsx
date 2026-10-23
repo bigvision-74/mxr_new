@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import mxrLogo from '../assets/images/mxr-logo.png'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowRight, Menu, X } from 'lucide-react'
 import { services } from '../data/navigation'
@@ -61,11 +62,11 @@ export function ImmersiveHero() {
       <div className="mxr-immersive-hero__grid absolute inset-0 opacity-40" />
       <div className="absolute -left-36 top-1/3 h-96 w-96 rounded-full bg-[#0B66C3]/20 blur-[120px]" />
 
-      <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col px-5 sm:px-8 lg:px-10 xl:px-0">
+      <div className="relative z-10 flex h-full flex-col px-[8vw]">
         <nav className="mxr-hero-nav flex h-24 items-center justify-between gap-6" aria-label="Main navigation">
           <a href="/" className="flex shrink-0 items-center" aria-label="MXR home">
             <img
-              src="/assets/mxr-logo.png"
+              src={mxrLogo}
               alt="MXR — Where vision becomes reality"
               className="h-11 w-auto object-contain sm:h-12"
             />
@@ -109,7 +110,7 @@ export function ImmersiveHero() {
         <AnimatePresence>
           {menuOpen && (
             <motion.div
-              className="absolute left-5 right-5 top-24 z-30 rounded-3xl border border-white/15 bg-black/90 p-4 shadow-2xl backdrop-blur-xl lg:hidden"
+              className="absolute left-[8vw] right-[8vw] top-24 z-30 rounded-3xl border border-white/15 bg-black/90 p-4 shadow-2xl backdrop-blur-xl lg:hidden"
               initial={{ opacity: 0, y: -12 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}

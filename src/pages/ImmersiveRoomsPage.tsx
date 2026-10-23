@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react'
+import useCasesImg from '../assets/images/drivexr/use-cases.webp'
 
 export default function ImmersiveRoomsPage() {
   return (
@@ -22,7 +23,7 @@ export default function ImmersiveRoomsPage() {
         </a>
       </div>
       <div className={"service-detail-image"}>
-        <img src={"/assets/drivexr/use-cases.webp"} alt={"Immersive Rooms at MXR"} />
+        <img src={useCasesImg} alt={"Immersive Rooms at MXR"} />
         <span>
           {"DESIGNED AROUND REAL OUTCOMES"}
         </span>

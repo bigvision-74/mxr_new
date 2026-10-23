@@ -1,4 +1,6 @@
 import type { CSSProperties } from 'react'
+import insightxrDevices from '../assets/images/insightxr-devices.png'
+import insightxrPlatform from '../assets/images/insightxr-platform.png'
 
 export default function InsightxrPage() {
   return (
@@ -47,7 +49,7 @@ export default function InsightxrPage() {
               {"LEARNING & ANALYTICS"}
             </span>
           </div>
-          <img src={"/assets/insightxr-devices.png"} alt={"InsightXR platform interface"} />
+          <img src={insightxrDevices} alt={"InsightXR platform interface"} />
         </div>
         <span className={"pp-stage-caption"}>
           {"INSIGHTXR / BY MXR"}
@@ -129,7 +131,7 @@ export default function InsightxrPage() {
     </section>
     <section className={"pp-experience"}>
       <div className={"pp-experience-visual"}>
-        <img src={"/assets/insightxr-platform.png"} alt={"InsightXR connects immersive experiences across devices"} loading={"lazy"} />
+        <img src={insightxrPlatform} alt={"InsightXR connects immersive experiences across devices"} loading={"lazy"} />
       </div>
       <div>
         <p className={"eyebrow"}>

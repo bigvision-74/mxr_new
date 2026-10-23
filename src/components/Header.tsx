@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { products, services } from '../data/navigation'
+import mxrLogo from '../assets/images/mxr-logo.png'
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -10,7 +11,7 @@ export function Header() {
     { name: 'Resources', links: [['Case Studies', '/case-study-xr-readiness.html'], ['Support', 'mailto:hello@mxr.ai']] },
   ]
   return <header className="site-header" id="top" onKeyDown={e => { if (e.key === 'Escape') { setDropdown(null); setMenuOpen(false) } }}>
-    <a className="brand brand-logo" href="/index.html" aria-label="MXR home"><img src="/assets/mxr-logo.png" alt="MXR — Where vision becomes reality" /></a>
+    <a className="brand brand-logo" href="/index.html" aria-label="MXR home"><img src={mxrLogo} alt="MXR — Where vision becomes reality" /></a>
     <button className="menu-toggle" aria-expanded={menuOpen} aria-controls="main-nav" onClick={() => setMenuOpen(v => !v)}><span /><span /><span /><span className="sr-only">{menuOpen ? 'Close menu' : 'Open menu'}</span></button>
     <nav id="main-nav" className={`main-nav${menuOpen ? ' open' : ''}`} aria-label="Main navigation">
       <a href="/index.html">Home</a><a href="/about.html" aria-current={window.location.pathname.includes('about') ? 'page' : undefined}>About</a>

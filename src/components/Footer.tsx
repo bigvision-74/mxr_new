@@ -1,11 +1,12 @@
 import type { CSSProperties } from 'react'
+import mxrLogo from '../assets/images/mxr-logo.png'
 
 export function Footer() { return (
   <footer>
     <div className={"footer-top"}>
       <div className={"footer-brand"}>
         <a className={"brand brand-light brand-logo"} href={"index.html"}>
-          <img src={"assets/mxr-logo.png"} alt={"MXR — Where vision becomes reality"} />
+          <img src={mxrLogo} alt={"MXR — Where vision becomes reality"} />
         </a>
         <p>
           {"Simulation. Extended reality. Artificial intelligence. Designed around people."}
@@ -72,7 +73,7 @@ export function Footer() { return (
     </div>
     <div className={"footer-bottom"}>
       <span>
-        {"© MXR / Meta Extended Reality. All rights reserved."}
+        {`© ${new Date().getFullYear()} MXR / Meta Extended Reality. All rights reserved.`}
       </span>
       <div>
         <a href={"#"}>

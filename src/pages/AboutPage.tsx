@@ -1,11 +1,13 @@
 import type { CSSProperties } from 'react'
 import { HeadsetHero } from '../components/HeadsetHero'
+import aboutHero from '../assets/images/about/about-hero.webp'
+import aboutValues from '../assets/images/about/about-values.webp'
 
 export default function AboutPage() {
   return (
   <main className={"about-page"}>
     <section className={"about-hero"}>
-      <img src={"assets/about/about-hero.webp"} alt={"A multidisciplinary technology team collaborating on an immersive technology project"} />
+      <img src={aboutHero} alt={"A multidisciplinary technology team collaborating on an immersive technology project"} />
       <div className={"about-hero-overlay"}>
 
       </div>
@@ -68,7 +70,7 @@ export default function AboutPage() {
     </section>
     <section className={"mxr-purpose mxr-purpose-vision"} aria-labelledby={"vision-heading"}>
       <div className={"mxr-purpose-image"}>
-        <img src={"assets/about/about-values.webp"} alt={"Immersive technology helping people build practical skills"} loading={"lazy"} />
+        <img src={aboutValues} alt={"Immersive technology helping people build practical skills"} loading={"lazy"} />
       </div>
       <div className={"mxr-purpose-copy reveal visible"}>
         <p className={"eyebrow"}>
@@ -98,7 +100,7 @@ export default function AboutPage() {
     </section>
     <section className={"mxr-purpose mxr-purpose-mission"} aria-labelledby={"mission-heading"}>
       <div className={"mxr-purpose-image"}>
-        <img src={"assets/about/about-hero.webp"} alt={"A multidisciplinary technology team collaborating on a project"} loading={"lazy"} />
+        <img src={aboutHero} alt={"A multidisciplinary technology team collaborating on a project"} loading={"lazy"} />
       </div>
       <div className={"mxr-purpose-copy reveal visible"}>
         <p className={"eyebrow"}>
@@ -147,7 +149,7 @@ export default function AboutPage() {
       <div className={"purpose-alt-grid"}>
         <article className={"purpose-alt-card"}>
           <div className={"purpose-alt-image"}>
-            <img src={"assets/about/about-values.webp"} alt={"Immersive technology opening new possibilities for learning"} loading={"lazy"} />
+            <img src={aboutValues} alt={"Immersive technology opening new possibilities for learning"} loading={"lazy"} />
             <span>
               {"01 / THE FUTURE WE SEE"}
             </span>
@@ -187,7 +189,7 @@ export default function AboutPage() {
         </article>
         <article className={"purpose-alt-card"}>
           <div className={"purpose-alt-image"}>
-            <img src={"assets/about/about-hero.webp"} alt={"Technology specialists collaborating to deliver practical solutions"} loading={"lazy"} />
+            <img src={aboutHero} alt={"Technology specialists collaborating to deliver practical solutions"} loading={"lazy"} />
             <span>
               {"02 / THE WORK WE DO"}
             </span>
@@ -282,7 +284,7 @@ export default function AboutPage() {
     </section>
     <section className={"about-values"}>
       <div className={"about-values-image reveal visible"}>
-        <img src={"assets/about/about-values.webp"} alt={"Professionals using mixed reality technology in a simulation and training environment"} />
+        <img src={aboutValues} alt={"Professionals using mixed reality technology in a simulation and training environment"} />
         <div className={"about-values-image-label"}>
           <small>
             {"DESIGNED AROUND PEOPLE"}

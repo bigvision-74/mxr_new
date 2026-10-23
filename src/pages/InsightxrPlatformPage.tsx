@@ -1,4 +1,7 @@
 import type { CSSProperties } from 'react'
+import insightxrDevices from '../assets/images/insightxr-devices.png'
+import insightxrPlatform from '../assets/images/insightxr-platform.png'
+import insightxrLearning from '../assets/images/insightxr-learning.png'
 
 export default function InsightxrPlatformPage() {
   return (
@@ -65,7 +68,7 @@ export default function InsightxrPlatformPage() {
               {"↗"}
             </b>
           </div>
-          <img src={"/assets/insightxr-devices.png"} alt={"InsightXR device management interface showing device controls, storage and status"} />
+          <img src={insightxrDevices} alt={"InsightXR device management interface showing device controls, storage and status"} />
         </div>
         <div className={"ix-floating-detail"}>
           <span>
@@ -130,7 +133,7 @@ export default function InsightxrPlatformPage() {
       <div className={"ix-sales-grid"}>
         <article>
           <div className={"ix-sales-card-image"}>
-            <img src={"/assets/insightxr-platform.png"} alt={"InsightXR connects content and experiences across a network of devices"} loading={"lazy"} />
+            <img src={insightxrPlatform} alt={"InsightXR connects content and experiences across a network of devices"} loading={"lazy"} />
             <span>
               {"01 / DEPLOY"}
             </span>
@@ -156,7 +159,7 @@ export default function InsightxrPlatformPage() {
         </article>
         <article>
           <div className={"ix-sales-card-image"}>
-            <img src={"/assets/insightxr-learning.png"} alt={"Device status, battery and connection information in InsightXR"} loading={"lazy"} />
+            <img src={insightxrLearning} alt={"Device status, battery and connection information in InsightXR"} loading={"lazy"} />
             <span>
               {"02 / CONTROL"}
             </span>

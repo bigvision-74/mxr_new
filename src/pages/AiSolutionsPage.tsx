@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react'
+import analyticsImg from '../assets/images/drivexr/analytics.webp'
 
 export default function AiSolutionsPage() {
   return (
@@ -22,7 +23,7 @@ export default function AiSolutionsPage() {
         </a>
       </div>
       <div className={"service-detail-image"}>
-        <img src={"/assets/drivexr/analytics.webp"} alt={"AI Solutions at MXR"} />
+        <img src={analyticsImg} alt={"AI Solutions at MXR"} />
         <span>
           {"DESIGNED AROUND REAL OUTCOMES"}
         </span>
