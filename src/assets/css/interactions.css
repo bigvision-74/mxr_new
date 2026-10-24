@@ -11,5 +11,20 @@
 .mxr-hero-contact svg{color:currentColor}
 .mxr-hero-nav a:not(.mxr-hero-contact){color:rgba(255,255,255,.88)}
 .mxr-hero-nav .mxr-service-dropdown a:hover{color:white}
+/* Navbar geometry is locked so page-level CSS can never shift, resize or re-space it. */
+.mxr-site-nav,.mxr-site-nav *{box-sizing:border-box;letter-spacing:normal;text-transform:none;text-decoration:none}
+.mxr-site-nav{height:96px!important;margin:0!important;padding:0!important;font-family:inherit;font-size:14px;line-height:20px}
+.mxr-site-nav>a:first-child{margin:0!important;padding:0!important;display:flex!important}
+@media(min-width:1024px){.mxr-site-nav>div:not(.mxr-service-nav){display:flex!important;align-items:center!important;gap:0!important;margin:0!important;padding:6px!important}}
+.mxr-site-nav>div>a,.mxr-site-nav>div>.mxr-service-nav>button{display:inline-flex!important;align-items:center;margin:0!important;padding:8px 16px!important;font-size:14px!important;font-weight:500!important;line-height:20px!important;border:0;border-radius:9999px;height:auto!important;min-height:0!important}
+.mxr-site-nav>div>a.mxr-hero-contact{margin-left:4px!important;padding:8px 20px!important;gap:8px;font-weight:600!important}
+.mxr-site-nav .mxr-service-nav{margin:0!important;padding:0!important;display:block!important}
+.mxr-site-nav .mxr-service-dropdown{top:100%!important;left:0!important;margin:0!important}
+/* Nav text stays white on every page; page-level link colours must not leak in. */
+.mxr-site-nav a:not(.mxr-hero-contact),.mxr-site-nav>div>button,.mxr-site-nav .mxr-service-nav>button{color:#fff!important}
+.mxr-site-nav a.mxr-hero-contact{color:#10263d!important;background:#fff}
+.mxr-site-nav .mxr-service-dropdown a{color:#fff!important}
+/* Kill Tailwind preflight focus-visible ring on dropdown links */
+.mxr-service-dropdown a:focus,.mxr-service-dropdown a:focus-visible{outline:none!important;box-shadow:none!important}
 /* Component visibility must win over legacy grid and flex display rules. */
 .mxr-react-page [hidden]{display:none!important}

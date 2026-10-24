@@ -5,7 +5,7 @@ import { resolve } from 'node:path'
 
 function cleanUrlsPlugin() {
   const redirect = (req: any, res: any, next: any) => {
-    if (!req.url) return next()
+    if (!req || !req.url) return next()
     // Redirect any /*.html URL to its clean equivalent
     if (req.url.endsWith('.html')) {
       const clean = req.url === '/index.html' ? '/' : req.url.replace(/\.html$/, '')
@@ -17,18 +17,14 @@ function cleanUrlsPlugin() {
   }
   return {
     name: 'clean-urls',
-    configureServer: (s: any) => s.middlewares.use(redirect),
-    configurePreviewServer: (s: any) => s.middlewares.use(redirect),
+    configureServer: (s: any) => { s.middlewares.use(redirect) },
+    configurePreviewServer: (s: any) => { s.middlewares.use(redirect) },
   }
 }
 
 export default defineConfig({
   server: {
     allowedHosts: ['terminal.local'],
-    historyApiFallback: true,
-  },
-  preview: {
-    historyApiFallback: true,
   },
   plugins: [react(), tailwindcss(), cleanUrlsPlugin()],
   publicDir: 'public',

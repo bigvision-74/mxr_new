@@ -48,7 +48,7 @@ export default function AboutPage() {
           <a className={"btn btn-primary"} href={"#our-story"}>
             {"Discover MXR"}
           </a>
-          <a className={"btn btn-ghost"} href={"mailto:hello@mxr.ai?subject=Work%20with%20MXR"}>
+          <a className={"btn btn-ghost"} href={"/contact"}>
             {"Start a Conversation"}
           </a>
         </div>

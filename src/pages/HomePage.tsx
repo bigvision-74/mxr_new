@@ -742,7 +742,7 @@ export default function HomePage() {
         </p>
       </div>
       <div className={"button-row"}>
-        <a className={"btn btn-primary"} href={"mailto:hello@mxr.ai"}>
+        <a className={"btn btn-primary"} href={"/contact"}>
           {"Talk to Our Team →"}
         </a>
         <a className={"btn btn-secondary"} href={"#solutions"}>

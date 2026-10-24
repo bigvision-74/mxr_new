@@ -12,6 +12,7 @@ import SimulatorDevelopmentPage from './pages/SimulatorDevelopmentPage'
 import XrDevelopmentPage from './pages/XrDevelopmentPage'
 import ImmersiveRoomsPage from './pages/ImmersiveRoomsPage'
 import AiSolutionsPage from './pages/AiSolutionsPage'
+import ContactPage from './pages/ContactPage'
 import PlatformDevelopmentPage from './pages/PlatformDevelopmentPage'
 
 export const pages = {
@@ -29,5 +30,6 @@ export const pages = {
 "xr-development.html": { Component: XrDevelopmentPage, title: "XR Development | MXR.ai", description: "Virtual, augmented and mixed reality experiences that help people understand, rehearse and interact with the world in new ways.", bodyClass: "" },
 "immersive-rooms.html": { Component: ImmersiveRoomsPage, title: "Immersive Rooms | MXR.ai", description: "Projection-led environments bring teams together for immersive learning, collaborative exploration and facilitated simulation.", bodyClass: "" },
 "ai-solutions.html": { Component: AiSolutionsPage, title: "AI Solutions | MXR.ai", description: "Practical AI solutions that support learning, simplify information workflows and help teams focus on higher-value tasks.", bodyClass: "" },
-"platform-development.html": { Component: PlatformDevelopmentPage, title: "Platform Development | MXR.ai", description: "Web, mobile and desktop platforms that connect users, content and workflows in a clear, dependable digital experience.", bodyClass: "" }
+"platform-development.html": { Component: PlatformDevelopmentPage, title: "Platform Development | MXR.ai", description: "Web, mobile and desktop platforms that connect users, content and workflows in a clear, dependable digital experience.", bodyClass: "" },
+"contact.html": { Component: ContactPage, title: "Contact MXR | MXR.ai", description: "Get in touch with the MXR team — call +44 7393 173361 or email team@mxr.ai.", bodyClass: "" }
 }

@@ -54,7 +54,7 @@ export function Footer() { return (
           <a href={"/about"}>
             {"About"}
           </a>
-          <a href={"mailto:hello@mxr.ai"}>
+          <a href={"/contact"}>
             {"Contact"}
           </a>
         </div>
@@ -65,7 +65,7 @@ export function Footer() { return (
           <a href={"/case-study-xr-readiness"}>
             {"Case Studies"}
           </a>
-          <a href={"mailto:hello@mxr.ai"}>
+          <a href={"/contact"}>
             {"Support"}
           </a>
         </div>

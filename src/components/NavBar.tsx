@@ -22,16 +22,14 @@ export function NavBar({ overlay = false }: NavBarProps) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const wrapperClass = overlay
-    ? 'relative z-10 flex flex-col px-[8vw]'
-    : 'sticky top-0 z-50 w-full bg-[rgba(31,33,35,0.97)] border-b border-[#3C3F42] shadow-[0_5px_20px_rgba(0,0,0,0.12)]'
+    ? 'relative z-30 flex flex-col px-[8vw]'
+    : 'absolute inset-x-0 top-0 z-50 flex w-full flex-col px-[8vw] bg-[linear-gradient(180deg,rgba(0,0,0,.62),transparent)]'
 
-  const innerClass = overlay
-    ? 'mxr-hero-nav flex h-24 items-center justify-between gap-6'
-    : 'flex h-[82px] items-center justify-between gap-6 px-[8vw]'
+  const innerClass = 'mxr-hero-nav flex h-24 items-center justify-between gap-6'
 
   return (
     <div className={wrapperClass}>
-      <nav className={innerClass} aria-label="Main navigation">
+      <nav className={`mxr-site-nav ${innerClass}`} aria-label="Main navigation">
         {/* Logo */}
         <a href="/" className="flex shrink-0 items-center" aria-label="MXR home">
           <img
@@ -42,7 +40,7 @@ export function NavBar({ overlay = false }: NavBarProps) {
         </a>
 
         {/* Desktop pill nav */}
-        <div className={`hidden items-center rounded-full p-1.5 lg:flex ${overlay ? 'border border-gray-700/80 bg-black/20 backdrop-blur-md' : 'border border-white/20 bg-white/10'}`}>
+        <div className={`hidden items-center rounded-full p-1.5 lg:flex border border-gray-700/80 bg-black/20 backdrop-blur-md`}>
           {navLinks.map((link) => {
             if (link.label === 'Products') return (
               <div className="mxr-service-nav" key="Products">
@@ -79,7 +77,7 @@ export function NavBar({ overlay = false }: NavBarProps) {
             )
           })}
           <a
-            href="mailto:hello@mxr.ai?subject=Talk%20to%20MXR"
+            href="/contact"
             className="mxr-hero-contact group ml-1 flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-[#10263D] transition-all duration-300 hover:bg-[#EEF5FB]"
           >
             Contact us
@@ -98,6 +96,7 @@ export function NavBar({ overlay = false }: NavBarProps) {
           {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </nav>
+      {!overlay && <div className="border-t border-white/15" />}
 
       {/* Mobile menu */}
       <AnimatePresence>
@@ -138,7 +137,7 @@ export function NavBar({ overlay = false }: NavBarProps) {
               )
             })}
             <a
-              href="mailto:hello@mxr.ai?subject=Talk%20to%20MXR"
+              href="/contact"
               onClick={() => setMenuOpen(false)}
               className="mxr-hero-contact mt-2 flex items-center justify-between rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-[#10263D]"
             >
