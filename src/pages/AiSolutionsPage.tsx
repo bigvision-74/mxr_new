@@ -9,10 +9,10 @@ export default function AiSolutionsPage() {
         <p className={"eyebrow"}>
           {"MXR SERVICES / AI SOLUTIONS"}
         </p>
-        <h1>
+        <h1 className="banner-title">
           {"Intelligence that makes work more effective."}
         </h1>
-        <p>
+        <p className="banner-lead">
           {"Practical AI solutions that support learning, simplify information workflows and help teams focus on higher-value tasks."}
         </p>
         <a className={"btn btn-primary"} href={"mailto:hello@mxr.ai?subject=AI%20Solutions%20enquiry"}>

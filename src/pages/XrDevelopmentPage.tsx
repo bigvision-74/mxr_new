@@ -9,10 +9,10 @@ export default function XrDevelopmentPage() {
         <p className={"eyebrow"}>
           {"MXR SERVICES / XR DEVELOPMENT"}
         </p>
-        <h1>
+        <h1 className="banner-title">
           {"Bring learning into a new dimension."}
         </h1>
-        <p>
+        <p className="banner-lead">
           {"Virtual, augmented and mixed reality experiences that help people understand, rehearse and interact with the world in new ways."}
         </p>
         <a className={"btn btn-primary"} href={"mailto:hello@mxr.ai?subject=XR%20Development%20enquiry"}>

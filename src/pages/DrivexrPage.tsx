@@ -16,7 +16,7 @@ export default function DrivexrPage() {
             {"EMERGENCY DRIVER SIMULATION"}
           </p>
           <div className={"dx-title"}>
-            <h1>
+            <h1 className="banner-title">
               <span>
                 {"Ready for"}
               </span>
@@ -28,7 +28,7 @@ export default function DrivexrPage() {
               </em>
             </h1>
           </div>
-          <p>
+          <p className="banner-lead">
             {"Build blue-light driving confidence in a controlled, immersive environment. Train for the unexpected. Measure every improvement."}
           </p>
           <a className={"dx-button"} href={"mailto:hello@mxr.ai?subject=DriveXR%20demonstration"}>

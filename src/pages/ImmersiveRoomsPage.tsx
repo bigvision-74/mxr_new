@@ -9,10 +9,10 @@ export default function ImmersiveRoomsPage() {
         <p className={"eyebrow"}>
           {"MXR SERVICES / IMMERSIVE ROOMS"}
         </p>
-        <h1>
+        <h1 className="banner-title">
           {"Turn a shared space into a shared experience."}
         </h1>
-        <p>
+        <p className="banner-lead">
           {"Projection-led environments bring teams together for immersive learning, collaborative exploration and facilitated simulation."}
         </p>
         <a className={"btn btn-primary"} href={"mailto:hello@mxr.ai?subject=Immersive%20Rooms%20enquiry"}>

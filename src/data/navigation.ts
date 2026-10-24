@@ -30,9 +30,13 @@ export const products = [
     "eprium"
   ],
   [
-    "DriveXR",
-    "drivexr"
+    "EPRium_old",
+    "eprium-old"
   ],
+  // [
+  //   "DriveXR",
+  //   "drivexr"
+  // ],
   [
     "DriveXR 2",
     "drivexr-2"

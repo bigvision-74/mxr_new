@@ -14,14 +14,14 @@ export default function InsightxrPlatformPage() {
           </span>
           {" INSIGHTXR · XR MANAGEMENT PLATFORM"}
         </p>
-        <h1>
+        <h1 className="banner-title">
           {"Less managing."}
           <br />
           <span>
             {"More immersing."}
           </span>
         </h1>
-        <p>
+        <p className="banner-lead">
           {"One place to deploy content, control XR devices and understand every training experience."}
         </p>
         <div className={"ix-hero-actions"}>

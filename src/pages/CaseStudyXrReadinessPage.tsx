@@ -25,10 +25,10 @@ export default function CaseStudyXrReadinessPage() {
         <p className={"eyebrow light"}>
           {"CASE STUDY · DEFENCE & SECURITY"}
         </p>
-        <h1>
+        <h1 className="banner-title">
           {"Enhancing Readiness Through XR Training."}
         </h1>
-        <p>
+        <p className="banner-lead">
           {"How a repeatable immersive training environment helped teams practise complex procedures safely, consistently and with clearer performance insight."}
         </p>
         <div className={"button-row"}>

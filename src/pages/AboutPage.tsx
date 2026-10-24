@@ -26,7 +26,7 @@ export default function AboutPage() {
           {"ABOUT MXR"}
         </p>
         <div className={"about-hero-title"}>
-          <h1>
+          <h1 className="banner-title">
             <span className={"about-title-dark"}>
               {"Your technology"}
             </span>
@@ -41,7 +41,7 @@ export default function AboutPage() {
             </span>
           </h1>
         </div>
-        <p>
+        <p className="banner-lead">
           {"We create purposeful XR, simulation, AI and software solutions that help organisations train better, work smarter and prepare people for the real world."}
         </p>
         <div className={"button-row"}>

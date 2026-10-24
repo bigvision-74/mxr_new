@@ -1,0 +1,38 @@
+/* Shared banner typography — reference: DriveXR 2 hero.
+   Lives in its own cascade layer so it wins over page-specific !important rules
+   without raising selector specificity. */
+@layer banner {
+  .banner-title {
+    font-family: Inter, "Segoe UI", Arial, sans-serif !important;
+    font-size: clamp(2.8rem, 5.6vw, 6.4rem) !important;
+    font-weight: 500 !important;
+    line-height: .95 !important;
+    letter-spacing: -.05em !important;
+  }
+
+  /* Stacked variant: the accent phrase (coloured by the page) starts on its own line */
+  .banner-title--stacked em {
+    display: block;
+    font-style: normal;
+  }
+
+  .banner-lead {
+    font-family: Inter, "Segoe UI", Arial, sans-serif !important;
+    font-size: 1.1rem !important;
+    font-weight: 400 !important;
+    line-height: 1.65 !important;
+  }
+
+  @media (max-width: 700px) {
+    .banner-title {
+      font-size: clamp(2.4rem, 11vw, 3.4rem) !important;
+      line-height: 1 !important;
+    }
+  }
+}
+
+/* Site-wide typeface: Inter for header, banner, body text and buttons */
+html, body, button, input, select, textarea,
+body *, body *::before, body *::after {
+    font-family: Inter, "Segoe UI", Arial, sans-serif !important
+}

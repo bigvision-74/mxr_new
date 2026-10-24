@@ -1,0 +1,8 @@
+/* Brand palette — two core colours used across the whole site.
+   Dark: banners, footers, dark sections. Light: page and section backgrounds. */
+:root {
+  --color-dark: #0d1826;
+  --color-light: #f8fafc;
+  --navy: var(--color-dark);
+  --pale: var(--color-light);
+}

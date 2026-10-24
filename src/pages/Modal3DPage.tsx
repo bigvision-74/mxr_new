@@ -11,12 +11,12 @@ export default function Modal3DPage() {
         <p className={"eyebrow"}>
           {"DEFENCE KNOWLEDGE PLATFORM"}
         </p>
-        <h1>
+        <h1 className="banner-title">
           {"Complex assets."}
           <br />
           {"Clear understanding."}
         </h1>
-        <p className={"pp-lead"}>
+        <p className="pp-lead banner-lead">
           {"Explore ordnance in interactive 3D. Connect component views, technical information and AR in one organised library."}
         </p>
         <div className={"pp-actions"}>

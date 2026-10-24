@@ -1,0 +1,1267 @@
+.epj {
+  position: relative;
+  overflow: hidden;
+  color: var(--color-dark);
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  padding: 100px 8vw 90px;
+  background: var(--color-light)
+}
+
+.epj-head {
+  max-width: 820px;
+  margin: 0 auto 56px;
+  text-align: center
+}
+
+.epj-title {
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -.045em;
+  margin: 0 0 22px;
+  color: var(--color-dark)
+}
+
+.epj-head p {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #56707f;
+  margin: 0
+}
+
+.epj-stages {
+  list-style: none;
+  margin: 0 0 48px;
+  padding: 0;
+  max-width: none;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  position: relative
+}
+
+.epj-stages:before {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #1684e8, #2ec4c0);
+  opacity: .35
+}
+
+.epj-stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  padding: 0;
+  background: none;
+  border: 0;
+  color: #56707f;
+  font: inherit;
+  cursor: pointer;
+  transition: color .25s
+}
+
+.epj-stage-icon {
+  display: grid;
+  place-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  background: #fff;
+  border: 1px solid #d3e0ea;
+  color: #0b66c3;
+  box-shadow: 0 8px 20px rgba(13, 24, 38, .06);
+  transition: .3s
+}
+
+.epj-stage small {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  color: #7d92a3
+}
+
+.epj-stage b {
+  font-size: 1rem;
+  font-weight: 600
+}
+
+.epj-stage:hover .epj-stage-icon {
+  border-color: #0b66c3;
+  transform: translateY(-3px)
+}
+
+.epj-stage.is-active {
+  color: var(--color-dark)
+}
+
+.epj-stage.is-active .epj-stage-icon {
+  background: linear-gradient(145deg, #2aa0f5, #0b66c3);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 0 0 8px rgba(22, 132, 232, .2), 0 14px 34px rgba(11, 102, 195, .5)
+}
+
+.epj-stage:focus-visible .epj-stage-icon {
+  outline: 2px solid #0b66c3;
+  outline-offset: 4px
+}
+
+.epj-card {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  max-width: none;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid #dbe5ef;
+  background: #fff;
+  box-shadow: 0 20px 50px rgba(13, 24, 38, .08)
+}
+
+.epj-card-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 44px
+}
+
+.epj-card-kicker {
+  margin: 0 0 18px;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  color: #0b66c3
+}
+
+.epj-card h3 {
+  margin: 0 0 16px;
+  font-size: clamp(1.5rem, 2.2vw, 2.1rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -.03em
+}
+
+.epj-card-copy>p:not(.epj-card-kicker) {
+  margin: 0 0 24px;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: #56707f
+}
+
+.epj-tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px
+}
+
+.epj-tags li {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid #cfe2f3;
+  background: #eef5fb;
+  color: #0b66c3;
+  font-size: .82rem;
+  font-weight: 600
+}
+
+.epj-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  object-fit: cover
+}
+
+.epj-foot {
+  max-width: none;
+  margin: 44px 0 0
+}
+
+.epj-foot h4 {
+  margin: 0 0 14px;
+  font-size: .95rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-transform: uppercase
+}
+
+.epj-foot p {
+  margin: 0;
+  max-width: 560px;
+  color: #56707f;
+  line-height: 1.7;
+  font-size: .95rem
+}
+
+@media(max-width:900px) {
+  .epj {
+    padding: 70px 6vw 60px
+  }
+
+  .epj-stages {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 28px
+  }
+
+  .epj-stages:before {
+    display: none
+  }
+
+  .epj-stage-icon {
+    width: 64px;
+    height: 64px
+  }
+
+  .epj-card {
+    grid-template-columns: 1fr
+  }
+
+  .epj-card-copy {
+    padding: 30px
+  }
+
+  .epj-card img {
+    min-height: 220px;
+    order: -1
+  }
+}
+
+/* Compact layout — whole section fits in one viewport */
+.epj {
+  padding: 56px 8vw 44px
+}
+
+.epj-head {
+  max-width: 900px;
+  margin-bottom: 30px
+}
+
+.epj-title {
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  margin-bottom: 12px
+}
+
+.epj-head p {
+  font-size: .98rem;
+  line-height: 1.55
+}
+
+.epj-stages {
+  margin-bottom: 28px
+}
+
+.epj-stages:before {
+  top: 32px
+}
+
+.epj-stage {
+  gap: 4px
+}
+
+.epj-stage-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 8px
+}
+
+.epj-stage-icon svg {
+  width: 22px;
+  height: 22px
+}
+
+.epj-stage small {
+  font-size: .66rem
+}
+
+.epj-stage b {
+  font-size: .95rem
+}
+
+.epj-stage.is-active .epj-stage-icon {
+  box-shadow: 0 0 0 6px rgba(22, 132, 232, .18), 0 10px 24px rgba(11, 102, 195, .4)
+}
+
+.epj-card {
+  grid-template-columns: 1.1fr .9fr;
+  height: clamp(250px, 34vh, 320px)
+}
+
+.epj-card-copy {
+  padding: 28px 36px
+}
+
+.epj-card-kicker {
+  margin-bottom: 12px;
+  font-size: .7rem
+}
+
+.epj-card h3 {
+  font-size: clamp(1.3rem, 1.9vw, 1.75rem);
+  margin-bottom: 10px
+}
+
+.epj-card-copy>p:not(.epj-card-kicker) {
+  font-size: .95rem;
+  line-height: 1.55;
+  margin-bottom: 16px
+}
+
+.epj-tags {
+  gap: 8px
+}
+
+.epj-tags li {
+  padding: 6px 14px;
+  font-size: .78rem
+}
+
+.epj-card img {
+  min-height: 0;
+  height: 100%
+}
+
+.epj-foot {
+  margin-top: 26px;
+  display: flex;
+  align-items: baseline;
+  gap: 6vw;
+  flex-wrap: wrap
+}
+
+.epj-foot h4 {
+  margin: 0;
+  font-size: .82rem;
+  flex: 0 1 auto
+}
+
+.epj-foot p {
+  font-size: .9rem;
+  line-height: 1.55;
+  max-width: 560px;
+  flex: 1 1 320px
+}
+
+@media(max-width:900px) {
+  .epj {
+    padding: 44px 6vw 36px
+  }
+
+  .epj-card {
+    height: auto
+  }
+
+  .epj-card img {
+    height: 200px;
+    min-height: 0
+  }
+
+  .epj-card-copy {
+    padding: 24px
+  }
+
+  .epj-stage-icon {
+    width: 56px;
+    height: 56px
+  }
+}
+
+/* Polish: eyebrow, progress line, richer card, tidy footer strip */
+.epj {
+  background: radial-gradient(ellipse at 50% 0, rgba(11, 102, 195, .08), transparent 55%), var(--color-light);
+  padding: 72px 8vw 64px;
+  border-top: 1px solid #e3ebf2;
+  border-bottom: 1px solid #e3ebf2
+}
+
+.epj-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 16px;
+  font-size: .74rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  color: #0b66c3
+}
+
+.epj-eyebrow:before,
+.epj-eyebrow:after {
+  content: "";
+  width: 28px;
+  height: 2px;
+  border-radius: 2px;
+  background: #0b66c3;
+  opacity: .5
+}
+
+.epj-head {
+  margin-bottom: 44px
+}
+
+.epj-title {
+  margin-bottom: 18px
+}
+
+.epj-head p:not(.epj-eyebrow) {
+  max-width: 680px;
+  margin: 0 auto
+}
+
+.epj-stages {
+  margin-bottom: 40px
+}
+
+.epj-stages:before {
+  opacity: 1;
+  background: #d6e4ef;
+  left: calc(100%/12);
+  right: calc(100%/12)
+}
+
+.epj-stages:after {
+  content: "";
+  position: absolute;
+  top: 32px;
+  left: calc(100%/12);
+  height: 2px;
+  width: calc((100% - 100%/6) * var(--progress, 0%) / 100%);
+  background: linear-gradient(90deg, #1684e8, #2ec4c0);
+  transition: width .45s ease
+}
+
+.epj-stage-icon {
+  position: relative;
+  z-index: 1
+}
+
+.epj-stage.is-active b {
+  color: #0b66c3
+}
+
+.epj-card {
+  position: relative;
+  height: clamp(280px, 38vh, 350px);
+  border-radius: 24px;
+  box-shadow: 0 30px 70px rgba(13, 24, 38, .1), 0 2px 0 rgba(255, 255, 255, .8) inset
+}
+
+.epj-card-copy {
+  position: relative;
+  padding: 34px 44px 34px 48px;
+  overflow: hidden
+}
+
+.epj-num {
+  position: absolute;
+  right: 20px;
+  bottom: -26px;
+  font-size: 9rem;
+  font-weight: 700;
+  letter-spacing: -.06em;
+  line-height: 1;
+  color: #0b66c3;
+  opacity: .06;
+  pointer-events: none
+}
+
+.epj-next {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  margin-top: 20px;
+  padding: 0;
+  background: none;
+  border: 0;
+  font: inherit;
+  font-size: .9rem;
+  font-weight: 600;
+  color: #0b66c3;
+  cursor: pointer
+}
+
+.epj-next svg {
+  transition: transform .25s
+}
+
+.epj-next:hover svg {
+  transform: translateX(4px)
+}
+
+.epj-card img {
+  position: relative
+}
+
+.epj-card:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 55%;
+  width: 90px;
+  background: linear-gradient(90deg, #fff, transparent);
+  pointer-events: none
+}
+
+.epj-foot {
+  position: relative;
+  margin-top: 36px;
+  padding: 20px 28px 20px 34px;
+  border: 1px solid #dfe9f1;
+  border-radius: 16px;
+  background: #fff;
+  align-items: center;
+  gap: 10px 5vw
+}
+
+.epj-foot h4 {
+  font-size: .8rem;
+  letter-spacing: .06em
+}
+
+.epj-foot p {
+  font-size: .92rem
+}
+
+@media(max-width:900px) {
+  .epj {
+    padding: 48px 6vw 44px
+  }
+
+  .epj-card:after {
+    display: none
+  }
+
+  .epj-num {
+    font-size: 6rem
+  }
+
+  .epj-card-copy {
+    padding: 26px 24px
+  }
+}
+
+/* Eyebrow: same style as the site's .eyebrow, no side lines */
+.epj-eyebrow {
+  display: block;
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+  color: var(--blue);
+  margin: 0 0 20px
+}
+
+.epj-eyebrow:before,
+.epj-eyebrow:after {
+  content: none
+}
+
+/* Detail card text — larger, better filled */
+.epj-card {
+  height: clamp(320px, 42vh, 400px);
+  grid-template-columns: 1.2fr .8fr
+}
+
+.epj-card:after {
+  left: 60%
+}
+
+.epj-card-copy {
+  padding: 40px 56px;
+  justify-content: center
+}
+
+.epj-card-kicker {
+  margin-bottom: 18px;
+  font-size: .8rem;
+  letter-spacing: .16em
+}
+
+.epj-card h3 {
+  font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+  line-height: 1.12;
+  letter-spacing: -.04em;
+  margin-bottom: 16px;
+  max-width: 620px
+}
+
+.epj-card-copy>p:not(.epj-card-kicker) {
+  font-size: 1.12rem;
+  line-height: 1.65;
+  max-width: 600px;
+  margin-bottom: 26px
+}
+
+.epj-tags {
+  gap: 10px
+}
+
+.epj-tags li {
+  padding: 9px 20px;
+  font-size: .9rem
+}
+
+.epj-next {
+  margin-top: 26px;
+  font-size: 1rem
+}
+
+.epj-num {
+  font-size: 11rem;
+  right: 28px;
+  bottom: -34px;
+  opacity: .07
+}
+
+@media(max-width:900px) {
+  .epj-card {
+    height: auto;
+    grid-template-columns: 1fr
+  }
+
+  .epj-card-copy {
+    padding: 28px 24px
+  }
+
+  .epj-card h3 {
+    font-size: 1.6rem
+  }
+
+  .epj-card-copy>p:not(.epj-card-kicker) {
+    font-size: 1rem
+  }
+}
+
+/* Card grows with its content so text is never clipped; balanced sizes */
+.epj-card {
+  height: auto;
+  min-height: 340px;
+  align-items: stretch
+}
+
+.epj-card-copy {
+  padding: 44px 56px 40px
+}
+
+.epj-card h3 {
+  font-size: clamp(1.6rem, 2.3vw, 2.2rem);
+  margin-bottom: 14px
+}
+
+.epj-card-copy>p:not(.epj-card-kicker) {
+  font-size: 1.05rem;
+  margin-bottom: 22px
+}
+
+.epj-tags li {
+  padding: 8px 18px;
+  font-size: .86rem
+}
+
+.epj-next {
+  margin-top: 22px;
+  font-size: .95rem
+}
+
+.epj-num {
+  font-size: 9rem;
+  bottom: -22px;
+  opacity: .06
+}
+
+.epj-card img {
+  height: 100%;
+  min-height: 340px
+}
+
+@media(max-width:900px) {
+  .epj-card {
+    min-height: 0
+  }
+
+  .epj-card img {
+    min-height: 0;
+    height: 200px
+  }
+}
+
+/* Tighter card padding/margins, clearer gap under the stage label */
+.epj-card {
+  min-height: 280px
+}
+
+.epj-card-copy {
+  padding: 28px 44px 24px
+}
+
+.epj-card-kicker {
+  margin-bottom: 22px
+}
+
+.epj-card h3 {
+  margin-bottom: 10px
+}
+
+.epj-card-copy>p:not(.epj-card-kicker) {
+  margin-bottom: 16px
+}
+
+.epj-next {
+  margin-top: 14px
+}
+
+.epj-card img {
+  min-height: 280px
+}
+
+@media(max-width:900px) {
+  .epj-card-copy {
+    padding: 22px 20px
+  }
+
+  .epj-card-kicker {
+    margin-bottom: 16px
+  }
+}
+
+/* Image no longer sets the card height (it was forcing ~425px and leaving big empty padding) */
+.epj-card {
+  min-height: 300px
+}
+
+.epj-card img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover
+}
+
+.epj-card-copy {
+  grid-column: 1;
+  padding: 32px 44px
+}
+
+.epj-card-kicker {
+  margin: 0 0 22px !important
+}
+
+.epj-card h3 {
+  margin: 0 0 12px
+}
+
+@media(max-width:900px) {
+  .epj-card img {
+    position: static;
+    width: 100%;
+    height: 200px
+  }
+
+  .epj-card-copy {
+    padding: 24px 20px
+  }
+}
+
+/* Footer text: plain, no background or border */
+.epj-foot {
+  display: block;
+  margin: 36px 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none
+}
+
+.epj-foot h4 {
+  margin: 0 0 10px;
+  font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+  font-weight: 600;
+  letter-spacing: -.01em;
+  text-transform: none;
+  color: var(--color-dark)
+}
+
+.epj-foot p {
+  margin: 0;
+  max-width: 640px;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #56707f
+}
+
+/* Footer strip: heading left, supporting text right */
+.epj-foot {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  column-gap: 6vw;
+  align-items: start;
+  margin-top: 32px
+}
+
+.epj-foot h4 {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.35
+}
+
+.epj-foot p {
+  margin: 0;
+  max-width: 600px;
+  font-size: .95rem;
+  line-height: 1.65
+}
+
+@media(max-width:900px) {
+  .epj-foot {
+    grid-template-columns: 1fr;
+    row-gap: 10px
+  }
+}
+
+/* Eprium — Assessment & debrief (dark theme) */
+.epd {
+  background: radial-gradient(ellipse at 20% 40%, rgba(22, 132, 232, .14), transparent 55%), var(--color-dark);
+  color: #fff;
+  padding: 96px 8vw
+}
+
+.epd-inner {
+  max-width: none;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6vw;
+  align-items: center
+}
+
+.epd-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 24px 40px rgba(0, 0, 0, .45))
+}
+
+.epd-eyebrow {
+  margin: 0 0 18px;
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+  color: #64b7ff
+}
+
+.epd h2 {
+  margin: 0 0 30px;
+  font-size: clamp(2.2rem, 3.6vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -.045em;
+  max-width: 520px;
+  color: #fff
+}
+
+.epd-lead {
+  margin: 0 0 44px;
+  padding-bottom: 24px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #aabac8
+}
+
+.epd-list {
+  list-style: none;
+  margin: 0 0 32px;
+  padding: 0;
+  display: grid;
+  gap: 14px
+}
+
+.epd-list li {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, .12);
+  background: rgba(255, 255, 255, .04)
+}
+
+.epd-icon {
+  flex: 0 0 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: linear-gradient(145deg, #2aa0f5, #0b66c3)
+}
+
+.epd-list b {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 600
+}
+
+.epd-list p {
+  margin: 4px 0 0;
+  color: #aabac8;
+  line-height: 1.55;
+  font-size: .95rem
+}
+
+.epd-cta {
+  display: inline-block;
+  padding: 16px 26px;
+  border-radius: 999px;
+  background: #0b66c3;
+  color: #fff;
+  font-weight: 700;
+  font-size: .95rem;
+  transition: .22s
+}
+
+.epd-cta:hover {
+  background: #1684e8;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(22, 132, 232, .3)
+}
+
+@media(max-width:900px) {
+  .epd {
+    padding: 60px 6vw
+  }
+
+  .epd-inner {
+    grid-template-columns: 1fr;
+    gap: 36px
+  }
+}
+
+/* Eprium — Benefits across education (no section background) */
+.epa {
+  background: none;
+  color: var(--color-dark);
+  padding: 84px 8vw
+}
+
+.epa-eyebrow {
+  margin: 0 0 18px;
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+  color: #0b66c3
+}
+
+.epa h2 {
+  margin: 0 0 34px;
+  max-width: 820px;
+  font-size: clamp(2.2rem, 3.6vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -.045em;
+  color: var(--color-dark)
+}
+
+.epa-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 26px
+}
+
+.epa-tabs button {
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid #dbe5ef;
+  background: #fff;
+  color: var(--color-dark);
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .2s
+}
+
+.epa-tabs button:hover {
+  border-color: #0b66c3;
+  color: #0b66c3
+}
+
+.epa-tabs button.is-active {
+  background: var(--color-dark);
+  border-color: var(--color-dark);
+  color: #fff
+}
+
+.epa-card {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid #dbe5ef;
+
+}
+
+.epa-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  object-fit: cover
+}
+
+.epa-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 44px 56px
+}
+
+.epa-kicker {
+  margin: 0 0 20px;
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+  color: #0b66c3
+}
+
+.epa-copy h3 {
+  margin: 0 0 18px;
+  font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -.04em
+}
+
+.epa-copy>p:not(.epa-kicker) {
+  margin: 0 0 24px;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #56707f
+}
+
+.epa-copy small {
+  font-size: .85rem;
+  font-weight: 600;
+  color: #56707f
+}
+
+@media(max-width:900px) {
+  .epa {
+    padding: 56px 6vw
+  }
+
+  .epa-card {
+    grid-template-columns: 1fr
+  }
+
+  .epa-card img {
+    min-height: 0;
+    height: 220px
+  }
+
+  .epa-copy {
+    padding: 28px 24px
+  }
+}
+
+/* Benefits across education — compact height */
+.epa {
+  padding: 56px 8vw 52px
+}
+
+.epa h2 {
+  margin-bottom: 24px
+}
+
+.epa-tabs {
+  margin-bottom: 20px
+}
+
+.epa-card {
+  height: clamp(260px, 34vh, 320px)
+}
+
+.epa-card img {
+  min-height: 0;
+  height: 100%
+}
+
+.epa-copy {
+  padding: 28px 48px
+}
+
+.epa-kicker {
+  margin-bottom: 14px
+}
+
+.epa-copy h3 {
+  margin-bottom: 12px
+}
+
+.epa-copy>p:not(.epa-kicker) {
+  margin-bottom: 16px
+}
+
+@media(max-width:900px) {
+  .epa-card {
+    height: auto
+  }
+
+  .epa-card img {
+    height: 200px
+  }
+}
+
+/* Eprium — Educational outcomes */
+.epo {
+  background: radial-gradient(ellipse at 50% 0, rgba(11, 102, 195, .08), transparent 55%), var(--color-light);
+  border-top: 1px solid #e3ebf2;
+  border-bottom: 1px solid #e3ebf2;
+  color: var(--color-dark);
+  padding: 72px 8vw
+}
+
+.epo-top {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 6vw;
+  align-items: center;
+  margin-bottom: 48px
+}
+
+.epo-eyebrow {
+  margin: 0 0 18px;
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+  color: #0b66c3
+}
+
+.epo-head h2 {
+  margin: 0 0 22px;
+  font-size: clamp(2.2rem, 3.6vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -.045em;
+  color: var(--color-dark)
+}
+
+.epo-head>p:not(.epo-eyebrow) {
+  margin: 0;
+  max-width: 560px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #56707f
+}
+
+.epo-figure {
+  position: relative;
+  margin: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(13, 24, 38, .14)
+}
+
+.epo-figure img {
+  display: block;
+  width: 100%;
+  height: 340px;
+  object-fit: cover
+}
+
+.epo-figure figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 60px 28px 22px;
+  color: #fff;
+  font-size: .98rem;
+  line-height: 1.5;
+  font-weight: 500;
+  background: linear-gradient(0deg, rgba(13, 24, 38, .88), transparent)
+}
+
+.epo-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px
+}
+
+.epo-grid li {
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #dbe5ef;
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(13, 24, 38, .05);
+  transition: .25s
+}
+
+.epo-grid li:hover {
+  transform: translateY(-4px);
+  border-color: #91bde6
+}
+
+.epo-grid small {
+  display: block;
+  margin-bottom: 14px;
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+  color: #0b66c3
+}
+
+.epo-grid h3 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -.01em
+}
+
+.epo-grid p {
+  margin: 0;
+  font-size: .93rem;
+  line-height: 1.6;
+  color: #56707f
+}
+
+@media(max-width:1100px) {
+  .epo-grid {
+    grid-template-columns: repeat(2, 1fr)
+  }
+}
+
+@media(max-width:900px) {
+  .epo {
+    padding: 52px 6vw
+  }
+
+  .epo-top {
+    grid-template-columns: 1fr;
+    gap: 28px
+  }
+
+  .epo-figure img {
+    height: 240px
+  }
+}
+
+@media(max-width:560px) {
+  .epo-grid {
+    grid-template-columns: 1fr
+  }
+}

@@ -25,14 +25,14 @@ export default function DefenceSecurityPage() {
         <p className={"eyebrow light"}>
           {"DEFENCE & SECURITY"}
         </p>
-        <h1>
+        <h1 className="banner-title">
           {"Train with confidence."}
           <br />
           <span>
             {"Prepare for reality."}
           </span>
         </h1>
-        <p>
+        <p className="banner-lead">
           {"Immersive, scalable simulation solutions that help defence and security teams build knowledge, practise procedures and develop readiness in safe, controlled environments."}
         </p>
         <div className={"button-row"}>

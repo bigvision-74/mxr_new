@@ -1,3 +1,4 @@
+import './assets/css/tokens.css'
 import { createRoot } from 'react-dom/client'
 import App from './App'
 import './assets/css/base.css'
@@ -7,5 +8,7 @@ import './assets/css/eprium-problem.css'
 import './assets/css/eprium-page.css'
 import './assets/css/interactions.css'
 import './assets/css/contact.css'
+import './assets/css/journey.css'
+import './assets/css/banner.css'
 
 createRoot(document.getElementById('root')!).render(<App />)

@@ -4,6 +4,7 @@ import DefenceSecurityPage from './pages/DefenceSecurityPage'
 import CaseStudyXrReadinessPage from './pages/CaseStudyXrReadinessPage'
 import Modal3DPage from './pages/Modal3DPage'
 import EpriumPage from './pages/EpriumPage'
+import EpriumOldPage from './pages/EpriumOldPage'
 import DrivexrPage from './pages/DrivexrPage'
 import DriveXR2Page from './pages/DriveXR2Page'
 import InsightxrPage from './pages/InsightxrPage'
@@ -22,8 +23,9 @@ export const pages = {
 "case-study-xr-readiness.html": { Component: CaseStudyXrReadinessPage, title: "Enhancing Readiness Through XR Training \u2014 MXR Case Study", description: "Discover how MXR used extended reality to support safer, repeatable and measurable operational training.", bodyClass: "" },
 "modal3d.html": { Component: Modal3DPage, title: "MODAL3D | MXR.ai", description: "Explore ordnance in interactive 3D. Connect component views, technical information and AR in one organised library.", bodyClass: "" },
 "eprium.html": { Component: EpriumPage, title: "EPRium | MXR.ai", description: "Give healthcare learners a safe place to practise patient encounters, clinical reasoning and digital documentation.", bodyClass: "" },
+"eprium-old.html": { Component: EpriumOldPage, title: "EPRium_old | MXR.ai", description: "Give healthcare learners a safe place to practise patient encounters, clinical reasoning and digital documentation.", bodyClass: "" },
 "drivexr.html": { Component: DrivexrPage, title: "DriveXR | MXR.ai", description: "Build emergency driving readiness through realistic scenarios, instructor control and evidence-led feedback.", bodyClass: "" },
-"drivexr-2.html": { Component: DriveXR2Page, title: "DriveXR 2 | MXR.ai", description: "Next-generation emergency driver simulation — richer environments, deeper data and a more connected training experience.", bodyClass: "" },
+"drivexr-2.html": { Component: DriveXR2Page, title: "DriveXR 2 | MXR.ai", description: "Next-generation emergency driver simulation — richer environments, deeper data and a more connected training experience.", bodyClass: "drivexr2-page" },
 "insightxr.html": { Component: InsightxrPage, title: "InsightXR | MXR.ai", description: "Bring content, learners, devices and performance data together to deliver a connected XR learning programme.", bodyClass: "" },
 "insightxr-platform.html": { Component: InsightxrPlatformPage, title: "InsightXR Platform | MXR.ai", description: "AR and VR device management, content delivery and immersive training insight with InsightXR.", bodyClass: "" },
 "simulator-development.html": { Component: SimulatorDevelopmentPage, title: "Simulator Development | MXR.ai", description: "Purpose-built simulators help teams practise complex tasks, build confidence and explore decisions in a safe, repeatable environment.", bodyClass: "" },

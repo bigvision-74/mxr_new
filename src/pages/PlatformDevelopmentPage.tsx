@@ -9,10 +9,10 @@ export default function PlatformDevelopmentPage() {
         <p className={"eyebrow"}>
           {"MXR SERVICES / PLATFORM DEVELOPMENT"}
         </p>
-        <h1>
+        <h1 className="banner-title">
           {"Software built around the way you work."}
         </h1>
-        <p>
+        <p className="banner-lead">
           {"Web, mobile and desktop platforms that connect users, content and workflows in a clear, dependable digital experience."}
         </p>
         <a className={"btn btn-primary"} href={"mailto:hello@mxr.ai?subject=Platform%20Development%20enquiry"}>

@@ -13,12 +13,12 @@ export default function InsightxrPage() {
         <p className={"eyebrow"}>
           {"XR LEARNING MANAGEMENT & ANALYTICS"}
         </p>
-        <h1>
+        <h1 className="banner-title">
           {"Manage immersive learning."}
           <br />
           {"Measure what matters."}
         </h1>
-        <p className={"pp-lead"}>
+        <p className="pp-lead banner-lead">
           {"Bring content, learners, devices and performance data together to deliver a connected XR learning programme."}
         </p>
         <div className={"pp-actions"}>

@@ -7,7 +7,7 @@
 .mxr-hero-nav button{background:transparent;border:0;color:rgba(255,255,255,.88);font:inherit;cursor:pointer}
 .mxr-hero-nav button:hover{background:rgba(255,255,255,.1);color:white}
 .mxr-immersive-hero .mxr-hero-contact{color:#10263d;background:#fff}
-.mxr-immersive-hero .mxr-hero-contact:hover{color:#10263d;background:#eef5fb}
+.mxr-immersive-hero .mxr-hero-contact:hover{color:#10263d;background:var(--color-light)}
 .mxr-hero-contact svg{color:currentColor}
 .mxr-hero-nav a:not(.mxr-hero-contact){color:rgba(255,255,255,.88)}
 .mxr-hero-nav .mxr-service-dropdown a:hover{color:white}

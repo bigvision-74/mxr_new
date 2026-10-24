@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { NavBar } from './NavBar'
-import bannerVideo from '../assets/videos/banner/HV9-MD_grok_take002.mp4'
+// import bannerVideo from '../assets/videos/banner/HV9-MD_grok_take002.mp4'
+import bannerVideo from '../assets/videos/banner/HV9_showcase_cut_v004_A_1920.mp4'
 
 type ShinyTextProps = {
   children: string
@@ -30,7 +31,7 @@ function ShinyText({ children, duration = 3, spread = 100 }: ShinyTextProps) {
 
 export function ImmersiveHero() {
   return (
-    <section className="mxr-immersive-hero relative h-screen min-h-[700px] bg-black text-white">
+    <section className="mxr-immersive-hero relative h-screen min-h-[700px] bg-[var(--color-dark)] text-white">
       {/* Background layers clipped independently so the nav dropdown can escape */}
       <div className="absolute inset-0 overflow-hidden">
         <video
@@ -61,7 +62,7 @@ export function ImmersiveHero() {
       <div className="relative z-10 flex flex-col px-[8vw] pb-10">
         <div className="border-t border-white/15 pt-[2.5vh] sm:pt-[3.5vh] lg:pt-[4.5vh]">
           <motion.h1
-            className="max-w-6xl text-5xl font-medium leading-[.85] tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
+            className="banner-title max-w-6xl text-5xl font-medium leading-[.85] tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
             aria-label="Technology for a Safer, Smarter Tomorrow."
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -72,7 +73,7 @@ export function ImmersiveHero() {
           </motion.h1>
 
           <motion.p
-            className="mt-7 max-w-2xl text-sm leading-6 text-white/80 md:text-base md:leading-7"
+            className="banner-lead mt-7 max-w-2xl text-sm leading-6 text-white/80 md:text-base md:leading-7"
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.65 }}

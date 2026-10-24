@@ -9,10 +9,10 @@ export default function SimulatorDevelopmentPage() {
         <p className={"eyebrow"}>
           {"MXR SERVICES / SIMULATOR DEVELOPMENT"}
         </p>
-        <h1>
+        <h1 className="banner-title">
           {"Prepare for the real world. Before it happens."}
         </h1>
-        <p>
+        <p className="banner-lead">
           {"Purpose-built simulators help teams practise complex tasks, build confidence and explore decisions in a safe, repeatable environment."}
         </p>
         <a className={"btn btn-primary"} href={"mailto:hello@mxr.ai?subject=Simulator%20Development%20enquiry"}>

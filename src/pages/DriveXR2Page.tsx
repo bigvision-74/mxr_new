@@ -344,7 +344,7 @@ function AnalyticsSection() {
       <div className="dx-wrap">
         <div className="dx-data-head">
           <div>
-            <p className="dx-kicker"><span className="dx-solution-dot" />DATA &amp; ANALYTICS</p>
+            <p className="dx-kicker">DATA &amp; ANALYTICS</p>
             <h2>Training intelligence, built in</h2>
             <p>DriveXR is built around measurable training outcomes. Sixteen behaviours are tracked in every session and turned into reports instructors can act on.</p>
           </div>
@@ -415,13 +415,9 @@ export default function DriveXR2Page() {
         <div className="dx-hero-copy">
           <p className="dx-kicker">EMERGENCY VEHICLE DRIVER TRAINING SIMULATOR</p>
           <div className="dx-title">
-            <h1>
-              <span>Precision under</span>
-              <span>pressure.</span>
-              <em>Performance when it matters.</em>
-            </h1>
+            <h1 className="banner-title banner-title--stacked">Precision under pressure. <em>Performance when it matters.</em></h1>
           </div>
-          <p>Develop, assess and improve real-world blue-light driving competency in a safe, measurable and fully immersive environment.</p>
+          <p className="banner-lead">Develop, assess and improve real-world blue-light driving competency in a safe, measurable and fully immersive environment.</p>
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 30 }}>
             <a className="dx-button" href="mailto:hello@mxr.ai?subject=DriveXR%202%20demonstration">
               Book a live demonstration{' '}
@@ -436,9 +432,12 @@ export default function DriveXR2Page() {
               </svg>
             </a>
           </div>
-          <div className="dx-hero-note">
-            REAL-WORLD SCENARIOS <span> / </span> MEASURABLE PERFORMANCE <span> / </span> BUILD CONFIDENCE, REDUCE RISK <span> / </span> BETTER DRIVERS, SAFER COMMUNITIES
-          </div>
+          <ul className="dx-hero-note" aria-label="Key benefits">
+            <li>Real-world scenarios</li>
+            <li>Measurable performance</li>
+            <li>Build confidence, reduce risk</li>
+            <li>Better drivers, safer communities</li>
+          </ul>
         </div>
         <div className="dx-caption">
           DriveXR 2{' '}
@@ -525,7 +524,6 @@ export default function DriveXR2Page() {
             <div className="dx-solution-bottom">
               <div className="dx-solution-copy">
                 <p className="dx-solution-kicker">
-                  <span className="dx-solution-dot" aria-hidden="true" />
                   THE MXR SOLUTION
                 </p>
                 <h2>Train. Measure. Improve.</h2>
@@ -574,7 +572,6 @@ export default function DriveXR2Page() {
         <div className="dx-spotlight-head dx-wrap">
           <div>
             <p className="dx-kicker">
-              <span className="dx-solution-dot" aria-hidden="true" />
               {' '}KEY FEATURES
             </p>
             <h2>Built for real-world readiness.</h2>
@@ -637,7 +634,7 @@ export default function DriveXR2Page() {
       <section className="dx-instructor">
         <div className="dx-instructor-grid dx-wrap">
           <div className="dx-instructor-copy">
-            <p className="dx-kicker"><span className="dx-solution-dot" />INSTRUCTOR CONTROL STATION</p>
+            <p className="dx-kicker">INSTRUCTOR CONTROL STATION</p>
             <h2>Run the scenario.<br />Watch every decision.</h2>
             <p>Instructors control the scenario, inject hazards and monitor performance live. Try it: switch on lights and sirens, then inject a hazard.</p>
             <img src={stageSetup} alt="Instructor monitoring a live DriveXR session" loading="lazy" />
@@ -649,7 +646,7 @@ export default function DriveXR2Page() {
 
       <section className="dx-how">
         <div className="dx-wrap">
-          <p className="dx-kicker"><span className="dx-solution-dot" />HOW IT WORKS</p>
+          <p className="dx-kicker">HOW IT WORKS</p>
           <h2>Simple. Scalable. Effective.</h2>
           <div className="dx-how-grid">
             {[
