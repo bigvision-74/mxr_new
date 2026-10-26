@@ -1,5 +1,4 @@
 ﻿import { useEffect, useRef } from 'react'
-import { useEffect, useRef } from 'react'
 import type { CSSProperties, MouseEvent } from 'react'
 import heroVideo from '../assets/videos/banner/about_HV3_grok_take001.mp4'
 import heroWireVideo from '../assets/videos/banner/about_HV3_wireframe_take002.mp4'

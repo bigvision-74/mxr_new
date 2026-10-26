@@ -2,6 +2,17 @@
    Lives in its own cascade layer so it wins over page-specific !important rules
    without raising selector specificity. */
 @layer banner {
+  /* These editorial heroes have intentional three-line titles in narrow columns. */
+  .about-hero-title .banner-title {
+    font-size: clamp(1.25rem, 8.4cqw, 3rem) !important;
+    line-height: 1.12 !important;
+  }
+
+  .dx-title .banner-title {
+    font-size: clamp(1.25rem, 11cqw, 3.625rem) !important;
+    line-height: 1.08 !important;
+  }
+
   .banner-title {
     font-family: Inter, "Segoe UI", Arial, sans-serif !important;
     font-size: clamp(2.8rem, 5.6vw, 6.4rem) !important;

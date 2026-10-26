@@ -90,3 +90,84 @@ body,
     padding-inline: var(--page-gutter);
   }
 }
+
+/* Scale the reading experience gradually from desktop to 4K. Keep the page
+   full width; only individual copy blocks retain a comfortable line length. */
+@media (min-width: 1921px) {
+  html {
+    font-size: clamp(16px, calc(8px + .416667vw), 24px);
+  }
+
+  .mxr-react-page :is(.section, .pp-benefits, .pp-features, .pp-experience,
+    .pp-audience, .service-deliver, .service-outcome, .service-steps,
+    .service-related, .ix-sales-capabilities, .ix-capabilities, .ix-intelligence,
+    .ix-value, .purpose-alternative) {
+    padding-block: 6rem;
+  }
+
+  .mxr-react-page :is(.section-heading > p, .process-heading > p,
+    .partnership-heading > p, .services-heading > p) {
+    max-width: 36rem;
+  }
+
+  .mxr-react-page :is(.card-image, .purpose-alt-image) {
+    height: auto;
+    aspect-ratio: 16 / 7;
+  }
+
+  .mxr-react-page :is(.card-content, .partnership-card, .service-card,
+    .pp-benefit-grid article, .pp-feature-grid article, .ep-feature-grid article) {
+    padding: 2rem;
+  }
+
+  .mxr-react-page :is(.service-feature > div > p:not(.service-label),
+    .mxr-purpose-copy > p:not(.eyebrow), .final-cta > div > p:last-child) {
+    max-width: 34rem;
+  }
+
+  .mxr-react-page .service-feature {
+    padding: 2.625rem;
+    min-height: 34rem;
+  }
+
+  .mxr-react-page .service-feature h3 { max-width: 25rem; }
+  .mxr-react-page .process-step p { max-width: 17rem; }
+  .mxr-react-page .partnership-card { min-height: 21rem; }
+  .mxr-react-page .final-cta { padding-block: 5rem; }
+  .mxr-react-page .final-cta h2 { max-width: 53.125rem; }
+  .mxr-react-page footer { padding-block: 4.5rem 1.5rem; }
+  .mxr-react-page .footer-brand p { max-width: 23rem; }
+  .mxr-react-page .footer-brand .brand-logo img { width: 15rem; }
+
+  .mxr-react-page .about-hero-copy { max-width: 50rem; }
+  .mxr-react-page .about-hero-title { max-width: 38.125rem; }
+  .mxr-react-page .mxr-purpose { min-height: 34rem; }
+  .mxr-react-page .mxr-purpose-copy { max-width: 53.125rem; padding-block: 4.5rem; }
+  .mxr-react-page .mxr-purpose-outcomes { max-width: 34rem; }
+  .mxr-react-page .purpose-alt-copy { padding: 2rem; }
+  .mxr-react-page .about-why-grid article { padding: 2.25rem; }
+
+  .mxr-react-page .dx-title { width: min(100%, 33.125rem); }
+  .mxr-react-page .dx-hero-copy > p:not(.dx-kicker) { max-width: 30rem; }
+  .mxr-react-page .dx-hero { min-height: 44rem; }
+  .mxr-react-page .pp-hero { min-height: 40rem; }
+  .mxr-react-page .pp-lead { max-width: 32rem; }
+  .mxr-react-page :is(.pp-hero-photo, .drive-evidence img, .drive-deployment img) {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+  .mxr-react-page :is(.ep-section-heading > p, .ep-hero-copy > p,
+    .ep-cta h2 + p, .ix-sales-copy > p:not(.eyebrow)) { max-width: 32rem; }
+  .mxr-react-page .ep-hero-inner { min-height: 40rem; }
+  .mxr-react-page .ep-journey figure { min-height: 28rem; }
+  .mxr-react-page .contact-banner-copy { max-width: 48rem; }
+  .mxr-react-page .contact-banner-copy > p:not(.eyebrow) { max-width: 36rem; }
+
+  /* Perspective distortion grows with image width and can escape its column. */
+  .mxr-react-page .ix-sales-art { min-width: 0; }
+  .mxr-react-page .ix-product-window {
+    transform: none;
+    max-width: 70rem;
+    margin-inline: auto;
+  }
+}
