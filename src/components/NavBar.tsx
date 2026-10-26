@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowRight, Menu, X } from 'lucide-react'
-import { services, products } from '../data/navigation'
+import { services, products, resources } from '../data/navigation'
 import mxrLogo from '../assets/images/mxr-logo.png'
 
 const navLinks = [
@@ -9,8 +9,27 @@ const navLinks = [
   { label: 'About', href: '/about' },
   { label: 'Services', href: '#' },
   { label: 'Products', href: '#' },
-  { label: 'Resources', href: '/case-study-xr-readiness' },
+  { label: 'Resources', href: '#' },
 ]
+
+const pathname = typeof window !== 'undefined' ? window.location.pathname : '/'
+
+function isLinkActive(href: string): boolean {
+  if (href === '/') return pathname === '/'
+  return pathname === href || pathname.startsWith(href + '/')
+}
+
+function isServicesActive(): boolean {
+  return services.some(s => pathname === `/${s.slug}` || pathname.startsWith(`/${s.slug}/`))
+}
+
+function isProductsActive(): boolean {
+  return products.some(([, slug]) => pathname === `/${slug}` || pathname.startsWith(`/${slug}/`))
+}
+
+function isResourcesActive(): boolean {
+  return resources.some(r => pathname === `/${r.slug}` || pathname.startsWith(`/${r.slug}/`))
+}
 
 interface NavBarProps {
   /** true  → transparent overlay (used inside ImmersiveHero on the homepage)
@@ -42,35 +61,57 @@ export function NavBar({ overlay = false }: NavBarProps) {
         {/* Desktop pill nav */}
         <div className={`hidden items-center rounded-full p-1.5 lg:flex border border-gray-700/80 bg-black/20 backdrop-blur-md`}>
           {navLinks.map((link) => {
-            if (link.label === 'Products') return (
-              <div className="mxr-service-nav" key="Products">
-                <button type="button" className="rounded-full border-0 bg-transparent px-4 py-2 text-sm font-medium text-white hover:bg-white/10 cursor-pointer">
-                  Products
-                </button>
-                <div className="mxr-service-dropdown">
-                  {products.map(([label, slug]) => (
-                    <a href={`/${slug}`} key={slug}>{label}</a>
-                  ))}
+            if (link.label === 'Products') {
+              const active = isProductsActive()
+              return (
+                <div className="mxr-service-nav" key="Products">
+                  <button type="button" className={`rounded-full border-0 px-4 py-2 text-base font-medium text-white hover:bg-white/10 cursor-pointer transition-all duration-300 ${active ? 'nav-active' : ''}`}>
+                    Products
+                  </button>
+                  <div className="mxr-service-dropdown">
+                    {products.map(([label, slug]) => (
+                      <a href={`/${slug}`} key={slug} className={pathname === `/${slug}` || pathname.startsWith(`/${slug}/`) ? 'nav-item-active' : ''}>{label}</a>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            )
-            if (link.label === 'Services') return (
-              <div className="mxr-service-nav" key="Services">
-                <button type="button" className="rounded-full border-0 bg-transparent px-4 py-2 text-sm font-medium text-white hover:bg-white/10 cursor-pointer">
-                  Services
-                </button>
-                <div className="mxr-service-dropdown">
-                  {services.map(s => (
-                    <a href={`/${s.slug}`} key={s.slug}>{s.title}</a>
-                  ))}
+              )
+            }
+            if (link.label === 'Services') {
+              const active = isServicesActive()
+              return (
+                <div className="mxr-service-nav" key="Services">
+                  <button type="button" className={`rounded-full border-0 px-4 py-2 text-base font-medium text-white hover:bg-white/10 cursor-pointer transition-all duration-300 ${active ? 'nav-active' : ''}`}>
+                    Services
+                  </button>
+                  <div className="mxr-service-dropdown">
+                    {services.map(s => (
+                      <a href={`/${s.slug}`} key={s.slug} className={pathname === `/${s.slug}` || pathname.startsWith(`/${s.slug}/`) ? 'nav-item-active' : ''}>{s.title}</a>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            )
+              )
+            }
+            if (link.label === 'Resources') {
+              const active = isResourcesActive()
+              return (
+                <div className="mxr-service-nav" key="Resources">
+                  <button type="button" className={`rounded-full border-0 px-4 py-2 text-base font-medium text-white hover:bg-white/10 cursor-pointer transition-all duration-300 ${active ? 'nav-active' : ''}`}>
+                    Resources
+                  </button>
+                  <div className="mxr-service-dropdown">
+                    {resources.map(r => (
+                      <a href={`/${r.slug}`} key={r.slug} className={pathname === `/${r.slug}` || pathname.startsWith(`/${r.slug}/`) ? 'nav-item-active' : ''}>{r.title}</a>
+                    ))}
+                  </div>
+                </div>
+              )
+            }
+            const active = isLinkActive(link.href)
             return (
               <a
                 key={link.label}
                 href={link.href}
-                className="rounded-full px-4 py-2 text-sm font-medium text-white transition-all duration-300 hover:bg-white/10"
+                className={`rounded-full px-4 py-2 text-base font-medium text-white transition-all duration-300 hover:bg-white/10 ${active ? 'bg-white/20' : ''}`}
               >
                 {link.label}
               </a>
@@ -109,28 +150,46 @@ export function NavBar({ overlay = false }: NavBarProps) {
             transition={{ duration: 0.22 }}
           >
             {navLinks.map((link) => {
-              if (link.label === 'Products') return (
-                <details className="mxr-mobile-services" key="Products">
-                  <summary>Products</summary>
-                  {products.map(([label, slug]) => (
-                    <a href={`/${slug}`} key={slug}>{label}</a>
-                  ))}
-                </details>
-              )
-              if (link.label === 'Services') return (
-                <details className="mxr-mobile-services" key="Services">
-                  <summary>Services</summary>
-                  {services.map(s => (
-                    <a href={`/${s.slug}`} key={s.slug}>{s.title}</a>
-                  ))}
-                </details>
-              )
+              if (link.label === 'Products') {
+                const active = isProductsActive()
+                return (
+                  <details className="mxr-mobile-services" key="Products" open={active || undefined}>
+                    <summary className={active ? 'nav-item-active' : ''}>Products</summary>
+                    {products.map(([label, slug]) => (
+                      <a href={`/${slug}`} key={slug} className={pathname === `/${slug}` || pathname.startsWith(`/${slug}/`) ? 'nav-item-active' : ''}>{label}</a>
+                    ))}
+                  </details>
+                )
+              }
+              if (link.label === 'Services') {
+                const active = isServicesActive()
+                return (
+                  <details className="mxr-mobile-services" key="Services" open={active || undefined}>
+                    <summary className={active ? 'nav-item-active' : ''}>Services</summary>
+                    {services.map(s => (
+                      <a href={`/${s.slug}`} key={s.slug} className={pathname === `/${s.slug}` || pathname.startsWith(`/${s.slug}/`) ? 'nav-item-active' : ''}>{s.title}</a>
+                    ))}
+                  </details>
+                )
+              }
+              if (link.label === 'Resources') {
+                const active = isResourcesActive()
+                return (
+                  <details className="mxr-mobile-services" key="Resources" open={active || undefined}>
+                    <summary className={active ? 'nav-item-active' : ''}>Resources</summary>
+                    {resources.map(r => (
+                      <a href={`/${r.slug}`} key={r.slug} className={pathname === `/${r.slug}` || pathname.startsWith(`/${r.slug}/`) ? 'nav-item-active' : ''}>{r.title}</a>
+                    ))}
+                  </details>
+                )
+              }
+              const active = isLinkActive(link.href)
               return (
                 <a
                   key={link.label}
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className="block rounded-2xl px-4 py-3 text-sm font-medium text-white transition hover:bg-white/10"
+                  className={`block rounded-2xl px-4 py-3 text-sm font-medium text-white transition hover:bg-white/10 ${active ? 'bg-white/10' : ''}`}
                 >
                   {link.label}
                 </a>

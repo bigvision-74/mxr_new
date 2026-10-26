@@ -1,0 +1,314 @@
+/* ── Blog Detail Banner — smaller title than default banner-title scale ── */
+.blog-detail-banner-title {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  font-size: clamp(1.2rem, 2vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -.02em;
+  color: #fff;
+  margin: 0 0 18px;
+}
+
+/* ── Blog Listing Page ──────────────────────────────────────────── */
+
+/* Pills row under the banner lead — reuses contact-banner structure */
+.blog-page .contact-banner h1 em {
+  font-style: normal;
+  color: #3ea0ff;
+}
+
+.blog-banner-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.blog-banner-pills span {
+  padding: 6px 16px;
+  border: 1px solid #2f8be8;
+  border-radius: 999px;
+  background: rgba(10, 50, 100, .4);
+  color: #8fcbff;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+/* ── Blog Grid Section ──────────────────────────────────────────── */
+.blog-grid-section {
+  padding: 72px var(--page-gutter) 100px;
+  background: #f4f8fd;
+}
+
+.blog-grid-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 44px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.blog-grid-header h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #10263d;
+  letter-spacing: -.02em;
+}
+
+.blog-count {
+  font-size: .82rem;
+  color: #7a96b0;
+  font-weight: 500;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+@media (max-width: 1024px) {
+  .blog-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .blog-grid { grid-template-columns: 1fr; gap: 20px; }
+}
+
+/* ── Blog Card ───────────────────────────────────────────────────── */
+.blog-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 14px rgba(16, 38, 61, .07), 0 1px 3px rgba(16, 38, 61, .04);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(212, 227, 240, .6);
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 44px rgba(11, 95, 208, .14), 0 2px 8px rgba(16, 38, 61, .07);
+  border-color: rgba(22, 132, 232, .3);
+}
+
+.blog-card-img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #d0e5f5;
+  flex-shrink: 0;
+  display: block;
+}
+
+.blog-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s ease;
+}
+
+.blog-card:hover .blog-card-img img {
+  transform: scale(1.05);
+}
+
+.blog-card-body {
+  padding: 24px 24px 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0;
+}
+
+.blog-card-date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .72rem;
+  font-weight: 700;
+  color: #1684e8;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.blog-card-title {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #10263d;
+  line-height: 1.42;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blog-card-desc {
+  font-size: .875rem;
+  color: #4a6278;
+  line-height: 1.65;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 22px;
+}
+
+/* The read-more pill uses the global .btn .btn-primary from buttons.css,
+   but scoped inside the card so it sits at the bottom */
+.blog-card-body .btn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+/* ── Blog Detail Page ───────────────────────────────────────────── */
+
+/* Meta row (date + author) shown below the lead in the shared contact-banner */
+.blog-detail-meta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.blog-detail-meta span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: .82rem;
+  color: rgba(255, 255, 255, .62);
+  font-weight: 500;
+}
+
+.blog-detail-meta svg {
+  color: #3ea0ff;
+}
+
+/* ── Blog Detail Body ───────────────────────────────────────────── */
+.blog-detail-body-wrap {
+  background: #f4f8fd;
+  padding: 56px var(--page-gutter) 96px;
+}
+
+.blog-detail-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.blog-detail-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .82rem;
+  font-weight: 600;
+  color: #1684e8;
+  text-decoration: none;
+  margin-bottom: 32px;
+  padding: 9px 18px;
+  background: #fff;
+  border-radius: 999px;
+  border: 1px solid #d4e3f0;
+  transition: background .15s, border-color .15s;
+}
+
+.blog-detail-back:hover {
+  background: #eef5fd;
+  border-color: #1684e8;
+}
+
+.blog-detail-content {
+  background: #fff;
+  border-radius: 22px;
+  padding: clamp(32px, 4vw, 60px) clamp(24px, 3.5vw, 56px);
+  box-shadow: 0 3px 20px rgba(16, 38, 61, .07), 0 1px 4px rgba(16, 38, 61, .04);
+  border: 1px solid rgba(212, 227, 240, .5);
+}
+
+.blog-detail-content p {
+  font-size: 1.02rem;
+  color: #2c3e55;
+  line-height: 1.82;
+  margin-bottom: 20px;
+}
+
+.blog-detail-content h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #10263d;
+  letter-spacing: -.02em;
+  margin: 40px 0 14px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #eef5fd;
+}
+
+.blog-detail-content h2:first-child { margin-top: 0; }
+
+.blog-detail-content ul {
+  margin: 0 0 22px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.blog-detail-content ul li {
+  font-size: .97rem;
+  color: #2c3e55;
+  line-height: 1.72;
+  padding: 12px 18px;
+  background: #f4f8fd;
+  border-radius: 10px;
+  border-left: 3px solid #1684e8;
+}
+
+.blog-detail-content img.para-img {
+  width: 100%;
+  border-radius: 14px;
+  margin: 28px 0;
+  object-fit: cover;
+}
+
+.blog-detail-content a {
+  color: #1684e8;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(22, 132, 232, .35);
+  text-underline-offset: 3px;
+  transition: color .15s, text-decoration-color .15s;
+}
+
+.blog-detail-content a:hover {
+  color: #0b5fd0;
+  text-decoration-color: #0b5fd0;
+}
+
+/* ── Not Found ───────────────────────────────────────────────────── */
+.blog-not-found {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+  padding: 80px var(--page-gutter);
+}
+
+.blog-not-found h2 {
+  font-size: 1.9rem;
+  color: #10263d;
+  font-weight: 700;
+  letter-spacing: -.03em;
+}
+
+.blog-not-found p {
+  color: #4a6278;
+  font-size: 1rem;
+}

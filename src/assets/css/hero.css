@@ -1929,6 +1929,21 @@
   background: transparent
 }
 
+.mxr-service-dropdown a.nav-item-active {
+  background: #ffffff22;
+  color: #fff
+}
+
+.mxr-mobile-services summary.nav-item-active {
+  color: #fff;
+  font-weight: 600
+}
+
+.mxr-mobile-services a.nav-item-active {
+  color: #fff;
+  font-weight: 500
+}
+
 .mxr-mobile-services {
   padding: 12px 16px;
   color: #fff;

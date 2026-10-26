@@ -6,6 +6,7 @@
 /* Native browser button backgrounds and global link rules must not obscure hero navigation. */
 .mxr-hero-nav button{background:transparent;border:0;color:rgba(255,255,255,.88);font:inherit;cursor:pointer}
 .mxr-hero-nav button:hover{background:rgba(255,255,255,.1);color:white}
+.mxr-hero-nav button.nav-active{background:rgba(255,255,255,.2)!important;color:#fff!important}
 .mxr-immersive-hero .mxr-hero-contact{color:#10263d;background:#fff}
 .mxr-immersive-hero .mxr-hero-contact:hover{color:#10263d;background:var(--color-light)}
 .mxr-hero-contact svg{color:currentColor}
