@@ -76,10 +76,10 @@ export function Footer() { return (
         {`© ${new Date().getFullYear()} MXR / Meta Extended Reality. All rights reserved.`}
       </span>
       <div>
-        <a href={"#"}>
-          {"Privacy"}
+        <a href={"/policies"}>
+          {"Policies"}
         </a>
-        <a href={"#"}>
+        <a href={"/terms-and-conditions"}>
           {"Terms"}
         </a>
         <a href={"#"}>

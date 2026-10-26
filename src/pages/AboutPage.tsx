@@ -1,23 +1,65 @@
-﻿import type { CSSProperties } from 'react'
+﻿import { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
+import type { CSSProperties, MouseEvent } from 'react'
+import heroVideo from '../assets/videos/banner/about_HV3_grok_take001.mp4'
+import heroWireVideo from '../assets/videos/banner/about_HV3_wireframe_take002.mp4'
 import aboutValues from '../assets/images/about/about-values.webp'
 import aboutHero from '../assets/images/about/about-hero.webp'
 
+// Wireframe video is revealed through a circular lens that follows the pointer.
+const moveLens = (e: MouseEvent<HTMLElement>) => {
+  const el = e.currentTarget
+  const r = el.getBoundingClientRect()
+  el.style.setProperty('--mx', `${e.clientX - r.left}px`)
+  el.style.setProperty('--my', `${e.clientY - r.top}px`)
+}
+
 export default function AboutPage() {
+  const baseRef = useRef<HTMLVideoElement>(null)
+  const wireRef = useRef<HTMLVideoElement>(null)
+
+  // The two hero videos are layered, so they must loop together. Native `loop` restarts each one on its own
+  // (their lengths differ slightly), which lets the wireframe drift out of step. Restart both when either ends.
+  useEffect(() => {
+    const base = baseRef.current, wire = wireRef.current
+    if (!base || !wire) return
+    const restart = () => { base.currentTime = 0; wire.currentTime = 0; void base.play(); void wire.play() }
+    const resync = () => { if (Math.abs(base.currentTime - wire.currentTime) > 0.15) wire.currentTime = base.currentTime }
+    base.addEventListener('ended', restart)
+    wire.addEventListener('ended', restart)
+    base.addEventListener('timeupdate', resync)
+    return () => {
+      base.removeEventListener('ended', restart)
+      wire.removeEventListener('ended', restart)
+      base.removeEventListener('timeupdate', resync)
+    }
+  }, [])
+
   return (
   <main className={"about-page"}>
-    <section className={"about-hero"}>
+    <section className={"about-hero about-hero--lens"} onMouseMove={moveLens}>
       <video
+        ref={baseRef}
         className="about-hero-video"
         autoPlay
-        loop
         muted
         playsInline
-        preload="metadata"
+        preload="auto"
         poster={aboutHero}
         aria-hidden="true"
-      >
-        <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_105406_16f4600d-7a92-4292-b96e-b19156c7830a.mp4" type="video/mp4" />
-      </video>
+        src={heroVideo}
+      />
+      <video
+        ref={wireRef}
+        className="about-hero-video about-hero-video--wire"
+        autoPlay
+        muted
+        playsInline
+        preload="auto"
+        aria-hidden="true"
+        src={heroWireVideo}
+      />
+      <span className="about-hero-lens" aria-hidden="true" />
       <div className={"about-hero-overlay"}>
 
       </div>

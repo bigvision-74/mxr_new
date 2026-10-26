@@ -49,8 +49,8 @@ export function ImmersiveHero() {
           />
         </video>
 
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.76)_0%,rgba(0,0,0,.22)_32%,rgba(0,0,0,.28)_60%,rgba(0,0,0,.92)_100%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,.44),transparent_55%,rgba(0,0,0,.18))]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.55)_0%,rgba(0,0,0,.08)_32%,rgba(0,0,0,.14)_60%,rgba(0,0,0,.8)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,.3),transparent_55%,rgba(0,0,0,.08))]" />
         <div className="mxr-immersive-hero__grid absolute inset-0 opacity-40" />
         <div className="absolute -left-36 top-1/3 h-96 w-96 rounded-full bg-[#0B66C3]/20 blur-[120px]" />
       </div>

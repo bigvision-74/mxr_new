@@ -4,6 +4,8 @@ import { EpriumJourney } from '../components/EpriumJourney'
 import { EpriumDebrief } from '../components/EpriumDebrief'
 import { EpriumAudiences } from '../components/EpriumAudiences'
 import { EpriumOutcomes } from '../components/EpriumOutcomes'
+import { EpriumCapabilities } from "../components/EpriumCapabilities"
+import { EpriumFaculty } from "../components/EpriumFaculty"
 import clinicalLearning from '../assets/images/eprium/clinical-learning.jpg'
 import clinicalPractice from '../assets/images/eprium/clinical-practice.jpg'
 
@@ -141,107 +143,8 @@ export default function EpriumPage() {
     <EpriumDebrief />
     <EpriumAudiences />
     <EpriumOutcomes />
-    <section className={"ep-journey"} id={"epr-experience"}>
-      <div className={"ep-wrap"}>
-        <div className={"ep-section-heading"}>
-          <div>
-            <p className={"eyebrow"}>
-              {"THE LEARNING EXPERIENCE"}
-            </p>
-            <h2>
-              {"Build confidence."}
-              <br />
-              <span>
-                {"One encounter at a time."}
-              </span>
-            </h2>
-          </div>
-          <p>
-            {"A simple rhythm for purposeful practice,"}
-            <br />
-            {"facilitated reflection and repeat learning."}
-          </p>
-        </div>
-        <div className={"ep-journey-grid"}>
-          <figure>
-            <img src={clinicalLearning} alt={"Clinical documentation on a laptop beside a stethoscope"} loading={"lazy"} />
-            <figcaption>
-              {"Digital confidence."}
-              <br />
-              {"Clinical readiness."}
-            </figcaption>
-            <span>
-              {"LEARN / PRACTISE / REFLECT"}
-            </span>
-          </figure>
-          <div className={"ep-journey-steps"}>
-            <article>
-              <span>
-                {"01"}
-              </span>
-              <div>
-                <small>
-                  {"PREPARE"}
-                </small>
-                <h3>
-                  {"Set the scenario."}
-                </h3>
-                <p>
-                  {"Introduce the patient and agree the learning goals."}
-                </p>
-              </div>
-              <svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.5"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}>
-                <path d={"M4 12h16m-6-6 6 6-6 6"}>
-
-                </path>
-              </svg>
-            </article>
-            <article>
-              <span>
-                {"02"}
-              </span>
-              <div>
-                <small>
-                  {"PRACTISE"}
-                </small>
-                <h3>
-                  {"Connect the encounter."}
-                </h3>
-                <p>
-                  {"Work through patient information, decisions and the clinical record."}
-                </p>
-              </div>
-              <svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.5"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}>
-                <path d={"M4 12h16m-6-6 6 6-6 6"}>
-
-                </path>
-              </svg>
-            </article>
-            <article>
-              <span>
-                {"03"}
-              </span>
-              <div>
-                <small>
-                  {"REFLECT"}
-                </small>
-                <h3>
-                  {"Turn insight into progress."}
-                </h3>
-                <p>
-                  {"Discuss the approach, identify learning needs and repeat."}
-                </p>
-              </div>
-              <svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.5"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}>
-                <path d={"M4 12h16m-6-6 6 6-6 6"}>
-
-                </path>
-              </svg>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
+    <EpriumCapabilities />
+    <EpriumFaculty />
     <section className={"ep-audience ep-wrap"}>
       <p className={"eyebrow"}>
         {"DESIGNED FOR HEALTHCARE EDUCATION"}

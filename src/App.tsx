@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { NavBar } from './components/NavBar'
 import { Footer } from './components/Footer'
-import { StyleSwitcher } from './components/StyleSwitcher'
 import { pages } from './page-manifest'
 
 export default function App() {
@@ -18,6 +17,5 @@ export default function App() {
     {filename !== 'index.html' && <NavBar />}
     <Component />
     <Footer />
-    <StyleSwitcher />
   </div>
 }

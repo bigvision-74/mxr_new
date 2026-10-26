@@ -1265,3 +1265,404 @@
     grid-template-columns: 1fr
   }
 }
+/* Eprium — Intelligent capabilities */
+.epc {
+  background: radial-gradient(ellipse at 20% 40%, rgba(22, 132, 232, .14), transparent 55%), var(--color-dark);
+  color: #fff;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  padding: 64px 8vw 72px
+}
+
+.epc-top {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 3vw;
+  align-items: center;
+  margin-bottom: 20px
+}
+
+.epc-eyebrow {
+  margin: 0 0 22px;
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+  color: #64b7ff
+}
+
+.epc-head h2 {
+  margin: 0 0 26px;
+  max-width: 680px;
+  font-size: clamp(2.2rem, 3.6vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -.045em;
+  color: #fff
+}
+
+.epc-head>p:not(.epc-eyebrow) {
+  margin: 0;
+  max-width: 560px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #aabac8
+}
+
+/* the artwork has transparent padding, so pull it in to tighten the gap above the cards */
+.epc-laptop {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-block: -9% -7%
+}
+
+.epc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px
+}
+
+.epc-grid article {
+  padding: 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, .12);
+  background: rgba(255, 255, 255, .04);
+  transition: .25s
+}
+
+.epc-grid article:hover {
+  transform: translateY(-4px);
+  border-color: rgba(100, 183, 255, .45);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, .3)
+}
+
+.epc-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  color: #fff;
+  background: linear-gradient(145deg, #2a7de1, #1ec0b0)
+}
+
+.epc .epc-grid h3 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -.01em;
+  color: #fff
+}
+
+.epc .epc-grid .epc-sub {
+  margin: 0 0 18px;
+  font-size: .8rem;
+  font-weight: 600;
+  color: #64b7ff
+}
+
+.epc .epc-grid ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 9px
+}
+
+.epc-grid li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: .93rem;
+  line-height: 1.5;
+  color: #aabac8
+}
+
+.epc-grid li svg {
+  flex: 0 0 14px;
+  color: #2ec4c0
+}
+
+@media(max-width:1100px) {
+  .epc-grid {
+    grid-template-columns: repeat(2, 1fr)
+  }
+}
+
+@media(max-width:900px) {
+  .epc {
+    padding: 52px 6vw
+  }
+
+  .epc-top {
+    grid-template-columns: 1fr;
+    gap: 28px
+  }
+}
+
+@media(max-width:620px) {
+  .epc-grid {
+    grid-template-columns: 1fr
+  }
+}
+
+/* Eprium — For faculty (no background of its own; shows the page background) */
+.epf {
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1fr);
+  gap: 5vw;
+  align-items: center;
+  padding: 80px 8vw 90px;
+  color: var(--color-dark);
+  font-family: Inter, "Segoe UI", Arial, sans-serif
+}
+
+.epf-figure {
+  margin: 0;
+  border-radius: 24px;
+  overflow: hidden
+}
+
+.epf-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: 68% 50%
+}
+
+.epf-eyebrow {
+  margin: 0 0 22px;
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+  color: #0b66c3
+}
+
+.epf .epf-copy h2 {
+  margin: 0 0 26px;
+  max-width: 520px;
+  font-size: clamp(2.2rem, 3.6vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -.045em;
+  color: var(--color-dark)
+}
+
+.epf .epf-lead {
+  margin: 0 0 36px;
+  max-width: 560px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #56707f
+}
+
+.epf ul {
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+.epf li {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 22px 0;
+  border-top: 1px solid #dbe5ef
+}
+
+.epf li:first-child {
+  border-top: 0;
+  padding-top: 0
+}
+
+.epf-icon {
+  flex: 0 0 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  color: #0b66c3;
+  border: 1px solid #dbe5ef;
+  background: #fff
+}
+
+.epf .epf-copy h3 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  color: var(--color-dark)
+}
+
+.epf .epf-copy li p {
+  margin: 0;
+  font-size: .95rem;
+  line-height: 1.55;
+  color: #56707f
+}
+
+@media(max-width:900px) {
+  .epf {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 52px 6vw 60px
+  }
+}
+
+/* Eprium — closing sections (light theme, same type as the other sections) */
+.ep-page .ep-audience.ep-wrap {
+  background: var(--color-light);
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  padding-block: 64px 8px;
+  text-align: center
+}
+
+.ep-page .ep-audience .eyebrow,
+.ep-page .ep-cta .eyebrow {
+  margin: 0 0 18px;
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+  color: #0b66c3
+}
+
+.ep-page .ep-audience>div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  border-top: 0;
+  padding-top: 6px
+}
+
+.ep-page .ep-audience span {
+  padding: 11px 24px;
+  border-radius: 999px;
+  border: 1px solid #dbe5ef;
+  background: #fff;
+  font-size: .95rem;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  color: var(--color-dark);
+  transition: .25s
+}
+
+.ep-page .ep-audience span:hover {
+  border-color: #91bde6;
+  color: #0b66c3;
+  transform: translateY(-2px)
+}
+
+/* CTA: one contained card instead of a full-bleed tinted band */
+.ep-page .ep-cta {
+  background: var(--color-light);
+  border-top: 0;
+  padding: 36px var(--page-gutter, 3vw) 80px;
+  font-family: Inter, "Segoe UI", Arial, sans-serif
+}
+
+.ep-page .ep-cta>.ep-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 540px);
+  gap: 72px;
+  align-items: center;
+  width: 100%;
+  max-width: 1360px;
+  margin-inline: auto;
+  padding: 60px 72px;
+  border-radius: 28px;
+  border: 1px solid #dbe5ef;
+  background: radial-gradient(ellipse at 100% 0, rgba(11, 102, 195, .1), transparent 55%), #fff;
+  box-shadow: 0 24px 60px rgba(13, 24, 38, .08), 0 2px 6px rgba(13, 24, 38, .04)
+}
+
+.ep-page .ep-cta h2 {
+  font-size: clamp(2.2rem, 3.6vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -.045em;
+  color: var(--color-dark)
+}
+
+.ep-page .ep-cta h2 span {
+  color: #0b66c3
+}
+
+.ep-page .ep-cta h2+p {
+  max-width: 620px;
+  margin: 22px 0 32px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #56707f
+}
+
+.ep-page .ep-cta .ep-button {
+  padding: 16px 26px;
+  font-size: .95rem;
+  font-weight: 700;
+  background: #0b66c3
+}
+
+.ep-page .ep-cta .ep-button:hover {
+  background: #1684e8;
+  box-shadow: 0 10px 24px rgba(22, 132, 232, .3)
+}
+
+.ep-page .ep-cta-visual {
+  align-items: stretch;
+  max-width: 540px;
+  width: 100%;
+  justify-self: end;
+  padding: 0
+}
+
+.ep-page .ep-cta-visual>div {
+  width: 100%;
+  gap: 18px;
+  padding: 20px 24px;
+  border-radius: 16px;
+  border: 1px solid #dbe5ef;
+  background: var(--color-light);
+  box-shadow: none;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  color: var(--color-dark)
+}
+
+.ep-page .ep-cta-visual>div:nth-of-type(2) {
+  transform: none
+}
+
+.ep-page .ep-cta-visual>div>svg {
+  box-sizing: content-box;
+  width: 22px;
+  height: 22px;
+  padding: 11px;
+  border-radius: 12px;
+  color: #fff;
+  background: linear-gradient(145deg, #2aa0f5, #0b66c3)
+}
+
+.ep-page .ep-cta-visual i {
+  height: 18px;
+  margin-left: 40px;
+  background: linear-gradient(#0b66c3, #64b7ff);
+  opacity: .5
+}
+
+@media(max-width:900px) {
+  .ep-page .ep-cta>.ep-wrap {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 40px 28px
+  }
+
+  .ep-page .ep-cta-visual {
+    justify-self: stretch;
+    max-width: none
+  }
+}
