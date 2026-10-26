@@ -22,8 +22,8 @@ export function NavBar({ overlay = false }: NavBarProps) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const wrapperClass = overlay
-    ? 'relative z-30 flex flex-col px-[8vw]'
-    : 'absolute inset-x-0 top-0 z-50 flex w-full flex-col px-[8vw] bg-[linear-gradient(180deg,rgba(0,0,0,.62),transparent)]'
+    ? 'relative z-30 flex flex-col site-page-gutter'
+    : 'absolute inset-x-0 top-0 z-50 flex w-full flex-col site-page-gutter bg-[linear-gradient(180deg,rgba(0,0,0,.62),transparent)]'
 
   const innerClass = 'mxr-hero-nav flex h-24 items-center justify-between gap-6'
 

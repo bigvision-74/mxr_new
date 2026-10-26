@@ -10,5 +10,6 @@ import './assets/css/interactions.css'
 import './assets/css/contact.css'
 import './assets/css/journey.css'
 import './assets/css/banner.css'
+import './assets/css/layout.css'
 
 createRoot(document.getElementById('root')!).render(<App />)

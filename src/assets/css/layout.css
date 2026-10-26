@@ -1,0 +1,92 @@
+/* Full-width layout. Content grids grow with the viewport; prose keeps its reading width. */
+:root {
+  --page-gutter: clamp(20px, 3vw, 64px);
+}
+
+html,
+body,
+#root,
+.mxr-react-page {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+}
+
+/* Shared alignment for full-width sections, header, hero and footer. */
+.mxr-react-page :is(
+  .section, .industries, .impact, .modal-showcase, .final-cta, footer,
+  .case-facts, .case-challenge, .case-delivery, .case-note,
+  .detail-intro, .capability-section, .related-product, .product-summary,
+  .feature-band, .benefit-strip, .outcomes, .experience-section,
+  .about-capabilities, .about-direction, .purpose-alternative,
+  .pp-hero, .pp-benefits, .pp-features, .pp-experience, .pp-audience, .pp-cta,
+  .service-deliver, .service-outcome, .service-steps, .service-related,
+  .drive-problem, .drive-evidence, .drive-deployment,
+  .ix-hero, .ix-capabilities, .ix-intelligence, .ix-value,
+  .ix-sales-hero, .ix-sales-benefits, .ix-sales-capabilities, .ix-sales-fit, .ix-sales-cta,
+  .contact-banner, .contact-main,
+  .epj, .epd, .epa, .epo, .epr-gap,
+  .ep2-workflow-inner, .ep2-hero-inner,
+  .dx-wrap, .dx-hero-copy, .dx-intro, .dx-industry,
+  .dx-solution-overlay-content, .dx-solution-steps,
+  .ep-wrap, .ep-hero-inner,
+  .dx-page.dx2 .dx-wrap,
+  .dx-page.dx2 .dx-solution-overlay-content,
+  .dx-page.dx2 .dx-solution-steps
+) {
+  padding-inline: var(--page-gutter);
+}
+
+/* Remove fixed desktop container caps without stretching individual text blocks. */
+.mxr-react-page :is(
+  .dx-wrap, .dx-hero-copy, .dx-intro-copy, .dx-intro-figure,
+  .dx-industry-grid, .dx-solution-overlay-content, .dx-solution-steps,
+  .ep-wrap, .ep-hero-inner, .ep2-hero-inner, .ep2-workflow-inner,
+  .about-direction-grid,
+  .dx-page.dx2 .dx-wrap
+) {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  min-width: 0;
+}
+
+/* Split heroes and image blends retain their columns and use the same outside edge. */
+.mxr-react-page :is(.detail-hero-copy, .product-hero-copy, .hero-copy, .case-hero-copy,
+  .epr-hero-copy, .dx-solution-copy, .dx-case-copy,
+  .service-detail-hero > div:first-child) {
+  padding-inline: var(--page-gutter);
+}
+
+.mxr-react-page .mxr-purpose-copy {
+  padding-left: var(--page-gutter);
+}
+
+.mxr-react-page .mxr-purpose-mission .mxr-purpose-copy {
+  padding-left: 0;
+  padding-right: var(--page-gutter);
+}
+
+.site-page-gutter {
+  padding-inline: var(--page-gutter);
+}
+
+@media (max-width: 850px) {
+  :root {
+    --page-gutter: clamp(18px, 4vw, 32px);
+  }
+
+  .mxr-react-page .mxr-purpose-mission .mxr-purpose-copy {
+    padding-inline: var(--page-gutter);
+  }
+}
+
+.mxr-react-page :is(.product-slider-controls, .dx-caption) {
+  right: var(--page-gutter);
+}
+
+@media (max-width: 850px) {
+  .mxr-react-page .mxr-purpose-copy {
+    padding-inline: var(--page-gutter);
+  }
+}

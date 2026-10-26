@@ -59,7 +59,7 @@ export function ImmersiveHero() {
       <NavBar overlay />
 
       {/* Hero copy */}
-      <div className="relative z-10 flex flex-col px-[8vw] pb-10">
+      <div className="relative z-10 flex flex-col site-page-gutter pb-10">
         <div className="border-t border-white/15 pt-[2.5vh] sm:pt-[3.5vh] lg:pt-[4.5vh]">
           <motion.h1
             className="banner-title max-w-6xl text-5xl font-medium leading-[.85] tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
