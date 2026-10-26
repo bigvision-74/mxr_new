@@ -1,6 +1,16 @@
-import type { FormEvent, ReactNode } from 'react'
-import { Phone, Mail, MapPin, ArrowRight, User, Building2, Briefcase, Globe, MessageSquare, Send } from 'lucide-react'
+import { useEffect } from 'react'
+import { Phone, Mail, MapPin, ArrowRight, Send } from 'lucide-react'
 import bannerImg from '../assets/images/about/about-hero.webp'
+
+declare global {
+  interface Window {
+    hbspt?: {
+      forms: {
+        create: (opts: { region: string; portalId: string; formId: string; target: string }) => void
+      }
+    }
+  }
+}
 
 const channels = [
   { icon: Phone, label: 'Call Us', value: '+44 7393 173361', href: 'tel:+447393173361', note: 'Speak directly with our team.' },
@@ -8,32 +18,31 @@ const channels = [
   { icon: MapPin, label: 'Our Location', value: 'United Kingdom', href: '', note: 'Global support for your training and simulation needs.' },
 ]
 
-const sectors = ['Defence & Security', 'Healthcare', 'Education', 'Emergency Services', 'Enterprise', 'Government', 'Other']
+function HubSpotForm() {
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.src = '//js-eu1.hsforms.net/forms/embed/v2.js'
+    script.charset = 'utf-8'
+    script.type = 'text/javascript'
+    document.body.appendChild(script)
 
-function sendEnquiry(e: FormEvent<HTMLFormElement>) {
-  e.preventDefault()
-  const d = new FormData(e.currentTarget)
-  const v = (k: string) => String(d.get(k) || '').trim()
-  const body = [
-    `Name: ${v('first')} ${v('last')}`,
-    `Company: ${v('company')}`,
-    `Sector: ${v('sector')}`,
-    `Website: ${v('website')}`,
-    `Phone: ${v('phone')}`,
-    `Email: ${v('email')}`,
-    '',
-    v('message'),
-  ].join('\n')
-  window.location.href = `mailto:team@mxr.ai?subject=${encodeURIComponent('Website enquiry from ' + (v('company') || v('first')))}&body=${encodeURIComponent(body)}`
-}
+    script.onload = () => {
+      if (window.hbspt) {
+        window.hbspt.forms.create({
+          region: 'eu1',
+          portalId: '143987629',
+          formId: 'd03567c0-89e4-4528-80ac-39e94d53dc76',
+          target: '#hubspotForm',
+        })
+      }
+    }
 
-function Field({ icon: Icon, label, children, full }: { icon: typeof User; label: string; children: ReactNode; full?: boolean }) {
-  return (
-    <label className={full ? 'full' : undefined}>
-      <span>{label}</span>
-      <span className="cf-input"><Icon aria-hidden="true" size={17} />{children}</span>
-    </label>
-  )
+    return () => {
+      document.body.removeChild(script)
+    }
+  }, [])
+
+  return <div id="hubspotForm" />
 }
 
 export default function ContactPage() {
@@ -66,26 +75,13 @@ export default function ContactPage() {
           })}
         </div>
       </aside>
-      <form className="contact-form" onSubmit={sendEnquiry}>
+      <div className="contact-form">
         <div className="cf-head">
           <span className="cf-head-icon"><Send aria-hidden="true" size={22} /></span>
-          <div><h3>Send us a message</h3><p>Fields marked * are required.</p></div>
+          <div><h3>Send us a message</h3><p>Our team will get back to you within 24 hours.</p></div>
         </div>
-        <Field icon={User} label="First Name *"><input name="first" required placeholder="Enter your first name" autoComplete="given-name" /></Field>
-        <Field icon={User} label="Last Name *"><input name="last" required placeholder="Enter your last name" autoComplete="family-name" /></Field>
-        <Field icon={Mail} label="Work Email *"><input name="email" type="email" required placeholder="you@company.com" autoComplete="email" /></Field>
-        <Field icon={Building2} label="Company Name"><input name="company" placeholder="Your company name" autoComplete="organization" /></Field>
-        <Field icon={Briefcase} label="Company Sector">
-          <select name="sector" defaultValue="">
-            <option value="" disabled>Select a sector</option>
-            {sectors.map((s) => <option key={s}>{s}</option>)}
-          </select>
-        </Field>
-        <Field icon={Phone} label="Phone Number"><input name="phone" type="tel" placeholder="+44 123 456 7890" autoComplete="tel" /></Field>
-        <Field icon={Globe} label="Company Website" full><input name="website" type="url" placeholder="https://" autoComplete="url" /></Field>
-        <Field icon={MessageSquare} label="Message *" full><textarea name="message" required rows={4} placeholder="Tell us about your project, requirements or any questions you have..." /></Field>
-        <button className="btn btn-primary full" type="submit"><Send aria-hidden="true" size={16} /> Send message →</button>
-      </form>
+        <HubSpotForm />
+      </div>
     </section>
   </main>
   )
