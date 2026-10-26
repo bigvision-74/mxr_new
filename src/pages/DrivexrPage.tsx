@@ -1,4 +1,4 @@
-﻿import type { CSSProperties } from 'react'
+import type { CSSProperties } from 'react'
 import brochureResponse from '../assets/images/drivexr/brochure-response.webp'
 import brochureInstructors from '../assets/images/drivexr/brochure-instructors.webp'
 import brochureTraining from '../assets/images/drivexr/brochure-training.webp'
@@ -416,6 +416,9 @@ export default function DrivexrPage() {
       <div className={"button-row"}>
         <a className={"btn btn-primary"} href={"mailto:hello@mxr.ai?subject=DriveXR%202%20demonstration"}>
           {"Book a demonstration →"}
+        </a>
+        <a className={"btn btn-secondary"} href={"/contact"}>
+          {"Start a Conversation"}
         </a>
       </div>
     </section>

@@ -63,7 +63,7 @@ export default function AboutPage() {
         </div>
         <div className={"about-story-copy reveal visible"}>
           <p className={"about-large"}>
-            {"MXR was founded with a belief that technology should make complex learning, training and operations more effective—not more complicated."}
+            {"MXR was founded with a belief that technology should make complex learning, training and operations more effective,not more complicated."}
           </p>
           <div className={"about-copy-columns"}>
             <p>
@@ -75,66 +75,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      <section className={"mxr-purpose mxr-purpose-vision"} aria-labelledby={"vision-heading"}>
-        <div className={"mxr-purpose-image"}>
-          <img src={aboutValues} alt={"Immersive technology helping people build practical skills"} loading={"lazy"} />
-        </div>
-        <div className={"mxr-purpose-copy reveal visible"}>
-          <p className={"eyebrow"}>
-            {"01 / OUR VISION"}
-          </p>
-          <h2 id={"vision-heading"}>
-            {"A future where technology extends "}
-            <span>
-              {"human potential."}
-            </span>
-          </h2>
-          <p>
-            {"We see immersive and intelligent technology strengthening how people learn, perform and make decisions, creating safer, smarter and more capable organisations."}
-          </p>
-          <div className={"mxr-purpose-outcomes"}>
-            <span>
-              {"Better learning"}
-            </span>
-            <span>
-              {"Stronger performance"}
-            </span>
-            <span>
-              {"Lasting impact"}
-            </span>
-          </div>
-        </div>
-      </section>
-      <section className={"mxr-purpose mxr-purpose-mission"} aria-labelledby={"mission-heading"}>
-        <div className={"mxr-purpose-image"}>
-          <img src={aboutHero} alt={"A multidisciplinary technology team collaborating on a project"} loading={"lazy"} />
-        </div>
-        <div className={"mxr-purpose-copy reveal visible"}>
-          <p className={"eyebrow"}>
-            {"02 / OUR MISSION"}
-          </p>
-          <h2 id={"mission-heading"}>
-            {"Turn innovation into "}
-            <span>
-              {"practical, measurable value."}
-            </span>
-          </h2>
-          <p>
-            {"We understand the challenge, design around real people and deliver solutions that improve training, simplify work and produce outcomes organisations can see and measure."}
-          </p>
-          <div className={"mxr-purpose-outcomes"}>
-            <span>
-              {"Understand"}
-            </span>
-            <span>
-              {"Design"}
-            </span>
-            <span>
-              {"Deliver"}
-            </span>
-          </div>
-        </div>
-      </section>
+
       <section className={"purpose-alternative"} aria-labelledby={"purpose-alt-heading"}>
         <div className={"purpose-alt-heading"}>
           <p className={"eyebrow"}>
@@ -142,14 +83,13 @@ export default function AboutPage() {
           </p>
           <h2 id={"purpose-alt-heading"}>
             {"One direction."}
-            <br />
             <span>
               {"Two commitments."}
             </span>
           </h2>
           <p>
             {"Our vision sets the ambition."}
-            <br />
+
             {"Our mission turns it into action."}
           </p>
         </div>
@@ -179,7 +119,7 @@ export default function AboutPage() {
                 {"Extend human potential."}
               </h3>
               <p>
-                {"A future where immersive and intelligent technology helps people learn better, perform with confidence and make smarter decisions."}
+                {"Our vision is to be your leading technology partner, empowering your organisation through innovative solutions that transform learning, training, and operations. We aim to create experiences that drive success in today’s fast-evolving digital landscape."}
               </p>
               <div className={"purpose-alt-footer"}>
                 {"Better learning "}
@@ -222,7 +162,7 @@ export default function AboutPage() {
                 {"Make innovation matter."}
               </h3>
               <p>
-                {"Understand real challenges. Design around people. Deliver solutions that improve training, simplify work and create measurable value."}
+                {"Our mission is simple: to help you succeed. We work with you to design and implement solutions in AR, VR, Mixed Reality, and AI that ensure you and your organisation reach your goals. By partnering with you, we create technology that transforms education, training, and business processes, delivering solutions that maximise value and achieve outstanding results for your team."}
               </p>
               <div className={"purpose-alt-footer"}>
                 {"Understand "}
@@ -239,56 +179,7 @@ export default function AboutPage() {
           </article>
         </div>
       </section>
-      <section className={"section about-why"}>
-        <div className={"section-heading reveal visible"}>
-          <div>
-            <p className={"eyebrow"}>
-              {"WHY MXR"}
-            </p>
-            <h2>
-              {"A partner for the complete journey."}
-            </h2>
-          </div>
-          <p>
-            {"We combine deep technology capability with an understanding of how organisations teach, train and operate."}
-          </p>
-        </div>
-        <div className={"about-why-grid"}>
-          <article className={"reveal visible"}>
-            <span>
-              {"01"}
-            </span>
-            <h3>
-              {"Outcome-led"}
-            </h3>
-            <p>
-              {"We begin with the problem, users and evidence of success—not a predetermined technology."}
-            </p>
-          </article>
-          <article className={"reveal visible"}>
-            <span>
-              {"02"}
-            </span>
-            <h3>
-              {"Multidisciplinary"}
-            </h3>
-            <p>
-              {"Strategy, design, development, immersive content and data expertise work as one team."}
-            </p>
-          </article>
-          <article className={"reveal visible"}>
-            <span>
-              {"03"}
-            </span>
-            <h3>
-              {"Built to scale"}
-            </h3>
-            <p>
-              {"Solutions are designed for long-term use, adoption and expansion across your organisation."}
-            </p>
-          </article>
-        </div>
-      </section>
+
       <section className={"about-values"}>
         <div className={"about-values-image reveal visible"}>
           <img src={aboutValues} alt={"Professionals using mixed reality technology in a simulation and training environment"} />
@@ -391,6 +282,59 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+
+      <section className={"section about-why"}>
+        <div className={"section-heading reveal visible"}>
+          <div>
+            <p className={"eyebrow"}>
+              {"WHY MXR"}
+            </p>
+            <h2>
+              {"A partner for the complete journey."}
+            </h2>
+          </div>
+          <p>
+            {"We combine deep technology capability with an understanding of how organisations teach, train and operate."}
+          </p>
+        </div>
+        <div className={"about-why-grid"}>
+          <article className={"reveal visible"}>
+            <span>
+              {"01"}
+            </span>
+            <h3>
+              {"Outcome-led"}
+            </h3>
+            <p>
+              {"We begin with the problem, users and evidence of success,not a predetermined technology."}
+            </p>
+          </article>
+          <article className={"reveal visible"}>
+            <span>
+              {"02"}
+            </span>
+            <h3>
+              {"Multidisciplinary"}
+            </h3>
+            <p>
+              {"Strategy, design, development, immersive content and data expertise work as one team."}
+            </p>
+          </article>
+          <article className={"reveal visible"}>
+            <span>
+              {"03"}
+            </span>
+            <h3>
+              {"Built to scale"}
+            </h3>
+            <p>
+              {"Solutions are designed for long-term use, adoption and expansion across your organisation."}
+            </p>
+          </article>
+        </div>
+      </section>
+
       <section className={"final-cta about-final home-wave-section home-wave-cta"}>
         <div className={"home-wave-media"} aria-hidden={"true"}>
           <video autoPlay={true} muted={true} loop={true} playsInline={true} preload={"metadata"}>

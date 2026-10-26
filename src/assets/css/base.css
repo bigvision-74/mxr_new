@@ -242,7 +242,7 @@ footer .footer-bottom{border-top-color:#484848}
 .about-direction-focus{display:flex;grid-column:auto;margin:auto 34px 34px;padding-top:22px;border-top:1px solid #dce5ea}
 .about-direction-focus span{background:#fff;border-color:#cbdce7;color:#31546c}
 .about-mission .about-direction-focus span{background:rgba(255,255,255,.75)}
-.about-values-image:after{background:linear-gradient(0deg,rgba(8,17,23,.24) 0%,rgba(8,17,23,.06) 48%,rgba(8,17,23,0) 75%)}
+.about-values-image:after{background:linear-gradient(90deg,transparent 55%,rgba(17,23,25,.75) 78%,#111719 100%),linear-gradient(0deg,rgba(8,17,23,.55) 0%,rgba(8,17,23,.1) 38%,transparent 60%)}
 .about-values-image-label{left:34px;right:34px;bottom:34px;max-width:620px;padding:24px 26px;background:rgba(12,24,32,.58);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(8px)}
 .about-values-image-label small{color:#8fd0ff}
 .about-values-image-label strong{font-size:1.5rem}

@@ -1,4 +1,4 @@
-﻿import type { CSSProperties } from 'react'
+import type { CSSProperties } from 'react'
 
 export default function DefenceSecurityPage() {
   return (
@@ -273,6 +273,9 @@ export default function DefenceSecurityPage() {
       <div className={"button-row"}>
         <a className={"btn btn-primary"} href={"mailto:hello@mxr.ai"}>
           {"Talk to Our Team →"}
+        </a>
+        <a className={"btn btn-secondary"} href={"/contact"}>
+          {"Start a Conversation"}
         </a>
       </div>
     </section>

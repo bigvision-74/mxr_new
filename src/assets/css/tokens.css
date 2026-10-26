@@ -5,4 +5,6 @@
   --color-light: #f8fafc;
   --navy: var(--color-dark);
   --pale: var(--color-light);
+  /* Blue accent for text on dark-theme sections */
+  --blue-dark: #64B7FF;
 }
