@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowRight, Menu, X } from 'lucide-react'
-import { services, products } from '../data/navigation'
+import { services, products, resources } from '../data/navigation'
 import mxrLogo from '../assets/images/mxr-logo.png'
 
 const navLinks = [
@@ -9,7 +9,7 @@ const navLinks = [
   { label: 'About', href: '/about' },
   { label: 'Services', href: '#' },
   { label: 'Products', href: '#' },
-  { label: 'Resources', href: '/case-study-xr-readiness' },
+  { label: 'Resources', href: '#' },
 ]
 
 const pathname = typeof window !== 'undefined' ? window.location.pathname : '/'
@@ -25,6 +25,10 @@ function isServicesActive(): boolean {
 
 function isProductsActive(): boolean {
   return products.some(([, slug]) => pathname === `/${slug}` || pathname.startsWith(`/${slug}/`))
+}
+
+function isResourcesActive(): boolean {
+  return resources.some(r => pathname === `/${r.slug}` || pathname.startsWith(`/${r.slug}/`))
 }
 
 interface NavBarProps {
@@ -61,7 +65,7 @@ export function NavBar({ overlay = false }: NavBarProps) {
               const active = isProductsActive()
               return (
                 <div className="mxr-service-nav" key="Products">
-                  <button type="button" className={`rounded-full border-0 px-4 py-2 text-sm font-medium text-white hover:bg-white/10 cursor-pointer transition-all duration-300 ${active ? 'nav-active' : ''}`}>
+                  <button type="button" className={`rounded-full border-0 px-4 py-2 text-base font-medium text-white hover:bg-white/10 cursor-pointer transition-all duration-300 ${active ? 'nav-active' : ''}`}>
                     Products
                   </button>
                   <div className="mxr-service-dropdown">
@@ -76,7 +80,7 @@ export function NavBar({ overlay = false }: NavBarProps) {
               const active = isServicesActive()
               return (
                 <div className="mxr-service-nav" key="Services">
-                  <button type="button" className={`rounded-full border-0 px-4 py-2 text-sm font-medium text-white hover:bg-white/10 cursor-pointer transition-all duration-300 ${active ? 'nav-active' : ''}`}>
+                  <button type="button" className={`rounded-full border-0 px-4 py-2 text-base font-medium text-white hover:bg-white/10 cursor-pointer transition-all duration-300 ${active ? 'nav-active' : ''}`}>
                     Services
                   </button>
                   <div className="mxr-service-dropdown">
@@ -87,12 +91,27 @@ export function NavBar({ overlay = false }: NavBarProps) {
                 </div>
               )
             }
+            if (link.label === 'Resources') {
+              const active = isResourcesActive()
+              return (
+                <div className="mxr-service-nav" key="Resources">
+                  <button type="button" className={`rounded-full border-0 px-4 py-2 text-base font-medium text-white hover:bg-white/10 cursor-pointer transition-all duration-300 ${active ? 'nav-active' : ''}`}>
+                    Resources
+                  </button>
+                  <div className="mxr-service-dropdown">
+                    {resources.map(r => (
+                      <a href={`/${r.slug}`} key={r.slug} className={pathname === `/${r.slug}` || pathname.startsWith(`/${r.slug}/`) ? 'nav-item-active' : ''}>{r.title}</a>
+                    ))}
+                  </div>
+                </div>
+              )
+            }
             const active = isLinkActive(link.href)
             return (
               <a
                 key={link.label}
                 href={link.href}
-                className={`rounded-full px-4 py-2 text-sm font-medium text-white transition-all duration-300 hover:bg-white/10 ${active ? 'bg-white/20' : ''}`}
+                className={`rounded-full px-4 py-2 text-base font-medium text-white transition-all duration-300 hover:bg-white/10 ${active ? 'bg-white/20' : ''}`}
               >
                 {link.label}
               </a>
@@ -149,6 +168,17 @@ export function NavBar({ overlay = false }: NavBarProps) {
                     <summary className={active ? 'nav-item-active' : ''}>Services</summary>
                     {services.map(s => (
                       <a href={`/${s.slug}`} key={s.slug} className={pathname === `/${s.slug}` || pathname.startsWith(`/${s.slug}/`) ? 'nav-item-active' : ''}>{s.title}</a>
+                    ))}
+                  </details>
+                )
+              }
+              if (link.label === 'Resources') {
+                const active = isResourcesActive()
+                return (
+                  <details className="mxr-mobile-services" key="Resources" open={active || undefined}>
+                    <summary className={active ? 'nav-item-active' : ''}>Resources</summary>
+                    {resources.map(r => (
+                      <a href={`/${r.slug}`} key={r.slug} className={pathname === `/${r.slug}` || pathname.startsWith(`/${r.slug}/`) ? 'nav-item-active' : ''}>{r.title}</a>
                     ))}
                   </details>
                 )

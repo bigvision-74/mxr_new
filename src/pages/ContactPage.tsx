@@ -6,7 +6,7 @@ declare global {
   interface Window {
     hbspt?: {
       forms: {
-        create: (opts: { region: string; portalId: string; formId: string; target: string }) => void
+        create: (opts: { region: string; portalId: string; formId: string; target: string; onFormReady?: () => void }) => void
       }
     }
   }
@@ -33,6 +33,23 @@ function HubSpotForm() {
           portalId: '143987629',
           formId: 'd03567c0-89e4-4528-80ac-39e94d53dc76',
           target: '#hubspotForm',
+          onFormReady: () => {
+            const container = document.querySelector('#hubspotForm')
+            if (!container) return
+            container.querySelectorAll<HTMLElement>(
+              '.hs-recaptcha, .grecaptcha-policy, [class*="recaptcha"]'
+            ).forEach(el => {
+              el.style.fontSize = '0.58rem'
+              el.style.color = '#c4d2dc'
+              el.style.textAlign = 'right'
+              el.style.marginTop = '4px'
+              el.style.lineHeight = '1.4'
+              el.querySelectorAll<HTMLElement>('*').forEach(child => {
+                child.style.fontSize = '0.58rem'
+                child.style.color = '#c4d2dc'
+              })
+            })
+          },
         })
       }
     }
@@ -47,42 +64,42 @@ function HubSpotForm() {
 
 export default function ContactPage() {
   return (
-  <main className="contact-page">
-    <section className="contact-banner" style={{ backgroundImage: `url(${bannerImg})` }}>
-      <div className="contact-banner-overlay" />
-      <div className="contact-banner-copy">
-        <p className="eyebrow">CONTACT MXR</p>
-        <h1 className="banner-title banner-title--stacked">Let’s build something <em>extraordinary.</em></h1>
-        <p className="banner-lead">Tell us about your next training, simulation or immersive technology project. We’re here to help you bring your ideas to life.</p>
-        <div className="contact-pills"><span>AR / VR</span><span>Simulation</span><span>AI Solutions</span></div>
-      </div>
-    </section>
-    <section className="contact-main">
-      <aside className="contact-info">
-        <p className="eyebrow">GET IN TOUCH</p>
-        <h2>We’d love to hear from you.</h2>
-        <p className="contact-info-lead">Whether you have a question, a project in mind, or just want to learn more about what we do — our team is ready to help.</p>
-        <div className="contact-cards">
-          {channels.map(({ icon: Icon, label, value, href, note }) => {
-            const inner = (<>
-              <span className="contact-card-icon"><Icon aria-hidden="true" size={24} /></span>
-              <span className="contact-card-body"><small>{label}</small><strong>{value}</strong><em>{note}</em></span>
-              {href && <ArrowRight aria-hidden="true" className="contact-card-arrow" size={18} />}
-            </>)
-            return href
-              ? <a key={label} className="contact-card" href={href}>{inner}</a>
-              : <div key={label} className="contact-card">{inner}</div>
-          })}
+    <main className="contact-page">
+      <section className="contact-banner" style={{ backgroundImage: `url(${bannerImg})` }}>
+        <div className="contact-banner-overlay" />
+        <div className="contact-banner-copy">
+          <p className="eyebrow">CONTACT MXR</p>
+          <h1 className="banner-title banner-title--stacked">Let's build something <em>extraordinary.</em></h1>
+          <p className="banner-lead">Tell us about your next training, simulation or immersive technology project. We're here to help you bring your ideas to life.</p>
+          <div className="contact-pills"><span>AR / VR</span><span>Simulation</span><span>AI Solutions</span></div>
         </div>
-      </aside>
-      <div className="contact-form">
-        <div className="cf-head">
-          <span className="cf-head-icon"><Send aria-hidden="true" size={22} /></span>
-          <div><h3>Send us a message</h3><p>Our team will get back to you within 24 hours.</p></div>
+      </section>
+      <section className="contact-main">
+        <aside className="contact-info">
+          <p className="eyebrow">GET IN TOUCH</p>
+          <h2>We'd love to hear from you.</h2>
+          <p className="contact-info-lead">Whether you have a question, a project in mind, or just want to learn more about what we do — our team is ready to help.</p>
+          <div className="contact-cards">
+            {channels.map(({ icon: Icon, label, value, href, note }) => {
+              const inner = (<>
+                <span className="contact-card-icon"><Icon aria-hidden="true" size={24} /></span>
+                <span className="contact-card-body"><small>{label}</small><strong>{value}</strong><em>{note}</em></span>
+                {href && <ArrowRight aria-hidden="true" className="contact-card-arrow" size={18} />}
+              </>)
+              return href
+                ? <a key={label} className="contact-card" href={href}>{inner}</a>
+                : <div key={label} className="contact-card">{inner}</div>
+            })}
+          </div>
+        </aside>
+        <div className="contact-form">
+          <div className="cf-head">
+            <span className="cf-head-icon"><Send aria-hidden="true" size={22} /></span>
+            <div><h3>Send us a message</h3><p>Our team will get back to you within 24 hours.</p></div>
+          </div>
+          <HubSpotForm />
         </div>
-        <HubSpotForm />
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
   )
 }

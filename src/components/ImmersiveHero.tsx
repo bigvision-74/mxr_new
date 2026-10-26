@@ -31,7 +31,7 @@ function ShinyText({ children, duration = 3, spread = 100 }: ShinyTextProps) {
 
 export function ImmersiveHero() {
   return (
-    <section className="mxr-immersive-hero relative h-screen min-h-[700px] bg-[var(--color-dark)] text-white">
+    <section className="mxr-immersive-hero relative flex h-screen min-h-[700px] flex-col bg-[var(--color-dark)] text-white">
       {/* Background layers clipped independently so the nav dropdown can escape */}
       <div className="absolute inset-0 overflow-hidden">
         <video
@@ -57,10 +57,11 @@ export function ImmersiveHero() {
 
       {/* Shared nav — overlay mode sits on top of the video */}
       <NavBar overlay />
+      <div className="relative z-10 site-page-gutter"><div className="border-t border-white/15" /></div>
 
       {/* Hero copy */}
-      <div className="relative z-10 flex flex-col site-page-gutter pb-10">
-        <div className="border-t border-white/15 pt-[2.5vh] sm:pt-[3.5vh] lg:pt-[4.5vh]">
+      <div className="relative z-10 flex flex-1 flex-col justify-center site-page-gutter pb-16">
+        <div>
           <motion.h1
             className="banner-title max-w-6xl text-5xl font-medium leading-[.85] tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
             aria-label="Technology for a Safer, Smarter Tomorrow."

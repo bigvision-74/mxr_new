@@ -171,3 +171,37 @@ body,
     margin-inline: auto;
   }
 }
+
+/* Wave CTA ("START A CONVERSATION"): identical on every page, including product pages whose
+   .pp / .ep-page / .dx-page rules would otherwise restyle the eyebrow, heading and text. */
+.mxr-react-page main .final-cta.home-wave-cta {
+  padding-block: 5rem !important;
+  padding-inline: var(--page-gutter) !important;
+  background: #102638 !important;
+}
+
+.mxr-react-page main .final-cta.home-wave-cta .eyebrow {
+  color: #89ceff !important;
+  font-size: .76rem !important;
+  font-weight: 800 !important;
+  letter-spacing: .18em !important;
+  margin: 0 0 20px !important;
+}
+
+.mxr-react-page main .final-cta.home-wave-cta h2 {
+  color: #fff !important;
+  font-family: inherit;
+  font-size: clamp(2.4rem, 4vw, 4.2rem) !important;
+  font-weight: inherit;
+  line-height: 1.08 !important;
+  letter-spacing: -.045em !important;
+  max-width: 53.125rem !important;
+  margin: 0 !important;
+}
+
+.mxr-react-page main .final-cta.home-wave-cta > div > p:last-child {
+  color: #d1e2ef !important;
+  font-size: 1.05rem !important;
+  max-width: 730px;
+  margin: 18px 0 0;
+}

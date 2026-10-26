@@ -396,31 +396,29 @@ export default function DrivexrPage() {
           </span>
         </div>
       </section>
-      <section className={"dx-cta"}>
-        <div className={"dx-wrap"}>
-          <div>
-            <p className={"dx-kicker"}>
-              {"SEE DRIVEXR IN ACTION"}
-            </p>
-            <h2>
-              {"Better prepared."}
-              <br />
-              {"Before the blue lights."}
-            </h2>
-            <p>
-              {"Explore a training setup built around your people and operational goals."}
-            </p>
-          </div>
-          <a className={"dx-button"} href={"mailto:hello@mxr.ai?subject=DriveXR%20demonstration"}>
-            {"Book a live demonstration "}
-            <svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.5"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}>
-              <path d={"M4 12h16m-6-6 6 6-6 6"}>
-
-              </path>
-            </svg>
-          </a>
-        </div>
-      </section>
+      <section className={"final-cta home-wave-section home-wave-cta"}>
+      <div className={"home-wave-media"} aria-hidden={"true"}>
+        <video autoPlay={true} muted={true} loop={true} playsInline={true} preload={"metadata"}>
+          <source src={"https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260815_034306_165449ef-7d2e-4e81-850f-1939c5cb442d.mp4"} type={"video/mp4"} />
+        </video>
+      </div>
+      <div>
+        <p className={"eyebrow"}>
+          {"SEE DRIVEXR 2 IN ACTION"}
+        </p>
+        <h2>
+          <>{"Ready to see"}<br />{"what's next?"}</>
+        </h2>
+        <p>
+          {"Explore a DriveXR 2 training setup built around your people and operational goals."}
+        </p>
+      </div>
+      <div className={"button-row"}>
+        <a className={"btn btn-primary"} href={"mailto:hello@mxr.ai?subject=DriveXR%202%20demonstration"}>
+          {"Book a demonstration →"}
+        </a>
+      </div>
+    </section>
     </main>
   )
 }

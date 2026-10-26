@@ -253,7 +253,12 @@ export default function DefenceSecurityPage() {
         </div>
       </div>
     </section>
-    <section className={"final-cta"}>
+    <section className={"final-cta home-wave-section home-wave-cta"}>
+      <div className={"home-wave-media"} aria-hidden={"true"}>
+        <video autoPlay={true} muted={true} loop={true} playsInline={true} preload={"metadata"}>
+          <source src={"https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260815_034306_165449ef-7d2e-4e81-850f-1939c5cb442d.mp4"} type={"video/mp4"} />
+        </video>
+      </div>
       <div>
         <p className={"eyebrow"}>
           {"START A CONVERSATION"}

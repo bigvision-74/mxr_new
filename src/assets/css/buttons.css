@@ -1,0 +1,71 @@
+/* One button design for the whole site.
+   Matches the pill buttons used in the home and EPRium banners: rounded pill, Inter semibold, 1px ring,
+   blue for the main action and black for the secondary action. Loaded last, and uses !important on the
+   visual properties so older page-specific button rules (square corners, other weights/sizes) cannot override it. */
+body :is(.btn, .dx-button, .ep-button) {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: .75rem !important;
+  min-height: 3rem !important;
+  padding: .75rem 1.5rem !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  font-family: Inter, "Segoe UI", Arial, sans-serif !important;
+  font-size: .875rem !important;
+  font-weight: 600 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  text-align: center;
+  cursor: pointer;
+  transform: none !important;
+  transition: background-color .3s, box-shadow .3s, color .3s !important;
+}
+
+@media (min-width: 768px) {
+  body :is(.btn, .dx-button, .ep-button) {
+    min-height: 3.25rem !important;
+    padding: 1rem 2rem !important;
+    font-size: 1rem !important;
+  }
+}
+
+/* Main action: blue */
+body :is(.btn-primary, .dx-button, .ep-button) {
+  background: #0b66c3 !important;
+  color: #fff !important;
+  box-shadow: 0 0 0 1px rgba(22, 132, 232, .6) !important;
+}
+
+body :is(.btn-primary, .dx-button, .ep-button):hover {
+  background: #1684e8 !important;
+  color: #fff !important;
+  box-shadow: 0 0 0 1px rgba(22, 132, 232, .6) !important;
+}
+
+/* Secondary action: black */
+body :is(.btn-secondary, .btn-ghost, .btn-white, .dx-button[style]) {
+  background: #000 !important;
+  color: #fff !important;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .25) !important;
+}
+
+body :is(.btn-secondary, .btn-ghost, .btn-white, .dx-button[style]):hover {
+  background: #111827 !important;
+  color: #fff !important;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .25) !important;
+}
+
+body .btn-small {
+  min-height: 2.75rem !important;
+  padding: .5rem 1.25rem !important;
+  font-size: .875rem !important;
+}
+
+body :is(.btn, .dx-button, .ep-button) svg {
+  width: 1rem !important;
+  height: 1rem !important;
+  flex-shrink: 0;
+}

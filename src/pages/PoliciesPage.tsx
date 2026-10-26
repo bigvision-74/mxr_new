@@ -2,7 +2,7 @@ import { ArrowRight, FileText } from 'lucide-react'
 import bannerImg from '../assets/images/about/about-hero.webp'
 import { policies, policyCategories } from '../data/policies'
 
-const livePages = new Set(['cookie-policy', 'data-protection-policy', 'data-retention-and-deletion-policy', 'mxr-data-protection-policy', 'privacy-policy', 'privacy-policy-gdpr', 'acceptable-use-policy', 'modern-slavery-statement', 'software-lifecycle-and-deprecation-policy', 'terms-of-sale-and-licensing', 'accessibility-statement', 'disaster-recovery-plan', 'it-policy', 'it-security-policy', 'security-policy', 'disciplinary-policy', 'equal-opportunities-and-discrimination-policy', 'health-and-safety-policy', 'health-and-safety-policy-remote-hybrid', 'whistleblowing-policy'])
+const livePages = new Set(['cookie-policy', 'data-protection-policy', 'data-retention-and-deletion-policy', 'mxr-data-protection-policy', 'privacy-policy', 'privacy-policy-gdpr', 'acceptable-use-policy', 'modern-slavery-statement', 'software-lifecycle-and-deprecation-policy', 'terms-of-sale-and-licensing', 'accessibility-statement', 'disaster-recovery-plan', 'it-policy', 'it-security-policy', 'security-policy', 'disciplinary-policy', 'equal-opportunities-and-discrimination-policy', 'health-and-safety-policy', 'health-and-safety-policy-remote-hybrid', 'whistleblowing-policy', 'carbon-reduction-plan', 'environmental-policy'])
 
 export default function PoliciesPage() {
   return (

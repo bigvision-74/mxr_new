@@ -1,3 +1,4 @@
+import { DriveRotatingRing } from '../components/DriveRotatingRing'
 import { useEffect, useRef, useState, type ReactElement } from 'react'
 import brochureResponse from '../assets/images/drivexr/brochure-response.webp'
 import brochureInstructors from '../assets/images/drivexr/brochure-instructors.webp'
@@ -409,11 +410,9 @@ export default function DriveXR2Page() {
   return (
     <main className="dx-page dx2">
       <section className="dx-hero">
-        <div className="dx-hero-image">
-          <img src={brochureResponse} alt="DriveXR 2 — next-generation emergency driver simulation" fetchPriority="high" />
-        </div>
+        <DriveRotatingRing />
         <div className="dx-hero-copy">
-          <p className="dx-kicker">EMERGENCY VEHICLE DRIVER TRAINING SIMULATOR</p>
+
           <div className="dx-title">
             <h1 className="banner-title banner-title--stacked">Precision under pressure. <em>Performance when it matters.</em></h1>
           </div>
@@ -818,19 +817,20 @@ export default function DriveXR2Page() {
         </div>
       </section>
 
-      <section className="dx-cta">
-        <div className="dx-wrap">
-          <div>
-            <p className="dx-kicker">SEE DRIVEXR 2 IN ACTION</p>
-            <h2>Ready to see<br />what's next?</h2>
-            <p>Explore a DriveXR 2 training setup built around your people and operational goals.</p>
-          </div>
-          <a className="dx-button" href="mailto:hello@mxr.ai?subject=DriveXR%202%20demonstration">
-            Book a demonstration{' '}
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <path d="M4 12h16m-6-6 6 6-6 6" />
-            </svg>
-          </a>
+      <section className="final-cta home-wave-section home-wave-cta">
+        <div className="home-wave-media" aria-hidden="true">
+          <video autoPlay muted loop playsInline preload="metadata">
+            <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260815_034306_165449ef-7d2e-4e81-850f-1939c5cb442d.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div>
+          <p className="eyebrow">LET'S BUILD WHAT'S NEXT</p>
+          <h2>Have a challenge worth solving?</h2>
+          <p>Talk to MXR about a practical route from idea to high-impact technology.</p>
+        </div>
+        <div className="button-row">
+          <a className="btn btn-primary" href="mailto:hello@mxr.ai?subject=New%20MXR%20Project">Talk to Our Team →</a>
+          <a className="btn btn-secondary" href="/#services">Explore Services</a>
         </div>
       </section>
     </main>

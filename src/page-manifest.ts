@@ -1,3 +1,6 @@
+import BlogPage from './pages/BlogPage'
+import CaseStudiesPage from './pages/CaseStudiesPage'
+import EventsPage from './pages/EventsPage'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import DefenceSecurityPage from './pages/DefenceSecurityPage'
@@ -41,23 +44,26 @@ import CarbonReductionPage from './pages/CarbonReductionPage'
 import EnvironmentalPolicyPage from './pages/EnvironmentalPolicyPage'
 
 export const pages: Record<string, { Component: () => any; title: string; description: string; bodyClass: string }> = {
-"index.html": { Component: HomePage, title: "MXR.ai \u2014 Technology for a Safer, Smarter Tomorrow", description: "MXR creates immersive simulation, XR and AI solutions for defence, healthcare and enterprise training.", bodyClass: "" },
-"about.html": { Component: AboutPage, title: "About MXR \u2014 Technology for Real-World Impact", description: "Meet MXR, a technology partner creating immersive simulation, AI and software solutions for education, training and enterprise.", bodyClass: "" },
-"defence-security.html": { Component: DefenceSecurityPage, title: "Defence & Security Solutions \u2014 MXR.ai", description: "MXR defence and security simulation solutions help teams build knowledge, rehearse safely and improve operational readiness.", bodyClass: "" },
-"case-study-xr-readiness.html": { Component: CaseStudyXrReadinessPage, title: "Enhancing Readiness Through XR Training \u2014 MXR Case Study", description: "Discover how MXR used extended reality to support safer, repeatable and measurable operational training.", bodyClass: "" },
-"modal3d.html": { Component: Modal3DPage, title: "MODAL3D | MXR.ai", description: "Explore ordnance in interactive 3D. Connect component views, technical information and AR in one organised library.", bodyClass: "" },
-"eprium.html": { Component: EpriumPage, title: "EPRium | MXR.ai", description: "Give healthcare learners a safe place to practise patient encounters, clinical reasoning and digital documentation.", bodyClass: "" },
-"eprium-old.html": { Component: EpriumOldPage, title: "EPRium_old | MXR.ai", description: "Give healthcare learners a safe place to practise patient encounters, clinical reasoning and digital documentation.", bodyClass: "" },
-"drivexr.html": { Component: DrivexrPage, title: "DriveXR | MXR.ai", description: "Build emergency driving readiness through realistic scenarios, instructor control and evidence-led feedback.", bodyClass: "" },
-"drivexr-2.html": { Component: DriveXR2Page, title: "DriveXR 2 | MXR.ai", description: "Next-generation emergency driver simulation — richer environments, deeper data and a more connected training experience.", bodyClass: "drivexr2-page" },
-"insightxr.html": { Component: InsightxrPage, title: "InsightXR | MXR.ai", description: "Bring content, learners, devices and performance data together to deliver a connected XR learning programme.", bodyClass: "" },
-"insightxr-platform.html": { Component: InsightxrPlatformPage, title: "InsightXR Platform | MXR.ai", description: "AR and VR device management, content delivery and immersive training insight with InsightXR.", bodyClass: "" },
-"simulator-development.html": { Component: SimulatorDevelopmentPage, title: "Simulator Development | MXR.ai", description: "Purpose-built simulators help teams practise complex tasks, build confidence and explore decisions in a safe, repeatable environment.", bodyClass: "" },
-"xr-development.html": { Component: XrDevelopmentPage, title: "XR Development | MXR.ai", description: "Virtual, augmented and mixed reality experiences that help people understand, rehearse and interact with the world in new ways.", bodyClass: "" },
-"immersive-rooms.html": { Component: ImmersiveRoomsPage, title: "Immersive Rooms | MXR.ai", description: "Projection-led environments bring teams together for immersive learning, collaborative exploration and facilitated simulation.", bodyClass: "" },
-"ai-solutions.html": { Component: AiSolutionsPage, title: "AI Solutions | MXR.ai", description: "Practical AI solutions that support learning, simplify information workflows and help teams focus on higher-value tasks.", bodyClass: "" },
-"platform-development.html": { Component: PlatformDevelopmentPage, title: "Platform Development | MXR.ai", description: "Web, mobile and desktop platforms that connect users, content and workflows in a clear, dependable digital experience.", bodyClass: "" },
-"contact.html": { Component: ContactPage, title: "Contact MXR | MXR.ai", description: "Get in touch with the MXR team — call +44 7393 173361 or email team@mxr.ai.", bodyClass: "" }
+    "index.html": { Component: HomePage, title: "MXR.ai \u2014 Technology for a Safer, Smarter Tomorrow", description: "MXR creates immersive simulation, XR and AI solutions for defence, healthcare and enterprise training.", bodyClass: "" },
+    "about.html": { Component: AboutPage, title: "About MXR \u2014 Technology for Real-World Impact", description: "Meet MXR, a technology partner creating immersive simulation, AI and software solutions for education, training and enterprise.", bodyClass: "" },
+    "defence-security.html": { Component: DefenceSecurityPage, title: "Defence & Security Solutions \u2014 MXR.ai", description: "MXR defence and security simulation solutions help teams build knowledge, rehearse safely and improve operational readiness.", bodyClass: "" },
+    "case-study.html": { Component: CaseStudyXrReadinessPage, title: "Enhancing Readiness Through XR Training \u2014 MXR Case Study", description: "Discover how MXR used extended reality to support safer, repeatable and measurable operational training.", bodyClass: "" },
+    "modal3d.html": { Component: Modal3DPage, title: "MODAL3D | MXR.ai", description: "Explore ordnance in interactive 3D. Connect component views, technical information and AR in one organised library.", bodyClass: "" },
+    "eprium.html": { Component: EpriumPage, title: "EPRium | MXR.ai", description: "Give healthcare learners a safe place to practise patient encounters, clinical reasoning and digital documentation.", bodyClass: "" },
+    "eprium-old.html": { Component: EpriumOldPage, title: "EPRium_old | MXR.ai", description: "Give healthcare learners a safe place to practise patient encounters, clinical reasoning and digital documentation.", bodyClass: "" },
+    "drivexr.html": { Component: DrivexrPage, title: "DriveXR | MXR.ai", description: "Build emergency driving readiness through realistic scenarios, instructor control and evidence-led feedback.", bodyClass: "" },
+    "drivexr-2.html": { Component: DriveXR2Page, title: "DriveXR 2 | MXR.ai", description: "Next-generation emergency driver simulation — richer environments, deeper data and a more connected training experience.", bodyClass: "drivexr2-page" },
+    "insightxr.html": { Component: InsightxrPage, title: "InsightXR | MXR.ai", description: "Bring content, learners, devices and performance data together to deliver a connected XR learning programme.", bodyClass: "" },
+    "insightxr-platform.html": { Component: InsightxrPlatformPage, title: "InsightXR Platform | MXR.ai", description: "AR and VR device management, content delivery and immersive training insight with InsightXR.", bodyClass: "" },
+    "simulator-development.html": { Component: SimulatorDevelopmentPage, title: "Simulator Development | MXR.ai", description: "Purpose-built simulators help teams practise complex tasks, build confidence and explore decisions in a safe, repeatable environment.", bodyClass: "" },
+    "xr-development.html": { Component: XrDevelopmentPage, title: "XR Development | MXR.ai", description: "Virtual, augmented and mixed reality experiences that help people understand, rehearse and interact with the world in new ways.", bodyClass: "" },
+    "immersive-rooms.html": { Component: ImmersiveRoomsPage, title: "Immersive Rooms | MXR.ai", description: "Projection-led environments bring teams together for immersive learning, collaborative exploration and facilitated simulation.", bodyClass: "" },
+    "ai-solutions.html": { Component: AiSolutionsPage, title: "AI Solutions | MXR.ai", description: "Practical AI solutions that support learning, simplify information workflows and help teams focus on higher-value tasks.", bodyClass: "" },
+    "platform-development.html": { Component: PlatformDevelopmentPage, title: "Platform Development | MXR.ai", description: "Web, mobile and desktop platforms that connect users, content and workflows in a clear, dependable digital experience.", bodyClass: "" },
+    "contact.html": { Component: ContactPage, title: "Contact MXR | MXR.ai", description: "Get in touch with the MXR team — call +44 7393 173361 or email team@mxr.ai.", bodyClass: "" },
+    "blog.html": { Component: BlogPage, title: "Blog | MXR.ai", description: "Insights, research and perspectives on XR, AI, simulation and immersive training.", bodyClass: "" },
+    "case-studies.html": { Component: CaseStudiesPage, title: "Case Studies | MXR.ai", description: "Real-world results from MXR's XR and AI projects across healthcare, education and enterprise.", bodyClass: "" },
+    "events.html": { Component: EventsPage, title: "Events | MXR.ai", description: "Meet MXR at conferences, webinars and industry events. Stay ahead with the latest in XR, AI and immersive simulation.", bodyClass: "" }
 }
 
 pages['policies.html'] = { Component: PoliciesPage, title: 'Policies | MXR.ai', description: 'Review the policies that govern MXR operations: privacy, data protection, security, accessibility, sustainability and more.', bodyClass: '' }
@@ -83,4 +89,4 @@ pages['health-and-safety-policy.html'] = { Component: HealthSafetyPage, title: '
 pages['health-and-safety-policy-remote-hybrid.html'] = { Component: HealthSafetyRemotePage, title: 'Health and Safety Policy Summary (Remote & Hybrid Tech Workers) | MXR.ai', description: 'Our health and safety obligations and guidelines for remote and hybrid technology workers.', bodyClass: '' }
 pages['carbon-reduction-plan.html'] = { Component: CarbonReductionPage, title: 'Carbon Reduction Plan & Evergreen Level 1 | MXR.ai', description: 'Our PPN 006/21-aligned Carbon Reduction Plan, emissions baseline, and commitment to Net Zero by 2050.', bodyClass: '' }
 pages['environmental-policy.html'] = { Component: EnvironmentalPolicyPage, title: 'Environmental Policy | MXR.ai', description: 'Our approach to minimising environmental impact across our offices, supply chain, and operations.', bodyClass: '' }
-pages['whistleblowing-policy.html'] ={ Component: WhistleblowingPage, title: 'Whistleblowing Policy | MXR.ai', description: 'How workers can raise concerns about malpractice or wrongdoing in the workplace, confidentially and without fear of reprisals.', bodyClass: '' }
+pages['whistleblowing-policy.html'] = { Component: WhistleblowingPage, title: 'Whistleblowing Policy | MXR.ai', description: 'How workers can raise concerns about malpractice or wrongdoing in the workplace, confidentially and without fear of reprisals.', bodyClass: '' }

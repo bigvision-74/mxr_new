@@ -1,3 +1,9 @@
+export const resources = [
+  { title: 'Blog', slug: 'blog' },
+  { title: 'Events', slug: 'events' },
+  { title: 'Case Studies', slug: 'case-studies' },
+] as const
+
 export const services = [
   {
     "title": "Simulator Development",
@@ -34,7 +40,7 @@ export const products = [
   //   "drivexr"
   // ],
   [
-    "DriveXR 2",
+    "DriveXR",
     "drivexr-2"
   ],
   [
