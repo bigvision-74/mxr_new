@@ -215,7 +215,12 @@ export default function ImmersiveRoomsPage() {
         </a>
       </div>
     </section>
-    <section className={"final-cta"}>
+    <section className={"final-cta home-wave-section home-wave-cta"}>
+      <div className={"home-wave-media"} aria-hidden={"true"}>
+        <video autoPlay={true} muted={true} loop={true} playsInline={true} preload={"metadata"}>
+          <source src={"https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260815_034306_165449ef-7d2e-4e81-850f-1939c5cb442d.mp4"} type={"video/mp4"} />
+        </video>
+      </div>
       <div>
         <p className={"eyebrow"}>
           {"LET’S BUILD WHAT’S NEXT"}
@@ -227,9 +232,11 @@ export default function ImmersiveRoomsPage() {
           {"Tell us what you want to achieve. We’ll help define a practical next step."}
         </p>
       </div>
-      <a className={"btn btn-primary"} href={"mailto:hello@mxr.ai?subject=Immersive%20Rooms%20enquiry"}>
-        {"Talk to our team →"}
-      </a>
+      <div className={"button-row"}>
+        <a className={"btn btn-primary"} href={"mailto:hello@mxr.ai?subject=Immersive%20Rooms%20enquiry"}>
+          {"Talk to our team →"}
+        </a>
+      </div>
     </section>
   </main>
   )

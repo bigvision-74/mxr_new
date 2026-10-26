@@ -2,23 +2,22 @@
    Lives in its own cascade layer so it wins over page-specific !important rules
    without raising selector specificity. */
 @layer banner {
-  /* These editorial heroes have intentional three-line titles in narrow columns. */
-  .about-hero-title .banner-title {
-    font-size: clamp(1.25rem, 8.4cqw, 3rem) !important;
-    line-height: 1.12 !important;
-  }
-
-  .dx-title .banner-title {
-    font-size: clamp(1.25rem, 11cqw, 3.625rem) !important;
-    line-height: 1.08 !important;
-  }
-
+  /* Large banner title (the original home banner size) used on every page. */
   .banner-title {
     font-family: Inter, "Segoe UI", Arial, sans-serif !important;
     font-size: clamp(2.8rem, 5.6vw, 6.4rem) !important;
     font-weight: 500 !important;
     line-height: .95 !important;
     letter-spacing: -.05em !important;
+  }
+
+  /* Very long policy titles step down a little so they wrap into two or three lines, not four. */
+  .banner-title--long {
+    font-size: clamp(2.4rem, 4.4vw, 4.75rem) !important;
+  }
+
+  .dx-title .banner-title--long {
+    font-size: clamp(2.4rem, 4vw, 4.25rem) !important;
   }
 
   /* Stacked variant: the accent phrase (coloured by the page) starts on its own line */
@@ -46,4 +45,103 @@
 html, body, button, input, select, textarea,
 body *, body *::before, body *::after {
     font-family: Inter, "Segoe UI", Arial, sans-serif !important
+}
+
+/* About hero: uses the shared banner typography (Inter 500, same size scale as the Contact and policy banners),
+   with a taller banner and a wider text column so the three title lines have room at that size. */
+.mxr-react-page .about-hero {
+  min-height: clamp(760px, 92vh, 960px);
+}
+
+/* Starts at the same page gutter as the header, logo and the sections below, instead of the old 7vw offset. */
+.mxr-react-page .about-hero .about-hero-copy {
+  width: auto;
+  max-width: min(78rem, 100%);
+  margin-inline: var(--page-gutter);
+}
+
+.mxr-react-page .about-hero .about-hero-title {
+  max-width: none;
+}
+
+.mxr-react-page .about-hero .about-hero-title h1 {
+  margin: 20px 0 26px;
+}
+
+.mxr-react-page .about-hero .about-hero-title h1 > span {
+  display: block;
+  white-space: normal;
+  color: #fff;
+}
+
+/* Accent colour matches the Contact banner */
+.mxr-react-page .about-hero .about-hero-title h1 > span:last-child,
+.mxr-react-page .about-hero .about-hero-title h1 em {
+  color: #3ea0ff;
+  font-style: normal;
+}
+
+.mxr-react-page .about-hero .about-hero-copy > .banner-lead {
+  max-width: 40rem;
+  color: #e3ecf5;
+}
+
+/* Small banner text: labels, breadcrumbs, tags and note lines were 10-12px. One larger scale for every banner. */
+.mxr-react-page main > section:first-of-type :is(.eyebrow, .dx-kicker) {
+  font-size: .8125rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .16em !important;
+}
+
+.mxr-react-page main > section:first-of-type :is(.pp-breadcrumb, .breadcrumbs, .breadcrumbs a, .breadcrumbs b, .breadcrumbs span) {
+  font-size: .875rem !important;
+}
+
+.mxr-react-page .pp-tags span {
+  font-size: .875rem !important;
+}
+
+.mxr-react-page .pp-actions > a:not(.btn) {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+}
+
+.mxr-react-page .ep2-tagline {
+  font-size: .8125rem !important;
+}
+
+.mxr-react-page .dx-hero-note {
+  font-size: .75rem !important;
+  letter-spacing: .12em !important;
+}
+
+/* Product page banners start below the 96px overlay navigation so the breadcrumb no longer sits under the logo */
+.mxr-react-page .pp-hero {
+  padding-top: 8.5rem;
+}
+
+/* DriveXR hero title column was 33rem wide for the smaller title; widen it for the large banner size. */
+.mxr-react-page .dx-title {
+  width: min(100%, 64rem);
+}
+
+/* Taller banners to give the larger title room: Contact and policy pages, EPRium and DriveXR 2. */
+.mxr-react-page .contact-banner {
+  min-height: clamp(520px, 66vh, 680px);
+}
+
+.mxr-react-page :is(.ep2-hero, .dx-page.dx2 .dx-hero) {
+  min-height: max(760px, 88vh);
+}
+
+/* DriveXR 2: leave the right side of the banner for the rotating ring */
+.mxr-react-page .dx-page.dx2 .dx-title {
+  width: min(100%, 60vw);
+}
+
+/* DriveXR 2: the hero grid had a 48% text column; use the full width so the title fits on two lines, ending before the ring */
+@media (min-width: 1101px) {
+  .mxr-react-page main.dx-page.dx2 .dx-hero {
+    grid-template-columns: 1fr;
+  }
 }

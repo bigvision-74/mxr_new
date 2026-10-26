@@ -48,9 +48,5 @@
 .mail-link { color: var(--blue); font-weight: 600; text-decoration: underline }
 .dp-table-wrap .dp-table { min-width: 760px }
 .policy-banner-wide .banner-title { overflow-wrap: anywhere; text-wrap: balance }
-/* Long policy titles use a smaller size so they wrap cleanly instead of overflowing. banner.css sets the title size
-   with !important inside the "banner" layer, so the override has to live in that layer too. */
-@layer banner {
-  .policy-banner-wide .banner-title.banner-title--long { font-size: clamp(2rem, 4.2vw, 4.6rem) !important; line-height: 1.05 !important }
-}
+
 .dp-table td { white-space: pre-line }

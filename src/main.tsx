@@ -12,5 +12,6 @@ import './assets/css/policies.css'
 import './assets/css/journey.css'
 import './assets/css/banner.css'
 import './assets/css/layout.css'
+import './assets/css/buttons.css'
 
 createRoot(document.getElementById('root')!).render(<App />)
