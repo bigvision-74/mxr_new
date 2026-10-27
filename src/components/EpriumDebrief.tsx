@@ -26,7 +26,6 @@ export function EpriumDebrief() {
               </li>
             ))}
           </ul>
-          <a className="epd-cta" href="mailto:hello@mxr.ai?subject=EPRium%20demonstration">Turn simulation activity into evidence for meaningful debrief</a>
         </div>
       </div>
     </section>

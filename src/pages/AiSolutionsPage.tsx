@@ -27,9 +27,6 @@ export default function AiSolutionsPage() {
             <a className="group inline-flex items-center gap-3 rounded-full bg-[#0B66C3] px-6 py-3 text-sm font-semibold text-white ring-1 ring-[#1684E8]/60 transition-all duration-300 hover:bg-[#1684E8] md:px-8 md:py-4 md:text-base" href={"mailto:hello@mxr.ai?subject=AI%20Solutions%20enquiry"}>
               {"Discuss your project"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
-            <a className="group inline-flex items-center gap-3 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/25 transition-all duration-300 hover:bg-gray-900 md:px-8 md:py-4 md:text-base" href={"/contact"}>
-              {"Start a Conversation"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </a>
           </div>
 
         </div>
@@ -244,8 +241,7 @@ export default function AiSolutionsPage() {
           </p>
         </div>
         <div className={"button-row"}>
-          <a className={"btn btn-primary"} href={"mailto:hello@mxr.ai?subject=AI%20Solutions%20enquiry"}>{"Talk to our team"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
-          <a className={"btn btn-secondary"} href={"/contact"}>{"Start a Conversation"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
+          <a className={"btn btn-primary"} href={"mailto:hello@mxr.ai?subject=AI%20Solutions%20enquiry"}>{"Talk to Our Team"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
         </div>
       </section>
     </main>

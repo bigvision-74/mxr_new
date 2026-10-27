@@ -234,7 +234,16 @@
 }
 
 .dx-capabilities {
-    background: var(--color-light)
+    background: #102437;
+    color: white
+}
+
+.dx-capabilities .dx-kicker {
+    color: #7bc9ff
+}
+
+.dx-capabilities .dx-section-heading p:not(.dx-kicker) {
+    color: #c5d3df
 }
 
 .dx-bento {
@@ -277,12 +286,13 @@
 }
 
 .dx-bento article {
-    background: white;
+    background: #ffffff0d;
+    border: 1px solid #ffffff1f;
     padding: 28px
 }
 
 .dx-bento article svg {
-    color: var(--dx-blue);
+    color: #73c1fc;
     margin-bottom: 22px
 }
 
@@ -293,16 +303,17 @@
 
 .dx-bento article p {
     font-size: 0.8125rem;
-    line-height: 1.7
+    line-height: 1.7;
+    color: #c5d3df
 }
 
 .dx-intelligence {
-    background: #102437;
-    color: white
+    background: var(--color-light);
+    color: #10263d
 }
 
 .dx-intelligence .dx-kicker {
-    color: #7bc9ff
+    color: #0b66c3
 }
 
 .dx-intelligence-grid {
@@ -313,7 +324,7 @@
 }
 
 .dx-intelligence p {
-    color: #c5d3df
+    color: #40596d
 }
 
 .dx-intelligence h2+p {
@@ -334,7 +345,7 @@
 }
 
 .dx-data-list svg {
-    color: #73c1fc;
+    color: var(--dx-blue);
     width: 23px
 }
 
@@ -345,8 +356,8 @@
 }
 
 .dx-metric-tags span {
-    border: 1px solid #ffffff25;
-    color: #cad8e3;
+    border: 1px solid #10263d33;
+    color: #40596d;
     font-size: 0.625rem;
     padding: 7px 10px
 }
@@ -375,7 +386,8 @@
     position: absolute;
     bottom: 32px;
     left: 30px;
-    z-index: 1
+    z-index: 1;
+    color: white
 }
 
 .dx-intelligence figcaption span {
@@ -641,8 +653,13 @@ body .dx-page h3 {
     color: #10263d
 }
 
-body .dx-page .dx-intelligence h2 {
+body .dx-page .dx-capabilities h2,
+body .dx-page .dx-bento article h3 {
     color: white !important
+}
+
+body .dx-page .dx-intelligence h2 {
+    color: #10263d !important
 }
 
 .dx-page .dx-challenge {
@@ -725,7 +742,7 @@ body .dx-page .dx-intelligence h2 {
     overflow: hidden
 }
 
-.dx-intro-figure img {
+.dx-intro-figure :is(img, video) {
     width: 100%;
     display: block;
     aspect-ratio: 16/5;
@@ -1316,8 +1333,8 @@ body .dx-page .dx-hero h1>em {
 
 /* Description paragraph — matches site lead text */
 .dx-page.dx2 .dx-solution-bottom>p {
-    font-size: 1.05rem !important;
-    line-height: 1.65
+    font-size: 1rem !important;
+    line-height: 1.8
 }
 
 /* Feature card labels + icons: blue to stay on-theme */
@@ -1332,9 +1349,9 @@ body .dx-page .dx-hero h1>em {
 
 /* Steps: proportional to site section headings */
 .dx-page.dx2 .dx-solution-step h3 {
-    font-size: clamp(1.35rem, 2.5vw, 1.8rem) !important;
+    font-size: 1.4rem !important;
     font-weight: 700;
-    letter-spacing: -.035em
+    letter-spacing: -.03em
 }
 
 .dx-page.dx2 .dx-solution-step--accent h3 {
@@ -1342,8 +1359,8 @@ body .dx-page .dx-hero h1>em {
 }
 
 .dx-page.dx2 .dx-solution-step p {
-    font-size: .95rem !important;
-    line-height: 1.75
+    font-size: 1rem !important;
+    line-height: 1.65
 }
 
 /* ── Simulator spotlight / interactive hotspot section ── */
@@ -1445,9 +1462,9 @@ body .dx-page .dx-hero h1>em {
 
 .dx-spot-pin.active {
     background: #fff;
-    border-color: #f5c518;
+    border-color: #0b66c3;
     color: #0d1c2e;
-    box-shadow: 0 0 0 5px rgba(245, 197, 24, .3), 0 3px 10px rgba(13, 28, 46, .25)
+    box-shadow: 0 0 0 5px rgba(22, 132, 232, .3), 0 3px 10px rgba(13, 28, 46, .25)
 }
 
 /* ── Detail panel ── */
@@ -1567,9 +1584,9 @@ body .dx-page .dx-hero h1>em {
 }
 
 .dx-spot-tags span.active {
-    background: #f5c518;
-    border-color: #f5c518;
-    color: #1a1200;
+    background: #0b66c3;
+    border-color: #0b66c3;
+    color: #fff;
     font-weight: 700
 }
 
@@ -2108,8 +2125,8 @@ body .dx-page .dx-hero h1>em {
 }
 
 .dx-solution-copy>p:not(.dx-solution-kicker) {
-    font-size: 1.05rem;
-    line-height: 1.75;
+    font-size: 1rem;
+    line-height: 1.8;
     color: var(--sol-muted) !important;
     margin: 0;
     max-width: 640px
@@ -2129,7 +2146,43 @@ body .dx-page .dx-hero h1>em {
 /* ── How it works ── */
 .dx-page.dx2 .dx-how {
     background: #0d1826;
-    padding: 80px 0 90px
+    padding: 0
+}
+
+/* How it works: the "From setup to debrief" layout on the dark background */
+.dx-how .dx-delivery-image {
+    background: none;
+    padding: 0
+}
+
+.dx-how .dx-delivery-image img {
+    display: block;
+    width: 100%;
+    max-height: none;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, .45)
+}
+
+.dx-how .dx-delivery-image span {
+    color: #8fa8be
+}
+
+.dx-how .dx-delivery li {
+    border-top-color: rgba(255, 255, 255, .14)
+}
+
+.dx-how .dx-delivery li>span {
+    color: #4eb8ff
+}
+
+.dx-how .dx-delivery li h3 {
+    color: #fff
+}
+
+.dx-how .dx-delivery li p {
+    color: #8fa8be
 }
 
 .dx-how .dx-kicker {
@@ -2410,6 +2463,11 @@ body .dx-page .dx-hero h1>em {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px
+}
+
+/* An odd last card spans the full row instead of leaving a gap */
+.dx-outputs>.dx-output:last-child:nth-child(odd) {
+    grid-column: 1 / -1
 }
 
 .dx-output {
@@ -2789,5 +2847,242 @@ body .dx-page .dx-hero h1>em {
 @media (max-width: 1000px) {
     .dx-ring {
         display: none
+    }
+}
+
+.dx-page .dx-capabilities .dx-section-heading {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 70px;
+    align-items: end;
+    max-width: none
+}
+
+.dx-page .dx-capabilities .dx-section-heading .dx-kicker,
+.dx-page .dx-capabilities .dx-section-heading h2 {
+    grid-column: 1
+}
+
+.dx-page .dx-capabilities .dx-section-heading>p:last-child {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: end;
+    margin-top: 0;
+    max-width: 480px;
+    justify-self: end
+}
+
+@media(max-width:900px) {
+    .dx-page .dx-capabilities .dx-section-heading {
+        display: block
+    }
+
+    .dx-page .dx-capabilities .dx-section-heading>p:last-child {
+        margin-top: 20px;
+        max-width: 620px
+    }
+}
+
+/* -- Data & analytics body: detail card + proportional outputs -- */
+.dx-metrics button.active {
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(11, 102, 195, .12)
+}
+
+.dx-output {
+    box-shadow: 0 6px 18px rgba(13, 35, 56, .06)
+}
+
+/* Wide last card: keep the gauge proportional instead of stretching it */
+.dx-outputs>.dx-output:last-child:nth-child(odd) .dx-output-art {
+    background: #14233a
+}
+
+.dx-outputs>.dx-output:last-child:nth-child(odd) .dx-output-art svg {
+    height: 260px;
+    margin: 0 auto
+}
+
+/* -- Data & analytics body: richer tiles and panels -- */
+.dx-data-label {
+    align-items: center;
+    margin-bottom: 18px
+}
+
+.dx-data-count {
+    background: var(--dx-ink);
+    color: #fff;
+    border-radius: 99px;
+    padding: 3px 10px;
+    letter-spacing: .04em
+}
+
+.dx-metrics {
+    gap: 10px
+}
+
+.dx-page.dx2 .dx-metrics button {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    column-gap: 12px;
+    padding: 18px 16px 25px;
+    border-radius: 12px;
+    border: 1px solid #dce8f2;
+    background: #fff;
+    box-shadow: 0 4px 14px rgba(13, 35, 56, .05);
+    overflow: hidden;
+    transition: transform .18s, border-color .18s, box-shadow .18s, background .18s
+}
+
+.dx-page.dx2 .dx-metrics button:hover {
+    transform: translateY(-2px);
+    border-color: #9fc3ea;
+    box-shadow: 0 10px 24px rgba(13, 35, 56, .1)
+}
+
+.dx-page.dx2 .dx-metrics button em {
+    display: grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    background: #eef4fa;
+    color: #5d7690;
+    font-weight: 700
+}
+
+.dx-page.dx2 .dx-metrics button b {
+    font-size: .95rem;
+    font-weight: 750;
+    letter-spacing: -.01em;
+    color: var(--dx-ink)
+}
+
+.dx-page.dx2 .dx-metrics button:after {
+    content: '';
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 11px;
+    height: 4px;
+    border-radius: 99px;
+    background: linear-gradient(90deg, #7fb2e8 var(--v), #e6eef6 var(--v))
+}
+
+.dx-page.dx2 .dx-metrics button.active {
+    background: linear-gradient(135deg, #eaf4ff, #fff);
+    border-color: var(--dx-blue);
+    box-shadow: 0 0 0 3px rgba(11, 102, 195, .12), 0 10px 24px rgba(11, 102, 195, .14)
+}
+
+.dx-page.dx2 .dx-metrics button.active em {
+    background: var(--dx-blue);
+    color: #fff
+}
+
+.dx-page.dx2 .dx-metrics button.active:after {
+    background: linear-gradient(90deg, #1f7ae0 var(--v), #dbe8f5 var(--v))
+}
+
+.dx-outputs {
+    gap: 16px
+}
+
+.dx-page.dx2 .dx-output {
+    border: 0;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 10px 28px rgba(13, 35, 56, .12)
+}
+
+.dx-page.dx2 .dx-output:hover {
+    box-shadow: 0 18px 40px rgba(13, 35, 56, .2)
+}
+
+.dx-page.dx2 .dx-output-foot {
+    padding: 14px 18px
+}
+
+.dx-page.dx2 .dx-output-foot span {
+    background: #eef4fa;
+    color: #4a6279;
+    border-radius: 99px;
+    padding: 4px 10px;
+    font-weight: 600
+}
+
+/* Equal-height columns: tops and bottoms line up */
+.dx-data-body {
+    align-items: stretch
+}
+
+.dx-data-body>div {
+    display: flex;
+    flex-direction: column
+}
+
+.dx-data-label {
+    min-height: 30px;
+    margin-bottom: 14px
+}
+
+.dx-metrics,
+.dx-outputs {
+    flex: 1
+}
+
+.dx-metrics {
+    grid-auto-rows: 1fr
+}
+
+.dx-outputs {
+    grid-template-rows: auto 1fr
+}
+
+.dx-outputs>.dx-output:last-child:nth-child(odd) {
+    display: flex;
+    flex-direction: column
+}
+
+.dx-outputs>.dx-output:last-child:nth-child(odd) .dx-output-art {
+    flex: 1;
+    display: grid;
+    place-items: center
+}
+
+@media(max-width:960px) {
+    .dx-outputs {
+        grid-template-rows: none
+    }
+}
+
+/* ── Key features: smaller simulator image, blank margin trimmed ──
+   The picture has ~12% empty space on its left and ~7% above and below. The wrapper is scaled down and pulled
+   up by that amount and centred in its column, and the numbered pins (positioned in % of the wrapper) stay exactly
+   on their parts. */
+.dx-page.dx2 .dx-spotlight-layout {
+    grid-template-columns: .95fr 1.05fr;
+    gap: 40px;
+    align-items: center
+}
+
+.dx-page.dx2 .dx-spotlight-imgwrap {
+    width: min(100%, 560px);
+    margin: calc(min(100%, 560px) * -.06) auto;
+    /* the simulator sits ~3% right of the picture's centre, so nudge the box left to centre the simulator itself */
+    transform: translateX(-3%)
+}
+
+@media (max-width: 960px) {
+    .dx-page.dx2 .dx-spotlight-layout {
+        grid-template-columns: 1fr;
+        gap: 24px
+    }
+
+    .dx-page.dx2 .dx-spotlight-imgwrap {
+        width: min(100%, 520px);
+        margin: calc(min(100%, 520px) * -.06) auto
     }
 }

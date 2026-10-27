@@ -1,4 +1,5 @@
 import { ArrowRight, Briefcase } from 'lucide-react'
+import defaultBanner from '../assets/videos/defaultbanner.mp4'
 import bannerImg from '../assets/images/about/about-hero.webp'
 import caseStudiesData from '../../casestudiesdata.json'
 
@@ -6,6 +7,7 @@ export default function CaseStudiesPage() {
     return (
         <main className="case-studies-page">
             <section className="contact-banner" style={{ backgroundImage: `url(${bannerImg})` }}>
+              <video className="contact-banner-video" autoPlay muted loop playsInline preload="metadata" aria-hidden="true"><source src={defaultBanner} type="video/mp4" /></video>
                 <div className="contact-banner-overlay" />
                 <div className="contact-banner-copy">
 
@@ -74,10 +76,7 @@ export default function CaseStudiesPage() {
                 </div>
                 <div className={"button-row"}>
                     <a className={"btn btn-primary"} href={"/contact"}>
-                        {"Talk to Our Team →"}
-                    </a>
-                    <a className={"btn btn-secondary"} href={"/#solutions"}>
-                        {"Explore Solutions"}
+                        {"Talk to Our Team"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                     </a>
                 </div>
             </section>

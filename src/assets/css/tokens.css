@@ -12,6 +12,11 @@
   --pale: var(--color-light);
   /* Blue accent for text on dark backgrounds (eyebrow labels, highlights). Change it here and it updates everywhere. */
   --blue-dark: #64B7FF;
+  /* Accent colour of the highlighted words in every hero/banner title (set once, used by banner.css and the home hero) */
+  --hero-accent: #3ea0ff;
+  /* Lighter blue that flows through the accent text; never white, so the text stays fully visible */
+  --hero-accent-flow: #8fd0ff;
+  --hero-shine: linear-gradient(100deg, var(--hero-accent) 0%, var(--hero-accent-flow) 50%, var(--hero-accent) 100%);
 }
 
 html, body, button, input, select, textarea {

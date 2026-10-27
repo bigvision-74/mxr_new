@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Phone, Mail, MapPin, ArrowRight, Send } from 'lucide-react'
+import defaultBanner from '../assets/videos/defaultbanner.mp4'
 import bannerImg from '../assets/images/about/about-hero.webp'
 
 declare global {
@@ -13,7 +14,6 @@ declare global {
 }
 
 const channels = [
-  { icon: Phone, label: 'Call Us', value: '+44 7393 173361', href: 'tel:+447393173361', note: 'Speak directly with our team.' },
   { icon: Mail, label: 'Email Our Team', value: 'team@mxr.ai', href: 'mailto:team@mxr.ai', note: 'Send us your questions or project brief.' },
   { icon: MapPin, label: 'Our Location', value: 'United Kingdom', href: '', note: 'Global support for your training and simulation needs.' },
 ]
@@ -66,6 +66,7 @@ export default function ContactPage() {
   return (
     <main className="contact-page">
       <section className="contact-banner" style={{ backgroundImage: `url(${bannerImg})` }}>
+        <video className="contact-banner-video" autoPlay muted loop playsInline preload="metadata" aria-hidden="true"><source src={defaultBanner} type="video/mp4" /></video>
         <div className="contact-banner-overlay" />
         <div className="contact-banner-copy">
           <h1 className="banner-title banner-title--stacked">Let's build something <em>extraordinary.</em></h1>

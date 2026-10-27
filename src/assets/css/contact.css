@@ -495,6 +495,7 @@ a.contact-card:hover .contact-card-arrow {
 }
 
 @media(max-width:900px) {
+
     #hubspotForm .hs-form,
     #hubspotForm form {
         grid-template-columns: 1fr
@@ -785,7 +786,7 @@ a.contact-card:hover .contact-card-arrow {
 /* EPRium hero — aligned with the home hero (font, weight, accent, buttons, backdrop) */
 .ep2-hero,
 .ep2-workflow {
-    font-family:var(--font-family)
+    font-family: var(--font-family)
 }
 
 .ep2-hero {
@@ -1015,7 +1016,7 @@ a.contact-card:hover .contact-card-arrow {
 
 /* EPRium hero — match home hero exactly: Inter everywhere, darker photo, content starts under the nav */
 .ep2-hero * {
-    font-family:var(--font-family)
+    font-family: var(--font-family)
 }
 
 .ep2-hero {
@@ -1127,8 +1128,8 @@ a.contact-card:hover .contact-card-arrow {
 }
 
 .mxr-immersive-hero {
-    height: 94vh !important;
-    min-height: 680px !important
+    height: 100vh !important;
+    min-height: 700px !important
 }
 
 /* EPRium: workflow strip and challenge section read as one full-width white section */
@@ -1265,4 +1266,16 @@ a.contact-card:hover .contact-card-arrow {
 .ep2-workflow {
     background: var(--color-light)
 }
-.ep2-workflow{background:transparent}
+
+.ep2-workflow {
+    background: transparent
+}
+/* Banner background video (same clip as Simulator Development), under the shade and text */
+.contact-banner-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none
+}

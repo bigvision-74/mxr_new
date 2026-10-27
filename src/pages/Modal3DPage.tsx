@@ -271,8 +271,7 @@ export default function Modal3DPage() {
           <p>{"Explore the experience with our team, around your training goals."}</p>
         </div>
         <div className={"button-row"}>
-          <a className={"btn btn-primary"} href={"mailto:hello@mxr.ai?subject=MODAL3D%20demo"}>{"Book a demo"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
-          <a className={"btn btn-secondary"} href={"/contact"}>{"Get in touch"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
+          <a className={"btn btn-primary"} href={"mailto:hello@mxr.ai?subject=MODAL3D%20demo"}>{"Talk to Our Team"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
         </div>
       </section>
     </main>

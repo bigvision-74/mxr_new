@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { NavBar } from './components/NavBar'
 import { Footer } from './components/Footer'
+import { ScrollToTop } from './components/ScrollToTop'
 import { pages } from './page-manifest'
 import BlogDetailPage from './pages/BlogDetailPage'
 import CaseStudyDetailPage from './pages/CaseStudyDetailPage'
@@ -36,6 +37,7 @@ export default function App() {
         <NavBar />
         <BlogDetailPage />
         <Footer />
+        <ScrollToTop />
       </div>
     )
   }
@@ -46,14 +48,16 @@ export default function App() {
         <NavBar />
         <CaseStudyDetailPage />
         <Footer />
+        <ScrollToTop />
       </div>
     )
   }
-  if (!page) return <><NavBar /><main className="section"><h1>Page not found</h1><p><a href="/">Return to MXR home</a></p></main><Footer /></>
+  if (!page) return <><NavBar /><main className="section"><h1>Page not found</h1><p><a href="/">Return to MXR home</a></p></main><Footer /><ScrollToTop /></>
   const { Component } = page
   return <div className={`mxr-react-page ${page.bodyClass}`}>
     {filename !== 'index.html' && <NavBar />}
     <Component />
     <Footer />
+    <ScrollToTop />
   </div>
 }

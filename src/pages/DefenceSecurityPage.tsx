@@ -40,9 +40,6 @@ export default function DefenceSecurityPage() {
           <a className={"btn btn-primary"} href={"#capabilities"}>
             {"Explore capabilities →"}
           </a>
-          <a className={"btn btn-ghost"} href={"mailto:hello@mxr.ai"}>
-            {"Discuss your requirement"}
-          </a>
         </div>
       </div>
       <div className={"detail-hero-image reveal visible"}>
@@ -273,7 +270,6 @@ export default function DefenceSecurityPage() {
       </div>
       <div className={"button-row"}>
         <a className={"btn btn-primary"} href={"mailto:hello@mxr.ai"}>{"Talk to Our Team"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
-        <a className={"btn btn-secondary"} href={"/contact"}>{"Start a Conversation"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
       </div>
     </section>
   </main>
