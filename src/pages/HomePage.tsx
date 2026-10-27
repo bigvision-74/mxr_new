@@ -2,6 +2,8 @@
 import { ArrowRight } from 'lucide-react'
 import { useState, useRef, useEffect } from 'react'
 import { ImmersiveHero } from '../components/ImmersiveHero'
+import driveXRImage from '../assets/images/drivexr/brochure-simulator.webp'
+import insightXRImage from '../assets/images/insightxr-platform.png'
 import '@google/model-viewer'
 
 export default function HomePage() {
@@ -602,13 +604,47 @@ export default function HomePage() {
             </div>
           </div>
         </article>
+
+        {([
+          { name: 'DriveXR', heading: 'Training for the moments that matter.', description: 'Build emergency driving readiness through repeatable immersive scenarios, instructor control and performance feedback.', href: '/drivexr-2', image: driveXRImage, alt: 'DriveXR simulator training environment', benefits: [['SIM', 'Realistic scenarios'], ['LIVE', 'Instructor-led training'], ['DATA', 'Performance feedback']] },
+          { name: 'InsightXR', heading: 'Manage learning. Measure progress.', description: 'Connect immersive content, learners, supported devices and performance insight in one organised platform.', href: '/insightxr', image: insightXRImage, alt: 'InsightXR learning management platform', benefits: [['XR', 'Connected delivery'], ['LMS', 'Learner management'], ['DATA', 'Assessment insight']] },
+          { name: 'Omnia', heading: 'An immersive room. Unlimited possibilities.', description: 'Design and deliver engaging 360° scenarios and shared interactive experiences for immersive rooms.', href: '/omnia', image: '', alt: 'Omnia immersive room visualisation', benefits: [['360°', 'Immersive content'], ['SCENE', 'Scenario creation'], ['TEAM', 'Shared experiences']] },
+        ] as const).map((product, index) => (
+          <article key={product.name} hidden={activeProduct !== index + 2} className={'product-slide modal-showcase' + (activeProduct === index + 2 ? ' active' : '')} data-product-slide={index + 2}>
+            <div className="modal-copy">
+              <p className="eyebrow light">FEATURED PRODUCT</p>
+              <h2>{product.name}</h2>
+              <h3>{product.heading}</h3>
+              <p>{product.description}</p>
+              <a className="btn btn-white" href={product.href}>Explore {product.name} →</a>
+            </div>
+            <div className="eprium-product-visual" style={{ background: 'transparent', border: 'none', boxShadow: 'none', display: 'grid', placeItems: 'center' }}>
+              {product.image ? (
+                <img src={product.image} alt={product.alt} loading="lazy" style={{ width: '100%', maxHeight: 520, objectFit: 'contain', borderRadius: 8 }} />
+              ) : (
+                <div role="img" aria-label={product.alt} style={{ width: '90%', aspectRatio: '1.5', display: 'grid', placeItems: 'center', color: '#c1f0f3', fontSize: 'clamp(2rem, 5vw, 4.5rem)', letterSpacing: '-.06em', fontWeight: 700, border: '2px solid #3a9ba6', borderRadius: 12, background: 'radial-gradient(circle, #183f53, #091623 72%)', boxShadow: '0 24px 75px #0007' }}>OMNIA</div>
+              )}
+            </div>
+            <div className="px-feat-list">
+              {product.benefits.map(([symbol, label]) => (
+                <div className="px-feat-row" key={label}>
+                  <div className="px-badge">{symbol}</div>
+                  <div className="px-feat-body"><div className="px-feat-meta"><h4>{label}</h4></div></div>
+                </div>
+              ))}
+            </div>
+          </article>
+        ))}
         <div className={"product-slider-controls"}>
-          <button onClick={() => setActiveProduct(p => (p + 1) % 2)} className={"product-arrow product-prev"} aria-label={"Previous featured product"}>{"←"}</button>
+          <button onClick={() => setActiveProduct(p => (p + 4) % 5)} className={"product-arrow product-prev"} aria-label={"Previous featured product"}>{"←"}</button>
           <div className={"product-dots"} role={"tablist"} aria-label={"Choose featured product"}>
             <button onClick={() => setActiveProduct(0)} aria-selected={activeProduct === 0} className={activeProduct === 0 ? "active" : ""} role={"tab"} aria-label={"Show MODAL3D"} data-product-go={"0"} />
             <button onClick={() => setActiveProduct(1)} aria-selected={activeProduct === 1} className={activeProduct === 1 ? "active" : ""} role={"tab"} aria-label={"Show EPRium"} data-product-go={"1"} />
+            <button onClick={() => setActiveProduct(2)} aria-selected={activeProduct === 2} className={activeProduct === 2 ? "active" : ""} role="tab" aria-label="Show DriveXR" data-product-go="2" />
+            <button onClick={() => setActiveProduct(3)} aria-selected={activeProduct === 3} className={activeProduct === 3 ? "active" : ""} role="tab" aria-label="Show InsightXR" data-product-go="3" />
+            <button onClick={() => setActiveProduct(4)} aria-selected={activeProduct === 4} className={activeProduct === 4 ? "active" : ""} role="tab" aria-label="Show Omnia" data-product-go="4" />
           </div>
-          <button onClick={() => setActiveProduct(p => (p + 1) % 2)} className={"product-arrow product-next"} aria-label={"Next featured product"}>{"→"}</button>
+          <button onClick={() => setActiveProduct(p => (p + 1) % 5)} className={"product-arrow product-next"} aria-label={"Next featured product"}>{"→"}</button>
         </div>
       </section>
 
