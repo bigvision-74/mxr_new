@@ -1229,6 +1229,7 @@ body .dx-page .dx-hero h1>em {
 }
 
 .dx-page.dx2 .dx-intro {
+    background: none;
     padding-left: 8vw;
     padding-right: 8vw
 }

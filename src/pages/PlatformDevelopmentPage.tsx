@@ -192,7 +192,40 @@ export default function PlatformDevelopmentPage() {
           </article>
         </div>
       </section>
-      <section className={"section service-related"}>
+      <section className={"section service-deliver"}>
+        <div>
+          <p className={"eyebrow"}>{"THE MXR ADVANTAGE"}</p>
+          <h2>
+            {"Built for your business."}
+            <br />
+            {"Designed for your users."}
+          </h2>
+          <p>{"The right expertise, a considered design approach and a clear focus on value, from your first requirement to everyday use."}</p>
+        </div>
+        <div className={"service-feature-grid"}>
+          <article>
+            <span>{"01"}</span>
+            <h3>{"Prompt customisation"}</h3>
+            <p>{"Tailored web, mobile and desktop solutions built around your workflows. We adapt quickly to your requirements, with regular reviews to keep delivery focused."}</p>
+          </article>
+          <article>
+            <span>{"02"}</span>
+            <h3>{"Qualified team"}</h3>
+            <p>{"Work with experienced developers, designers and consultants who bring practical expertise across platforms, integrations and immersive technology."}</p>
+          </article>
+          <article>
+            <span>{"03"}</span>
+            <h3>{"Cost-effective solutions"}</h3>
+            <p>{"Prioritise the features that make a difference. Clear scope, reusable components and phased delivery help you manage investment as your platform grows."}</p>
+          </article>
+          <article>
+            <span>{"04"}</span>
+            <h3>{"User-centred design"}</h3>
+            <p>{"Intuitive interfaces that make complex tasks feel straightforward. We combine considered UI and UX design with responsive layouts for everyday usability."}</p>
+          </article>
+        </div>
+      </section>
+      <section className={"section service-related service-related--tint"}>
         <p className={"eyebrow"}>
           {"CONNECTED CAPABILITIES"}
         </p>

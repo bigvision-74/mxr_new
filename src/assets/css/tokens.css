@@ -10,7 +10,7 @@
   --color-light: #f8fafc;
   --navy: var(--color-dark);
   --pale: var(--color-light);
-  /* Blue accent for text on dark-theme sections */
+  /* Blue accent for text on dark backgrounds (eyebrow labels, highlights). Change it here and it updates everywhere. */
   --blue-dark: #64B7FF;
 }
 

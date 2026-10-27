@@ -411,7 +411,6 @@ export default function DriveXR2Page() {
   return (
     <main className="dx-page dx2">
       <section className="dx-hero">
-        {/* TEMP: static gif in place of <DriveRotatingRing /> */}
         <div className="dx-ring">
           <img src={podTransparent} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
         </div>

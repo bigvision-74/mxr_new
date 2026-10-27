@@ -9,14 +9,14 @@ export default function OmniaPage() {
     <main className={"pp ep-page"} style={{ "--product-accent": "#087f8c" } as CSSProperties}>
       <ProductHero title="Meet" accent="Omnia." lead="Omnia product description goes here." demoSubject="Omnia demonstration" secondaryHref="#omnia-overview-heading" secondaryLabel="Explore Omnia" image={omniaBg} />
 
-      {/* Placeholder section: replace the copy below with the Omnia content. */}
+      {/* Coming-soon notice: replace the copy below with the Omnia content when it is ready. */}
       <section className={"epr-gap"} aria-labelledby={"omnia-overview-heading"}>
         <div className={"epr-gap-heading"}>
           <div>
             <p className={"eyebrow"}>{"OVERVIEW"}</p>
-            <h2 id={"omnia-overview-heading"}>{"Omnia section heading"}</h2>
+            <h2 id={"omnia-overview-heading"}>{"Coming soon"}</h2>
           </div>
-          <p>{"Omnia overview text goes here."}</p>
+          <p>{"We're putting the finishing touches on Omnia. Check back shortly for the full overview."}</p>
         </div>
       </section>
 

@@ -1,12 +1,15 @@
 import type { CSSProperties } from 'react'
 import { ArrowRight } from 'lucide-react'
 import { ProductHero } from '../components/ProductHero'
-import defaultBanner from '../assets/videos/defaultbanner.mp4'
+import { HoverCutawayVideo } from '../components/HoverCutawayVideo'
+import { ProductModelViewer } from '../components/ProductModelViewer'
+import vs50Model from '../assets/images/modal3d/VS-50.glb?url'
+import modalHero from '../assets/images/modal3d/modal3d_hero.mp4'
 
 export default function Modal3DPage() {
   return (
     <main className={"pp"} style={{ "--product-accent": "#0b66c3" } as CSSProperties}>
-      <ProductHero title="Complex assets." accent="Clear understanding." lead="Explore ordnance in interactive 3D. Connect component views, technical information and AR in one organised library." demoSubject="MODAL3D demonstration" secondaryHref="#product-benefits" secondaryLabel="Explore MODAL3D" video={defaultBanner} />
+      <ProductHero title="Complex assets." accent="Clear understanding." lead="Explore ordnance in interactive 3D. Connect component views, technical information and AR in one organised library." demoSubject="MODAL3D demonstration" secondaryHref="#product-benefits" secondaryLabel="Explore MODAL3D" visual={<HoverCutawayVideo src={modalHero} label="MODAL3D ordnance model, with its inner parts revealed under the pointer" />} />
       <section className={"pp-benefits"} id={"product-benefits"}>
         <div className={"pp-heading"}>
           <div>
@@ -82,28 +85,7 @@ export default function Modal3DPage() {
       </section>
       <section className={"pp-experience"}>
         <div className={"pp-experience-visual"}>
-          <div className={"pp-model"}>
-            <div className={"technical-object"}>
-              <div className={"obj-part p1"}>
-
-              </div>
-              <div className={"obj-part p2"}>
-
-              </div>
-              <div className={"obj-part p3"}>
-
-              </div>
-              <div className={"obj-part p4"}>
-
-              </div>
-              <div className={"scan-line"}>
-
-              </div>
-            </div>
-            <span className={"pp-model-label"}>
-              {"INTERACTIVE 3D · COMPONENT EXPLORATION"}
-            </span>
-          </div>
+          <ProductModelViewer src={vs50Model} alt={"Interactive 3D model of the VS-50"} label={"DRAG TO TURN · SCROLL TO ZOOM"} />
         </div>
         <div>
           <p className={"eyebrow"}>
@@ -276,22 +258,7 @@ export default function Modal3DPage() {
           </article>
         </div>
       </section>
-      <section className={"pp-audience"}>
-        <p className={"eyebrow"}>
-          {"BUILT FOR YOUR WORLD"}
-        </p>
-        <div>
-          <span>
-            {"Defence training"}
-          </span>
-          <span>
-            {"Technical education"}
-          </span>
-          <span>
-            {"Instructor-led learning"}
-          </span>
-        </div>
-      </section>
+
       <section className={"final-cta home-wave-section home-wave-cta"}>
         <div className={"home-wave-media"} aria-hidden={"true"}>
           <video autoPlay={true} muted={true} loop={true} playsInline={true} preload={"metadata"}>
