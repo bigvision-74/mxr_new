@@ -218,16 +218,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 24px;
-    flex: 0 0 300px;
-    min-height: 220px;
+    padding: 20px;
+    flex: 0 0 460px;
+    min-height: 320px;
 }
 
 .cs-hero-image img {
-    max-height: 260px;
-    width: auto;
+    max-height: 420px;
+    width: 100%;
     max-width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     display: block;
     border-radius: 10px;
 }
@@ -304,4 +304,98 @@
     .cs-meta-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* ── Role Grid (NHS-style icon cards) ───────────────────────────── */
+.cs-role-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 20px 0 28px;
+}
+
+.cs-role-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 28px 16px 24px;
+    border: 1px solid #dbe8f5;
+    border-radius: 14px;
+    background: #fff;
+    transition: box-shadow .2s, border-color .2s, transform .2s;
+}
+
+.cs-role-card:hover {
+    box-shadow: 0 8px 28px rgba(22, 132, 232, .12);
+    border-color: rgba(22, 132, 232, .4);
+    transform: translateY(-3px);
+}
+
+.cs-role-card span {
+    font-size: .95rem;
+    font-weight: 600;
+    color: #1684e8;
+    text-align: center;
+}
+
+/* ── Video Block ─────────────────────────────────────────────────── */
+.cs-video-wrap {
+    margin: 24px auto;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid #dbe8f5;
+    max-width: 720px;
+    aspect-ratio: 16 / 9;
+}
+
+.cs-video-wrap video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+.cs-video-placeholder {
+    margin: 24px 0;
+    border-radius: 14px;
+    border: 2px dashed #d4e3f0;
+    background: #f4f8fd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.cs-video-placeholder span {
+    font-size: .9rem;
+    font-weight: 600;
+    color: #7a96b0;
+}
+
+@media (max-width: 600px) {
+    .cs-role-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ── Case study layout overrides ────────────────────────────────── */
+
+/* 1. Hero text + image always side-by-side — push collapse breakpoint down to 700px */
+@media (min-width: 701px) {
+    .case-hero {
+        grid-template-columns: 52% 48% !important;
+    }
+}
+
+/* 2. Challenge section-heading: stack heading block above description paragraph */
+.case-challenge .section-heading {
+    display: block !important;
+}
+
+.case-challenge .section-heading > p {
+    margin-top: 16px !important;
+    max-width: 780px;
 }

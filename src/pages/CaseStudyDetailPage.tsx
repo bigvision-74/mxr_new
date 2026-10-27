@@ -1,4 +1,22 @@
-import { ArrowLeft, Briefcase, Clock, Cpu, User, FolderKanban, Sparkles } from 'lucide-react'
+import { ArrowLeft, Briefcase, Clock, Cpu, User, FolderKanban } from 'lucide-react'
+import {
+  FaBrain, FaBook, FaPencilAlt, FaBuilding, FaCheck,
+  FaUserMd, FaStethoscope, FaUserNurse, FaToolbox, FaLightbulb, FaLaptopCode,
+} from 'react-icons/fa'
+import type { IconType } from 'react-icons'
+
+const featureIconMap: Record<string, IconType> = {
+  'natural language processing': FaBrain,
+  'nlp': FaBrain,
+  'syllabus': FaBook,
+  'mock exam': FaPencilAlt,
+  'white-labelled': FaBuilding,
+  'white labelled': FaBuilding,
+}
+
+const roleIconMap: Record<string, IconType> = {
+  FaUserMd, FaStethoscope, FaUserNurse, FaToolbox, FaLightbulb, FaLaptopCode,
+}
 import bannerImg from '../assets/images/about/about-hero.webp'
 import caseStudiesData from '../../casestudiesdata.json'
 
@@ -7,6 +25,7 @@ type BaseBlock =
     | { type: 'para'; content: string[] }
     | { type: 'list'; content: string[] }
     | { type: 'quote'; content: string; attribution?: string }
+    | { type: 'video'; src: string }
 
 type SideBySideBlock = {
     type: 'sidebyside'
@@ -16,14 +35,15 @@ type SideBySideBlock = {
 
 type KeyFeaturesBlock = {
     type: 'keyfeatures'
-    features: Array<{
-        icon?: string
-        title: string
-        description: string
-    }>
+    features: Array<{ icon?: string; title: string; description: string }>
 }
 
-type BodyBlock = BaseBlock | SideBySideBlock | KeyFeaturesBlock
+type RoleGridBlock = {
+    type: 'rolegrid'
+    roles: Array<{ label: string; icon: string }>
+}
+
+type BodyBlock = BaseBlock | SideBySideBlock | KeyFeaturesBlock | RoleGridBlock
 
 function renderBlock(block: BodyBlock, index: number) {
     if (!block) return null
@@ -78,21 +98,60 @@ function renderBlock(block: BodyBlock, index: number) {
         return (
             <div key={index} className="cs-features-wrap">
                 <div className="cs-features-grid">
-                    {block.features.map((feature, i) => (
-                        <div key={i} className="cs-feature-card">
-                            <div className="cs-feature-icon-wrap">
-                                <Sparkles size={20} className="cs-feature-icon" />
+                    {block.features.map((feature, i) => {
+                        const key = Object.keys(featureIconMap).find(k =>
+                            feature.title.toLowerCase().includes(k)
+                        )
+                        const Icon: IconType = key ? featureIconMap[key] : FaCheck
+                        return (
+                            <div key={i} className="cs-feature-card">
+                                <div className="cs-feature-icon-wrap">
+                                    <Icon size={42} color="#1684e8" />
+                                </div>
+                                <h4 className="cs-feature-title">{feature.title}</h4>
+                                <p className="cs-feature-desc">{feature.description}</p>
                             </div>
-                            <h4 className="cs-feature-title">{feature.title}</h4>
-                            <p className="cs-feature-desc">{feature.description}</p>
-                        </div>
-                    ))}
+                        )
+                    })}
                 </div>
             </div>
         )
     }
 
-    // 6. Paragraphs (Array of strings or single string)
+    // 6. Role Grid (NHS-style icon cards)
+    if (block.type === 'rolegrid') {
+        return (
+            <div key={index} className="cs-role-grid">
+                {block.roles.map((role, i) => {
+                    const Icon: IconType = roleIconMap[role.icon] ?? FaCheck
+                    return (
+                        <div key={i} className="cs-role-card">
+                            <Icon size={48} color="#1684e8" />
+                            <span>{role.label}</span>
+                        </div>
+                    )
+                })}
+            </div>
+        )
+    }
+
+    // 7. Video
+    if (block.type === 'video') {
+        if (!block.src) return (
+            <div key={index} className="cs-video-placeholder">
+                <span>Video coming soon</span>
+            </div>
+        )
+        return (
+            <div key={index} className="cs-video-wrap">
+                <video controls playsInline preload="metadata">
+                    <source src={block.src} type="video/mp4" />
+                </video>
+            </div>
+        )
+    }
+
+    // 8. Paragraphs (Array of strings or single string)
     if (block.type === 'para') {
         const paragraphs = Array.isArray(block.content)
             ? block.content
@@ -151,55 +210,56 @@ export default function CaseStudyDetailPage() {
                         <ArrowLeft size={14} /> All case studies
                     </a>
 
-                    {/* Meta info card */}
-                    <div className="cs-meta-card">
-                        <div className="cs-meta-grid">
-                            <div className="cs-meta-item">
-                                <User size={15} />
-                                <div>
-                                    <span className="cs-meta-label">Client</span>
-                                    <span className="cs-meta-value">{cs.client}</span>
-                                </div>
-                            </div>
-                            <div className="cs-meta-item">
-                                <Briefcase size={15} />
-                                <div>
-                                    <span className="cs-meta-label">Industry</span>
-                                    <span className="cs-meta-value">{cs.industry}</span>
-                                </div>
-                            </div>
-                            <div className="cs-meta-item">
-                                <Clock size={15} />
-                                <div>
-                                    <span className="cs-meta-label">Duration</span>
-                                    <span className="cs-meta-value">{cs.duration}</span>
-                                </div>
-                            </div>
-                            {cs.project && (
-                                <div className="cs-meta-item cs-meta-item--wide">
-                                    <FolderKanban size={15} />
+                    {/* Meta card + image side by side */}
+                    <div className="cs-hero-row">
+                        <div className="cs-meta-card">
+                            <div className="cs-meta-grid">
+                                <div className="cs-meta-item">
+                                    <User size={15} />
                                     <div>
-                                        <span className="cs-meta-label">Project</span>
-                                        <span className="cs-meta-value">{cs.project}</span>
+                                        <span className="cs-meta-label">Client</span>
+                                        <span className="cs-meta-value">{cs.client}</span>
                                     </div>
                                 </div>
-                            )}
-                            <div className="cs-meta-item cs-meta-item--wide">
-                                <Cpu size={15} />
-                                <div>
-                                    <span className="cs-meta-label">Technology</span>
-                                    <span className="cs-meta-value">{cs.technology}</span>
+                                <div className="cs-meta-item">
+                                    <Briefcase size={15} />
+                                    <div>
+                                        <span className="cs-meta-label">Industry</span>
+                                        <span className="cs-meta-value">{cs.industry}</span>
+                                    </div>
+                                </div>
+                                <div className="cs-meta-item">
+                                    <Clock size={15} />
+                                    <div>
+                                        <span className="cs-meta-label">Duration</span>
+                                        <span className="cs-meta-value">{cs.duration}</span>
+                                    </div>
+                                </div>
+                                {cs.project && (
+                                    <div className="cs-meta-item cs-meta-item--wide">
+                                        <FolderKanban size={15} />
+                                        <div>
+                                            <span className="cs-meta-label">Project</span>
+                                            <span className="cs-meta-value">{cs.project}</span>
+                                        </div>
+                                    </div>
+                                )}
+                                <div className="cs-meta-item cs-meta-item--wide">
+                                    <Cpu size={15} />
+                                    <div>
+                                        <span className="cs-meta-label">Technology</span>
+                                        <span className="cs-meta-value">{cs.technology}</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    {/* Hero image */}
-                    {imageSrc && (
-                        <div className="cs-hero-image">
-                            <img src={imageSrc} alt={cs.shorttitle} />
-                        </div>
-                    )}
+                        {imageSrc && (
+                            <div className="cs-hero-image">
+                                <img src={imageSrc} alt={cs.shorttitle} />
+                            </div>
+                        )}
+                    </div>
 
                     {/* Dynamic Case Study Body */}
                     <div className="blog-detail-content">

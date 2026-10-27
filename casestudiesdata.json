@@ -11,7 +11,7 @@
         "industry": "Education & Training",
         "duration": "3 Months",
         "technology": "Generative AI, Natural Language Processing (NLP), Learning Management System (LMS) Integration",
-        "cardImg": "assets/images/case-studies/apm-chatbot.jpg",
+        "cardImg": "assets/images/case-studies/mobile.png",
         "body": [
             {
                 "type": "sidebyside",
@@ -151,7 +151,7 @@
         "industry": "Health and Care",
         "duration": "3 Months",
         "technology": "Virtual Reality (VR), UI/UX Design, Graphic Design, Web Design",
-        "cardImg": "assets/images/case-studies/nhs-vr.jpg",
+        "cardImg": "assets/images/case-studies/man.png",
         "body": [
             {
                 "type": "title",
@@ -174,14 +174,32 @@
                 ]
             },
             {
-                "type": "list",
-                "content": [
-                    "Receptionist",
-                    "Doctor",
-                    "Nurse",
-                    "Handyman",
-                    "Electrician",
-                    "IT Specialist"
+                "type": "rolegrid",
+                "roles": [
+                    {
+                        "label": "Receptionist",
+                        "icon": "FaUserMd"
+                    },
+                    {
+                        "label": "Doctor",
+                        "icon": "FaStethoscope"
+                    },
+                    {
+                        "label": "Nurse",
+                        "icon": "FaUserNurse"
+                    },
+                    {
+                        "label": "Handyman",
+                        "icon": "FaToolbox"
+                    },
+                    {
+                        "label": "Electrician",
+                        "icon": "FaLightbulb"
+                    },
+                    {
+                        "label": "IT Specialist",
+                        "icon": "FaLaptopCode"
+                    }
                 ]
             },
             {
@@ -199,6 +217,10 @@
                 "content": [
                     "Once the project was completed, the NHS used the VR experience at schools and career expos across the country. The combination of cutting-edge VR technology and relevant content drew significant attention. Young people were eager to try the headsets, which offered them a first-hand look at the diversity of career options within the NHS."
                 ]
+            },
+            {
+                "type": "video",
+                "src": "/assets/images/case-studies/hospital.mp4"
             },
             {
                 "type": "title",
