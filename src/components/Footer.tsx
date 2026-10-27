@@ -43,8 +43,8 @@ export function Footer() { return (
           <a href={"/insightxr"}>
             {"InsightXR"}
           </a>
-          <a href={"/insightxr-platform"}>
-            {"InsightXR — Platform version"}
+          <a href={"/omnia"}>
+            {"Omnia"}
           </a>
         </div>
         <div>

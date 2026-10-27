@@ -68,10 +68,9 @@ export default function ContactPage() {
       <section className="contact-banner" style={{ backgroundImage: `url(${bannerImg})` }}>
         <div className="contact-banner-overlay" />
         <div className="contact-banner-copy">
-          <p className="eyebrow">CONTACT MXR</p>
           <h1 className="banner-title banner-title--stacked">Let's build something <em>extraordinary.</em></h1>
           <p className="banner-lead">Tell us about your next training, simulation or immersive technology project. We're here to help you bring your ideas to life.</p>
-          <div className="contact-pills"><span>AR / VR</span><span>Simulation</span><span>AI Solutions</span></div>
+
         </div>
       </section>
       <section className="contact-main">

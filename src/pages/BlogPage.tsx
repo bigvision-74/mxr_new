@@ -8,7 +8,7 @@ export default function BlogPage() {
       <section className="contact-banner" style={{ backgroundImage: `url(${bannerImg})` }}>
         <div className="contact-banner-overlay" />
         <div className="contact-banner-copy">
-          <p className="eyebrow">MXR INSIGHTS</p>
+
           <h1 className="banner-title banner-title--stacked">
             Ideas, research &amp; <em>perspectives</em>
           </h1>

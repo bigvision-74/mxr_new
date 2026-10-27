@@ -1,4 +1,5 @@
 ﻿import type { CSSProperties } from 'react'
+import { ArrowRight } from 'lucide-react'
 import { useState } from 'react'
 import { ImmersiveHero } from '../components/ImmersiveHero'
 
@@ -742,12 +743,8 @@ export default function HomePage() {
           </p>
         </div>
         <div className={"button-row"}>
-          <a className={"btn btn-primary"} href={"/contact"}>
-            {"Talk to Our Team →"}
-          </a>
-          <a className={"btn btn-secondary"} href={"#solutions"}>
-            {"Explore Solutions"}
-          </a>
+          <a className={"btn btn-primary"} href={"/contact"}>{"Talk to Our Team"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
+          <a className={"btn btn-secondary"} href={"#solutions"}>{"Explore Solutions"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
         </div>
       </section>
     </main>

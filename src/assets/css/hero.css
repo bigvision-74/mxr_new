@@ -3160,7 +3160,7 @@
 }
 
 .mxr-immersive-hero {
-  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  font-family:var(--font-family);
   background: var(--color-dark);
   isolation: isolate;
 }

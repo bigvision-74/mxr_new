@@ -1,10 +1,19 @@
+/* Self-hosted Inter (variable, all weights). To change the site font, swap this
+   import and update --font-family below — nothing else needs to change. */
+@import '@fontsource-variable/inter';
+
 /* Brand palette — two core colours used across the whole site.
    Dark: banners, footers, dark sections. Light: page and section backgrounds. */
 :root {
+  --font-family: 'Inter Variable', Inter, system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
   --color-dark: #0d1826;
   --color-light: #f8fafc;
   --navy: var(--color-dark);
   --pale: var(--color-light);
   /* Blue accent for text on dark-theme sections */
   --blue-dark: #64B7FF;
+}
+
+html, body, button, input, select, textarea {
+  font-family: var(--font-family);
 }

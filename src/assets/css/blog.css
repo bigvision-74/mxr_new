@@ -1,6 +1,6 @@
 /* ── Blog Detail Banner — smaller title than default banner-title scale ── */
 .blog-detail-banner-title {
-  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  font-family:var(--font-family);
   font-size: clamp(1.2rem, 2vw, 1.75rem);
   font-weight: 500;
   line-height: 1.25;

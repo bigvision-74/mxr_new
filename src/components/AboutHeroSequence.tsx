@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react'
-import posterImg from '../assets/images/about/about-hero.webp'
 
 // Frame sequences exported from the hero animation: r### = original footage, t### = wireframe render of the same shot.
 // Frame N of both sets shows the same moment, so the wireframe lens always lines up with the picture underneath.
@@ -112,7 +111,7 @@ export function AboutHeroSequence() {
 
   return (
     <>
-      <canvas ref={baseRef} className="about-hero-video about-hero-seq" width={W} height={H} aria-hidden="true" style={{ backgroundImage: `url(${posterImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
+      <canvas ref={baseRef} className="about-hero-video about-hero-seq" width={W} height={H} aria-hidden="true" />
       <canvas ref={wireRef} className="about-hero-video about-hero-video--wire about-hero-seq" width={W} height={H} aria-hidden="true" />
     </>
   )

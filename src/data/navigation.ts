@@ -48,7 +48,7 @@ export const products = [
     "insightxr"
   ],
   [
-    "InsightXR \u2014 Platform version",
-    "insightxr-platform"
+    "Omnia",
+    "omnia"
   ]
 ] as const

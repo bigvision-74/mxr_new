@@ -96,7 +96,7 @@ export default function EventsPage() {
       <section className="contact-banner" style={{ backgroundImage: `url(${bannerImg})` }}>
         <div className="contact-banner-overlay" />
         <div className="contact-banner-copy">
-          <p className="eyebrow">MXR EVENTS</p>
+
           <h1 className="banner-title banner-title--stacked">
             Tech events &amp; <em>industry insights</em>
           </h1>

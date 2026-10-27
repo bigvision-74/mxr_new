@@ -1,4 +1,5 @@
-import { DriveRotatingRing } from '../components/DriveRotatingRing'
+import podTransparent from '../assets/images/drivexr/pod-transparent.gif'
+import { ArrowRight } from 'lucide-react'
 import { useEffect, useRef, useState, type ReactElement } from 'react'
 import brochureResponse from '../assets/images/drivexr/brochure-response.webp'
 import brochureInstructors from '../assets/images/drivexr/brochure-instructors.webp'
@@ -410,13 +411,16 @@ export default function DriveXR2Page() {
   return (
     <main className="dx-page dx2">
       <section className="dx-hero">
-        <DriveRotatingRing />
+        {/* TEMP: static gif in place of <DriveRotatingRing /> */}
+        <div className="dx-ring">
+          <img src={podTransparent} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        </div>
         <div className="dx-hero-copy">
 
           <div className="dx-title">
-            <h1 className="banner-title banner-title--stacked">Precision under pressure. <em>Performance when it matters.</em></h1>
+            <h1 className="banner-title banner-title--stacked">Ready for the moments <em>that matter.</em></h1>
           </div>
-          <p className="banner-lead">Develop, assess and improve real-world blue-light driving competency in a safe, measurable and fully immersive environment.</p>
+          <p className="banner-lead">Build blue-light driving confidence in a controlled, immersive environment. Train for the unexpected. Measure every improvement.</p>
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 30 }}>
             <a className="dx-button" href="mailto:hello@mxr.ai?subject=DriveXR%202%20demonstration">
               Book a live demonstration{' '}
@@ -431,12 +435,6 @@ export default function DriveXR2Page() {
               </svg>
             </a>
           </div>
-          <ul className="dx-hero-note" aria-label="Key benefits">
-            <li>Real-world scenarios</li>
-            <li>Measurable performance</li>
-            <li>Build confidence, reduce risk</li>
-            <li>Better drivers, safer communities</li>
-          </ul>
         </div>
         <div className="dx-caption">
           DriveXR 2{' '}
@@ -829,8 +827,8 @@ export default function DriveXR2Page() {
           <p>Talk to MXR about a practical route from idea to high-impact technology.</p>
         </div>
         <div className="button-row">
-          <a className="btn btn-primary" href="mailto:hello@mxr.ai?subject=New%20MXR%20Project">Talk to Our Team →</a>
-          <a className="btn btn-secondary" href="/#services">Explore Services</a>
+          <a className="btn btn-primary" href="mailto:hello@mxr.ai?subject=New%20MXR%20Project">Talk to Our Team <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
+          <a className="btn btn-secondary" href="/#services">Explore Services <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
         </div>
       </section>
     </main>

@@ -785,7 +785,7 @@ a.contact-card:hover .contact-card-arrow {
 /* EPRium hero — aligned with the home hero (font, weight, accent, buttons, backdrop) */
 .ep2-hero,
 .ep2-workflow {
-    font-family: Inter, "Segoe UI", Arial, sans-serif
+    font-family:var(--font-family)
 }
 
 .ep2-hero {
@@ -1015,7 +1015,7 @@ a.contact-card:hover .contact-card-arrow {
 
 /* EPRium hero — match home hero exactly: Inter everywhere, darker photo, content starts under the nav */
 .ep2-hero * {
-    font-family: Inter, "Segoe UI", Arial, sans-serif
+    font-family:var(--font-family)
 }
 
 .ep2-hero {

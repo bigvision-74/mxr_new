@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react'
+import { ArrowRight } from 'lucide-react'
 
 export default function DefenceSecurityPage() {
   return (
@@ -271,12 +272,8 @@ export default function DefenceSecurityPage() {
         </p>
       </div>
       <div className={"button-row"}>
-        <a className={"btn btn-primary"} href={"mailto:hello@mxr.ai"}>
-          {"Talk to Our Team →"}
-        </a>
-        <a className={"btn btn-secondary"} href={"/contact"}>
-          {"Start a Conversation"}
-        </a>
+        <a className={"btn btn-primary"} href={"mailto:hello@mxr.ai"}>{"Talk to Our Team"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
+        <a className={"btn btn-secondary"} href={"/contact"}>{"Start a Conversation"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
       </div>
     </section>
   </main>

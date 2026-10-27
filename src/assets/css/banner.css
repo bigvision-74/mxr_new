@@ -4,7 +4,7 @@
 @layer banner {
   /* Large banner title (the original home banner size) used on every page. */
   .banner-title {
-    font-family: Inter, "Segoe UI", Arial, sans-serif !important;
+    font-family:var(--font-family) !important;
     font-size: clamp(2.8rem, 5.6vw, 6.4rem) !important;
     font-weight: 500 !important;
     line-height: .95 !important;
@@ -27,7 +27,7 @@
   }
 
   .banner-lead {
-    font-family: Inter, "Segoe UI", Arial, sans-serif !important;
+    font-family:var(--font-family) !important;
     font-size: 1.1rem !important;
     font-weight: 400 !important;
     line-height: 1.65 !important;
@@ -44,7 +44,7 @@
 /* Site-wide typeface: Inter for header, banner, body text and buttons */
 html, body, button, input, select, textarea,
 body *, body *::before, body *::after {
-    font-family: Inter, "Segoe UI", Arial, sans-serif !important
+    font-family:var(--font-family) !important
 }
 
 /* About and Service hero: uses the shared banner typography (Inter 500, same size scale as the Contact and policy banners),
@@ -148,4 +148,26 @@ body *, body *::before, body *::after {
   .mxr-react-page main.dx-page.dx2 .dx-hero {
     grid-template-columns: 1fr;
   }
+}
+
+/* Product banners: text block sits in the vertical middle of the banner (top to bottom) */
+.mxr-react-page .ep2-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mxr-react-page .ep2-hero .ep2-hero-inner {
+  width: 100%;
+  padding-block: 110px 70px;
+}
+
+.mxr-react-page .dx-page.dx2 .dx-hero {
+  display: flex;
+  align-items: center;
+}
+
+.mxr-react-page .dx-page.dx2 .dx-hero .dx-hero-copy {
+  width: 100%;
+  padding-block: 96px 80px;
 }

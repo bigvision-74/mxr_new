@@ -11,7 +11,7 @@ body :is(.btn, .dx-button, .ep-button) {
   padding: .75rem 1.5rem !important;
   border: 0 !important;
   border-radius: 999px !important;
-  font-family: Inter, "Segoe UI", Arial, sans-serif !important;
+  font-family:var(--font-family) !important;
   font-size: .875rem !important;
   font-weight: 600 !important;
   line-height: 1.25 !important;

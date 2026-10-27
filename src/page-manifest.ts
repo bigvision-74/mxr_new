@@ -11,7 +11,7 @@ import EpriumOldPage from './pages/EpriumOldPage'
 import DrivexrPage from './pages/DrivexrPage'
 import DriveXR2Page from './pages/DriveXR2Page'
 import InsightxrPage from './pages/InsightxrPage'
-import InsightxrPlatformPage from './pages/InsightxrPlatformPage'
+import OmniaPage from './pages/OmniaPage'
 import SimulatorDevelopmentPage from './pages/SimulatorDevelopmentPage'
 import XrDevelopmentPage from './pages/XrDevelopmentPage'
 import ImmersiveRoomsPage from './pages/ImmersiveRoomsPage'
@@ -54,7 +54,7 @@ export const pages: Record<string, { Component: () => any; title: string; descri
     "drivexr.html": { Component: DrivexrPage, title: "DriveXR | MXR.ai", description: "Build emergency driving readiness through realistic scenarios, instructor control and evidence-led feedback.", bodyClass: "" },
     "drivexr-2.html": { Component: DriveXR2Page, title: "DriveXR 2 | MXR.ai", description: "Next-generation emergency driver simulation — richer environments, deeper data and a more connected training experience.", bodyClass: "drivexr2-page" },
     "insightxr.html": { Component: InsightxrPage, title: "InsightXR | MXR.ai", description: "Bring content, learners, devices and performance data together to deliver a connected XR learning programme.", bodyClass: "" },
-    "insightxr-platform.html": { Component: InsightxrPlatformPage, title: "InsightXR Platform | MXR.ai", description: "AR and VR device management, content delivery and immersive training insight with InsightXR.", bodyClass: "" },
+    "omnia.html": { Component: OmniaPage, title: "Omnia | MXR.ai", description: "Omnia by MXR.ai.", bodyClass: "" },
     "simulator-development.html": { Component: SimulatorDevelopmentPage, title: "Simulator Development | MXR.ai", description: "Purpose-built simulators help teams practise complex tasks, build confidence and explore decisions in a safe, repeatable environment.", bodyClass: "" },
     "xr-development.html": { Component: XrDevelopmentPage, title: "XR Development | MXR.ai", description: "Virtual, augmented and mixed reality experiences that help people understand, rehearse and interact with the world in new ways.", bodyClass: "" },
     "immersive-rooms.html": { Component: ImmersiveRoomsPage, title: "Immersive Rooms | MXR.ai", description: "Projection-led environments bring teams together for immersive learning, collaborative exploration and facilitated simulation.", bodyClass: "" },

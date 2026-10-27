@@ -8,7 +8,7 @@ export default function CaseStudiesPage() {
             <section className="contact-banner" style={{ backgroundImage: `url(${bannerImg})` }}>
                 <div className="contact-banner-overlay" />
                 <div className="contact-banner-copy">
-                    <p className="eyebrow">MXR CASE STUDIES</p>
+
                     <h1 className="banner-title banner-title--stacked">
                         Real impact, <em>real results</em>
                     </h1>

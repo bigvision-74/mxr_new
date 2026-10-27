@@ -2,7 +2,7 @@
   position: relative;
   overflow: hidden;
   color: var(--color-dark);
-  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  font-family:var(--font-family);
   padding: 100px 8vw 90px;
   background: var(--color-light)
 }
@@ -1269,7 +1269,7 @@
 .epc {
   background: radial-gradient(ellipse at 20% 40%, rgba(22, 132, 232, .14), transparent 55%), var(--color-dark);
   color: #fff;
-  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  font-family:var(--font-family);
   padding: 64px 8vw 72px
 }
 
@@ -1415,7 +1415,7 @@
   align-items: center;
   padding: 80px 8vw 90px;
   color: var(--color-dark);
-  font-family: Inter, "Segoe UI", Arial, sans-serif
+  font-family:var(--font-family)
 }
 
 .epf-figure {
@@ -1515,7 +1515,7 @@
 /* Eprium — closing sections (light theme, same type as the other sections) */
 .ep-page .ep-audience.ep-wrap {
   background: var(--color-light);
-  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  font-family:var(--font-family);
   padding-block: 64px 8px;
   text-align: center
 }
@@ -1561,7 +1561,7 @@
   background: var(--color-light);
   border-top: 0;
   padding: 36px var(--page-gutter, 3vw) 80px;
-  font-family: Inter, "Segoe UI", Arial, sans-serif
+  font-family:var(--font-family)
 }
 
 .ep-page .ep-cta>.ep-wrap {
