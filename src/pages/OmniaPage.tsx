@@ -1,13 +1,13 @@
 import type { CSSProperties } from 'react'
 import { ArrowRight } from 'lucide-react'
 import { ProductHero } from '../components/ProductHero'
-import omniaBg from '../assets/images/eprium/clinical-practice.jpg'
+import defaultBanner from '../assets/videos/defaultbanner.mp4'
 
 // Same banner as EPRium. Headline, lead and background image are placeholders until the Omnia copy and artwork arrive.
 export default function OmniaPage() {
   return (
     <main className={"pp ep-page"} style={{ "--product-accent": "#087f8c" } as CSSProperties}>
-      <ProductHero title="Meet" accent="Omnia." lead="Omnia product description goes here." demoSubject="Omnia demonstration" secondaryHref="#omnia-overview-heading" secondaryLabel="Explore Omnia" image={omniaBg} />
+      <ProductHero title="Meet" accent="Omnia." lead="Omnia product description goes here." demoSubject="Omnia demonstration" secondaryHref="#omnia-overview-heading" secondaryLabel="Explore Omnia" video={defaultBanner} />
 
       {/* Coming-soon notice: replace the copy below with the Omnia content when it is ready. */}
       <section className={"epr-gap"} aria-labelledby={"omnia-overview-heading"}>
@@ -33,7 +33,6 @@ export default function OmniaPage() {
         </div>
         <div className={"button-row"}>
           <a className={"btn btn-primary"} href={"/contact"}>{"Talk to Our Team"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
-          <a className={"btn btn-secondary"} href={"/#solutions"}>{"Explore Solutions"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
         </div>
       </section>
     </main>

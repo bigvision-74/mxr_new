@@ -176,12 +176,12 @@ body,
    Identical height, padding, spacing, typography and layout on every page.
    Matches the Home page "Get in Touch" / contact section. */
 .mxr-react-page main .final-cta.home-wave-cta {
-  min-height: 445px !important;
+  min-height: 320px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
   gap: 6vw !important;
-  padding-block: 5rem !important;
+  padding-block: 3.25rem !important;
   padding-inline: var(--page-gutter) !important;
   background: #102638 !important;
   box-sizing: border-box !important;
@@ -242,5 +242,52 @@ body,
   .mxr-react-page main .final-cta.home-wave-cta .button-row {
     margin-top: 28px !important;
     min-width: 0 !important;
+  }
+}
+
+/* Scroll-to-top button, fixed to the left edge. Colours match the site's primary button (see buttons.css). */
+body .scroll-top {
+  position: fixed;
+  left: 20px;
+  bottom: 24px;
+  z-index: 60;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  background: #0b66c3;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 0 1px rgba(22, 132, 232, .6), 0 10px 24px rgba(13, 35, 56, .3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity .3s, transform .3s, visibility .3s, background-color .3s;
+}
+
+body .scroll-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+body .scroll-top:hover {
+  background: #1684e8;
+}
+
+body .scroll-top:focus-visible {
+  outline: 2px solid #64b7ff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  body .scroll-top {
+    left: 14px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
   }
 }

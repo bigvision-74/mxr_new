@@ -1,27 +1,31 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { NavBar } from './NavBar'
+import driveLogo from '../assets/images/drivexr.svg'
+import omniaLogo from '../assets/images/omnia.svg'
+import insightLogo from '../assets/images/insightxr.svg'
+import modalLogo from '../assets/images/modal3d.svg'
 // import bannerVideo from '../assets/videos/banner/HV9-MD_grok_take002.mp4'
 import bannerVideo from '../assets/videos/banner/HV9_showcase_cut_v004_A_1920.mp4'
 
 type ShinyTextProps = {
-  children: string
+  children: ReactNode
   duration?: number
-  spread?: number
 }
 
-function ShinyText({ children, duration = 3, spread = 100 }: ShinyTextProps) {
+function ShinyText({ children, duration = 3 }: ShinyTextProps) {
   return (
     <motion.span
       className="block bg-clip-text text-transparent"
       style={{
-        backgroundImage: `linear-gradient(${spread}deg, #64CEFB 0%, #64CEFB 35%, #ffffff 50%, #64CEFB 65%, #64CEFB 100%)`,
-        backgroundSize: '250% 100%',
+        backgroundImage: 'var(--hero-shine)',
+        backgroundSize: '200% 100%',
+        backgroundRepeat: 'repeat-x',
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
       }}
-      initial={{ backgroundPosition: '-100% 0%' }}
+      initial={{ backgroundPosition: '0% 0%' }}
       animate={{ backgroundPosition: '200% 0%' }}
       transition={{ duration, ease: 'linear', repeat: Infinity }}
     >
@@ -33,10 +37,10 @@ function ShinyText({ children, duration = 3, spread = 100 }: ShinyTextProps) {
 // The showcase video plays the four products one after another. `go` is where a tab jumps to (a little after the cut, so the
 // previous scene never shows); `from` is where that product's scene begins, used to work out which tab is active.
 const PRODUCTS = [
-  { id: 'drivexr', label: 'DriveXR', chip: 'drive', chipAccent: 'XR', from: 0, go: 0, light: true },
-  { id: 'omnia', label: 'OMNIA', chip: 'OMNIA', chipAccent: '', from: 10.8, go: 11.2, light: true },
-  { id: 'insightxr', label: 'InsightXR', chip: 'Insight', chipAccent: 'XR', from: 20.54, go: 20.94, light: false },
-  { id: 'modal3d', label: 'MODAL3D', chip: 'MODAL', chipAccent: '3D', from: 27.7, go: 28.1, light: false },
+  { id: 'drivexr', logo: driveLogo, label: 'DriveXR', chip: 'drive', chipAccent: 'XR', from: 0, go: 0, light: true },
+  { id: 'omnia', logo: omniaLogo, label: 'OMNIA', chip: 'OMNIA', chipAccent: '', from: 10.8, go: 11.2, light: true },
+  { id: 'insightxr', logo: insightLogo, label: 'InsightXR', chip: 'Insight', chipAccent: 'XR', from: 20.54, go: 20.94, light: false },
+  { id: 'modal3d', logo: modalLogo, label: 'MODAL3D', chip: 'MODAL', chipAccent: '3D', from: 27.7, go: 28.1, light: false },
 ] as const
 
 function activeAt(t: number) {
@@ -92,7 +96,7 @@ export function ImmersiveHero() {
         </video>
 
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.55)_0%,rgba(0,0,0,.08)_32%,rgba(0,0,0,.14)_60%,rgba(0,0,0,.8)_100%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,11,18,.88)_0%,rgba(6,11,18,.7)_30%,rgba(6,11,18,.28)_58%,transparent_80%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,11,18,.94)_0%,rgba(6,11,18,.8)_30%,rgba(6,11,18,.4)_58%,transparent_85%)]" />
         <div className="mxr-immersive-hero__grid absolute inset-0 opacity-40" />
         <div className="absolute -left-36 top-1/3 h-96 w-96 rounded-full bg-[#0B66C3]/20 blur-[120px]" />
       </div>
@@ -112,7 +116,7 @@ export function ImmersiveHero() {
             transition={{ delay: 0.15, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <span className="block text-white" aria-hidden="true">Technology for a&nbsp;</span>
-            <span aria-hidden="true"><ShinyText>Safer, Smarter Tomorrow.</ShinyText></span>
+            <span aria-hidden="true"><ShinyText>Safer, Smarter<br />Tomorrow.</ShinyText></span>
           </motion.h1>
 
           <motion.p
@@ -149,7 +153,7 @@ export function ImmersiveHero() {
       {/* Product tabs, bottom right: the chip names the product on screen; the tabs jump the video to a product. */}
       <div className="hv-tabs">
         <span className={`hv-chip ${PRODUCTS[active].light ? 'is-light' : 'is-dark'}`} aria-hidden="true">
-          {PRODUCTS[active].chip}<b>{PRODUCTS[active].chipAccent}</b>
+          <img src={PRODUCTS[active].logo} alt="" />
         </span>
         <div className="hv-rail" role="tablist" aria-label="Products">
           {PRODUCTS.map((pr, i) => (

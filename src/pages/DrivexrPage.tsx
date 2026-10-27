@@ -415,8 +415,7 @@ export default function DrivexrPage() {
         </p>
       </div>
       <div className={"button-row"}>
-        <a className={"btn btn-primary"} href={"mailto:hello@mxr.ai?subject=DriveXR%202%20demonstration"}>{"Book a demonstration"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
-        <a className={"btn btn-secondary"} href={"/contact"}>{"Start a Conversation"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
+        <a className={"btn btn-primary"} href={"mailto:hello@mxr.ai?subject=DriveXR%202%20demonstration"}>{"Talk to Our Team"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
       </div>
     </section>
     </main>

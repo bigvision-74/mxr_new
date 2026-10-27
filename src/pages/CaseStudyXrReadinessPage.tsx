@@ -36,9 +36,6 @@ export default function CaseStudyXrReadinessPage() {
           <a className={"btn btn-primary"} href={"#case-overview"}>
             {"Explore the case study ↓"}
           </a>
-          <a className={"btn btn-ghost"} href={"mailto:hello@mxr.ai?subject=XR%20Training%20Enquiry"}>
-            {"Discuss a similar project"}
-          </a>
         </div>
       </div>
       <div className={"case-hero-image reveal visible"}>
@@ -392,7 +389,6 @@ export default function CaseStudyXrReadinessPage() {
       </div>
       <div className={"button-row"}>
         <a className={"btn btn-primary"} href={"mailto:hello@mxr.ai?subject=Training%20Solution%20Enquiry"}>{"Talk to Our Team"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
-        <a className={"btn btn-secondary"} href={"/#services"}>{"Explore Services"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
       </div>
     </section>
   </main>

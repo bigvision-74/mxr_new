@@ -20,10 +20,64 @@
     font-size: clamp(2.4rem, 4vw, 4.25rem) !important;
   }
 
+  /* Section headings (the small uppercase labels above each section title) share one style on every page.
+     Change it here to change it everywhere. */
+  .eyebrow,
+  .dx-kicker,
+  .dx-solution-kicker,
+  .dx-industry-kicker,
+  [class*="-eyebrow"],
+  .epa-kicker {
+    font-size: .76rem !important;
+    font-weight: 800 !important;
+    letter-spacing: .18em !important;
+  }
+
+  /* Highlighted words in every banner title use one colour (--hero-accent in tokens.css) with the same flowing
+     blue flow as the home banner. */
+  .banner-title em,
+  .banner-title > br + span,
+  .mxr-react-page :is(.about-hero, .service-detail-hero) .about-hero-title h1 > span:last-child {
+    color: var(--hero-accent) !important;
+    background-image: var(--hero-shine) !important;
+    background-size: 200% 100% !important;
+    background-repeat: repeat-x !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    animation: hero-shine 3s linear infinite;
+    /* background-clip:text only paints inside the box; the tight line-height cut off descenders (g, y, p) */
+    padding-bottom: .14em;
+    margin-bottom: -.14em;
+  }
+
+  /* A highlighted word nested inside a highlighted line shows the line's gradient instead of drawing its own. */
+  .banner-title > br + span em,
+  .mxr-react-page :is(.about-hero, .service-detail-hero) .about-hero-title h1 > span:last-child em {
+    background: none !important;
+    animation: none;
+  }
+
   /* Stacked variant: the accent phrase (coloured by the page) starts on its own line */
   .banner-title--stacked em {
     display: block;
     font-style: normal;
+  }
+
+  /* Section headings: one typeface, size and weight on every page, light or dark. Reference: the home "Solutions for a complex world"
+     heading. Colours stay with each section. Article text (policies, blog posts, case-study bodies) keeps its own scale. */
+  main h2:not(.terms-article h2, .blog-detail-content h2, .cs-section-title, .blog-not-found h2) {
+    font-family: var(--font-family) !important;
+    font-size: clamp(2.5rem, 4vw, 4.2rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.08 !important;
+    letter-spacing: -.045em !important;
+  }
+
+  @media (max-width: 700px) {
+    main h2:not(.terms-article h2, .blog-detail-content h2, .cs-section-title, .blog-not-found h2) {
+      font-size: clamp(1.9rem, 8vw, 2.5rem) !important;
+    }
   }
 
   .banner-lead {
@@ -38,6 +92,21 @@
       font-size: clamp(2.4rem, 11vw, 3.4rem) !important;
       line-height: 1 !important;
     }
+  }
+}
+
+/* The gradient starts and ends on the same blue and repeats, so it loops with no gaps: the text is always filled. */
+@keyframes hero-shine {
+  from { background-position: 0 0; }
+  to { background-position: 200% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner-title em,
+  .banner-title > br + span,
+  .mxr-react-page :is(.about-hero, .service-detail-hero) .about-hero-title h1 > span:last-child {
+    animation: none;
+    background-position: 0 0;
   }
 }
 
@@ -81,7 +150,7 @@ body *, body *::before, body *::after {
 /* Accent colour matches the Contact banner */
 .mxr-react-page :is(.about-hero, .service-detail-hero) .about-hero-title h1 > span:last-child,
 .mxr-react-page :is(.about-hero, .service-detail-hero) .about-hero-title h1 em {
-  color: #3ea0ff;
+  color: var(--hero-accent);
   font-style: normal;
 }
 
@@ -90,13 +159,8 @@ body *, body *::before, body *::after {
   color: #e3ecf5;
 }
 
-/* Small banner text: labels, breadcrumbs, tags and note lines were 10-12px. One larger scale for every banner. */
-.mxr-react-page main > section:first-of-type :is(.eyebrow, .dx-kicker) {
-  font-size: .8125rem !important;
-  font-weight: 700 !important;
-  letter-spacing: .16em !important;
-}
-
+/* Small banner text: breadcrumbs, tags and note lines were 10-12px. One larger scale for every banner.
+   (Section headings / eyebrows are styled once, in the banner layer at the top of this file.) */
 .mxr-react-page main > section:first-of-type :is(.pp-breadcrumb, .breadcrumbs, .breadcrumbs a, .breadcrumbs b, .breadcrumbs span) {
   font-size: .875rem !important;
 }

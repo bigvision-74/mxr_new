@@ -1,18 +1,17 @@
 import podTransparent from '../assets/images/drivexr/pod-transparent.gif'
 import { ArrowRight } from 'lucide-react'
-import { useEffect, useRef, useState, type ReactElement } from 'react'
+import { useEffect, useRef, useState, type ReactElement, type CSSProperties } from 'react'
 import brochureResponse from '../assets/images/drivexr/brochure-response.webp'
 import brochureInstructors from '../assets/images/drivexr/brochure-instructors.webp'
 import brochureTraining from '../assets/images/drivexr/brochure-training.webp'
 import brochureSimulator from '../assets/images/drivexr/brochure-simulator.webp'
-import dxSimulator from '../assets/images/drivexr/ambulance-tunnel.webp'
+import dxVehicles from '../assets/videos/DXR2_vehicles.mp4'
 import dxAmbulanceData from '../assets/images/drivexr/holo-training.webp'
 import crewPanorama from '../assets/images/drivexr/crew-panorama.webp'
 import simulatorRig from '../assets/images/drivexr/rig-side.webp'
 import ambulanceData from '../assets/images/drivexr/analytics-ambulance.webp'
 import stageSetup from '../assets/images/drivexr/stage-setup.webp'
 import stageDrive from '../assets/images/drivexr/stage-drive.webp'
-import stageReview from '../assets/images/drivexr/stage-review.webp'
 
 const ALL_TAGS = ['Instructor', 'Blue-Light', 'High-Fidelity', 'UK', 'Dynamic', 'Scenario', 'Performance', 'Multi-Screen']
 
@@ -294,36 +293,20 @@ const OUTPUTS: { title: string; tag: string; art: ReactElement }[] = [
   {
     title: 'Competency scoring', tag: 'pass / fail',
     art: (
-      <svg viewBox="0 0 240 130" role="img" aria-label="Competency scoring gauge at 76 percent">
+      <svg viewBox="0 0 480 190" role="img" aria-label="Competency scoring gauge at 76 percent">
         <defs>
           <linearGradient id="gg" x1="0" x2="1"><stop offset="0" stopColor="#3b82f6" /><stop offset=".5" stopColor="#3ecf8e" /><stop offset=".75" stopColor="#f5c518" /><stop offset="1" stopColor="#e5484d" /></linearGradient>
         </defs>
-        <rect width="240" height="130" fill="#14233a" />
-        <text x="12" y="20" fill="#cfd9e3" fontSize="10">Competency Scoring</text>
-        <path d="M58 112a62 62 0 0 1 124 0" fill="none" stroke="url(#gg)" strokeWidth="14" />
-        <path d="M120 112 L138 56" stroke="#fff" strokeWidth="3" strokeLinecap="round" />
-        <circle cx="120" cy="112" r="5" fill="#fff" />
-        <text x="120" y="102" fill="#fff" fontSize="20" fontWeight="700" textAnchor="middle">76%</text>
-        <text x="186" y="40" fill="#f5c518" fontSize="8">Pass/Fail Thresholds</text>
-        <text x="190" y="62" fill="#e5484d" fontSize="8">Pass Fail</text>
-      </svg>
-    ),
-  },
-  {
-    title: 'Policy compliance', tag: 'review',
-    art: (
-      <svg viewBox="0 0 240 130" role="img" aria-label="Policy compliance review table">
-        <rect width="240" height="130" fill="#14233a" />
-        <text x="12" y="20" fill="#cfd9e3" fontSize="10">Policy Compliance Review</text>
-        <rect x="12" y="34" width="40" height="86" rx="3" fill="#1a2b3f" />
-        {[0, 1, 2, 3].map(i => <rect key={i} x="18" y={44 + i * 16} width="26" height="4" rx="2" fill="#4a6179" />)}
-        {[0, 1, 2, 3].map(r => [0, 1, 2].map(c => (
-          <g key={`${r}${c}`}>
-            <rect x={64 + c * 56} y={34 + r * 22} width="52" height="18" rx="3" fill="#1d3049" />
-            <circle cx={72 + c * 56} cy={43 + r * 22} r="3.5" fill={(r + c) % 4 === 3 ? '#f5a623' : '#3ecf8e'} />
-            <rect x={80 + c * 56} y={41 + r * 22} width="26" height="4" rx="2" fill="#4a6179" />
-          </g>
-        )))}
+        <rect width="480" height="190" fill="#14233a" />
+        <text x="24" y="34" fill="#cfd9e3" fontSize="14">Competency Scoring</text>
+        <text x="24" y="108" fill="#fff" fontSize="52" fontWeight="700">76%</text>
+        <text x="26" y="132" fill="#a9bccd" fontSize="12">overall score</text>
+        <circle cx="28" cy="152" r="4" fill="#3ecf8e" /><text x="38" y="156" fill="#cfd9e3" fontSize="11">Pass: 70% and above</text>
+        <circle cx="28" cy="172" r="4" fill="#e5484d" /><text x="38" y="176" fill="#cfd9e3" fontSize="11">Fail: below 70%</text>
+        <path d="M250 165a100 100 0 0 1 200 0" fill="none" stroke="url(#gg)" strokeWidth="20" />
+        <path d="M402 84L415 66" stroke="#fff" strokeWidth="2" opacity=".7" />
+        <path d="M350 165 L408 110" stroke="#fff" strokeWidth="4" strokeLinecap="round" />
+        <circle cx="350" cy="165" r="8" fill="#fff" />
       </svg>
     ),
   },
@@ -332,7 +315,6 @@ const OUTPUTS: { title: string; tag: string; art: ReactElement }[] = [
 function AnalyticsSection() {
   const [metric, setMetric] = useState(1)
   const [open, setOpen] = useState<number | null>(null)
-  const [name, val, unit, note, score] = METRICS[metric]
 
   useEffect(() => {
     if (open === null) return
@@ -355,22 +337,13 @@ function AnalyticsSection() {
 
         <div className="dx-data-body">
           <div>
-            <div className="dx-data-label"><span>TRACKED IN EVERY SESSION</span><span>16</span></div>
+            <div className="dx-data-label"><span>TRACKED IN EVERY SESSION · SAMPLE DATA</span><span className="dx-data-count">16</span></div>
             <div className="dx-metrics">
               {METRICS.map((m, i) => (
-                <button type="button" key={m[0]} className={i === metric ? 'active' : ''} aria-pressed={i === metric} onClick={() => setMetric(i)}>
-                  <em>{String(i + 1).padStart(2, '0')}</em><span>{m[0]}</span>
+                <button type="button" key={m[0]} className={i === metric ? 'active' : ''} aria-pressed={i === metric} onClick={() => setMetric(i)} style={{ '--v': `${m[4]}%` } as CSSProperties}>
+                  <em>{String(i + 1).padStart(2, '0')}</em><span>{m[0]}</span><b>{m[1]}</b>
                 </button>
               ))}
-            </div>
-            <div className="dx-metric-card">
-              <div>
-                <h3>{name}</h3>
-                <p>{note}</p>
-              </div>
-              <div className="dx-metric-val"><strong>{val}</strong><small>{unit}</small></div>
-              <div className="dx-metric-bar"><i style={{ width: `${score}%`, background: score >= 90 ? '#2fb67c' : score >= 80 ? '#0b66c3' : '#e8a13a' }} /></div>
-              <small className="dx-metric-sample">SAMPLE SESSION VALUES</small>
             </div>
           </div>
 
@@ -417,7 +390,7 @@ export default function DriveXR2Page() {
         <div className="dx-hero-copy">
 
           <div className="dx-title">
-            <h1 className="banner-title banner-title--stacked">Ready for the moments <em>that matter.</em></h1>
+            <h1 className="banner-title banner-title--stacked">Ready for the<br />moments that <em>matter.</em></h1>
           </div>
           <p className="banner-lead">Build blue-light driving confidence in a controlled, immersive environment. Train for the unexpected. Measure every improvement.</p>
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 30 }}>
@@ -435,10 +408,7 @@ export default function DriveXR2Page() {
             </a>
           </div>
         </div>
-        <div className="dx-caption">
-          DriveXR 2{' '}
-          <span>Emergency driver training, reimagined.</span>
-        </div>
+
       </section>
 
       {/* ── Intro: Immersive by design ── */}
@@ -453,7 +423,7 @@ export default function DriveXR2Page() {
           </p>
         </div>
         <figure className="dx-intro-figure">
-          <img src={dxSimulator} alt="Ambulance inside a DriveXR multi-screen immersive simulator" loading="lazy" />
+          <video src={dxVehicles} aria-label="Ambulance inside a DriveXR multi-screen immersive simulator" autoPlay muted loop playsInline preload="metadata" />
           <figcaption>FROM CLASSROOM TO BLUE-LIGHT READINESS</figcaption>
         </figure>
       </section>
@@ -641,27 +611,37 @@ export default function DriveXR2Page() {
       </section>
 
       <section className="dx-how">
-        <div className="dx-wrap">
-          <p className="dx-kicker">HOW IT WORKS</p>
-          <h2>Simple. Scalable. Effective.</h2>
-          <div className="dx-how-grid">
-            {[
-              { n: 1, img: stageSetup, tag: 'SETUP', title: 'Configure the scenario', desc: 'Set scenarios, routes, weather, hazards and learner profiles.', alt: 'Instructor configuring a scenario at the control station' },
-              { n: 2, img: stageDrive, tag: 'TRAINING & SIMULATION', title: 'Drive the response', desc: 'Learners operate through live, immersive emergency response scenarios.', alt: 'Crew driving a live emergency response scenario in the simulator' },
-              { n: 3, img: stageReview, tag: 'REVIEW & ANALYTICS', title: 'Assess and debrief', desc: 'Instructors assess performance through detailed analytics and replay tools.', alt: 'Instructor reviewing a learner session on multiple screens' },
-            ].map(c => (
-              <article className="dx-how-card" key={c.n}>
-                <div className="dx-how-img">
-                  <img src={c.img} alt={c.alt} loading="lazy" />
-                  <span>{c.n}</span>
+        <div className="dx-delivery dx-wrap">
+          <div className="dx-delivery-image">
+            <img src={stageDrive} alt="Crew driving a live emergency response scenario in the simulator" loading="lazy" />
+            <span>SETUP · TRAINING · REVIEW</span>
+          </div>
+          <div>
+            <p className="dx-kicker">HOW IT WORKS</p>
+            <h2>Simple. Scalable.<br />Effective.</h2>
+            <ol>
+              <li>
+                <span>01</span>
+                <div>
+                  <h3>Configure the scenario</h3>
+                  <p>Set scenarios, routes, weather, hazards and learner profiles.</p>
                 </div>
-                <div className="dx-how-body">
-                  <small>{c.tag}</small>
-                  <h3>{c.title}</h3>
-                  <p>{c.desc}</p>
+              </li>
+              <li>
+                <span>02</span>
+                <div>
+                  <h3>Drive the response</h3>
+                  <p>Learners operate through live, immersive emergency response scenarios.</p>
                 </div>
-              </article>
-            ))}
+              </li>
+              <li>
+                <span>03</span>
+                <div>
+                  <h3>Assess and debrief</h3>
+                  <p>Instructors assess performance through detailed analytics and replay tools.</p>
+                </div>
+              </li>
+            </ol>
           </div>
         </div>
       </section>
@@ -767,53 +747,6 @@ export default function DriveXR2Page() {
         </div>
       </section>
 
-      <section className="dx-delivery dx-wrap">
-        <div className="dx-delivery-image">
-          <img src={brochureSimulator} alt="DriveXR 2 simulator cab with connected multi-screen displays" loading="lazy" />
-          <span>ONE CONNECTED TRAINING SYSTEM</span>
-        </div>
-        <div>
-          <p className="dx-kicker">FROM SETUP TO DEBRIEF</p>
-          <h2>Simple to run.<br />Powerful in practice.</h2>
-          <ol>
-            <li>
-              <span>01</span>
-              <div>
-                <h3>Configure</h3>
-                <p>Set routes, conditions, hazards and objectives — then save as a reusable session template.</p>
-              </div>
-            </li>
-            <li>
-              <span>02</span>
-              <div>
-                <h3>Train</h3>
-                <p>Deliver immersive response scenarios with live instructor oversight and real-time hazard control.</p>
-              </div>
-            </li>
-            <li>
-              <span>03</span>
-              <div>
-                <h3>Review</h3>
-                <p>Use trend analytics, replay and competency scoring to guide the next session with confidence.</p>
-              </div>
-            </li>
-          </ol>
-          <p className="dx-included">Software, cab integration, instructor station, expanded scenario library, multi-session analytics and reporting — with onboarding and ongoing technical support. Custom road environments available.</p>
-        </div>
-      </section>
-
-      <section className="dx-audience dx-wrap">
-        <p className="dx-kicker">DESIGNED FOR YOUR WORLD</p>
-        <div>
-          <span>Ambulance services</span>
-          <span>Universities</span>
-          <span>Fire & rescue</span>
-          <span>Police support</span>
-          <span>Fleet training</span>
-          <span>Defence & military</span>
-        </div>
-      </section>
-
       <section className="final-cta home-wave-section home-wave-cta">
         <div className="home-wave-media" aria-hidden="true">
           <video autoPlay muted loop playsInline preload="metadata">
@@ -827,7 +760,6 @@ export default function DriveXR2Page() {
         </div>
         <div className="button-row">
           <a className="btn btn-primary" href="mailto:hello@mxr.ai?subject=New%20MXR%20Project">Talk to Our Team <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
-          <a className="btn btn-secondary" href="/#services">Explore Services <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
         </div>
       </section>
     </main>

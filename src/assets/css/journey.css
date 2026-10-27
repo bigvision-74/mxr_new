@@ -850,6 +850,8 @@
   display: block;
   width: 100%;
   height: auto;
+  transform: scale(1.25);
+  transform-origin: 40% 50%;
   filter: drop-shadow(0 24px 40px rgba(0, 0, 0, .45))
 }
 
@@ -945,6 +947,10 @@
   .epd-inner {
     grid-template-columns: 1fr;
     gap: 36px
+  }
+
+  .epd-visual img {
+    transform: none
   }
 }
 

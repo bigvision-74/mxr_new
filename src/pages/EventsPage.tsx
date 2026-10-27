@@ -1,4 +1,5 @@
 import { Globe, MapPin, Tag, ArrowRight } from 'lucide-react'
+import defaultBanner from '../assets/videos/defaultbanner.mp4'
 import bannerImg from '../assets/images/about/about-hero.webp'
 import event2 from '../assets/images/eventASPiH.png'
 
@@ -94,6 +95,7 @@ export default function EventsPage() {
     <main className="events-page">
       {/* Banner — same structure as Blog and Policies */}
       <section className="contact-banner" style={{ backgroundImage: `url(${bannerImg})` }}>
+        <video className="contact-banner-video" autoPlay muted loop playsInline preload="metadata" aria-hidden="true"><source src={defaultBanner} type="video/mp4" /></video>
         <div className="contact-banner-overlay" />
         <div className="contact-banner-copy">
 

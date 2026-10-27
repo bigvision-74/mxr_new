@@ -680,3 +680,22 @@
 .pp .epr-gap{background:var(--color-light)}
 
 .pp .epr-gap{background:transparent}
+
+/* "Train for the reality of digital care": step numbers are circles in the theme blue */
+.epr-gap-tag>span {
+    width: 34px;
+    min-width: 0;
+    height: 34px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1.5px solid #0b66c3;
+    background: rgba(11, 102, 195, .08);
+    color: #0b66c3
+}
+
+.epr-gap-number {
+    border-color: var(--blue-dark);
+    background: rgba(13, 24, 38, .55);
+    color: var(--blue-dark);
+    font-weight: 700
+}
