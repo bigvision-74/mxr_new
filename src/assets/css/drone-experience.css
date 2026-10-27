@@ -1,0 +1,7 @@
+.drone-experience{position:relative;display:grid;align-content:center;min-height:32rem;overflow:hidden;background:radial-gradient(ellipse,#1e3144,#0d1826 72%);padding:2rem 1rem 5rem}
+.drone-experience>img{width:100%;height:auto;max-height:30rem;object-fit:contain;mix-blend-mode:screen;animation:drone-experience-hover 8s ease-in-out infinite;mask-image:radial-gradient(ellipse,#000 40%,transparent 73%)}
+.drone-experience.is-paused>img{animation-play-state:paused}
+.drone-experience-footer{position:absolute;bottom:1.5rem;inset-inline:1.5rem;display:flex;justify-content:space-between;gap:1rem;align-items:center;color:#b9c9d8}.drone-experience-footer>span{font-size:.55rem;letter-spacing:.12em}.drone-experience-footer button{background:transparent;color:#e0e9f1;border:1px solid #7d95aa66;display:flex;align-items:center;gap:.5rem;padding:.6rem .8rem;font-size:.65rem;cursor:pointer}.drone-experience-footer button:focus-visible{outline:2px solid #1684e8;outline-offset:3px}.drone-experience-footer button svg{width:.8rem;height:.8rem}
+@keyframes drone-experience-hover{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-12px) rotate(1deg)}}
+@media(max-width:600px){.drone-experience{min-height:24rem}.drone-experience-footer{inset-inline:1rem}.drone-experience-footer>span{max-width:16ch;line-height:1.5}}
+@media(prefers-reduced-motion:reduce){.drone-experience>img{animation:none}.drone-experience-footer button{display:none}}

@@ -1,0 +1,22 @@
+.modal-asset-banner{position:relative;min-width:0;height:clamp(34rem,43vw,45rem);isolation:isolate;background:radial-gradient(ellipse at 55% 50%,#1e364d70,transparent 65%)}
+.modal-asset-grid{position:absolute;inset:5% 0;background-image:linear-gradient(#8ab6d710 1px,transparent 1px),linear-gradient(90deg,#8ab6d710 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse,#0008,transparent 70%)}
+.modal-asset-banner img{width:100%;height:100%;object-fit:contain}.modal-asset-banner>div:not(.modal-asset-grid):not(.modal-asset-caption){position:absolute}
+.modal-asset-banner>div>span{display:block;font-size:.5rem;letter-spacing:.15em;color:#96b7cf;font-weight:600}
+.modal-banner-drone{width:59%;height:43%;top:0;left:0;animation:modal-drone-hover 7s ease-in-out infinite}.modal-banner-drone img{mix-blend-mode:screen;mask-image:radial-gradient(ellipse,#000 42%,transparent 73%)}.modal-banner-drone span{position:absolute;left:12%;bottom:0}
+.modal-banner-tank{width:87%;height:57%;bottom:11%;left:-8%;animation:modal-tank-drift 12s ease-in-out infinite}.modal-banner-tank span{position:absolute;left:20%;bottom:1%}
+.modal-banner-ammo{width:47%;height:61%;right:-5%;top:14%;animation:modal-ammo-float 9s ease-in-out infinite}.modal-banner-ammo span{position:absolute;right:0;bottom:-4%;white-space:nowrap}
+
+@keyframes modal-drone-hover{0%,100%{transform:translate(0,0) rotate(-2deg)}50%{transform:translate(10px,-14px) rotate(2deg)}}
+@keyframes modal-tank-drift{0%,100%{transform:translateX(0) rotate(-1deg)}50%{transform:translateX(12px) rotate(1deg)}}
+@keyframes modal-ammo-float{0%,100%{transform:translateY(0) rotate(2deg)}50%{transform:translateY(-10px) rotate(-2deg)}}
+@media(max-width:1000px){.modal-asset-banner{height:36rem;width:min(100%,52rem);margin:0 auto}}
+@media(max-width:600px){.modal-asset-banner{height:27rem}.modal-asset-banner>div>span{font-size:.4rem}.modal-banner-ammo{right:-2%;width:43%}.modal-banner-tank{bottom:15%}}
+@media(prefers-reduced-motion:reduce){.modal-banner-drone,.modal-banner-tank,.modal-banner-ammo{animation:none}}
+
+.mxr-react-page main.pp.modal3d-page .ep2-hero{background:#0d1826;min-height:49rem;padding-inline:var(--page-gutter);overflow:hidden}
+.mxr-react-page main.pp.modal3d-page .ep2-hero .ep2-hero-inner{width:44%;margin:0;padding-inline:0;position:relative;z-index:2}
+.modal3d-page .ep2-hero-inner h1{font-size:clamp(2.7rem,4.7vw,5.6rem);max-width:12ch}
+.modal3d-page .ep2-hero>.modal-asset-banner{position:absolute;right:var(--page-gutter);top:8rem;width:53%;z-index:1}
+@media(max-width:1000px){.mxr-react-page main.pp.modal3d-page .ep2-hero{display:flex;padding-top:6rem}.mxr-react-page main.pp.modal3d-page .ep2-hero .ep2-hero-inner{width:100%;padding-block:3rem 0;order:0}.modal3d-page .ep2-hero>.modal-asset-banner{position:relative;top:auto;right:auto;width:100%;order:1;margin-top:1rem;margin-bottom:2rem}.modal3d-page .ep2-hero-inner h1{max-width:18ch}}
+
+.modal3d-page .ep2-hero-inner .ep2-lead{width:100%;max-width:32rem}.modal3d-page .ep2-hero-inner h1{line-height:1.05}

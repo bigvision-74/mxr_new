@@ -1,19 +1,13 @@
 import type { CSSProperties } from 'react'
 import { ArrowRight } from 'lucide-react'
 import { ProductHero } from '../components/ProductHero'
-import { HoverCutawayVideo } from '../components/HoverCutawayVideo'
-import { ProductModelViewer } from '../components/ProductModelViewer'
-import vs50Model from '../assets/images/modal3d/VS-50.glb?url'
-import modalHero from '../assets/images/modal3d/modal3d_hero.mp4'
-
+import { ModalAssetBanner } from '../components/ModalAssetBanner'
+import { DroneExperience } from '../components/DroneExperience'
 
 export default function Modal3DPage() {
   return (
-    <main className={"pp"} style={{ "--product-accent": "#0b66c3" } as CSSProperties}>
-      <div className="modal3d-hero-shell">
-        <ProductHero title="Complex assets." accent="Clear understanding." lead="Explore ordnance in interactive 3D. Connect component views, technical information and AR in one organised library." demoSubject="MODAL3D demonstration" secondaryHref="#product-benefits" secondaryLabel="Explore MODAL3D" visual={<HoverCutawayVideo src={modalHero} label="MODAL3D ordnance model, with its inner parts revealed under the pointer" />} />
-        <img className="modal3d-hero-drone" src="/assets/images/Home/drone.png" alt="" aria-hidden="true" />
-      </div>
+    <main className={"pp modal3d-page"} style={{ "--product-accent": "#0b66c3" } as CSSProperties}>
+      <ProductHero title="Complex assets." accent="Clear understanding." lead="Explore ordnance in interactive 3D. Connect component views, technical information and AR in one organised library." demoSubject="MODAL3D demonstration" secondaryHref="#product-benefits" secondaryLabel="Explore MODAL3D" visual={<ModalAssetBanner />} />
       <section className={"pp-benefits"} id={"product-benefits"}>
         <div className={"pp-heading"}>
           <div>
@@ -89,7 +83,7 @@ export default function Modal3DPage() {
       </section>
       <section className={"pp-experience"}>
         <div className={"pp-experience-visual"}>
-          <ProductModelViewer src={vs50Model} alt={"Interactive 3D model of the VS-50"} label={"DRAG TO TURN · SCROLL TO ZOOM"} />
+          <DroneExperience />
         </div>
         <div>
           <p className={"eyebrow"}>

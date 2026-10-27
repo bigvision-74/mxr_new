@@ -2,9 +2,11 @@
 import { ArrowRight } from 'lucide-react'
 import { useState, useRef, useEffect } from 'react'
 import { ImmersiveHero } from '../components/ImmersiveHero'
-import clinicalSimulation from '../assets/images/H4_clinical-simulation.webp'
-import driveXRImage from '../assets/images/drivexr/brochure-simulator.webp'
-import insightXRImage from '../assets/images/insightxr-platform.png'
+import { AdditionalFeaturedProducts, extraProducts } from '../components/AdditionalFeaturedProducts'
+import { PanoramaSolutions } from '../components/PanoramaSolutions'
+import defenceSecurityImage from '../assets/images/solutions/defence-security.png'
+import enterpriseTrainingImage from '../assets/images/solutions/enterprise-training.jpg'
+import customSolutionsImage from '../assets/images/solutions/custom-solutions.jpg'
 import '@google/model-viewer'
 
 export default function HomePage() {
@@ -97,34 +99,80 @@ export default function HomePage() {
   return (
     <main>
       <ImmersiveHero />
-      <section className="section intro mxr-solutions-panorama" id="solutions">
-        <div className="section-heading reveal visible">
+      <section className={"section intro"} id={"solutions"}>
+        <div className={"section-heading reveal visible"}>
           <div>
-            <p className="eyebrow">SOLUTIONS FOR A COMPLEX WORLD</p>
-            <h2>Built for Real-World Impact.</h2>
+            <p className={"eyebrow"}>
+              {"SOLUTIONS FOR A COMPLEX WORLD"}
+            </p>
+            <h2>
+              {"Built for Real-World Impact."}
+            </h2>
           </div>
-          <p>MXR develops simulation technologies that turn complex knowledge into confident action, across high-consequence industries where better preparation matters.</p>
+          <p>
+            {"MXR develops simulation technologies that turn complex knowledge into confident action, across high-consequence industries where better preparation matters."}
+          </p>
         </div>
-        <div className="mxr-panorama-grid" aria-label="MXR industry solutions">
-          {([
-            { number: '01', tag: 'DS', name: 'Defence & Security', text: 'Mission-ready training for a safer world.', href: '/defence-security', image: '/assets/images/blog/Virtual-reality.jpg' },
-            { number: '02', tag: 'HS', name: 'Healthcare Simulation', text: 'Better practice. Brighter outcomes.', href: '/eprium', image: clinicalSimulation },
-            { number: '03', tag: 'ET', name: 'Enterprise Training', text: 'Real skills for real performance.', href: '/simulator-development', image: '/assets/images/blog/educationBlog.jpg' },
-            { number: '04', tag: 'CS', name: 'Custom Solutions', text: 'Built around your needs.', href: '/platform-development', image: '/assets/images/blog/arBusiness.jpg' },
-          ] as const).map((solution) => (
-            <a className="mxr-panorama-panel" href={solution.href} key={solution.number} aria-label={`Explore ${solution.name}`}>
-              <img src={solution.image} alt="" loading="lazy" />
-              <div className="mxr-panorama-shade" aria-hidden="true" />
-              <span className="mxr-panorama-meta"><span>{solution.tag}</span>{solution.number}</span>
-              <div className="mxr-panorama-copy">
-                <h3>{solution.name}</h3>
-                <p>{solution.text}</p>
-                <span className="mxr-panorama-link">Explore solution <ArrowRight size={16} aria-hidden="true" /></span>
-              </div>
-            </a>
-          ))}
+        <div className={"card-grid solutions-grid"}>
+          <article className={"image-card reveal visible"}>
+            <div className={"card-image defence"} style={{ backgroundImage: `url(${defenceSecurityImage})`, backgroundPosition: 'center 45%' }}>
+
+            </div>
+            <div className={"card-content"}>
+              <h3>
+                {"Defence & Security"}
+              </h3>
+              <p>
+                {"Rehearse missions safely."}<br />
+                {"Build real-world readiness."}
+              </p>
+            </div>
+          </article>
+          <article className={"image-card reveal visible"}>
+            <div className={"card-image healthcare"}>
+
+            </div>
+            <div className={"card-content"}>
+              <h3>
+                {"Healthcare Simulation"}
+              </h3>
+              <p>
+                {"Practise clinical skills safely."}<br />
+                {"Prepare for real patient care."}
+              </p>
+            </div>
+          </article>
+          <article className={"image-card reveal visible"}>
+            <div className={"card-image enterprise"} style={{ backgroundImage: `url(${enterpriseTrainingImage})`, backgroundPosition: 'center 40%' }}>
+
+            </div>
+            <div className={"card-content"}>
+              <h3>
+                {"Enterprise Training"}
+              </h3>
+              <p>
+                {"Train for workplace challenges."}<br />
+                {"Build skills and confidence."}
+              </p>
+            </div>
+          </article>
+          <article className={"image-card reveal visible"}>
+            <div className={"card-image custom"} style={{ backgroundImage: `url(${customSolutionsImage})`, backgroundPosition: 'center 45%' }}>
+
+            </div>
+            <div className={"card-content"}>
+              <h3>
+                {"Custom Solutions"}
+              </h3>
+              <p>
+                {"Built around your requirements."}<br />
+                {"From concept to deployment."}
+              </p>
+            </div>
+          </article>
         </div>
       </section>
+      <PanoramaSolutions />
       <section className={"section services"} id={"services"}>
         <div className={"services-heading reveal visible"}>
           <div>
@@ -564,47 +612,13 @@ export default function HomePage() {
             </div>
           </div>
         </article>
-
-        {([
-          { name: 'DriveXR', heading: 'Training for the moments that matter.', description: 'Build emergency driving readiness through repeatable immersive scenarios, instructor control and performance feedback.', href: '/drivexr-2', image: driveXRImage, alt: 'DriveXR simulator training environment', benefits: [['SIM', 'Realistic scenarios'], ['LIVE', 'Instructor-led training'], ['DATA', 'Performance feedback']] },
-          { name: 'InsightXR', heading: 'Manage learning. Measure progress.', description: 'Connect immersive content, learners, supported devices and performance insight in one organised platform.', href: '/insightxr', image: insightXRImage, alt: 'InsightXR learning management platform', benefits: [['XR', 'Connected delivery'], ['LMS', 'Learner management'], ['DATA', 'Assessment insight']] },
-          { name: 'Omnia', heading: 'An immersive room. Unlimited possibilities.', description: 'Design and deliver engaging 360° scenarios and shared interactive experiences for immersive rooms.', href: '/omnia', image: '', alt: 'Omnia immersive room visualisation', benefits: [['360°', 'Immersive content'], ['SCENE', 'Scenario creation'], ['TEAM', 'Shared experiences']] },
-        ] as const).map((product, index) => (
-          <article key={product.name} hidden={activeProduct !== index + 2} className={'product-slide modal-showcase' + (activeProduct === index + 2 ? ' active' : '')} data-product-slide={index + 2}>
-            <div className="modal-copy">
-              <p className="eyebrow light">FEATURED PRODUCT</p>
-              <h2>{product.name}</h2>
-              <h3>{product.heading}</h3>
-              <p>{product.description}</p>
-              <a className="btn btn-white" href={product.href}>Explore {product.name} →</a>
-            </div>
-            <div className="eprium-product-visual" style={{ background: 'transparent', border: 'none', boxShadow: 'none', display: 'grid', placeItems: 'center' }}>
-              {product.image ? (
-                <img src={product.image} alt={product.alt} loading="lazy" style={{ width: '100%', maxHeight: 520, objectFit: 'contain', borderRadius: 8 }} />
-              ) : (
-                <div role="img" aria-label={product.alt} style={{ width: '90%', aspectRatio: '1.5', display: 'grid', placeItems: 'center', color: '#c1f0f3', fontSize: 'clamp(2rem, 5vw, 4.5rem)', letterSpacing: '-.06em', fontWeight: 700, border: '2px solid #3a9ba6', borderRadius: 12, background: 'radial-gradient(circle, #183f53, #091623 72%)', boxShadow: '0 24px 75px #0007' }}>OMNIA</div>
-              )}
-            </div>
-            <div className="px-feat-list">
-              {product.benefits.map(([symbol, label]) => (
-                <div className="px-feat-row" key={label}>
-                  <div className="px-badge">{symbol}</div>
-                  <div className="px-feat-body"><div className="px-feat-meta"><h4>{label}</h4></div></div>
-                </div>
-              ))}
-            </div>
-          </article>
-        ))}
+        <AdditionalFeaturedProducts active={activeProduct} />
         <div className={"product-slider-controls"}>
-          <button onClick={() => setActiveProduct(p => (p + 4) % 5)} className={"product-arrow product-prev"} aria-label={"Previous featured product"}>{"←"}</button>
-          <div className={"product-dots"} role={"tablist"} aria-label={"Choose featured product"}>
-            <button onClick={() => setActiveProduct(0)} aria-selected={activeProduct === 0} className={activeProduct === 0 ? "active" : ""} role={"tab"} aria-label={"Show MODAL3D"} data-product-go={"0"} />
-            <button onClick={() => setActiveProduct(1)} aria-selected={activeProduct === 1} className={activeProduct === 1 ? "active" : ""} role={"tab"} aria-label={"Show EPRium"} data-product-go={"1"} />
-            <button onClick={() => setActiveProduct(2)} aria-selected={activeProduct === 2} className={activeProduct === 2 ? "active" : ""} role="tab" aria-label="Show DriveXR" data-product-go="2" />
-            <button onClick={() => setActiveProduct(3)} aria-selected={activeProduct === 3} className={activeProduct === 3 ? "active" : ""} role="tab" aria-label="Show InsightXR" data-product-go="3" />
-            <button onClick={() => setActiveProduct(4)} aria-selected={activeProduct === 4} className={activeProduct === 4 ? "active" : ""} role="tab" aria-label="Show Omnia" data-product-go="4" />
+          <button onClick={() => setActiveProduct(p => (p - 1 + 6) % 6)} className={"product-arrow product-prev"} aria-label={"Previous featured product"}>{"←"}</button>
+          <div className="product-dots" role="tablist" aria-label="Choose featured product">
+            {['MODAL3D','EPRium',...extraProducts.map(p=>p.name)].map((name,index)=><button key={name} onClick={()=>setActiveProduct(index)} aria-selected={activeProduct===index} className={`product-name-tab${activeProduct===index?' active':''}`} role="tab" aria-label={`Show ${name}`} data-product-go={index}>{name}</button>)}
           </div>
-          <button onClick={() => setActiveProduct(p => (p + 1) % 5)} className={"product-arrow product-next"} aria-label={"Next featured product"}>{"→"}</button>
+          <button onClick={() => setActiveProduct(p => (p + 1) % 6)} className={"product-arrow product-next"} aria-label={"Next featured product"}>{"→"}</button>
         </div>
       </section>
 

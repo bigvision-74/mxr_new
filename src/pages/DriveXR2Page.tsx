@@ -1,4 +1,4 @@
-import podTransparent from '../assets/images/drivexr/pod-transparent.gif'
+import podTransparent from '../assets/images/drivexr/pod-transparent.webp'
 import { ArrowRight } from 'lucide-react'
 import { useEffect, useRef, useState, type ReactElement, type CSSProperties } from 'react'
 import brochureResponse from '../assets/images/drivexr/brochure-response.webp'
