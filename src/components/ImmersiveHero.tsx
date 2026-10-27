@@ -91,7 +91,7 @@ export function ImmersiveHero() {
           >
             <a
               href="#solutions"
-              className="group inline-flex items-center gap-3 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/25 transition-all duration-300 hover:bg-gray-900 md:px-8 md:py-4 md:text-base"
+              className="group inline-flex items-center gap-3 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/25 transition-all duration-300 hover:bg-gray-900 md:px-8 md:py-4 md:text-base bg-[#0B66C3] hover:bg-[#1684E8]"
             >
               Explore Our Solutions
               <ArrowRight
@@ -99,9 +99,7 @@ export function ImmersiveHero() {
                 className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
               />
             </a>
-            <span className="text-xs font-semibold uppercase tracking-[.16em] text-white/60">
-              People · Skills · Safety · Opportunity
-            </span>
+
           </motion.div>
         </div>
       </div>

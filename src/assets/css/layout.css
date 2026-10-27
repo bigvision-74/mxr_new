@@ -172,16 +172,28 @@ body,
   }
 }
 
-/* Wave CTA ("START A CONVERSATION"): identical on every page, including product pages whose
-   .pp / .ep-page / .dx-page rules would otherwise restyle the eyebrow, heading and text. */
+/* Wave CTA ("START A CONVERSATION" / "LET'S BUILD WHAT'S NEXT"):
+   Identical height, padding, spacing, typography and layout on every page.
+   Matches the Home page "Get in Touch" / contact section. */
 .mxr-react-page main .final-cta.home-wave-cta {
+  min-height: 445px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 6vw !important;
   padding-block: 5rem !important;
   padding-inline: var(--page-gutter) !important;
   background: #102638 !important;
+  box-sizing: border-box !important;
+}
+
+.mxr-react-page main .final-cta.home-wave-cta > div:not(.home-wave-media) {
+  position: relative !important;
+  z-index: 1 !important;
 }
 
 .mxr-react-page main .final-cta.home-wave-cta .eyebrow {
-  color: #89ceff !important;
+  color: var(--blue-dark) !important;
   font-size: .76rem !important;
   font-weight: 800 !important;
   letter-spacing: .18em !important;
@@ -202,6 +214,33 @@ body,
 .mxr-react-page main .final-cta.home-wave-cta > div > p:last-child {
   color: #d1e2ef !important;
   font-size: 1.05rem !important;
+  line-height: 1.6 !important;
   max-width: 730px;
   margin: 18px 0 0;
+}
+
+.mxr-react-page main .final-cta.home-wave-cta .button-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  flex-wrap: wrap !important;
+  margin-top: 0 !important;
+  min-width: 385px;
+  flex-shrink: 0 !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+@media (max-width: 1100px) {
+  .mxr-react-page main .final-cta.home-wave-cta {
+    min-height: auto !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding-block: 4rem !important;
+  }
+
+  .mxr-react-page main .final-cta.home-wave-cta .button-row {
+    margin-top: 28px !important;
+    min-width: 0 !important;
+  }
 }

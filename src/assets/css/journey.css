@@ -858,7 +858,7 @@
   font-size: .76rem;
   font-weight: 800;
   letter-spacing: .16em;
-  color: #64b7ff
+  color: var(--blue-dark)
 }
 
 .epd h2 {
@@ -1286,7 +1286,7 @@
   font-size: .76rem;
   font-weight: 800;
   letter-spacing: .16em;
-  color: #64b7ff
+  color: var(--blue-dark)
 }
 
 .epc-head h2 {
@@ -1359,7 +1359,7 @@
   margin: 0 0 18px;
   font-size: .8rem;
   font-weight: 600;
-  color: #64b7ff
+  color: var(--blue-dark)
 }
 
 .epc .epc-grid ul {
@@ -1650,7 +1650,7 @@
 .ep-page .ep-cta-visual i {
   height: 18px;
   margin-left: 40px;
-  background: linear-gradient(#0b66c3, #64b7ff);
+  background: linear-gradient(#0b66c3, var(--blue-dark));
   opacity: .5
 }
 
