@@ -46,7 +46,7 @@
   right: 8%;
   top: 40px;
   height: 2px;
-  background: linear-gradient(90deg, #1684e8, #2ec4c0);
+  background: linear-gradient(90deg, #147ee1, #2ec4c0);
   opacity: .35
 }
 
@@ -434,7 +434,7 @@
   left: calc(100%/12);
   height: 2px;
   width: calc((100% - 100%/6) * var(--progress, 0%) / 100%);
-  background: linear-gradient(90deg, #1684e8, #2ec4c0);
+  background: linear-gradient(90deg, #147ee1, #2ec4c0);
   transition: width .45s ease
 }
 
@@ -932,7 +932,7 @@
 }
 
 .epd-cta:hover {
-  background: #1684e8;
+  background: #147ee1;
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(22, 132, 232, .3)
 }
@@ -1607,7 +1607,7 @@
 }
 
 .ep-page .ep-cta .ep-button:hover {
-  background: #1684e8;
+  background: #147ee1;
   box-shadow: 0 10px 24px rgba(22, 132, 232, .3)
 }
 

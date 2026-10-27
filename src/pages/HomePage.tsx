@@ -1,10 +1,96 @@
 ﻿import type { CSSProperties } from 'react'
 import { ArrowRight } from 'lucide-react'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { ImmersiveHero } from '../components/ImmersiveHero'
+import '@google/model-viewer'
 
 export default function HomePage() {
   const [activeProduct, setActiveProduct] = useState(0)
+  const [modelLoaded, setModelLoaded] = useState(false)
+  const [isExploded, setIsExploded] = useState(false)
+  const modelViewerRef = useRef<HTMLElement>(null)
+  const [activePlatform, setActivePlatform] = useState(0)
+  const newModelRef = useRef<HTMLElement>(null)
+  const [isExploded2, setIsExploded2] = useState(false)
+  const [newModelLoaded, setNewModelLoaded] = useState(false)
+
+  const handleExplode2 = () => {
+    const mv = newModelRef.current as any
+    if (!mv) return
+    if (mv.availableAnimations?.length > 0) {
+      if (!isExploded2) {
+        mv.animationName = mv.availableAnimations[0]
+        mv.play({ repetitions: 1 })
+        setIsExploded2(true)
+      } else {
+        mv.pause()
+        mv.currentTime = 0
+        setIsExploded2(false)
+      }
+      return
+    }
+    if (!isExploded2) {
+      setIsExploded2(true)
+      mv.setAttribute('camera-orbit', '45deg 45deg 300%')
+      mv.setAttribute('field-of-view', '35deg')
+      setTimeout(() => {
+        mv.setAttribute('camera-orbit', '0deg 75deg auto')
+        mv.setAttribute('field-of-view', '11deg')
+        setIsExploded2(false)
+      }, 1400)
+    }
+  }
+  const [modelInView, setModelInView] = useState(false)
+  const platformSectionRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    const el = modelViewerRef.current
+    if (!el) return
+    const onLoad = () => setModelLoaded(true)
+    el.addEventListener('load', onLoad)
+    return () => el.removeEventListener('load', onLoad)
+  }, [])
+
+  useEffect(() => {
+    const section = platformSectionRef.current
+    if (!section) return
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setModelInView(true); observer.disconnect() } },
+      { rootMargin: '300px' }
+    )
+    observer.observe(section)
+    return () => observer.disconnect()
+  }, [])
+
+  const handleExplode = () => {
+    const mv = modelViewerRef.current as any
+    if (!mv) return
+
+    if (mv.availableAnimations?.length > 0) {
+      if (!isExploded) {
+        mv.animationName = mv.availableAnimations[0]
+        mv.play({ repetitions: 1 })
+        setIsExploded(true)
+      } else {
+        mv.pause()
+        mv.currentTime = 0
+        setIsExploded(false)
+      }
+      return
+    }
+
+    // Fallback: burst camera effect
+    if (!isExploded) {
+      setIsExploded(true)
+      mv.setAttribute('camera-orbit', '45deg 45deg 300%')
+      mv.setAttribute('field-of-view', '35deg')
+      setTimeout(() => {
+        mv.setAttribute('camera-orbit', '0deg 70deg auto')
+        mv.setAttribute('field-of-view', '11deg')
+        setIsExploded(false)
+      }, 1400)
+    }
+  }
   return (
     <main>
       <ImmersiveHero />
@@ -28,21 +114,12 @@ export default function HomePage() {
 
             </div>
             <div className={"card-content"}>
-              <span className={"line-icon"}>
-                {"◇"}
-              </span>
               <h3>
                 {"Defence & Security"}
               </h3>
               <p>
                 {"Mission-ready training for a safer world."}
               </p>
-              <a href={"/defence-security"}>
-                {"Explore solution "}
-                <span>
-                  {"↗"}
-                </span>
-              </a>
             </div>
           </article>
           <article className={"image-card reveal visible"}>
@@ -50,21 +127,12 @@ export default function HomePage() {
 
             </div>
             <div className={"card-content"}>
-              <span className={"line-icon"}>
-                {"◇"}
-              </span>
               <h3>
                 {"Healthcare Simulation"}
               </h3>
               <p>
                 {"Better practice. Brighter outcomes."}
               </p>
-              <a href={"/eprium"}>
-                {"Explore solution "}
-                <span>
-                  {"↗"}
-                </span>
-              </a>
             </div>
           </article>
           <article className={"image-card reveal visible"}>
@@ -72,21 +140,12 @@ export default function HomePage() {
 
             </div>
             <div className={"card-content"}>
-              <span className={"line-icon"}>
-                {"◇"}
-              </span>
               <h3>
                 {"Enterprise Training"}
               </h3>
               <p>
                 {"Real skills for real performance."}
               </p>
-              <a href={"#products"}>
-                {"Explore solution "}
-                <span>
-                  {"↗"}
-                </span>
-              </a>
             </div>
           </article>
           <article className={"image-card reveal visible"}>
@@ -94,21 +153,12 @@ export default function HomePage() {
 
             </div>
             <div className={"card-content"}>
-              <span className={"line-icon"}>
-                {"◇"}
-              </span>
               <h3>
                 {"Custom Solutions"}
               </h3>
               <p>
                 {"Built around your needs."}
               </p>
-              <a href={"#contact"}>
-                {"Explore solution "}
-                <span>
-                  {"↗"}
-                </span>
-              </a>
             </div>
           </article>
         </div>
@@ -120,7 +170,8 @@ export default function HomePage() {
               {"OUR SERVICES"}
             </p>
             <h2>
-              {"From Vision to Working Technology."}
+              {"From Vision to "}
+              <span style={{ color: "var(--blue)" }}>{"Working Technology."}</span>
             </h2>
           </div>
           <p>
@@ -359,14 +410,9 @@ export default function HomePage() {
           <article className={"partnership-card reveal visible"}>
             <div className={"partnership-icon"} aria-hidden={"true"}>
               <svg viewBox={"0 0 48 48"}>
-                <circle cx={"24"} cy={"24"} r={"16"}>
-
-                </circle>
-                <path d={"M28 17h-6.5a4 4 0 0 0 0 8h5a4 4 0 0 1 0 8H19M24 13v22"}>
-
+                <path d={"M24 4L8 10v12c0 10.5 7 17.5 16 20.5 9-3 16-10 16-20.5V10z"}>
                 </path>
-                <path d={"m34 10 4 4 7-7"}>
-
+                <path d={"m17 23 5 5 9-10"}>
                 </path>
               </svg>
             </div>
@@ -383,14 +429,13 @@ export default function HomePage() {
           <article className={"partnership-card reveal visible"}>
             <div className={"partnership-icon"} aria-hidden={"true"}>
               <svg viewBox={"0 0 48 48"}>
-                <path d={"M8 11h25v19H18l-8 7v-7H8z"}>
-
+                <circle cx={"14"} cy={"14"} r={"5"}>
+                </circle>
+                <circle cx={"34"} cy={"34"} r={"5"}>
+                </circle>
+                <path d={"M19 14h5a9 9 0 0 1 9 9v2a9 9 0 0 0 6 8.5"}>
                 </path>
-                <path d={"M17 18h8M17 23h11"}>
-
-                </path>
-                <path d={"M34 19h6v18H24v-4"}>
-
+                <path d={"M14 19v5a9 9 0 0 0 9 9h2"}>
                 </path>
               </svg>
             </div>
@@ -407,18 +452,8 @@ export default function HomePage() {
           <article className={"partnership-card reveal visible"}>
             <div className={"partnership-icon"} aria-hidden={"true"}>
               <svg viewBox={"0 0 48 48"}>
-                <circle cx={"24"} cy={"24"} r={"17"}>
-
-                </circle>
-                <path d={"M24 14v11l8 5"}>
-
-                </path>
-                <path d={"M8 8h9M31 8h9"}>
-
-                </path>
-                <path d={"m37 17 5 1-3 4"}>
-
-                </path>
+                <polygon points={"26,4 8,26 22,26 22,44 40,22 26,22"}>
+                </polygon>
               </svg>
             </div>
             <span>
@@ -434,17 +469,11 @@ export default function HomePage() {
           <article className={"partnership-card reveal visible"}>
             <div className={"partnership-icon"} aria-hidden={"true"}>
               <svg viewBox={"0 0 48 48"}>
-                <circle cx={"18"} cy={"17"} r={"6"}>
-
+                <circle cx={"24"} cy={"18"} r={"13"}>
                 </circle>
-                <circle cx={"34"} cy={"19"} r={"5"}>
-
-                </circle>
-                <path d={"M7 38c0-8 4-12 11-12s11 4 11 12M28 29c2-2 4-3 7-3 5 0 8 4 8 11"}>
-
+                <path d={"M17 30L12 42l12-4 12 4-5-12"}>
                 </path>
-                <path d={"m31 10 3-4 3 4"}>
-
+                <path d={"m19 18 3 3 7-8"}>
                 </path>
               </svg>
             </div>
@@ -460,7 +489,7 @@ export default function HomePage() {
           </article>
         </div>
       </section>
-      <section className={"featured-products home-wave-section"} id={"products"} aria-label={"Featured products"}>
+      <section className={"featured-products home-wave-section"} id={"products"} aria-label={"Featured products"} style={{ background: "linear-gradient(135deg, #0a0f1a 0%, #0d1f35 50%, #0a1628 100%)" }}>
         <div className={"home-wave-media"} aria-hidden={"true"}>
           <video autoPlay={true} muted={true} loop={true} playsInline={true} preload={"metadata"}>
             <source src={"https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260815_034306_165449ef-7d2e-4e81-850f-1939c5cb442d.mp4"} type={"video/mp4"} />
@@ -468,199 +497,166 @@ export default function HomePage() {
         </div>
         <article hidden={activeProduct !== 0} className={"product-slide modal-showcase" + (activeProduct === 0 ? " active" : "")} data-product-slide={"0"}>
           <div className={"modal-copy reveal visible"}>
-            <p className={"eyebrow light"}>
-              {"FEATURED PRODUCT"}
-            </p>
-            <h2>
-              {"MODAL"}
-              <span>
-                {"3D"}
-              </span>
-            </h2>
-            <h3>
-              {"The digital ammunition and ordnance library."}
-            </h3>
-            <p>
-              {"Explore highly accurate 3D models with AR access, detailed specifications and training resources."}
-            </p>
-            <a className={"btn btn-white"} href={"/modal3d"}>
-              {"Explore MODAL3D →"}
-            </a>
+            <p className={"eyebrow light"}>{"FEATURED PRODUCT"}</p>
+            <h2>{"MODAL"}<span>{"3D"}</span></h2>
+            <h3>{"The digital ammunition and ordnance library."}</h3>
+            <p>{"Explore highly accurate 3D models with AR access, detailed specifications and training resources."}</p>
+            <a className={"btn btn-white"} href={"/modal3d"}>{"Explore MODAL3D →"}</a>
           </div>
-          <div className={"modal-visual reveal visible"}>
-            <div className={"technical-object"}>
-              <div className={"obj-part p1"}>
-
-              </div>
-              <div className={"obj-part p2"}>
-
-              </div>
-              <div className={"obj-part p3"}>
-
-              </div>
-              <div className={"obj-part p4"}>
-
-              </div>
-              <div className={"scan-line"}>
-
+          <div className={"modal-visual reveal visible"} style={{ background: "transparent", backdropFilter: "none", boxShadow: "none", border: "none", overflow: "visible", height: "520px", position: "relative", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <img
+              src={"/assets/images/Home/drone.png"}
+              alt={"MODAL 3D – drone"}
+              style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }}
+            />
+          </div>
+          <div className="px-feat-list">
+            <div className="px-feat-row">
+              <div className="px-badge">STL</div>
+              <div className="px-feat-body">
+                <div className="px-feat-meta">
+                  <h4>3D Printable Asset Library</h4>
+                  <div className="px-tags"><span>STL</span><span>Reference data</span></div>
+                </div>
+                <p>Access detailed, training-ready assets prepared for authorised 3D printing. Build repeatable physical training sets locally.</p>
               </div>
             </div>
-            <div className={"annotation a1"}>
-              <b>
-                {"01"}
-              </b>
-              {" Component inspection"}
+            <div className="px-feat-row">
+              <div className="px-badge px-badge--ar">AR</div>
+              <div className="px-feat-body">
+                <div className="px-feat-meta">
+                  <h4>Augmented Reality App</h4>
+                  <div className="px-tags"><span>3D inspection</span><span>AR placement</span></div>
+                </div>
+                <p>Place and inspect digital assets in the real world. Supports guided familiarisation, visual recognition and self-paced learning.</p>
+              </div>
             </div>
-            <div className={"annotation a2"}>
-              <b>
-                {"02"}
-              </b>
-              {" Exploded visualisation"}
+            <div className="px-feat-row">
+              <div className="px-badge px-badge--mr">MR</div>
+              <div className="px-feat-body">
+                <div className="px-feat-meta">
+                  <h4>Mixed Reality Environment</h4>
+                  <div className="px-tags"><span>MR headset</span></div>
+                </div>
+                <p>Access the ammunition library via mixed reality headsets for immersive, hands-on inspection in a connected training environment.</p>
+              </div>
             </div>
           </div>
-          <ul className={"feature-list reveal visible"}>
-            <li>
-              {"Interactive 3D Models"}
-            </li>
-            <li>
-              {"AR Access"}
-            </li>
-            <li>
-              {"Detailed Specifications"}
-            </li>
-            <li>
-              {"Training & Assessment"}
-            </li>
-            <li>
-              {"Web & Mobile Access"}
-            </li>
-          </ul>
         </article>
         <article hidden={activeProduct !== 1} className={"product-slide modal-showcase eprium-showcase" + (activeProduct === 1 ? " active" : "")} data-product-slide={"1"}>
           <div className={"modal-copy"}>
-            <p className={"eyebrow light"}>
-              {"FEATURED PRODUCT"}
-            </p>
-            <h2>
-              {"EPR"}
-              <span>
-                {"ium"}
-              </span>
-            </h2>
-            <h3>
-              {"Clinical practice before clinical placement."}
-            </h3>
-            <p>
-              {"Give healthcare learners a safe, realistic way to practise patient encounters, clinical reasoning and electronic patient records."}
-            </p>
-            <a className={"btn btn-white"} href={"/eprium"}>
-              {"Explore EPRium →"}
-            </a>
+            <p className={"eyebrow light"}>{"FEATURED PRODUCT"}</p>
+            <h2>{"EPR"}<span style={{ color: "#147ee1" }}>{"ium"}</span></h2>
+            <h3>{"Clinical practice before clinical placement."}</h3>
+            <p>{"Give healthcare learners a safe, realistic way to practise patient encounters, clinical reasoning and electronic patient records."}</p>
+            <a className={"btn btn-white"} href={"/eprium"}>{"Explore EPRium →"}</a>
           </div>
-          <div className={"eprium-product-visual"}>
-            <div className={"eprium-screen"}>
-              <div className={"eprium-screen-bar"}>
-                <b>
-                  {"EPRium"}
-                </b>
-                <span>
-                  {"SIMULATION MODE"}
-                </span>
-              </div>
-              <div className={"eprium-screen-body"}>
-                <aside>
-                  <i>
-
-                  </i>
-                  <i>
-
-                  </i>
-                  <i>
-
-                  </i>
-                  <i>
-
-                  </i>
-                </aside>
-                <div>
-                  <small>
-                    {"SIMULATED PATIENT RECORD"}
-                  </small>
-                  <h4>
-                    {"Clinical encounter"}
-                  </h4>
-                  <p>
-                    {"Review. Assess. Document."}
-                  </p>
-                  <div className={"record-lines"}>
-                    <i>
-
-                    </i>
-                    <i>
-
-                    </i>
-                    <i>
-
-                    </i>
-                  </div>
+          <div className={"eprium-product-visual"} style={{ background: "transparent", backgroundImage: "none", backgroundColor: "transparent", backdropFilter: "none", boxShadow: "none", border: "none" }}>
+            <img
+              src={"/assets/images/Home/Dashboard EPRium.png"}
+              alt={"EPRium dashboard screenshot"}
+              loading="lazy"
+              style={{ width: "120%", height: "580px", objectFit: "contain", borderRadius: "10px", display: "block", boxShadow: "none", transform: "perspective(900px) rotateY(6deg)", margin: "auto" }}
+            />
+          </div>
+          <div className="px-feat-list">
+            <div className="px-feat-row">
+              <div className="px-badge">EHR</div>
+              <div className="px-feat-body">
+                <div className="px-feat-meta">
+                  <h4>High-Fidelity EHR Mirror</h4>
+                  <div className="px-tags"><span>Simulated EHR</span></div>
                 </div>
+                <p>A simulated Electronic Health Record system that looks and feels like the real thing.</p>
               </div>
             </div>
-            <div className={"annotation e1"}>
-              <b>
-                {"01"}
-              </b>
-              {" Patient encounters"}
+            <div className="px-feat-row">
+              <div className="px-badge px-badge--collab">CO</div>
+              <div className="px-feat-body">
+                <div className="px-feat-meta">
+                  <h4>Multi-User Sessions</h4>
+                  <div className="px-tags"><span>Real-time</span><span>Team-based</span></div>
+                </div>
+                <p>Collaborate with peers or mentors in real-time within the same simulation.</p>
+              </div>
             </div>
-            <div className={"annotation e2"}>
-              <b>
-                {"02"}
-              </b>
-              {" Clinical documentation"}
+            <div className="px-feat-row">
+              <div className="px-badge px-badge--risk">RC</div>
+              <div className="px-feat-body">
+                <div className="px-feat-meta">
+                  <h4>Risk-Free Critical Care</h4>
+                  <div className="px-tags"><span>Patient safety</span></div>
+                </div>
+                <p>Practice high-stakes emergency decisions without risking patient safety.</p>
+              </div>
+            </div>
+            <div className="px-feat-row">
+              <div className="px-badge px-badge--data">DA</div>
+              <div className="px-feat-body">
+                <div className="px-feat-meta">
+                  <h4>Data-Driven Feedback</h4>
+                  <div className="px-tags"><span>Analytics</span><span>Audit trail</span></div>
+                </div>
+                <p>Instant performance analytics and auditing for students and educators.</p>
+              </div>
             </div>
           </div>
-          <ul className={"feature-list"}>
-            <li>
-              {"Virtual Patients"}
-            </li>
-            <li>
-              {"Simulated EPR"}
-            </li>
-            <li>
-              {"Clinical Reasoning"}
-            </li>
-            <li>
-              {"Educator Feedback"}
-            </li>
-            <li>
-              {"Multi-device Access"}
-            </li>
-          </ul>
         </article>
         <div className={"product-slider-controls"}>
-          <button onClick={() => setActiveProduct(p => (p + 1) % 2)} className={"product-arrow product-prev"} aria-label={"Previous featured product"}>
-            {"←"}
-          </button>
+          <button onClick={() => setActiveProduct(p => (p + 1) % 2)} className={"product-arrow product-prev"} aria-label={"Previous featured product"}>{"←"}</button>
           <div className={"product-dots"} role={"tablist"} aria-label={"Choose featured product"}>
-            <button onClick={() => setActiveProduct(0)} aria-selected={activeProduct === 0} className={activeProduct === 0 ? "active" : ""} role={"tab"} aria-label={"Show MODAL3D"} data-product-go={"0"}>
-
-            </button>
-            <button onClick={() => setActiveProduct(1)} aria-selected={activeProduct === 1} className={activeProduct === 1 ? "active" : ""} role={"tab"} aria-label={"Show EPRium"} data-product-go={"1"}>
-
-            </button>
+            <button onClick={() => setActiveProduct(0)} aria-selected={activeProduct === 0} className={activeProduct === 0 ? "active" : ""} role={"tab"} aria-label={"Show MODAL3D"} data-product-go={"0"} />
+            <button onClick={() => setActiveProduct(1)} aria-selected={activeProduct === 1} className={activeProduct === 1 ? "active" : ""} role={"tab"} aria-label={"Show EPRium"} data-product-go={"1"} />
           </div>
-          <button onClick={() => setActiveProduct(p => (p + 1) % 2)} className={"product-arrow product-next"} aria-label={"Next featured product"}>
-            {"→"}
-          </button>
+          <button onClick={() => setActiveProduct(p => (p + 1) % 2)} className={"product-arrow product-next"} aria-label={"Next featured product"}>{"→"}</button>
         </div>
       </section>
+
+      {false && (<section className="px-section" id="platform-features" aria-label="Platform features" ref={platformSectionRef as any}>
+        <div className="px-head">
+          <p className="eyebrow">FEATURED PRODUCTS</p>
+          <h2>Everything Your Team Needs.</h2>
+        </div>
+
+        <div className="px-tabs">
+          <button className={"px-tab" + (activePlatform === 0 ? " active" : "")} onClick={() => setActivePlatform(0)}>
+            <span className="px-tab-sector">DEFENCE &amp; SECURITY</span>
+            <span className="px-tab-name">MODAL 3D</span>
+          </button>
+          <button className={"px-tab" + (activePlatform === 1 ? " active" : "")} onClick={() => setActivePlatform(1)}>
+            <span className="px-tab-sector px-tab-sector--health">HEALTHCARE</span>
+            <span className="px-tab-name">EPRium</span>
+          </button>
+        </div>
+
+        <div className="px-body">
+          <div className="px-content">
+            {activePlatform === 0 ? (
+              <div className="px-product" key="modal">
+                <p className="px-sector">DEFENCE &amp; SECURITY</p>
+                <h3>MODAL<span>3D</span></h3>
+                <p className="px-desc">The digital ammunition and ordnance library — highly accurate 3D models with AR access, detailed specifications and training resources.</p>
+                <a href="/modal3d" className="px-cta">Explore MODAL3D →</a>
+              </div>
+            ) : (
+              <div className="px-product" key="eprium">
+                <p className="px-sector px-sector--health">HEALTHCARE</p>
+                <h3>EPR<span>ium</span></h3>
+                <p className="px-desc">Clinical practice before clinical placement — a safe, realistic way to practise patient encounters, clinical reasoning and electronic patient records.</p>
+                <a href="/eprium" className="px-cta">Explore EPRium →</a>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>)}
       <section className={"section why"} id={"about"}>
         <div className={"why-heading reveal visible"}>
           <p className={"eyebrow"}>
             {"THE MXR APPROACH"}
           </p>
           <h2>
-            {"More Than Simulation."}
+            {"More Than "}
+            <em>{"Simulation."}</em>
           </h2>
           <p>
             {"We combine immersive design, intelligence and measurable outcomes to create technology that performs beyond the demo."}
@@ -668,60 +664,36 @@ export default function HomePage() {
         </div>
         <div className={"pillars"}>
           <article className={"reveal visible"}>
-            <span>
-              {"◉"}
+            <span aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="7" stroke="currentColor" strokeWidth="1.5"/><circle cx="9" cy="9" r="2.5" fill="currentColor"/></svg>
             </span>
-            <b>
-              {"01"}
-            </b>
-            <h3>
-              {"Immersive"}
-            </h3>
-            <p>
-              {"Experiences designed to replicate real-world environments."}
-            </p>
+            <b aria-hidden="true">{"01"}</b>
+            <h3>{"Immersive"}</h3>
+            <p>{"Experiences designed to replicate real-world environments with precision."}</p>
           </article>
           <article className={"reveal visible"}>
-            <span>
-              {"✦"}
+            <span aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 2L11.5 7H16L12.5 10.5L14 16L9 13L4 16L5.5 10.5L2 7H6.5L9 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/></svg>
             </span>
-            <b>
-              {"02"}
-            </b>
-            <h3>
-              {"Intelligent"}
-            </h3>
-            <p>
-              {"Data and AI help improve learning and decision-making."}
-            </p>
+            <b aria-hidden="true">{"02"}</b>
+            <h3>{"Intelligent"}</h3>
+            <p>{"Data and AI continuously improve learning outcomes and decision-making."}</p>
           </article>
           <article className={"reveal visible"}>
-            <span>
-              {"↗"}
+            <span aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="3,13 7,8 11,10 15,4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/><circle cx="15" cy="4" r="1.5" fill="currentColor"/></svg>
             </span>
-            <b>
-              {"03"}
-            </b>
-            <h3>
-              {"Measurable"}
-            </h3>
-            <p>
-              {"Training outcomes can be assessed and improved."}
-            </p>
+            <b aria-hidden="true">{"03"}</b>
+            <h3>{"Measurable"}</h3>
+            <p>{"Training outcomes are tracked, assessed and continuously improved."}</p>
           </article>
           <article className={"reveal visible"}>
-            <span>
-              {"⊞"}
+            <span aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="6" height="6" rx="1" stroke="currentColor" strokeWidth="1.5"/><rect x="10" y="2" width="6" height="6" rx="1" stroke="currentColor" strokeWidth="1.5"/><rect x="2" y="10" width="6" height="6" rx="1" stroke="currentColor" strokeWidth="1.5"/><rect x="10" y="10" width="6" height="6" rx="1" stroke="currentColor" strokeWidth="1.5"/></svg>
             </span>
-            <b>
-              {"04"}
-            </b>
-            <h3>
-              {"Scalable"}
-            </h3>
-            <p>
-              {"Solutions designed for individuals, teams and organisations."}
-            </p>
+            <b aria-hidden="true">{"04"}</b>
+            <h3>{"Scalable"}</h3>
+            <p>{"Solutions built for individuals, teams and entire organisations."}</p>
           </article>
         </div>
       </section>
@@ -744,7 +716,6 @@ export default function HomePage() {
         </div>
         <div className={"button-row"}>
           <a className={"btn btn-primary"} href={"/contact"}>{"Talk to Our Team"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
-          <a className={"btn btn-secondary"} href={"#solutions"}>{"Explore Solutions"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
         </div>
       </section>
     </main>

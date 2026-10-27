@@ -128,12 +128,12 @@
 }
 
 .event-meta-row svg {
-  color: #1684e8;
+  color: #147ee1;
   flex-shrink: 0;
 }
 
 .event-meta-row a {
-  color: #1684e8;
+  color: #147ee1;
   font-weight: 600;
   text-decoration: none;
   transition: color .15s;
@@ -158,16 +158,16 @@
   gap: 6px;
   font-size: .82rem;
   font-weight: 700;
-  color: #1684e8;
+  color: #147ee1;
   text-decoration: none;
   padding: 8px 18px;
   border-radius: 999px;
-  border: 1.5px solid #1684e8;
+  border: 1.5px solid #147ee1;
   transition: background .15s, color .15s;
 }
 
 .event-cta:hover {
-  background: #1684e8;
+  background: #147ee1;
   color: #fff;
 }
 

@@ -129,7 +129,7 @@
   gap: 6px;
   font-size: .72rem;
   font-weight: 700;
-  color: #1684e8;
+  color: #147ee1;
   letter-spacing: .06em;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -207,7 +207,7 @@
   gap: 8px;
   font-size: .82rem;
   font-weight: 600;
-  color: #1684e8;
+  color: #147ee1;
   text-decoration: none;
   margin-bottom: 32px;
   padding: 9px 18px;
@@ -219,7 +219,7 @@
 
 .blog-detail-back:hover {
   background: #eef5fd;
-  border-color: #1684e8;
+  border-color: #147ee1;
 }
 
 .blog-detail-content {
@@ -265,7 +265,7 @@
   padding: 12px 18px;
   background: #f4f8fd;
   border-radius: 10px;
-  border-left: 3px solid #1684e8;
+  border-left: 3px solid #147ee1;
 }
 
 .blog-detail-content img.para-img {
@@ -276,7 +276,7 @@
 }
 
 .blog-detail-content a {
-  color: #1684e8;
+  color: #147ee1;
   font-weight: 600;
   text-decoration: underline;
   text-decoration-color: rgba(22, 132, 232, .35);

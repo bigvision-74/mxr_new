@@ -251,7 +251,7 @@
 .mxr-purpose-outcomes span:before {
   content: '';
   display: inline-block;
-  background: #1684e8;
+  background: #147ee1;
   width: 4px;
   height: 4px;
   border-radius: 50%;
@@ -586,6 +586,12 @@
 
 .home-wave-section .modal-copy>p:not(.eyebrow) {
   color: #d4e2ed !important
+}
+
+.home-wave-section .eprium-product-visual {
+  background: transparent !important;
+  background-image: none !important;
+  backdrop-filter: none !important
 }
 
 @media(max-width:900px) {
@@ -1315,7 +1321,7 @@
 
 .ix-sales-tags span {
   font-size: 0.625rem;
-  border-left: 2px solid #1684e8;
+  border-left: 2px solid #147ee1;
   padding-left: 9px;
   color: #526e85
 }
@@ -1373,7 +1379,7 @@
 
 .ix-sales-benefits b {
   font-size: 0.6875rem;
-  color: #1684e8
+  color: #147ee1
 }
 
 .ix-sales-benefits span {
@@ -1499,7 +1505,7 @@
 
 .ix-sales-wave i {
   flex: 1;
-  background: linear-gradient(#74ceff, #1684e8);
+  background: linear-gradient(#74ceff, #147ee1);
   height: 35%;
   border-radius: 3px 3px 0 0
 }
@@ -1765,7 +1771,7 @@
 
 .ix-platform-features article:hover {
   transform: translateY(-4px);
-  border-color: #1684e8
+  border-color: #147ee1
 }
 
 .ix-platform-features article>span {
@@ -1792,7 +1798,7 @@
 
 .ix-platform-industries article {
   padding-top: 25px;
-  border-top: 3px solid #1684e8
+  border-top: 3px solid #147ee1
 }
 
 .ix-platform-industries article>span {
@@ -2353,7 +2359,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #e4faff, #1684e8 50%, #08386b);
+  background: linear-gradient(135deg, #e4faff, #147ee1 50%, #08386b);
   border: 1px solid #c5f5ff;
   box-shadow: 0 12px 35px #00356b66, inset 0 2px 6px white;
   transform: rotate(15deg);
@@ -2708,7 +2714,7 @@
   width: 10px;
   height: 10px;
   border-radius: 3px;
-  background: #1684e8;
+  background: #147ee1;
   box-shadow: 4px -4px #a9d9ff
 }
 
@@ -2785,7 +2791,7 @@
 
 .ix-window-bar b {
   font-size: 0.75rem;
-  color: #1684e8
+  color: #147ee1
 }
 
 .ix-sales .ix-product-window>img {
@@ -3527,7 +3533,7 @@
 }
 
 .purpose-alt-footer span {
-  color: #1684e8;
+  color: #147ee1;
   margin: 0 8px
 }
 
@@ -3650,5 +3656,205 @@
   .about-hero-video--wire,
   .about-hero-lens {
     display: none
+  }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* ── More Than Simulation — redesigned light section ── */
+section.why {
+  background: #f8fafc;
+  padding: clamp(80px, 10vw, 140px) clamp(24px, 8vw, 120px);
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 0.75fr 1.6fr;
+  gap: clamp(40px, 6vw, 100px);
+  align-items: start;
+}
+
+/* Subtle dot-grid background texture */
+section.why::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(11, 102, 195, 0.08) 1px, transparent 1px);
+  background-size: 36px 36px;
+  pointer-events: none;
+}
+
+/* Soft glow blob */
+section.why::after {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: 8%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(11, 102, 195, 0.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* Heading column */
+section.why .why-heading {
+  position: sticky;
+  top: 120px;
+}
+
+section.why .why-heading .eyebrow {
+  color: #0b66c3;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+section.why .why-heading .eyebrow::before {
+  display: none;
+}
+
+section.why .why-heading h2 {
+  font-size: clamp(2.4rem, 4vw, 3.8rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.06;
+  color: #0d1826;
+  margin: 0 0 24px;
+}
+
+section.why .why-heading h2 em {
+  font-style: normal;
+  background: linear-gradient(90deg, #0b66c3, #147ee1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+section.why .why-heading > p:last-child {
+  color: #4a6070;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 360px;
+}
+
+/* Pillars grid */
+section.why .pillars {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+}
+
+section.why .pillars article {
+  position: relative;
+  padding: 38px 34px 36px;
+  background: #fff;
+  border: 1px solid #dbe8f5;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 12px rgba(11, 102, 195, 0.05);
+}
+
+section.why .pillars article:hover {
+  box-shadow: 0 8px 32px rgba(11, 102, 195, 0.12);
+  border-color: #aac8f0;
+  transform: translateY(-3px);
+}
+
+/* Top accent bar */
+section.why .pillars article::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #0b66c3, #4d9de0);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 14px 14px 0 0;
+}
+
+section.why .pillars article:hover::before {
+  opacity: 1;
+}
+
+/* Ghost number */
+section.why .pillars b {
+  position: absolute;
+  bottom: 12px;
+  right: 20px;
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgba(11, 102, 195, 0.05);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Icon */
+section.why .pillars span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(11, 102, 195, 0.08);
+  border: 1px solid rgba(11, 102, 195, 0.18);
+  font-size: 1.3rem;
+  color: #0b66c3;
+  margin-bottom: 22px;
+}
+
+section.why .pillars article:hover span {
+  background: rgba(11, 102, 195, 0.14);
+  border-color: rgba(11, 102, 195, 0.3);
+}
+
+section.why .pillars h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0d1826;
+  margin: 0 0 10px;
+  letter-spacing: -0.02em;
+}
+
+section.why .pillars p {
+  color: #5a7080;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+@media (max-width: 1100px) {
+  section.why {
+    grid-template-columns: 1fr;
+  }
+
+  section.why .why-heading {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  section.why .pillars {
+    grid-template-columns: 1fr;
   }
 }

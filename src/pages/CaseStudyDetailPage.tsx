@@ -106,7 +106,7 @@ function renderBlock(block: BodyBlock, index: number) {
                         return (
                             <div key={i} className="cs-feature-card">
                                 <div className="cs-feature-icon-wrap">
-                                    <Icon size={42} color="#1684e8" />
+                                    <Icon size={42} color="#147ee1" />
                                 </div>
                                 <h4 className="cs-feature-title">{feature.title}</h4>
                                 <p className="cs-feature-desc">{feature.description}</p>
@@ -126,7 +126,7 @@ function renderBlock(block: BodyBlock, index: number) {
                     const Icon: IconType = roleIconMap[role.icon] ?? FaCheck
                     return (
                         <div key={i} className="cs-role-card">
-                            <Icon size={48} color="#1684e8" />
+                            <Icon size={48} color="#147ee1" />
                             <span>{role.label}</span>
                         </div>
                     )

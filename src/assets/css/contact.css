@@ -127,7 +127,7 @@ a.contact-card:hover {
     display: grid;
     place-items: center;
     border-radius: 12px;
-    background: linear-gradient(135deg, #1684e8, #0a54b8);
+    background: linear-gradient(135deg, #147ee1, #0a54b8);
     color: #fff
 }
 
@@ -192,7 +192,7 @@ a.contact-card:hover .contact-card-arrow {
     display: grid;
     place-items: center;
     border-radius: 10px;
-    background: linear-gradient(135deg, #1684e8, #0a54b8);
+    background: linear-gradient(135deg, #147ee1, #0a54b8);
     color: #fff
 }
 
@@ -383,7 +383,7 @@ a.contact-card:hover .contact-card-arrow {
 #hubspotForm select:focus,
 #hubspotForm textarea:focus {
     background: #fff;
-    border-color: #1684e8;
+    border-color: #147ee1;
     box-shadow: 0 0 0 3.5px rgba(22, 132, 232, .14)
 }
 
@@ -400,7 +400,7 @@ a.contact-card:hover .contact-card-arrow {
     font-size: 1.05rem;
     font-weight: 700;
     color: #fff;
-    background: linear-gradient(90deg, #0b5fd0 0%, #1684e8 60%, #1fa0f5 100%);
+    background: linear-gradient(90deg, #0b5fd0 0%, #147ee1 60%, #1fa0f5 100%);
     border: none;
     border-radius: 12px;
     cursor: pointer;
@@ -483,7 +483,7 @@ a.contact-card:hover .contact-card-arrow {
     height: 16px;
     flex-shrink: 0;
     margin-top: 2px;
-    accent-color: #1684e8;
+    accent-color: #147ee1;
     border-radius: 4px
 }
 
@@ -548,7 +548,7 @@ a.contact-card:hover .contact-card-arrow {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: #1684e8;
+    background: #147ee1;
     box-shadow: 0 0 0 4px rgba(22, 132, 232, .3)
 }
 
@@ -618,7 +618,7 @@ a.contact-card:hover .contact-card-arrow {
 }
 
 .ep2-btn-primary {
-    background: linear-gradient(90deg, #0b5fd0, #1684e8);
+    background: linear-gradient(90deg, #0b5fd0, #147ee1);
     color: #fff;
     box-shadow: 0 10px 28px rgba(22, 132, 232, .4)
 }
@@ -674,7 +674,7 @@ a.contact-card:hover .contact-card-arrow {
     width: 38px;
     height: 38px;
     border-radius: 10px;
-    background: linear-gradient(135deg, #1684e8, #0a54b8)
+    background: linear-gradient(135deg, #147ee1, #0a54b8)
 }
 
 .ep2-float b {

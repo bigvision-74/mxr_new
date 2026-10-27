@@ -40,7 +40,7 @@ body :is(.btn-primary, .dx-button, .ep-button) {
 }
 
 body :is(.btn-primary, .dx-button, .ep-button):hover {
-  background: #1684e8 !important;
+  background: #147ee1 !important;
   color: #fff !important;
   box-shadow: 0 0 0 1px rgba(22, 132, 232, .6) !important;
 }
