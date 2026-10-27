@@ -1,7 +1,8 @@
+import type { ReactNode } from 'react'
 import { ArrowRight } from 'lucide-react'
 
 // Shared product banner (same markup and styling as the EPRium hero): dark shade, grid and glow over a picture or looping video.
-export function ProductHero({ title, accent, lead, demoSubject, secondaryHref, secondaryLabel, video, image }: {
+export function ProductHero({ title, accent, lead, demoSubject, secondaryHref, secondaryLabel, video, image, visual }: {
   title: string
   accent: string
   lead: string
@@ -10,15 +11,17 @@ export function ProductHero({ title, accent, lead, demoSubject, secondaryHref, s
   secondaryLabel: string
   video?: string
   image?: string
+  visual?: ReactNode // sits on the right of the banner, above the shade
 }) {
   return (
     <section className="ep2-hero">
       {video
         ? <video className="ep2-bg" autoPlay muted loop playsInline preload="metadata" aria-hidden="true"><source src={video} type="video/mp4" /></video>
-        : <img className="ep2-bg" src={image} alt="" fetchPriority="high" />}
+        : image ? <img className="ep2-bg" src={image} alt="" fetchPriority="high" /> : null}
       <div className="ep2-shade" aria-hidden="true" />
       <div className="ep2-grid" aria-hidden="true" />
       <div className="ep2-glow" aria-hidden="true" />
+      {visual}
       <div className="ep2-hero-inner">
         <h1 className="banner-title banner-title--stacked">{title} <em>{accent}</em></h1>
         <p className="ep2-lead banner-lead">{lead}</p>

@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { NavBar } from './NavBar'
@@ -29,18 +30,59 @@ function ShinyText({ children, duration = 3, spread = 100 }: ShinyTextProps) {
   )
 }
 
+// The showcase video plays the four products one after another. `go` is where a tab jumps to (a little after the cut, so the
+// previous scene never shows); `from` is where that product's scene begins, used to work out which tab is active.
+const PRODUCTS = [
+  { id: 'drivexr', label: 'DriveXR', chip: 'drive', chipAccent: 'XR', from: 0, go: 0, light: true },
+  { id: 'omnia', label: 'OMNIA', chip: 'OMNIA', chipAccent: '', from: 10.8, go: 11.2, light: true },
+  { id: 'insightxr', label: 'InsightXR', chip: 'Insight', chipAccent: 'XR', from: 20.54, go: 20.94, light: false },
+  { id: 'modal3d', label: 'MODAL3D', chip: 'MODAL', chipAccent: '3D', from: 27.7, go: 28.1, light: false },
+] as const
+
+function activeAt(t: number) {
+  let n = 0
+  PRODUCTS.forEach((pr, i) => { if (t >= pr.from) n = i })
+  return n
+}
+
 export function ImmersiveHero() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [active, setActive] = useState(0)
+
+  // Follow the video: the active tab changes as soon as the video moves on to the next product (and wraps back to the first).
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+    let raf = 0, current = 0
+    const tick = () => {
+      const n = activeAt(video.currentTime)
+      if (n !== current) { current = n; setActive(n) }
+      raf = requestAnimationFrame(tick)
+    }
+    raf = requestAnimationFrame(tick)
+    return () => cancelAnimationFrame(raf)
+  }, [])
+
+  const jumpTo = (i: number) => {
+    const video = videoRef.current
+    if (!video) return
+    video.currentTime = PRODUCTS[i].go
+    setActive(i)
+    video.play().catch(() => { /* autoplay blocked: the tab still shows the chosen product */ })
+  }
+
   return (
     <section className="mxr-immersive-hero relative flex h-screen min-h-[700px] flex-col bg-[var(--color-dark)] text-white">
       {/* Background layers clipped independently so the nav dropdown can escape */}
       <div className="absolute inset-0 overflow-hidden">
         <video
+          ref={videoRef}
           className="mxr-immersive-hero__video absolute inset-0 h-full w-full object-cover"
           autoPlay
           loop
           muted
           playsInline
-          preload="metadata"
+          preload="auto"
           aria-label="MXR immersive technology showcase"
         >
           <source
@@ -50,7 +92,7 @@ export function ImmersiveHero() {
         </video>
 
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.55)_0%,rgba(0,0,0,.08)_32%,rgba(0,0,0,.14)_60%,rgba(0,0,0,.8)_100%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,.3),transparent_55%,rgba(0,0,0,.08))]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,11,18,.88)_0%,rgba(6,11,18,.7)_30%,rgba(6,11,18,.28)_58%,transparent_80%)]" />
         <div className="mxr-immersive-hero__grid absolute inset-0 opacity-40" />
         <div className="absolute -left-36 top-1/3 h-96 w-96 rounded-full bg-[#0B66C3]/20 blur-[120px]" />
       </div>
@@ -91,7 +133,7 @@ export function ImmersiveHero() {
           >
             <a
               href="#solutions"
-              className="group inline-flex items-center gap-3 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/25 transition-all duration-300 hover:bg-gray-900 md:px-8 md:py-4 md:text-base bg-[#0B66C3] hover:bg-[#1684E8]"
+              className="group inline-flex items-center gap-3 rounded-full bg-[#0B66C3] px-6 py-3 text-sm font-semibold text-white ring-1 ring-[#1684E8]/60 transition-all duration-300 hover:bg-[#1684E8] md:px-8 md:py-4 md:text-base"
             >
               Explore Our Solutions
               <ArrowRight
@@ -101,6 +143,20 @@ export function ImmersiveHero() {
             </a>
 
           </motion.div>
+        </div>
+      </div>
+
+      {/* Product tabs, bottom right: the chip names the product on screen; the tabs jump the video to a product. */}
+      <div className="hv-tabs">
+        <span className={`hv-chip ${PRODUCTS[active].light ? 'is-light' : 'is-dark'}`} aria-hidden="true">
+          {PRODUCTS[active].chip}<b>{PRODUCTS[active].chipAccent}</b>
+        </span>
+        <div className="hv-rail" role="tablist" aria-label="Products">
+          {PRODUCTS.map((pr, i) => (
+            <button key={pr.id} type="button" role="tab" aria-selected={i === active} className={i === active ? 'is-active' : ''} onClick={() => jumpTo(i)}>
+              <span>{String(i + 1).padStart(2, '0')}</span>{pr.label}
+            </button>
+          ))}
         </div>
       </div>
     </section>

@@ -256,22 +256,7 @@ export default function InsightxrPage() {
           </article>
         </div>
       </section>
-      <section className={"pp-audience"}>
-        <p className={"eyebrow"}>
-          {"BUILT FOR YOUR WORLD"}
-        </p>
-        <div>
-          <span>
-            {"Education"}
-          </span>
-          <span>
-            {"Healthcare"}
-          </span>
-          <span>
-            {"Enterprise training"}
-          </span>
-        </div>
-      </section>
+
       <section className={"final-cta home-wave-section home-wave-cta"}>
         <div className={"home-wave-media"} aria-hidden={"true"}>
           <video autoPlay={true} muted={true} loop={true} playsInline={true} preload={"metadata"}>
