@@ -6,10 +6,14 @@ import { ProductModelViewer } from '../components/ProductModelViewer'
 import vs50Model from '../assets/images/modal3d/VS-50.glb?url'
 import modalHero from '../assets/images/modal3d/modal3d_hero.mp4'
 
+
 export default function Modal3DPage() {
   return (
     <main className={"pp"} style={{ "--product-accent": "#0b66c3" } as CSSProperties}>
-      <ProductHero title="Complex assets." accent="Clear understanding." lead="Explore ordnance in interactive 3D. Connect component views, technical information and AR in one organised library." demoSubject="MODAL3D demonstration" secondaryHref="#product-benefits" secondaryLabel="Explore MODAL3D" visual={<HoverCutawayVideo src={modalHero} label="MODAL3D ordnance model, with its inner parts revealed under the pointer" />} />
+      <div className="modal3d-hero-shell">
+        <ProductHero title="Complex assets." accent="Clear understanding." lead="Explore ordnance in interactive 3D. Connect component views, technical information and AR in one organised library." demoSubject="MODAL3D demonstration" secondaryHref="#product-benefits" secondaryLabel="Explore MODAL3D" visual={<HoverCutawayVideo src={modalHero} label="MODAL3D ordnance model, with its inner parts revealed under the pointer" />} />
+        <img className="modal3d-hero-drone" src="/assets/images/Home/drone.png" alt="" aria-hidden="true" />
+      </div>
       <section className={"pp-benefits"} id={"product-benefits"}>
         <div className={"pp-heading"}>
           <div>

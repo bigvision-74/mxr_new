@@ -2,6 +2,7 @@
 import { ArrowRight } from 'lucide-react'
 import { useState, useRef, useEffect } from 'react'
 import { ImmersiveHero } from '../components/ImmersiveHero'
+import clinicalSimulation from '../assets/images/H4_clinical-simulation.webp'
 import driveXRImage from '../assets/images/drivexr/brochure-simulator.webp'
 import insightXRImage from '../assets/images/insightxr-platform.png'
 import '@google/model-viewer'
@@ -96,73 +97,32 @@ export default function HomePage() {
   return (
     <main>
       <ImmersiveHero />
-      <section className={"section intro"} id={"solutions"}>
-        <div className={"section-heading reveal visible"}>
+      <section className="section intro mxr-solutions-panorama" id="solutions">
+        <div className="section-heading reveal visible">
           <div>
-            <p className={"eyebrow"}>
-              {"SOLUTIONS FOR A COMPLEX WORLD"}
-            </p>
-            <h2>
-              {"Built for Real-World Impact."}
-            </h2>
+            <p className="eyebrow">SOLUTIONS FOR A COMPLEX WORLD</p>
+            <h2>Built for Real-World Impact.</h2>
           </div>
-          <p>
-            {"MXR develops simulation technologies that turn complex knowledge into confident action, across high-consequence industries where better preparation matters."}
-          </p>
+          <p>MXR develops simulation technologies that turn complex knowledge into confident action, across high-consequence industries where better preparation matters.</p>
         </div>
-        <div className={"card-grid solutions-grid"}>
-          <article className={"image-card reveal visible"}>
-            <div className={"card-image defence"}>
-
-            </div>
-            <div className={"card-content"}>
-              <h3>
-                {"Defence & Security"}
-              </h3>
-              <p>
-                {"Mission-ready training for a safer world."}
-              </p>
-            </div>
-          </article>
-          <article className={"image-card reveal visible"}>
-            <div className={"card-image healthcare"}>
-
-            </div>
-            <div className={"card-content"}>
-              <h3>
-                {"Healthcare Simulation"}
-              </h3>
-              <p>
-                {"Better practice. Brighter outcomes."}
-              </p>
-            </div>
-          </article>
-          <article className={"image-card reveal visible"}>
-            <div className={"card-image enterprise"}>
-
-            </div>
-            <div className={"card-content"}>
-              <h3>
-                {"Enterprise Training"}
-              </h3>
-              <p>
-                {"Real skills for real performance."}
-              </p>
-            </div>
-          </article>
-          <article className={"image-card reveal visible"}>
-            <div className={"card-image custom"}>
-
-            </div>
-            <div className={"card-content"}>
-              <h3>
-                {"Custom Solutions"}
-              </h3>
-              <p>
-                {"Built around your needs."}
-              </p>
-            </div>
-          </article>
+        <div className="mxr-panorama-grid" aria-label="MXR industry solutions">
+          {([
+            { number: '01', tag: 'DS', name: 'Defence & Security', text: 'Mission-ready training for a safer world.', href: '/defence-security', image: '/assets/images/blog/Virtual-reality.jpg' },
+            { number: '02', tag: 'HS', name: 'Healthcare Simulation', text: 'Better practice. Brighter outcomes.', href: '/eprium', image: clinicalSimulation },
+            { number: '03', tag: 'ET', name: 'Enterprise Training', text: 'Real skills for real performance.', href: '/simulator-development', image: '/assets/images/blog/educationBlog.jpg' },
+            { number: '04', tag: 'CS', name: 'Custom Solutions', text: 'Built around your needs.', href: '/platform-development', image: '/assets/images/blog/arBusiness.jpg' },
+          ] as const).map((solution) => (
+            <a className="mxr-panorama-panel" href={solution.href} key={solution.number} aria-label={`Explore ${solution.name}`}>
+              <img src={solution.image} alt="" loading="lazy" />
+              <div className="mxr-panorama-shade" aria-hidden="true" />
+              <span className="mxr-panorama-meta"><span>{solution.tag}</span>{solution.number}</span>
+              <div className="mxr-panorama-copy">
+                <h3>{solution.name}</h3>
+                <p>{solution.text}</p>
+                <span className="mxr-panorama-link">Explore solution <ArrowRight size={16} aria-hidden="true" /></span>
+              </div>
+            </a>
+          ))}
         </div>
       </section>
       <section className={"section services"} id={"services"}>
