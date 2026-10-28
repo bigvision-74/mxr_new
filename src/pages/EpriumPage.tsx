@@ -8,6 +8,7 @@ import { EpriumCapabilities } from "../components/EpriumCapabilities"
 import { EpriumFaculty } from "../components/EpriumFaculty"
 import defaultBanner from '../assets/videos/defaultbanner.mp4'
 import clinicalLearning from '../assets/images/eprium/clinical-learning.jpg'
+import epriumScreen from '../assets/images/eprium/epriumss.png'
 import clinicalPractice from '../assets/images/eprium/clinical-practice.jpg'
 
 export default function EpriumPage() {
@@ -62,55 +63,8 @@ export default function EpriumPage() {
                 {"Use changing clinical information, results and patient responses to decide what happens next."}
               </p>
             </div>
-            <div className={"epr-gap-record"} aria-hidden={"true"}>
-              <div className={"epr-gap-record-top"}>
-                <b>
-                  {"EPRium"}
-                </b>
-                <span>
-                  {"SIMULATION"}
-                </span>
-              </div>
-              <div className={"epr-gap-patient"}>
-                <span>
-                  {"＋"}
-                </span>
-                <div>
-                  <b>
-                    {"Patient record"}
-                  </b>
-                  <small>
-                    {"Clinical learning environment"}
-                  </small>
-                </div>
-              </div>
-              <div className={"epr-gap-record-row"}>
-                <span>
-                  {"Observations"}
-                </span>
-                <i>
-                  {"✓"}
-                </i>
-              </div>
-              <div className={"epr-gap-record-row"}>
-                <span>
-                  {"Assessment"}
-                </span>
-                <i>
-                  {"✓"}
-                </i>
-              </div>
-              <div className={"epr-gap-record-row"}>
-                <span>
-                  {"Care plan"}
-                </span>
-                <i>
-                  {"✓"}
-                </i>
-              </div>
-              <small className={"epr-gap-preview"}>
-                {"ILLUSTRATIVE VIEW"}
-              </small>
+            <div className={"epr-gap-record epr-gap-shot"} aria-hidden={"true"}>
+              <img src={epriumScreen} alt={"EPRium dashboard showing a live patient session"} loading={"lazy"} />
             </div>
           </article>
           <article className={"epr-gap-small epr-gap-scenarios"}>

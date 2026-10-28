@@ -699,3 +699,18 @@
     color: var(--blue-dark);
     font-weight: 700
 }
+
+/* Card 02: real EPRium screenshot in the tilted record card */
+.epr-gap-record.epr-gap-shot {
+    padding: 0;
+    overflow: hidden;
+    align-self: center;
+    width: 70%;
+    margin-left: auto
+}
+
+.epr-gap-shot img {
+    display: block;
+    width: 100%;
+    height: auto
+}
