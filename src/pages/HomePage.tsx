@@ -435,7 +435,7 @@ export default function HomePage() {
             <h2>{"MODAL"}<span>{"3D"}</span></h2>
             <h3>{"The digital ammunition and ordnance library."}</h3>
             <p>{"Explore highly accurate 3D models with AR access, detailed specifications and training resources."}</p>
-            <a className={"btn btn-white"} href={"/modal3d"}>{"Explore MODAL3D →"}</a>
+            <a className={"btn btn-primary"} href={"/modal3d"}>{"Explore MODAL3D"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
           </div>
           <div className={"modal-visual reveal visible"} style={{ background: "transparent", backdropFilter: "none", boxShadow: "none", border: "none", overflow: "visible", height: "520px", position: "relative", display: "flex", alignItems: "center", justifyContent: "center" }}>
             <img
@@ -450,7 +450,6 @@ export default function HomePage() {
               <div className="px-feat-body">
                 <div className="px-feat-meta">
                   <h4>3D Printable Asset Library</h4>
-                  <div className="px-tags"><span>STL</span><span>Reference data</span></div>
                 </div>
                 <p>Access detailed, training-ready assets prepared for authorised 3D printing. Build repeatable physical training sets locally.</p>
               </div>
@@ -460,7 +459,6 @@ export default function HomePage() {
               <div className="px-feat-body">
                 <div className="px-feat-meta">
                   <h4>Augmented Reality App</h4>
-                  <div className="px-tags"><span>3D inspection</span><span>AR placement</span></div>
                 </div>
                 <p>Place and inspect digital assets in the real world. Supports guided familiarisation, visual recognition and self-paced learning.</p>
               </div>
@@ -470,7 +468,6 @@ export default function HomePage() {
               <div className="px-feat-body">
                 <div className="px-feat-meta">
                   <h4>Mixed Reality Environment</h4>
-                  <div className="px-tags"><span>MR headset</span></div>
                 </div>
                 <p>Access the ammunition library via mixed reality headsets for immersive, hands-on inspection in a connected training environment.</p>
               </div>
@@ -483,7 +480,7 @@ export default function HomePage() {
             <h2>{"EPR"}<span style={{ color: "#147ee1" }}>{"ium"}</span></h2>
             <h3>{"Clinical practice before clinical placement."}</h3>
             <p>{"Give healthcare learners a safe, realistic way to practise patient encounters, clinical reasoning and electronic patient records."}</p>
-            <a className={"btn btn-white"} href={"/eprium"}>{"Explore EPRium →"}</a>
+            <a className={"btn btn-primary"} href={"/eprium"}>{"Explore EPRium"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
           </div>
           <div className={"eprium-product-visual"} style={{ background: "transparent", backgroundImage: "none", backgroundColor: "transparent", backdropFilter: "none", boxShadow: "none", border: "none" }}>
             <img
@@ -499,7 +496,6 @@ export default function HomePage() {
               <div className="px-feat-body">
                 <div className="px-feat-meta">
                   <h4>High-Fidelity EHR Mirror</h4>
-                  <div className="px-tags"><span>Simulated EHR</span></div>
                 </div>
                 <p>A simulated Electronic Health Record system that looks and feels like the real thing.</p>
               </div>
@@ -509,7 +505,6 @@ export default function HomePage() {
               <div className="px-feat-body">
                 <div className="px-feat-meta">
                   <h4>Multi-User Sessions</h4>
-                  <div className="px-tags"><span>Real-time</span><span>Team-based</span></div>
                 </div>
                 <p>Collaborate with peers or mentors in real-time within the same simulation.</p>
               </div>
@@ -519,7 +514,6 @@ export default function HomePage() {
               <div className="px-feat-body">
                 <div className="px-feat-meta">
                   <h4>Risk-Free Critical Care</h4>
-                  <div className="px-tags"><span>Patient safety</span></div>
                 </div>
                 <p>Practice high-stakes emergency decisions without risking patient safety.</p>
               </div>
@@ -529,7 +523,6 @@ export default function HomePage() {
               <div className="px-feat-body">
                 <div className="px-feat-meta">
                   <h4>Data-Driven Feedback</h4>
-                  <div className="px-tags"><span>Analytics</span><span>Audit trail</span></div>
                 </div>
                 <p>Instant performance analytics and auditing for students and educators.</p>
               </div>

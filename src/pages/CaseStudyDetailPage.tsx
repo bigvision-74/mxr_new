@@ -1,22 +1,24 @@
 import { ArrowLeft, Briefcase, Clock, Cpu, User, FolderKanban } from 'lucide-react'
 import {
-  FaBrain, FaBook, FaPencilAlt, FaBuilding, FaCheck,
-  FaUserMd, FaStethoscope, FaUserNurse, FaToolbox, FaLightbulb, FaLaptopCode,
+    FaBrain, FaBook, FaPencilAlt, FaBuilding, FaCheck,
+    FaUserMd, FaStethoscope, FaUserNurse, FaToolbox, FaLightbulb, FaLaptopCode,
 } from 'react-icons/fa'
 import type { IconType } from 'react-icons'
 
 const featureIconMap: Record<string, IconType> = {
-  'natural language processing': FaBrain,
-  'nlp': FaBrain,
-  'syllabus': FaBook,
-  'mock exam': FaPencilAlt,
-  'white-labelled': FaBuilding,
-  'white labelled': FaBuilding,
+    'natural language processing': FaBrain,
+    'nlp': FaBrain,
+    'syllabus': FaBook,
+    'mock exam': FaPencilAlt,
+    'white-labelled': FaBuilding,
+    'white labelled': FaBuilding,
 }
 
 const roleIconMap: Record<string, IconType> = {
-  FaUserMd, FaStethoscope, FaUserNurse, FaToolbox, FaLightbulb, FaLaptopCode,
+    FaUserMd, FaStethoscope, FaUserNurse, FaToolbox, FaLightbulb, FaLaptopCode,
 }
+import defaultBanner from '../assets/videos/defaultbanner.mp4'
+import AccentTitle from '../components/AccentTitle'
 import bannerImg from '../assets/images/about/about-hero.webp'
 import caseStudiesData from '../../casestudiesdata.json'
 
@@ -190,23 +192,31 @@ export default function CaseStudyDetailPage() {
         )
     }
 
+    // Group the body into full-width bands: a new band starts at every heading (or side-by-side block)
+    const bands: BodyBlock[][] = []
+        ; (Array.isArray(cs.body) ? (cs.body as BodyBlock[]) : []).forEach(block => {
+            if (!block) return
+            if (block.type === 'title' || block.type === 'sidebyside' || bands.length === 0) bands.push([])
+            bands[bands.length - 1].push(block)
+        })
+
     const imageSrc = cs.cardImg?.startsWith('/') ? cs.cardImg : `/${cs.cardImg || cs.image}`
 
     return (
-        <main className="blog-detail-page">
+        <main className="blog-detail-page cs-page">
             {/* Banner */}
             <section className="contact-banner" style={{ backgroundImage: `url(${bannerImg})` }}>
+                <video className="contact-banner-video" autoPlay muted loop playsInline preload="metadata" aria-hidden="true"><source src={defaultBanner} type="video/mp4" /></video>
                 <div className="contact-banner-overlay" />
-                <div className="contact-banner-copy">
-                    <p className="eyebrow">MXR CASE STUDIES</p>
-                    <h1 className="blog-detail-banner-title">{cs.bannerHeading}</h1>
+                <div className="contact-banner-copy policy-banner-wide">
+                    <h1 className="banner-title banner-title--long"><AccentTitle text={cs.bannerHeading} /></h1>
                     {cs.subHeading && <p className="banner-lead">{cs.subHeading}</p>}
                 </div>
             </section>
 
             <div className="blog-detail-body-wrap">
                 <div className="blog-detail-inner">
-                    <a href="/case-studies" className="blog-detail-back">
+                    <a href="/case-studies" className="btn btn-primary blog-detail-back">
                         <ArrowLeft size={14} /> All case studies
                     </a>
 
@@ -261,13 +271,24 @@ export default function CaseStudyDetailPage() {
                         )}
                     </div>
 
-                    {/* Dynamic Case Study Body */}
-                    <div className="blog-detail-content">
-                        {Array.isArray(cs.body) &&
-                            (cs.body as BodyBlock[]).map((block, i) => renderBlock(block, i))}
-                    </div>
                 </div>
             </div>
+
+            {/* Dynamic Case Study Body: full-width bands alternating white / light, with Results on the dark theme colour */}
+            {bands.map((band, i) => {
+                const first = band[0]
+                const dark = first.type === 'title' && first.content.trim().toLowerCase() === 'results'
+                // Tone alternates light / white over the non-dark bands, so a dark band never touches a same-tone neighbour
+                const lightBefore = bands.slice(0, i).filter(b => !(b[0].type === 'title' && b[0].content.trim().toLowerCase() === 'results')).length
+                const tone = dark ? 'dark' : lightBefore % 2 === 0 ? 'light' : 'white'
+                return (
+                    <section key={i} className={`cs-band cs-band--${tone}`}>
+                        <div className="cs-band-inner blog-detail-content">
+                            {band.map((block, j) => renderBlock(block, j))}
+                        </div>
+                    </section>
+                )
+            })}
         </main>
     )
 }

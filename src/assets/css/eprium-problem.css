@@ -677,9 +677,14 @@
         margin-top: 20px
     }
 }
-.pp .epr-gap{background:var(--color-light)}
 
-.pp .epr-gap{background:transparent}
+.pp .epr-gap {
+    background: var(--color-light)
+}
+
+.pp .epr-gap {
+    background: transparent
+}
 
 /* "Train for the reality of digital care": step numbers are circles in the theme blue */
 .epr-gap-tag>span {
@@ -698,4 +703,30 @@
     background: rgba(13, 24, 38, .55);
     color: var(--blue-dark);
     font-weight: 700
+}
+
+/* Card 02: real EPRium screenshot in the tilted record card */
+.epr-gap-record.epr-gap-shot {
+    padding: 0;
+    overflow: hidden;
+    align-self: center;
+    width: 70%;
+    margin-left: auto
+}
+
+.epr-gap-shot img {
+    display: block;
+    width: 100%;
+    height: auto
+}
+
+/* Stronger lower scrim keeps the challenge caption readable over photography. */
+.ep-page .epr-gap-main:after {
+    background: linear-gradient(to top, rgba(3, 16, 25, .94) 0%, rgba(3, 16, 25, .8) 24%, rgba(3, 16, 25, .3) 52%, transparent 76%)
+}
+
+.ep-page .epr-gap-main-copy h3,
+.ep-page .epr-gap-main-copy p {
+    color: #fff;
+    text-shadow: 0 1px 3px #0005
 }

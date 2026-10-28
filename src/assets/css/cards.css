@@ -1,0 +1,56 @@
+/* One card design for the whole site.
+   Reference: the blog / service cards: 16px rounded corners, soft #d5e3f3 border and a light shadow.
+   Loaded last. Radius is !important so older per-page radii (0, 3px, 8px, 12px, 14px, 18px, 20px, 24px) cannot win.
+   Change --card-radius here to change every card. Joined grids and ruled lists (service features, steps, values,
+   capability rows) are not cards and are left alone. */
+:root {
+  --card-radius: 16px;
+  --card-border: #d5e3f3;
+  --card-shadow: 0 10px 30px #0f3a4a0d;
+}
+
+/* Rounded corners on every card (light and dark) */
+:is(
+  .image-card, .product-card, .featured-card, .partnership-card, .service-card, .blog-card,
+  .cs-feature-card, .cs-meta-card, .cs-role-card, .cs-sidebyside-col, .cs-hero-image, .cs-video-wrap,
+  .contact-card, .policy-card, .terms-toc, .terms-article, .blog-detail-content, .event-image,
+  .dx-solution-card, .dx-how-card, .dx-metric-card, .dx-data-card, .dx-bento article,
+  .epj-card, .epa-card, .epc-grid article, .ep-feature-grid article, .ep-journey-steps article,
+  .purpose-alt-card, .about-direction .about-direction-card, section.why .pillars article,
+  .ix-audience-grid article, .ix-platform-features article, .ix-sales-grid article, .ix-chart-card,
+  .epr-cap-grid article, .drive-problem-grid article, .pp-benefit-grid article, .service-use-cases,
+  .service-related a, .about-why-grid article, .about-values-image-label
+) {
+  border-radius: var(--card-radius) !important;
+}
+
+/* The accent bars along the top edge of a card follow the same corner radius */
+:is(.partnership-card, section.why .pillars article)::before {
+  border-radius: var(--card-radius) var(--card-radius) 0 0 !important;
+}
+
+/* Cards with images or accent bars clip to the rounded corner */
+:is(.ix-sales-grid article, .about-why-grid article, .purpose-alt-card, .partnership-card, section.why .pillars article, .blog-card) {
+  overflow: hidden;
+}
+
+/* Light cards share the reference border and shadow (hover rules keep their own, they are more specific) */
+:is(
+  .product-card, .partnership-card, .cs-feature-card, .cs-meta-card, .cs-role-card, .contact-card, .policy-card,
+  .ix-audience-grid article, .ix-platform-features article, .epr-cap-grid article, .service-use-cases,
+  .terms-toc, .terms-article, .purpose-alt-card, section.why .pillars article, .pp-benefit-grid article,
+  .drive-problem-grid article
+) {
+  border-color: var(--card-border);
+  box-shadow: var(--card-shadow);
+}
+
+/* Image cards: the picture and its gradient overlay are clipped to the rounded corner */
+:is(.dx-intelligence figure, .dx-delivery-image) {
+  border-radius: var(--card-radius) !important;
+  overflow: hidden;
+}
+
+:is(.drive-evidence img, .drive-deployment img) {
+  border-radius: var(--card-radius) !important;
+}

@@ -8,11 +8,12 @@ import { EpriumCapabilities } from "../components/EpriumCapabilities"
 import { EpriumFaculty } from "../components/EpriumFaculty"
 import defaultBanner from '../assets/videos/defaultbanner.mp4'
 import clinicalLearning from '../assets/images/eprium/challenge-workflow.webp'
+import epriumScreen from '../assets/images/eprium/epriumss.png'
 import clinicalPractice from '../assets/images/eprium/challenge-placement.webp'
 
 export default function EpriumPage() {
   return (
-    <main className={"pp ep-page"} style={{ "--product-accent": "#087f8c" } as CSSProperties}>
+    <main className={"pp ep-page"} style={{ "--product-accent": "#0b66c3" } as CSSProperties}>
       <section className="ep2-hero">
         <video className="ep2-bg" autoPlay muted loop playsInline preload="metadata" aria-hidden="true"><source src={defaultBanner} type="video/mp4" /></video>
         <div className="ep2-shade" aria-hidden="true" />
@@ -62,55 +63,8 @@ export default function EpriumPage() {
                 {"Use changing clinical information, results and patient responses to decide what happens next."}
               </p>
             </div>
-            <div className={"epr-gap-record"} aria-hidden={"true"}>
-              <div className={"epr-gap-record-top"}>
-                <b>
-                  {"EPRium"}
-                </b>
-                <span>
-                  {"SIMULATION"}
-                </span>
-              </div>
-              <div className={"epr-gap-patient"}>
-                <span>
-                  {"＋"}
-                </span>
-                <div>
-                  <b>
-                    {"Patient record"}
-                  </b>
-                  <small>
-                    {"Clinical learning environment"}
-                  </small>
-                </div>
-              </div>
-              <div className={"epr-gap-record-row"}>
-                <span>
-                  {"Observations"}
-                </span>
-                <i>
-                  {"✓"}
-                </i>
-              </div>
-              <div className={"epr-gap-record-row"}>
-                <span>
-                  {"Assessment"}
-                </span>
-                <i>
-                  {"✓"}
-                </i>
-              </div>
-              <div className={"epr-gap-record-row"}>
-                <span>
-                  {"Care plan"}
-                </span>
-                <i>
-                  {"✓"}
-                </i>
-              </div>
-              <small className={"epr-gap-preview"}>
-                {"ILLUSTRATIVE VIEW"}
-              </small>
+            <div className={"epr-gap-record epr-gap-shot"} aria-hidden={"true"}>
+              <img src={epriumScreen} alt={"EPRium dashboard showing a live patient session"} loading={"lazy"} />
             </div>
           </article>
           <article className={"epr-gap-small epr-gap-scenarios"}>

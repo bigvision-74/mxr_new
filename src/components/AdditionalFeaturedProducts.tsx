@@ -1,7 +1,7 @@
-import { Route, SlidersHorizontal, ChartNoAxesCombined, LayoutDashboard, Headset, Sparkles, Clock3, MessageCircle } from 'lucide-react'
+import { ArrowRight, Route, SlidersHorizontal, ChartNoAxesCombined, LayoutDashboard, Headset, Sparkles, Clock3, MessageCircle } from 'lucide-react'
 import driveImage from '../assets/images/drivexr/brochure-simulator.webp'
 import insightImage from '../assets/images/insightxr-platform.png'
-import omniaImage from '../assets/images/services/immersive-room.png'
+import omniaImage from '../assets/images/solutions/enterprise-training.jpg'
 import '../assets/css/featured-expansion.css'
 
 export const extraProducts = [
@@ -12,7 +12,7 @@ export const extraProducts = [
 
 export function AdditionalFeaturedProducts({active}:{active:number}){
   return <>{extraProducts.map((p,i)=><article hidden={active!==i+2} className={`product-slide modal-showcase extra-product-slide${active===i+2?' active':''}`} data-product-slide={i+2} key={p.name}>
-    <div className="modal-copy"><p className="eyebrow light">{p.name==='Omnia'?'PRODUCT PREVIEW':'FEATURED PRODUCT'}</p><h2>{p.name}</h2><h3>{p.heading}</h3><p>{p.copy}</p><a className="btn btn-white" href={p.href}>Explore {p.name} →</a></div>
+    <div className="modal-copy"><p className="eyebrow light">{p.name==='Omnia'?'PRODUCT PREVIEW':'FEATURED PRODUCT'}</p><h2>{p.name}</h2><h3>{p.heading}</h3><p>{p.copy}</p><a className="btn btn-primary" href={p.href}>Explore {p.name} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a></div>
     <div className={`extra-product-art extra-product-art-${p.kind}`}><img src={p.image} alt={p.alt} loading="lazy"/>{p.name==='Omnia'&&<span className="extra-product-preview">PREVIEW / FULL DETAILS COMING SOON</span>}</div>
     <div className="px-feat-list">{p.features.map(([Icon,title,copy])=><div className="px-feat-row" key={title}><div className="px-badge"><Icon aria-hidden="true" strokeWidth={1.6} /></div><div className="px-feat-body"><div className="px-feat-meta"><h4>{title}</h4></div><p>{copy}</p></div></div>)}</div>
   </article>)}</>

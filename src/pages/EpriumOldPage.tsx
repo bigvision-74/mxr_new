@@ -4,7 +4,7 @@ import clinicalPractice from '../assets/images/eprium/clinical-practice.jpg'
 
 export default function EpriumOldPage() {
   return (
-  <main className={"pp ep-page"} style={{"--product-accent": "#087f8c"} as CSSProperties}>
+  <main className={"pp ep-page"} style={{"--product-accent": "#0b66c3"} as CSSProperties}>
     <section className={"ep-hero"}>
       <div className={"ep-hero-inner"}>
         <div className={"ep-hero-copy"}>
@@ -29,14 +29,6 @@ export default function EpriumOldPage() {
           <div className={"ep-hero-actions"}>
             <a className={"ep-button"} href={"mailto:hello@mxr.ai?subject=EPRium%20demonstration"}>
               {"Book a demonstration "}
-              <svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.5"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}>
-                <path d={"M4 12h16m-6-6 6 6-6 6"}>
-
-                </path>
-              </svg>
-            </a>
-            <a href={"#epr-experience"}>
-              {"Explore the experience "}
               <svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.5"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}>
                 <path d={"M4 12h16m-6-6 6 6-6 6"}>
 

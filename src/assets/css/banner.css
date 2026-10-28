@@ -64,7 +64,7 @@
     font-style: normal;
   }
 
-  /* Section headings: one typeface, size and weight on every page, light or dark. Reference: the home "Solutions for a complex world"
+  /* Section headings: one typeface, size and weight on every page, light or dark. Reference: the Blog "All Articles"
      heading. Colours stay with each section. Article text (policies, blog posts, case-study bodies) keeps its own scale. */
   main h2:not(.terms-article h2, .blog-detail-content h2, .cs-section-title, .blog-not-found h2) {
     font-family: var(--font-family) !important;

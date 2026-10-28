@@ -8,7 +8,7 @@ import insightLogo from '../assets/images/insightxr.svg'
 import modalLogo from '../assets/images/modal3d.svg'
 // import bannerVideo from '../assets/videos/banner/HV9-MD_grok_take002.mp4'
 // TODO: replace with ../assets/videos/banner/HV9_showcase_cut_v004_A_1920.mp4 once added
-import bannerVideo from '../assets/videos/defaultbanner.mp4'
+import bannerVideo from '../assets/videos/home_hero.mp4'
 
 type ShinyTextProps = {
   children: ReactNode
@@ -116,8 +116,8 @@ export function ImmersiveHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
-            <span className="block text-white" aria-hidden="true">Technology for a&nbsp;</span>
-            <span aria-hidden="true"><ShinyText>Safer, Smarter<br />Tomorrow.</ShinyText></span>
+            <span className="block text-white" aria-hidden="true">Technology for</span>
+            <span aria-hidden="true"><ShinyText>a Safer, Smarter<br />Tomorrow.</ShinyText></span>
           </motion.h1>
 
           <motion.p

@@ -1,4 +1,6 @@
 import { ArrowLeft } from 'lucide-react'
+import defaultBanner from '../assets/videos/defaultbanner.mp4'
+import AccentTitle from '../components/AccentTitle'
 import bannerImg from '../assets/images/about/about-hero.webp'
 import blogsData from '../../blogsdata.json'
 
@@ -61,9 +63,10 @@ export default function BlogDetailPage() {
   return (
     <main className="blog-detail-page">
       <section className="contact-banner" style={{ backgroundImage: `url(${bannerImg})` }}>
+        <video className="contact-banner-video" autoPlay muted loop playsInline preload="metadata" aria-hidden="true"><source src={defaultBanner} type="video/mp4" /></video>
         <div className="contact-banner-overlay" />
-        <div className="contact-banner-copy">
-          <h1 className="blog-detail-banner-title">{blog.bannerHeading}</h1>
+        <div className="contact-banner-copy policy-banner-wide">
+          <h1 className="banner-title banner-title--long"><AccentTitle text={blog.bannerHeading} /></h1>
           {blog.subHeading && (
             <p className="banner-lead">{blog.subHeading}</p>
           )}
@@ -72,7 +75,7 @@ export default function BlogDetailPage() {
 
       <div className="blog-detail-body-wrap">
         <div className="blog-detail-inner">
-          <a href="/blog" className="blog-detail-back">
+          <a href="/blog" className="btn btn-primary blog-detail-back">
             <ArrowLeft size={14} /> All articles
           </a>
           <div className="blog-detail-content">

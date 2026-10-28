@@ -60,7 +60,7 @@
 .dx-hero-image {
     position: absolute;
     inset: 0 0 0 39%;
-    background: #091a2c
+    background: var(--color-dark)
 }
 
 .dx-hero-image img {
@@ -127,7 +127,7 @@
 }
 
 .dx-button:hover {
-    background: #07529f;
+    background: var(--color-primary);
     transform: translateY(-2px)
 }
 
@@ -234,7 +234,7 @@
 }
 
 .dx-capabilities {
-    background: #102437;
+    background: var(--color-dark);
     color: white
 }
 
@@ -834,7 +834,7 @@ body .dx-page .dx-intelligence h2 {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #0b66c3;
+    background: var(--color-primary);
     flex-shrink: 0
 }
 
@@ -1153,11 +1153,11 @@ body .dx-page .dx-hero-copy>p:not(.dx-kicker) {
 }
 
 .dx-page .dx-hero .dx-button {
-    background: #0b66c3
+    background: var(--color-primary)
 }
 
 .dx-page .dx-hero .dx-button:hover {
-    background: #147ee1
+    background: var(--color-primary-hover)
 }
 
 @media(max-width:900px) {
@@ -1584,7 +1584,7 @@ body .dx-page .dx-hero h1>em {
 }
 
 .dx-spot-tags span.active {
-    background: #0b66c3;
+    background: var(--color-primary);
     border-color: #0b66c3;
     color: #fff;
     font-weight: 700
@@ -2036,7 +2036,7 @@ body .dx-page .dx-hero h1>em {
 }
 
 .dx-console.is-lights .dx-console-dots i:nth-child(-n+2) {
-    background: #2f7bff
+    background: var(--color-primary)
 }
 
 .dx-console.is-hazard .dx-console-map>span {
@@ -2070,7 +2070,7 @@ body .dx-page .dx-hero h1>em {
 }
 
 .dx-console-dots i.on {
-    background: #2f7bff
+    background: var(--color-primary)
 }
 
 .dx-pt-hazard {
@@ -2523,7 +2523,7 @@ body .dx-page .dx-hero h1>em {
 
 .dx-lightbox-card {
     width: min(900px, 100%);
-    background: #14233a;
+    background: var(--color-dark);
     border-radius: 14px;
     overflow: hidden
 }
@@ -2895,7 +2895,7 @@ body .dx-page .dx-hero h1>em {
 
 /* Wide last card: keep the gauge proportional instead of stretching it */
 .dx-outputs>.dx-output:last-child:nth-child(odd) .dx-output-art {
-    background: #14233a
+    background: var(--color-dark)
 }
 
 .dx-outputs>.dx-output:last-child:nth-child(odd) .dx-output-art svg {
@@ -3085,4 +3085,33 @@ body .dx-page .dx-hero h1>em {
         width: min(100%, 520px);
         margin: calc(min(100%, 520px) * -.06) auto
     }
+}
+
+/* "Built for real-world readiness": no dark background, so text and cards switch to the light-page colours */
+body .dx-page .dx-capabilities {
+    background: transparent;
+    color: var(--color-dark)
+}
+
+body .dx-page .dx-capabilities .dx-kicker {
+    color: var(--color-primary)
+}
+
+body .dx-page .dx-capabilities h2,
+body .dx-page .dx-capabilities .dx-bento article h3 {
+    color: var(--color-dark) !important
+}
+
+body .dx-page .dx-capabilities .dx-section-heading p:not(.dx-kicker),
+body .dx-page .dx-capabilities .dx-bento article p {
+    color: #51627a
+}
+
+body .dx-page .dx-capabilities .dx-bento article {
+    background: #fff;
+    border-color: var(--card-border, #d5e3f3)
+}
+
+body .dx-page .dx-capabilities .dx-bento article svg {
+    color: var(--color-primary)
 }

@@ -399,7 +399,7 @@
   width: 28px;
   height: 2px;
   border-radius: 2px;
-  background: #0b66c3;
+  background: var(--color-primary);
   opacity: .5
 }
 
@@ -926,7 +926,7 @@
   display: inline-block;
   padding: 16px 26px;
   border-radius: 999px;
-  background: #0b66c3;
+  background: var(--color-primary);
   color: #fff;
   font-weight: 700;
   font-size: .95rem;
@@ -934,7 +934,7 @@
 }
 
 .epd-cta:hover {
-  background: #147ee1;
+  background: var(--color-primary-hover);
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(22, 132, 232, .3)
 }
@@ -1609,11 +1609,11 @@
   padding: 16px 26px;
   font-size: .95rem;
   font-weight: 700;
-  background: #0b66c3
+  background: var(--color-primary)
 }
 
 .ep-page .ep-cta .ep-button:hover {
-  background: #147ee1;
+  background: var(--color-primary-hover);
   box-shadow: 0 10px 24px rgba(22, 132, 232, .3)
 }
 
