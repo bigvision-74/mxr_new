@@ -193,37 +193,71 @@ export default function SimulatorDevelopmentPage() {
           </article>
         </div>
       </section>
-      <section className={"section service-related"}>
+      <section className={"section service-related service-related--cards"}>
         <p className={"eyebrow"}>
           {"CONNECTED CAPABILITIES"}
         </p>
         <h2>
           {"Explore our other services."}
         </h2>
-        <div>
-          <a href={"/xr-development"}>
-            {"XR Development"}
-            <span>
-              {"↗"}
+        <div className={"service-related-grid"}>
+          <a href={"/xr-development"} className={"service-card"}>
+            <span className={"service-card-icon"}>
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="18" width="44" height="26" rx="8" stroke="#0B66C3" strokeWidth="1.8"/>
+                <path d="M6 30h8M42 30h8" stroke="#0B66C3" strokeWidth="1.8" strokeLinecap="round"/>
+                <circle cx="19" cy="30" r="5" stroke="#0B66C3" strokeWidth="1.8"/>
+                <circle cx="37" cy="30" r="5" stroke="#0B66C3" strokeWidth="1.8"/>
+                <path d="M24 30h8" stroke="#0B66C3" strokeWidth="1.8" strokeLinecap="round"/>
+                <path d="M28 12v6M22 13.5l2 5M34 13.5l-2 5" stroke="#0B66C3" strokeWidth="1.6" strokeLinecap="round"/>
+              </svg>
             </span>
+            <strong>{"XR DEVELOPMENT"}</strong>
+            <p>{"Design and build immersive XR experiences tailored to your training, simulation and engagement goals."}</p>
+            <span className={"service-card-link"}>{"Explore"} <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="#0B66C3" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
           </a>
-          <a href={"/immersive-rooms"}>
-            {"Immersive Rooms"}
-            <span>
-              {"↗"}
+          <a href={"/immersive-rooms"} className={"service-card"}>
+            <span className={"service-card-icon"}>
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="14" width="48" height="28" rx="3" stroke="#0B66C3" strokeWidth="1.8"/>
+                <path d="M4 36h48" stroke="#0B66C3" strokeWidth="1.8"/>
+                <rect x="10" y="20" width="36" height="12" rx="2" stroke="#0B66C3" strokeWidth="1.5"/>
+                <path d="M22 44h12M28 42v2" stroke="#0B66C3" strokeWidth="1.8" strokeLinecap="round"/>
+                <circle cx="28" cy="26" r="3" stroke="#0B66C3" strokeWidth="1.5"/>
+              </svg>
             </span>
+            <strong>{"IMMERSIVE ROOMS"}</strong>
+            <p>{"Purpose-designed spaces using large-format displays and projection to create shared immersive environments."}</p>
+            <span className={"service-card-link"}>{"Explore"} <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="#0B66C3" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
           </a>
-          <a href={"/ai-solutions"}>
-            {"AI Solutions"}
-            <span>
-              {"↗"}
+          <a href={"/ai-solutions"} className={"service-card"}>
+            <span className={"service-card-icon"}>
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="28" cy="28" r="10" stroke="#0B66C3" strokeWidth="1.8"/>
+                <path d="M28 8v6M28 42v6M8 28h6M42 28h6" stroke="#0B66C3" strokeWidth="1.8" strokeLinecap="round"/>
+                <path d="M14.1 14.1l4.2 4.2M37.7 37.7l4.2 4.2M41.9 14.1l-4.2 4.2M18.3 37.7l-4.2 4.2" stroke="#0B66C3" strokeWidth="1.6" strokeLinecap="round"/>
+                <circle cx="28" cy="28" r="4" stroke="#0B66C3" strokeWidth="1.5"/>
+                <circle cx="28" cy="28" r="1.5" fill="#0B66C3"/>
+              </svg>
             </span>
+            <strong>{"AI SOLUTIONS"}</strong>
+            <p>{"Integrate AI-driven tools to enhance learning, automate content generation and surface actionable insights."}</p>
+            <span className={"service-card-link"}>{"Explore"} <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="#0B66C3" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
           </a>
-          <a href={"/platform-development"}>
-            {"Platform Development"}
-            <span>
-              {"↗"}
+          <a href={"/platform-development"} className={"service-card"}>
+            <span className={"service-card-icon"}>
+              <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="12" width="40" height="32" rx="3" stroke="#0B66C3" strokeWidth="1.8"/>
+                <path d="M8 20h40" stroke="#0B66C3" strokeWidth="1.8"/>
+                <circle cx="14" cy="16" r="1.5" fill="#0B66C3"/>
+                <circle cx="19" cy="16" r="1.5" fill="#0B66C3"/>
+                <circle cx="24" cy="16" r="1.5" fill="#0B66C3"/>
+                <path d="M21 30l-4 4 4 4M35 30l4 4-4 4M27 28l2 10" stroke="#0B66C3" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
             </span>
+            <strong>{"PLATFORM DEVELOPMENT"}</strong>
+            <p>{"Design and develop bespoke platforms for LMS, workforce development and data analytics with seamless integration."}</p>
+            <span className={"service-card-link"}>{"Explore"} <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="#0B66C3" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
           </a>
         </div>
       </section>
