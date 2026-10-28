@@ -7013,34 +7013,42 @@ footer .footer-bottom {
 }
 
 .about-why-grid article {
-    position: relative;
-    padding: 36px;
-    border: 1px solid #d7e2e8;
-    min-height: 270px
+    min-height: 300px
 }
 
-.about-why-grid article:before {
-    content: "";
+.about-why-grid article b {
     position: absolute;
-    left: -1px;
-    top: -1px;
-    width: 5px;
-    height: 70px;
-    background: #0b66c3
+    top: 20px;
+    left: 24px;
+    font-size: 5rem;
+    font-weight: 900;
+    color: rgba(11, 102, 195, 0.07);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    user-select: none;
+    pointer-events: none
 }
 
-.about-why-grid span {
-    color: #7d8c94;
-    font-size: .73rem
+.about-why-grid .service-compact:hover {
+    border-color: #b6cfe8;
+    box-shadow: 0 18px 44px rgba(15, 40, 70, .1);
+    background: linear-gradient(180deg, #fff, #f0f7fd);
+    transform: translateY(-5px)
+}
+
+.about-why-grid .service-compact:hover:before {
+    height: 100%
 }
 
 .about-why-grid h3 {
-    font-size: 1.45rem;
-    margin: 40px 0 12px
+    font-size: 1.22rem;
+    line-height: 1.2;
+    margin: 90px 0 10px
 }
 
 .about-why-grid p {
-    color: #64727a;
+    font-size: .9rem;
+    color: #5e7587;
     line-height: 1.65
 }
 
