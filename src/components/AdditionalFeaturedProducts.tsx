@@ -14,7 +14,7 @@ export const extraProducts = [
 export function AdditionalFeaturedProducts({ active }: { active: number }) {
   return <>{extraProducts.map((p, i) => <article hidden={active !== i + 2} className={`product-slide modal-showcase extra-product-slide${active === i + 2 ? ' active' : ''}`} data-product-slide={i + 2} key={p.name}>
     <div className="modal-copy"><p className="eyebrow light">FEATURED PRODUCT</p><h2>{p.name}</h2><h3>{p.heading}</h3><p>{p.copy}</p><a className="btn btn-primary" href={p.href}>Explore {p.name} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a></div>
-    <div className={`extra-product-art extra-product-art-${p.kind}`}><img src={p.image} alt={p.alt} loading="lazy" /></div>
+    <div className={`extra-product-art extra-product-art-${p.kind}`}>{p.name === 'InsightXR' ? <video className="insight-feature-video" src="/assets/videos/insightxr-imac.webm" autoPlay muted loop playsInline preload="metadata" aria-label="InsightXR platform demonstration on an iMac" /> : <img src={p.image} alt={p.alt} loading="lazy" />}</div>
 
     <div className="px-feat-list">{p.features.map(([Icon, title, copy]) => <div className="px-feat-row" key={title}><div className="px-badge"><Icon aria-hidden="true" strokeWidth={1.6} /></div><div className="px-feat-body"><div className="px-feat-meta"><h4>{title}</h4></div><p>{copy}</p></div></div>)}</div>
   </article>)}</>

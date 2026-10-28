@@ -49,3 +49,5 @@
 }
 .featured-products .extra-product-art-omnia img{width:100%;height:auto;max-height:34rem;object-fit:contain;mask-image:none!important;-webkit-mask-image:none!important;filter:none!important;border-radius:0}.featured-products .extra-product-art-omnia{overflow:visible}
 
+
+.featured-products .insight-feature-video{width:100%;height:auto;max-height:34rem;object-fit:contain;display:block;background:transparent;mask-image:none;filter:none;transform:none}@media(max-width:820px){.featured-products .insight-feature-video{max-height:26rem}}
