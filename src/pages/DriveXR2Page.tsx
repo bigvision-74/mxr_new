@@ -2,7 +2,6 @@ import { ArrowRight } from 'lucide-react'
 import { useEffect, useRef, useState, type ReactElement, type CSSProperties } from 'react'
 import brochureResponse from '../assets/images/drivexr/brochure-response.webp'
 import brochureInstructors from '../assets/images/drivexr/brochure-instructors.webp'
-import brochureTraining from '../assets/images/drivexr/brochure-training.webp'
 import brochureSimulator from '../assets/images/drivexr/brochure-simulator.webp'
 import dxVehicles from '../assets/videos/DXR2_vehicles.mp4'
 import dxAmbulanceData from '../assets/images/drivexr/holo-training.webp'
@@ -548,57 +547,6 @@ export default function DriveXR2Page() {
               <p>Dual delivery — immersive VR headset or multi-screen cab — selectable per session with no hardware swap needed.</p>
             </article>
           </div>
-        </div>
-      </section>
-
-      <section className="dx-intelligence">
-        <div className="dx-wrap dx-intelligence-grid">
-          <div>
-            <p className="dx-kicker">FROM EXPERIENCE TO EVIDENCE</p>
-            <h2>
-              Understand every<br />decision on the road.
-            </h2>
-            <p>DriveXR 2 captures more — and makes it easier to act on. Instructors and training managers get a clearer view of where each driver stands and what comes next.</p>
-            <div className="dx-data-list">
-              <span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <path d="M3 3v18h18M7 15l4-5 4 3 6-8" />
-                </svg>
-                Multi-session trend analytics
-              </span>
-              <span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <path d="M3 11a9 9 0 1 1 2 7M3 4v7h7" />
-                  <path d="m11 8 5 4-5 4z" />
-                </svg>
-                Side-by-side session replay
-              </span>
-              <span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <path d="M12 3 3 7v6c0 5 9 9 9 9s9-4 9-9V7z" />
-                  <path d="m8 12 3 3 5-6" />
-                </svg>
-                Competency scoring & export
-              </span>
-            </div>
-            <div className="dx-metric-tags">
-              <span>Speed compliance</span>
-              <span>Reaction times</span>
-              <span>Gaze tracking</span>
-              <span>Lane discipline</span>
-              <span>Mirror checks</span>
-              <span>Junction approach</span>
-              <span>Blue-light compliance</span>
-              <span>Trend variance</span>
-            </div>
-          </div>
-          <figure>
-            <img src={brochureTraining} alt="DriveXR 2 performance analytics and debrief view" loading="lazy" />
-            <figcaption>
-              <span>TRAIN → MEASURE → IMPROVE</span>
-              <strong>Every session.<br />A sharper picture.</strong>
-            </figcaption>
-          </figure>
         </div>
       </section>
 

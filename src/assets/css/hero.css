@@ -1027,10 +1027,10 @@
   place-items: center;
   width: 46px;
   height: 46px;
-  border-radius: 11px;
-  color: var(--product-accent);
-  background: #e9f3fa;
-  border: 1px solid #d1e5f3
+  border-radius: 12px;
+  color: #fff;
+  background: linear-gradient(145deg, #2aa0f5, #0b66c3);
+  border: 0
 }
 
 .pp-icon svg {
@@ -3178,7 +3178,7 @@
 }
 
 .mxr-immersive-hero__video {
-  filter: saturate(.9) contrast(1.04) brightness(.92);
+  filter: none;
   /* The frame is 16:9 and the hero is often wider, so it gets cropped top and bottom. Anchor near the top so the
      roof and light bar of the ambulance stay in view and the floor is what gets trimmed. */
   object-position: 50% 8%;
@@ -3818,19 +3818,19 @@ section.why .pillars span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  background: rgba(11, 102, 195, 0.08);
-  border: 1px solid rgba(11, 102, 195, 0.18);
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #2aa0f5, #0b66c3);
+  border: 0;
   font-size: 1.3rem;
-  color: #0b66c3;
+  color: #fff;
   margin-bottom: 22px;
 }
 
 section.why .pillars article:hover span {
-  background: rgba(11, 102, 195, 0.14);
-  border-color: rgba(11, 102, 195, 0.3);
+  background: linear-gradient(145deg, #3aaaf8, #1274d6);
+  border-color: transparent;
 }
 
 section.why .pillars h3 {

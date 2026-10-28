@@ -1,11 +1,10 @@
 import { GraduationCap, HeartPulse, Layers3, ShieldCheck } from 'lucide-react'
 import healthcareImage from '../assets/images/H4_clinical-simulation.webp'
 import enterpriseImage from '../assets/images/solutions/enterprise-training.jpg'
+import defenceImage from '../assets/images/solutions/defence-security.png'
 import customImage from '../assets/images/solutions/custom-solutions.jpg'
 import '../assets/css/panorama-solutions.css'
 
-// defence artwork is not in the repo yet; add the file at this public path to show it
-const defenceImage = '/assets/images/solutions/defence-security.png'
 const solutions = [
   { title: 'Defence & Security', label: 'Readiness', description: 'Rehearse complex scenarios. Prepare people for the moments that matter.', image: defenceImage, position: '44% center', Icon: ShieldCheck },
   { title: 'Healthcare Simulation', label: 'Clinical practice', description: 'Create space to practise safely and build confidence before patient care.', image: healthcareImage, position: '50% center', Icon: HeartPulse },

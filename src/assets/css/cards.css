@@ -54,3 +54,34 @@
 :is(.drive-evidence img, .drive-deployment img) {
   border-radius: var(--card-radius) !important;
 }
+
+/* Home service mosaic: the featured capability card and the compact cards */
+:is(.service-feature, .service-compact) {
+  border-radius: var(--card-radius) !important;
+  overflow: hidden;
+}
+
+/* Remaining content boxes (product mock-ups, dashboards, panels, tables): same corner radius.
+   Small icon tiles, chips, inputs and buttons keep their own smaller radii. */
+:is(
+  .epr-window, .epr-record-panels>div, .browser-frame, .eprium-screen, .ui-cards div,
+  .ix-dashboard, .ix-stat-row article, .ix-dash-bottom article, .ix-device-console, .ix-product-window, .ix-floating-detail,
+  .ep-workspace, .ep-workspace-metrics>div, .ep-note, .ep-cta-visual>div, .epr-gap-record,
+  .pp-screen, .pp-record, .pp-model, .pp-cta, .ep2-float, .dx-output, .dp-table-wrap,
+  .panorama-panel, .mxr-service-dropdown, .dropdown
+) {
+  border-radius: var(--card-radius) !important;
+}
+
+:is(.dp-table-wrap, .panorama-panel, .epr-window, .eprium-screen, .browser-frame) {
+  overflow: hidden;
+}
+
+/* Home service mosaic: icon tiles are rounded squares, tags are pills */
+:is(.service-icon, .service-feature-icon) {
+  border-radius: 14px !important;
+}
+
+.service-tags span {
+  border-radius: 999px !important;
+}

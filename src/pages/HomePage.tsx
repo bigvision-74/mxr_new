@@ -1,9 +1,10 @@
-import type { CSSProperties } from 'react'
+﻿import type { CSSProperties } from 'react'
 import { ArrowRight, Printer, ScanLine, Glasses, ClipboardList, Users, ShieldCheck, ChartNoAxesCombined } from 'lucide-react'
 import { useState, useRef, useEffect } from 'react'
 import { ImmersiveHero } from '../components/ImmersiveHero'
 import { AdditionalFeaturedProducts, extraProducts } from '../components/AdditionalFeaturedProducts'
 import { PanoramaSolutions } from '../components/PanoramaSolutions'
+import { DroneLoop } from '../components/DroneLoop'
 import '@google/model-viewer'
 
 export default function HomePage() {
@@ -431,18 +432,14 @@ export default function HomePage() {
         </div>
         <article hidden={activeProduct !== 0} className={"product-slide modal-showcase" + (activeProduct === 0 ? " active" : "")} data-product-slide={"0"}>
           <div className={"modal-copy reveal visible"}>
-            <p className={"eyebrow light"}>{"FEATURED PRODUCT"}</p>
+            <p className={"eyebrow light"}>{"FEATURED PRODUCTS"}</p>
             <h2>{"MODAL"}<span>{"3D"}</span></h2>
             <h3>{"The digital ammunition and ordnance library."}</h3>
             <p>{"Explore highly accurate 3D models with AR access, detailed specifications and training resources."}</p>
             <a className={"btn btn-primary"} href={"/modal3d"}>{"Explore MODAL3D"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
           </div>
           <div className={"modal-visual reveal visible"} style={{ background: "transparent", backdropFilter: "none", boxShadow: "none", border: "none", overflow: "visible", height: "520px", position: "relative", display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <img
-              src={"/assets/images/Home/drone.png"}
-              alt={"MODAL 3D – drone"}
-              style={{ width: "100%", height: "100%", objectFit: "contain", display: "block" }}
-            />
+            <DroneLoop alt={"MODAL 3D – drone"} />
           </div>
           <div className="px-feat-list">
             <div className="px-feat-row">
@@ -476,7 +473,7 @@ export default function HomePage() {
         </article>
         <article hidden={activeProduct !== 1} className={"product-slide modal-showcase eprium-showcase" + (activeProduct === 1 ? " active" : "")} data-product-slide={"1"}>
           <div className={"modal-copy"}>
-            <p className={"eyebrow light"}>{"FEATURED PRODUCT"}</p>
+            <p className={"eyebrow light"}>{"FEATURED PRODUCTS"}</p>
             <h2>{"EPR"}<span style={{ color: "#147ee1" }}>{"ium"}</span></h2>
             <h3>{"Clinical practice before clinical placement."}</h3>
             <p>{"Give healthcare learners a safe, realistic way to practise patient encounters, clinical reasoning and electronic patient records."}</p>
@@ -509,15 +506,7 @@ export default function HomePage() {
                 <p>Collaborate with peers or mentors in real-time within the same simulation.</p>
               </div>
             </div>
-            <div className="px-feat-row">
-              <div className="px-badge px-badge--risk"><ShieldCheck aria-hidden="true" strokeWidth={1.6} /></div>
-              <div className="px-feat-body">
-                <div className="px-feat-meta">
-                  <h4>Risk-Free Critical Care</h4>
-                </div>
-                <p>Practice high-stakes emergency decisions without risking patient safety.</p>
-              </div>
-            </div>
+
             <div className="px-feat-row">
               <div className="px-badge px-badge--data"><ChartNoAxesCombined aria-hidden="true" strokeWidth={1.6} /></div>
               <div className="px-feat-body">
@@ -533,7 +522,7 @@ export default function HomePage() {
         <div className={"product-slider-controls"}>
           <button onClick={() => setActiveProduct(p => (p - 1 + 5) % 5)} className={"product-arrow product-prev"} aria-label={"Previous featured product"}>{"←"}</button>
           <div className="product-dots" role="tablist" aria-label="Choose featured product">
-            {['MODAL3D','EPRium',...extraProducts.map(p=>p.name)].map((name,index)=><button key={name} onClick={()=>setActiveProduct(index)} aria-selected={activeProduct===index} className={`product-name-tab${activeProduct===index?' active':''}`} role="tab" aria-label={`Show ${name}`} data-product-go={index}>{name}</button>)}
+            {['MODAL3D', 'EPRium', ...extraProducts.map(p => p.name)].map((name, index) => <button key={name} onClick={() => setActiveProduct(index)} aria-selected={activeProduct === index} className={`product-name-tab${activeProduct === index ? ' active' : ''}`} role="tab" aria-label={`Show ${name}`} data-product-go={index}>{name}</button>)}
           </div>
           <button onClick={() => setActiveProduct(p => (p + 1) % 5)} className={"product-arrow product-next"} aria-label={"Next featured product"}>{"→"}</button>
         </div>
@@ -592,7 +581,7 @@ export default function HomePage() {
         <div className={"pillars"}>
           <article className={"reveal visible"}>
             <span aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="7" stroke="currentColor" strokeWidth="1.5"/><circle cx="9" cy="9" r="2.5" fill="currentColor"/></svg>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="7" stroke="currentColor" strokeWidth="1.5" /><circle cx="9" cy="9" r="2.5" fill="currentColor" /></svg>
             </span>
             <b aria-hidden="true">{"01"}</b>
             <h3>{"Immersive"}</h3>
@@ -600,7 +589,7 @@ export default function HomePage() {
           </article>
           <article className={"reveal visible"}>
             <span aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 2L11.5 7H16L12.5 10.5L14 16L9 13L4 16L5.5 10.5L2 7H6.5L9 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/></svg>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 2L11.5 7H16L12.5 10.5L14 16L9 13L4 16L5.5 10.5L2 7H6.5L9 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" /></svg>
             </span>
             <b aria-hidden="true">{"02"}</b>
             <h3>{"Intelligent"}</h3>
@@ -608,7 +597,7 @@ export default function HomePage() {
           </article>
           <article className={"reveal visible"}>
             <span aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="3,13 7,8 11,10 15,4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/><circle cx="15" cy="4" r="1.5" fill="currentColor"/></svg>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="3,13 7,8 11,10 15,4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /><circle cx="15" cy="4" r="1.5" fill="currentColor" /></svg>
             </span>
             <b aria-hidden="true">{"03"}</b>
             <h3>{"Measurable"}</h3>
@@ -616,7 +605,7 @@ export default function HomePage() {
           </article>
           <article className={"reveal visible"}>
             <span aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="6" height="6" rx="1" stroke="currentColor" strokeWidth="1.5"/><rect x="10" y="2" width="6" height="6" rx="1" stroke="currentColor" strokeWidth="1.5"/><rect x="2" y="10" width="6" height="6" rx="1" stroke="currentColor" strokeWidth="1.5"/><rect x="10" y="10" width="6" height="6" rx="1" stroke="currentColor" strokeWidth="1.5"/></svg>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="6" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" /><rect x="10" y="2" width="6" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" /><rect x="2" y="10" width="6" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" /><rect x="10" y="10" width="6" height="6" rx="1" stroke="currentColor" strokeWidth="1.5" /></svg>
             </span>
             <b aria-hidden="true">{"04"}</b>
             <h3>{"Scalable"}</h3>

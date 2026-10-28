@@ -1,5 +1,6 @@
 import { ArrowLeft, ExternalLink, Mail } from 'lucide-react'
 import { Linkify } from '../components/Linkify'
+import defaultBanner from '../assets/videos/defaultbanner.mp4'
 import bannerImg from '../assets/images/about/about-hero.webp'
 import { cookieIntro, cookieSections } from '../data/cookies'
 
@@ -7,6 +8,7 @@ export default function CookiePolicyPage() {
   return (
   <main className="policy-page">
     <section className="contact-banner" style={{ backgroundImage: `url(${bannerImg})` }}>
+      <video className="contact-banner-video" autoPlay muted loop playsInline preload="metadata" aria-hidden="true"><source src={defaultBanner} type="video/mp4" /></video>
       <div className="contact-banner-overlay" />
       <div className="contact-banner-copy policy-banner-wide">
         <h1 className="banner-title">Cookie <em>Policy</em></h1>
@@ -14,7 +16,7 @@ export default function CookiePolicyPage() {
       </div>
     </section>
     <section className="terms-doc">
-      <a className="policy-back-btn" href="/policies"><ArrowLeft aria-hidden="true" size={16} /> Back to Policies</a>
+      <a className="btn btn-primary policy-back-btn" href="/policies"><ArrowLeft aria-hidden="true" size={16} /> Back to Policies</a>
       <nav className="terms-toc" aria-label="Cookie policy sections">
         <h3>Contents</h3>
         {cookieSections.map((s, i) => <a key={s.title} href={`#section-${i + 1}`}><b>{i + 1}.</b> {s.title}</a>)}

@@ -3,7 +3,6 @@ import { ArrowRight, Glasses, Brain, BarChart3, FileText } from 'lucide-react'
 import { EpriumJourney } from '../components/EpriumJourney'
 import { EpriumDebrief } from '../components/EpriumDebrief'
 import { EpriumAudiences } from '../components/EpriumAudiences'
-import { EpriumOutcomes } from '../components/EpriumOutcomes'
 import { EpriumCapabilities } from "../components/EpriumCapabilities"
 import { EpriumFaculty } from "../components/EpriumFaculty"
 import defaultBanner from '../assets/videos/defaultbanner.mp4'
@@ -20,8 +19,8 @@ export default function EpriumPage() {
         <div className="ep2-grid" aria-hidden="true" />
         <div className="ep2-glow" aria-hidden="true" />
         <div className="ep2-hero-inner">
-          <h1 className="banner-title banner-title--stacked">From classroom to <em>clinical readiness.</em></h1>
-          <p className="ep2-lead banner-lead">Clinical learning connected to the decisions, documentation and digital workflows of modern patient care.</p>
+          <h1 className="banner-title banner-title--stacked">Simulated EPR. Real<em>Clinical Practice.</em></h1>
+          <p className="ep2-lead banner-lead">EPRium gives healthcare students a realistic environment to practise patient interactions, clinical decision-making and electronic patient records, before they have to do it for real.</p>
           <div className="ep2-actions">
             <a href="mailto:hello@mxr.ai?subject=EPRium%20demonstration" className="group inline-flex items-center gap-3 rounded-full bg-[#0B66C3] px-6 py-3 text-sm font-semibold text-white ring-1 ring-[#1684E8]/60 transition-all duration-300 hover:bg-[#1684E8] md:px-8 md:py-4 md:text-base">Book a Demonstration <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
 
@@ -84,7 +83,6 @@ export default function EpriumPage() {
       <EpriumJourney />
       <EpriumDebrief />
       <EpriumAudiences />
-      <EpriumOutcomes />
       <EpriumCapabilities />
       <EpriumFaculty />
       <section className={"final-cta home-wave-section home-wave-cta"}>

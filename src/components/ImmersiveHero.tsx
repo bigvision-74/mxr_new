@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { NavBar } from './NavBar'
 import driveLogo from '../assets/images/drivexr.svg'
-import omniaLogo from '../assets/images/omnia.svg'
 import insightLogo from '../assets/images/insightxr.svg'
 import modalLogo from '../assets/images/modal3d.svg'
 // import bannerVideo from '../assets/videos/banner/HV9-MD_grok_take002.mp4'
@@ -35,16 +34,20 @@ function ShinyText({ children, duration = 3 }: ShinyTextProps) {
   )
 }
 
-// The showcase video plays the four products one after another. `go` is where a tab jumps to (a little after the cut, so the
-// previous scene never shows); `from` is where that product's scene begins, used to work out which tab is active.
+// home_hero.mp4 (19.75s) already plays the products in this order: MODAL3D, DriveXR, InsightXR, then wipes back to MODAL3D and loops.
+// `from` is where the product's scene begins (the start of its wipe or hard cut), used to pick the active tab and logo;
+// `go` is where a tab jumps to, the same point, so the whole scene plays from its first frame.
 const PRODUCTS = [
-  { id: 'drivexr', logo: driveLogo, label: 'DriveXR', chip: 'drive', chipAccent: 'XR', from: 0, go: 0, light: true },
-  { id: 'omnia', logo: omniaLogo, label: 'OMNIA', chip: 'OMNIA', chipAccent: '', from: 10.8, go: 11.2, light: true },
-  { id: 'insightxr', logo: insightLogo, label: 'InsightXR', chip: 'Insight', chipAccent: 'XR', from: 20.54, go: 20.94, light: false },
-  { id: 'modal3d', logo: modalLogo, label: 'MODAL3D', chip: 'MODAL', chipAccent: '3D', from: 27.7, go: 28.1, light: false },
+  { id: 'modal3d', logo: modalLogo, label: 'MODAL3D', from: 0, go: 0, light: false },
+  { id: 'drivexr', logo: driveLogo, label: 'DriveXR', from: 4.4, go: 4.4, light: true },
+  { id: 'insightxr', logo: insightLogo, label: 'InsightXR', from: 16.7, go: 16.7, light: false },
 ] as const
 
+// The loop wipe starts at about 19.1s, when MODAL3D takes over again.
+const LOOP_WIPE = 19.1
+
 function activeAt(t: number) {
+  if (t >= LOOP_WIPE) return 0
   let n = 0
   PRODUCTS.forEach((pr, i) => { if (t >= pr.from) n = i })
   return n
@@ -54,7 +57,7 @@ export function ImmersiveHero() {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [active, setActive] = useState(0)
 
-  // Follow the video: the active tab changes as soon as the video moves on to the next product (and wraps back to the first).
+  // Follow the video: the active tab and logo change as soon as the video moves on to the next product.
   useEffect(() => {
     const video = videoRef.current
     if (!video) return
@@ -96,9 +99,9 @@ export function ImmersiveHero() {
           />
         </video>
 
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.55)_0%,rgba(0,0,0,.08)_32%,rgba(0,0,0,.14)_60%,rgba(0,0,0,.8)_100%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,11,18,.94)_0%,rgba(6,11,18,.8)_30%,rgba(6,11,18,.4)_58%,transparent_85%)]" />
-        <div className="mxr-immersive-hero__grid absolute inset-0 opacity-40" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.3)_0%,transparent_30%,transparent_65%,rgba(0,0,0,.35)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,11,18,.72)_0%,rgba(6,11,18,.55)_30%,rgba(6,11,18,.2)_55%,transparent_78%)]" />
+        <div className="mxr-immersive-hero__grid absolute inset-0 opacity-20" />
         <div className="absolute -left-36 top-1/3 h-96 w-96 rounded-full bg-[#0B66C3]/20 blur-[120px]" />
       </div>
 

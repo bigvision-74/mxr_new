@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { ArrowLeft, Mail } from 'lucide-react'
 import { Linkify } from './Linkify'
+import defaultBanner from '../assets/videos/defaultbanner.mp4'
 import bannerImg from '../assets/images/about/about-hero.webp'
 import type { DpSection } from '../data/data-protection'
 
@@ -11,6 +12,7 @@ export function PolicyDoc({ title, lead, sections, contactLabel, longTitle }: Pr
   return (
   <main className="policy-page">
     <section className="contact-banner" style={{ backgroundImage: `url(${bannerImg})` }}>
+      <video className="contact-banner-video" autoPlay muted loop playsInline preload="metadata" aria-hidden="true"><source src={defaultBanner} type="video/mp4" /></video>
       <div className="contact-banner-overlay" />
       <div className="contact-banner-copy policy-banner-wide">
         <h1 className={`banner-title${longTitle ? ' banner-title--long' : ''}`}>{title}</h1>
@@ -18,7 +20,7 @@ export function PolicyDoc({ title, lead, sections, contactLabel, longTitle }: Pr
       </div>
     </section>
     <section className="terms-doc">
-      <a className="policy-back-btn" href="/policies"><ArrowLeft aria-hidden="true" size={16} /> Back to Policies</a>
+      <a className="btn btn-primary policy-back-btn" href="/policies"><ArrowLeft aria-hidden="true" size={16} /> Back to Policies</a>
       <nav className="terms-toc" aria-label="Policy sections">
         <h3>Contents</h3>
         {sections.map((s, i) => <a key={s.title} href={`#section-${i + 1}`}><b>{i + 1}.</b> {s.title}</a>)}

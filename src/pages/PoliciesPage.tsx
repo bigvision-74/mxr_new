@@ -1,4 +1,5 @@
 import { ArrowRight, FileText } from 'lucide-react'
+import defaultBanner from '../assets/videos/defaultbanner.mp4'
 import bannerImg from '../assets/images/about/about-hero.webp'
 import { policies, policyCategories } from '../data/policies'
 
@@ -8,8 +9,9 @@ export default function PoliciesPage() {
   return (
   <main className="policy-page">
     <section className="contact-banner" style={{ backgroundImage: `url(${bannerImg})` }}>
+      <video className="contact-banner-video" autoPlay muted loop playsInline preload="metadata" aria-hidden="true"><source src={defaultBanner} type="video/mp4" /></video>
       <div className="contact-banner-overlay" />
-      <div className="contact-banner-copy policy-banner-wide">
+      <div className="contact-banner-copy">
         <h1 className="banner-title">Our <em>Policies</em></h1>
         <p className="banner-lead">At MXR, we are committed to transparency, responsibility, and ethical business practices. Please review the following policies that govern our operations.</p>
       </div>

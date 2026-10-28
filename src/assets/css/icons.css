@@ -1,0 +1,59 @@
+/* One icon-tile design for the whole site. Loaded last.
+   Light background: white tile, blue outline, blue icon.   Dark background: solid blue tile, white icon.
+   The colours come from three variables. They default to the light tile; dark sections switch them below,
+   so any icon placed inside a dark section picks up the dark tile automatically. */
+:root {
+  --icon-bg: #fff;
+  --icon-border: #0b66c3;
+  --icon-fg: #0b66c3;
+}
+
+:is(
+  .pp-experience, .epc, .epd, .panorama-panel, .service-feature, .featured-products, .final-cta, .process,
+  .capability-grid, .contact-banner, .mxr-effect-section, .dx-hero, .ep2-hero, .about-hero, [data-theme="dark"]
+) {
+  --icon-bg: linear-gradient(145deg, #2aa0f5, #0b66c3);
+  --icon-border: transparent;
+  --icon-fg: #fff;
+}
+
+body :is(
+  .partnership-icon, .service-icon, .service-feature-icon, .pp-icon, .epc-icon, .epd-icon, .epf-icon, .panorama-icon,
+  .policy-card-icon, .contact-card-icon, .cf-head-icon, .cap-icon, section.why .pillars span,
+  .dx-page .dx-bento article > svg
+) {
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--icon-border);
+  border-radius: 12px;
+  background: var(--icon-bg);
+  color: var(--icon-fg);
+  box-shadow: none;
+}
+
+/* Hover keeps the same two-tone design, only the outline deepens */
+body :is(.partnership-card:hover .partnership-icon, section.why .pillars article:hover span, .policy-card--link:hover .policy-card-icon) {
+  background: var(--icon-bg);
+  border-color: #0b66c3;
+}
+
+/* Icons that had no tile of their own */
+body .cap-icon {
+  width: 48px;
+  height: 48px;
+  font-size: 1.4rem;
+}
+body .dx-page .dx-bento article > svg {
+  display: block;
+  stroke: currentColor;
+}
+body .service-feature-icon {
+  border-radius: 12px;
+}
+
+/* About: the Vision / Mission card icons stay bare (no tile), a little larger than before */
+body .purpose-alt-label svg {
+  flex: none;
+  width: 32px;
+  height: 32px;
+}

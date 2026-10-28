@@ -849,9 +849,9 @@
 .epd-visual img {
   display: block;
   width: 100%;
+  max-width: 720px;
   height: auto;
-  transform: scale(1.25);
-  transform-origin: 40% 50%;
+  margin-inline: auto;
   filter: drop-shadow(0 24px 40px rgba(0, 0, 0, .45))
 }
 
@@ -1349,7 +1349,7 @@
   margin-bottom: 18px;
   border-radius: 12px;
   color: #fff;
-  background: linear-gradient(145deg, #2a7de1, #1ec0b0)
+  background: linear-gradient(145deg, #2aa0f5, #0b66c3)
 }
 
 .epc .epc-grid h3 {
@@ -1387,7 +1387,7 @@
 
 .epc-grid li svg {
   flex: 0 0 14px;
-  color: #2ec4c0
+  color: var(--blue-dark)
 }
 
 @media(max-width:1100px) {
@@ -1671,4 +1671,9 @@
     justify-self: stretch;
     max-width: none
   }
+}
+
+/* EPRium capabilities: the laptop picture is mirrored left to right (the layout is unchanged) */
+.epc-laptop {
+  transform: scaleX(-1)
 }

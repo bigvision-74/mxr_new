@@ -69,7 +69,6 @@ export function EpriumAudiences() {
           <p className="epa-kicker">{a.tab.toUpperCase()}</p>
           <h3>{a.title}</h3>
           <p>{a.text}</p>
-          <small>{active + 1} of {audiences.length} audiences</small>
         </div>
       </article>
     </section>

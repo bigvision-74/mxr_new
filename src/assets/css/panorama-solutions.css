@@ -1,7 +1,6 @@
 .solutions-panorama {
   padding: 5.5rem var(--page-gutter) 3rem;
   background: #fff;
-  border-top: 1px solid var(--border, #dbe5ef);
 }
 
 .panorama-heading {
@@ -95,15 +94,15 @@
   color: #fff;
 }
 
-.panorama-panel-top > span:first-child { opacity: .75; }
+.panorama-panel-top > span:first-child { color: var(--hero-accent); font-weight: 700; }
 
 .panorama-panel-copy {
   position: absolute;
   inset: auto 1.5rem 2rem;
 }
 
-.panorama-icon { display: block; margin-bottom: 1.1rem; color: #a1ddff; }
-.panorama-icon svg { width: 1.9rem; height: 1.9rem; }
+.panorama-icon { display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: 1.1rem; border-radius: 12px; color: #fff; background: linear-gradient(145deg, #2aa0f5, #0b66c3); }
+.panorama-icon svg { width: 1.5rem; height: 1.5rem; }
 
 .panorama-panel-copy h3 {
   max-width: 13ch;

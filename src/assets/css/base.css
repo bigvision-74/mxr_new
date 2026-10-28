@@ -3078,7 +3078,7 @@ footer .footer-bottom {
 /* Services */
 .services {
     background: var(--color-light);
-    border-top: 1px solid var(--border)
+    border-top: 0
 }
 
 .services-heading {
@@ -3150,9 +3150,9 @@ footer .footer-bottom {
 .service-icon {
     width: 58px;
     height: 58px;
-    border: 1px solid #9CC4E8;
-    background: var(--pale);
-    color: var(--blue);
+    border: 0;
+    background: linear-gradient(145deg, #2aa0f5, #0b66c3);
+    color: #fff;
     display: grid;
     place-items: center;
     font-size: .88rem;
@@ -3335,7 +3335,7 @@ footer .footer-bottom {
 .process-node span {
     font-size: .68rem;
     letter-spacing: .1em;
-    color: #8CCBFF;
+    color: var(--hero-accent);
     position: relative;
     z-index: 1
 }
@@ -3591,7 +3591,6 @@ footer .footer-bottom {
 .service-compact .service-icon {
     width: 52px;
     height: 52px;
-    border-radius: 2px;
     font-size: .8rem
 }
 
@@ -5224,17 +5223,16 @@ footer .footer-bottom {
     height: 56px;
     display: grid;
     place-items: center;
-    background: linear-gradient(135deg, #e8f3fd, #d6eafb);
-    border: 1px solid #b8d9f5;
+    background: linear-gradient(145deg, #2aa0f5, #0b66c3);
+    border: 0;
     border-radius: 12px;
     margin-bottom: 44px;
-    color: var(--blue);
+    color: #fff;
     transition: background .25s, border-color .25s
 }
 
 .partnership-card:hover .partnership-icon {
-    background: linear-gradient(135deg, #d6eafb, #bcd8f7);
-    border-color: #8ec1ef
+    background: linear-gradient(145deg, #3aaaf8, #1274d6)
 }
 
 .partnership-icon svg {
@@ -5258,7 +5256,8 @@ footer .footer-bottom {
 }
 
 .partnership-card h3 {
-    font-size: 1.18rem;
+    font-size: 1.15rem;
+    font-weight: 600;
     line-height: 1.25;
     margin: 0 0 10px;
     color: var(--navy)
@@ -5266,7 +5265,7 @@ footer .footer-bottom {
 
 .partnership-card p {
     color: #62788a;
-    font-size: .92rem;
+    font-size: .93rem;
     margin: 0;
     line-height: 1.65
 }

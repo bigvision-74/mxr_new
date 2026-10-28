@@ -3115,3 +3115,14 @@ body .dx-page .dx-capabilities .dx-bento article {
 body .dx-page .dx-capabilities .dx-bento article svg {
     color: var(--color-primary)
 }
+
+/* Capability icons: the same blue gradient tile with a white icon as the EPRium and Modal3D pages */
+body .dx-page .dx-bento article > svg {
+    box-sizing: content-box;
+    width: 22px;
+    height: 22px;
+    padding: 12px;
+    border-radius: 12px;
+    color: #fff;
+    background: linear-gradient(145deg, #2aa0f5, #0b66c3)
+}
