@@ -1,5 +1,7 @@
 ﻿import type { CSSProperties, MouseEvent } from 'react'
 import { ArrowRight } from 'lucide-react'
+import ourvision from '../assets/images/about/our-vision.webp'
+import ourmission from '../assets/images/about/our-mission.webp'
 import aboutValues from '../assets/images/about/about-values.webp'
 import aboutHero from '../assets/images/about/about-hero.webp'
 import { AboutHeroSequence } from '../components/AboutHeroSequence'
@@ -93,6 +95,7 @@ export default function AboutPage() {
         <div className={"purpose-alt-grid"}>
           <article className={"purpose-alt-card"}>
             <div className={"purpose-alt-image"}>
+              {/* <img src={ourvision} alt={"Immersive technology opening new possibilities for learning"} loading={"lazy"} /> */}
               <img src={aboutValues} alt={"Immersive technology opening new possibilities for learning"} loading={"lazy"} />
               <span>
                 {"01 / THE FUTURE WE SEE"}
@@ -179,7 +182,7 @@ export default function AboutPage() {
 
       <section className={"about-values"}>
         <div className={"about-values-image reveal visible"}>
-          <img src={aboutValues} alt={"Professionals using mixed reality technology in a simulation and training environment"} />
+          <img src={ourvision} alt={"Professionals using mixed reality technology in a simulation and training environment"} />
           <div className={"about-values-image-label"}>
             <small>
               {"DESIGNED AROUND PEOPLE"}

@@ -1,0 +1,1317 @@
+/* Omnia product page — isolated styles; honours MXR Inter, navy and blue design tokens. */
+.om-page {
+  --om-navy: #0d2338;
+  --om-blue: #0b66c3;
+  --om-ink: #10263d;
+  --om-muted: #66778a;
+  --om-line: #dbe5ef;
+  overflow: hidden;
+}
+
+.om-page *,
+.om-page *::before,
+.om-page *::after {
+  box-sizing: border-box;
+}
+
+.om-container {
+  max-width: 1440px;
+  width: calc(100% - 2 * var(--page-gutter, 6vw));
+  margin-inline: auto;
+}
+
+.om-page .om-eyebrow {
+  color: var(--om-blue);
+  margin: 0 0 22px;
+  text-transform: uppercase;
+}
+
+.om-page h2 {
+  color: var(--om-ink);
+}
+
+.om-page :is(h2, h3, p) {
+  text-wrap: pretty;
+}
+
+.om-page .ep2-hero {
+  min-height: clamp(750px, 89vh, 950px) !important;
+  background: radial-gradient(ellipse at 74% 55%, #183d5d 0, #101e30 38%, #0b1521 78%) !important;
+}
+
+.om-page .ep2-hero::after {
+  content: 'OMNIA';
+  position: absolute;
+  bottom: 30px;
+  right: 5vw;
+  font-size: clamp(5rem, 13vw, 12rem);
+  font-weight: 800;
+  letter-spacing: -.095em;
+  line-height: 1;
+  color: rgba(255, 255, 255, .027);
+  pointer-events: none;
+}
+
+.om-page .ep2-hero-inner {
+  width: 52% !important;
+  max-width: 780px;
+  margin-left: 0 !important;
+  position: relative;
+  z-index: 4 !important;
+  padding: 110px 0 75px !important;
+}
+
+.om-page .ep2-hero-inner h1 {
+  font-size: clamp(3.1rem, 5.7vw, 6.5rem) !important;
+  line-height: 1.02 !important;
+}
+
+.om-page .ep2-hero-inner h1 em {
+  max-width: 12.5ch;
+}
+
+.om-page .ep2-lead {
+  max-width: 36rem;
+  color: #d6e3ed !important;
+  font-size: clamp(1rem, 1.25vw, 1.17rem) !important;
+}
+
+.om-page .omnia-room-visual {
+  top: 15%;
+  right: -2%;
+  width: 56%;
+  height: 72%;
+  z-index: 3;
+}
+
+.om-page .omnia-room-visual img {
+  object-fit: contain;
+  filter: drop-shadow(0 26px 60px #0008);
+}
+
+.om-proof-strip {
+  min-height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 28px;
+  padding: 20px var(--page-gutter, 6vw);
+  background: #f5f8fb;
+  border-bottom: 1px solid #e4ecf3;
+  flex-wrap: wrap;
+}
+
+.om-proof-strip span {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  white-space: nowrap;
+  color: #455f76;
+  font-size: .82rem;
+  font-weight: 600;
+}
+
+.om-proof-strip span:first-child {
+  color: #8396a8;
+  letter-spacing: .15em;
+  font-size: .67rem;
+  font-weight: 800;
+}
+
+.om-proof-strip svg {
+  color: var(--om-blue);
+}
+
+.om-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr);
+  gap: clamp(50px, 10vw, 165px);
+  align-items: end;
+  padding-block: clamp(96px, 10vw, 154px);
+}
+
+.om-intro h2 {
+  max-width: 880px;
+  margin: 0;
+}
+
+.om-intro h2 span,
+.om-final-cta h2 span {
+  color: #6b8499;
+}
+
+.om-intro-right>p {
+  color: #5e7387;
+  font-size: 1.12rem;
+  line-height: 1.9;
+  margin: 0 0 32px;
+}
+
+.om-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  font-size: .94rem;
+  font-weight: 750;
+  color: var(--om-blue);
+  border-bottom: 1px solid #a9cbe9;
+  text-decoration: none;
+  padding-bottom: 9px;
+}
+
+.om-text-link svg,
+.om-outline-link svg,
+.om-primary-cta svg {
+  transition: transform .2s ease;
+}
+
+.om-text-link:hover svg,
+.om-outline-link:hover svg,
+.om-primary-cta:hover svg {
+  transform: translateX(4px);
+}
+
+.om-workflow {
+  background: #eef3f8;
+  padding: 100px 0 100px;
+}
+
+.om-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 45px;
+}
+
+.om-section-heading>div {
+  max-width: 740px;
+}
+
+.om-section-heading h2 {
+  margin: 0;
+}
+
+.om-section-heading>p {
+  max-width: 338px;
+  color: #687b8d;
+  line-height: 1.8;
+  margin: 0 0 4px;
+  font-size: .96rem;
+}
+
+.om-workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.om-workflow-card {
+  min-height: 302px;
+  padding: 30px 26px 28px;
+  border-radius: 16px;
+  border: 1px solid #dce5ee;
+  background: #fff;
+  box-shadow: 0 8px 24px #11294408;
+  position: relative;
+  transition: transform .25s, box-shadow .25s;
+}
+
+.om-workflow-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px #11294414;
+}
+
+.om-workflow-card-top {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-bottom: 70px;
+  color: var(--om-blue);
+}
+
+.om-workflow-card-top span {
+  color: #8c9fb2;
+  font-size: .75rem;
+  font-weight: 750;
+}
+
+.om-workflow-card h3 {
+  font-size: 1.15rem;
+  color: #10263d;
+  letter-spacing: -.02em;
+  margin: 0 0 12px;
+}
+
+.om-workflow-card p {
+  font-size: .86rem;
+  line-height: 1.75;
+  color: #677a8d;
+  margin: 0;
+}
+
+.om-showcase {
+  background: #0d1826;
+  color: #fff;
+  padding: 100px 0 100px;
+  position: relative;
+}
+
+.om-showcase::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 90% 32%, rgba(11, 102, 195, .17), transparent 60%);
+  pointer-events: none;
+}
+
+.om-showcase>.om-container {
+  position: relative;
+}
+
+.om-section-heading-dark h2 {
+  color: #fff;
+}
+
+.om-section-heading-dark>p {
+  color: #a1b5c7;
+}
+
+.om-section-heading-dark .om-eyebrow {
+  color: #66b9ff;
+}
+
+.om-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 50px 0 28px;
+}
+
+.om-tab {
+  appearance: none;
+  background: #1b2a3a;
+  border: 1px solid #3b4c5e;
+  padding: 15px 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 999px;
+  font: inherit;
+  font-size: .86rem;
+  font-weight: 650;
+  color: #bdcfdf;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.om-tab:hover {
+  border-color: #7b99b3;
+  color: white;
+}
+
+.om-tab.is-active {
+  background: #f9fbff;
+  border-color: #f9fbff;
+  color: #0b3150;
+}
+
+.om-tab:focus-visible {
+  outline: 3px solid #85c8ff;
+  outline-offset: 3px;
+}
+
+.om-feature-panel {
+  display: grid;
+  grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
+  gap: clamp(30px, 5vw, 76px);
+  align-items: center;
+  border: 1px solid #30495e;
+  border-radius: 18px;
+  background: linear-gradient(125deg, #182b3d, #102234 70%);
+  padding: clamp(24px, 4.2vw, 66px);
+  min-height: 488px;
+  animation: om-enter .25s ease-out both;
+}
+
+@keyframes om-enter {
+  from {
+    opacity: .4;
+    transform: translateY(8px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+.om-feature-kicker {
+  color: #79bdf1 !important;
+  font-weight: 800;
+  font-size: .72rem;
+  letter-spacing: .13em;
+  margin: 0 0 25px;
+}
+
+.om-feature-copy h3 {
+  font-size: clamp(1.8rem, 2.55vw, 2.9rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -.045em;
+  color: #fff;
+  margin: 0 0 22px;
+}
+
+.om-feature-copy>p:not(.om-feature-kicker) {
+  font-size: .97rem;
+  color: #b3c6d8;
+  line-height: 1.85;
+  margin: 0 0 25px;
+}
+
+.om-feature-copy ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.om-feature-copy li {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  color: #dce9f3;
+  font-size: .84rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.om-feature-copy li>span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4ca6e9;
+  flex-shrink: 0;
+  margin-top: 9px;
+}
+
+.om-feature-media {
+  position: relative;
+  min-height: 310px;
+  border-radius: 14px;
+  background: #263b50;
+  border: 1px solid #4c6478;
+  overflow: hidden;
+  box-shadow: 0 30px 55px #0004;
+}
+
+.om-feature-media>img {
+  display: block;
+  width: 100%;
+  height: clamp(250px, 28vw, 400px);
+  object-fit: cover;
+  object-position: center;
+  border-radius: 9px;
+}
+
+.om-image-caption {
+  position: absolute;
+  bottom: 22px;
+  left: 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 50px;
+  padding: 10px 12px;
+  background: #071625df;
+  color: #f7fbff;
+  font-size: .7rem;
+  font-weight: 650;
+}
+
+.om-capabilities {
+  padding-block: 118px 126px;
+}
+
+.om-capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.om-capability-card {
+  padding: 35px;
+  min-height: 255px;
+  border: 1px solid var(--om-line);
+  border-radius: 16px;
+  background: #fff;
+  position: relative;
+  box-shadow: 0 10px 30px #10263d08;
+}
+
+.om-capability-icon {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #edf5fd;
+  color: #0b66c3;
+  margin-bottom: 35px;
+}
+
+.om-capability-card h3 {
+  font-size: 1.1rem;
+  margin: 0 0 11px;
+  color: var(--om-ink);
+}
+
+.om-capability-card p {
+  font-size: .9rem;
+  color: #657b8f;
+  line-height: 1.75;
+  max-width: 280px;
+  margin: 0;
+}
+
+.om-capability-arrow {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #8cabbf;
+}
+
+.om-scenarios {
+  background: #f6f8fa;
+  padding: 100px 0 100px;
+}
+
+.om-scenarios-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.om-scenario-card {
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid #dce7ef;
+  background: #fff;
+  box-shadow: 0 10px 25px #10263d08;
+}
+
+.om-scenario-img {
+  height: 215px;
+  position: relative;
+  overflow: hidden;
+  background: #0d1826;
+}
+
+.om-scenario-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .45s;
+}
+
+.om-scenario-card:hover img {
+  transform: scale(1.06);
+}
+
+.om-scenario-img::after {
+  content: '';
+  position: absolute;
+  inset: 38% 0 0;
+  background: linear-gradient(transparent, #07172588);
+  pointer-events: none;
+}
+
+.om-scenario-img span {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  z-index: 1;
+  background: #ffffff;
+  color: #243d55;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 11px;
+  border-radius: 5px;
+  font-size: .66rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+}
+
+.om-scenario-copy {
+  padding: 25px;
+  min-height: 150px;
+}
+
+.om-scenario-copy h3 {
+  font-size: 1.12rem;
+  color: #10263d;
+  margin: 0 0 11px;
+}
+
+.om-scenario-copy p {
+  font-size: .86rem;
+  color: #62798c;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.om-delivery {
+  background: linear-gradient(115deg, #0b1c2e 8%, #143550 100%);
+  padding-block: 112px;
+}
+
+.om-delivery-content {
+  display: grid;
+  grid-template-columns: .95fr 1.05fr;
+  gap: clamp(60px, 9vw, 155px);
+  align-items: center;
+}
+
+.om-delivery h2 {
+  color: #fff;
+  max-width: 750px;
+  margin: 0 0 25px;
+}
+
+.om-delivery .om-eyebrow {
+  color: #66b9ff;
+}
+
+.om-delivery-content>div:first-child>p:not(.eyebrow) {
+  color: #b6c9dc;
+  line-height: 1.85;
+  max-width: 560px;
+  font-size: 1rem;
+  margin: 0 0 35px;
+}
+
+.om-outline-link {
+  color: #fff;
+  border: 1px solid #7390a7;
+  border-radius: 50px;
+  padding: 15px 21px;
+  font-size: .87rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.om-delivery-cards {
+  display: grid;
+  gap: 12px;
+}
+
+.om-delivery-cards>div {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 4px 18px;
+  align-items: center;
+  padding: 23px 26px;
+  border: 1px solid #50677b;
+  border-radius: 12px;
+  background: #ffffff0b;
+}
+
+.om-delivery-cards svg {
+  color: #77c5fb;
+  grid-row: span 2;
+}
+
+.om-delivery-cards strong {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.om-delivery-cards span {
+  color: #b3c6d6;
+  font-size: .86rem;
+  line-height: 1.55;
+}
+
+.om-final-cta {
+  padding: 108px 0 115px;
+  background: #f4f8fc;
+}
+
+.om-final-layout {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.om-final-cta h2 {
+  max-width: 850px;
+  margin: 0 0 22px;
+}
+
+.om-final-cta p:not(.eyebrow) {
+  max-width: 610px;
+  color: #657c90;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.om-primary-cta {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  color: #fff;
+  background: var(--om-blue);
+  padding: 19px 26px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: .89rem;
+  box-shadow: 0 14px 28px #0b66c329;
+}
+
+.om-primary-cta:hover {
+  background: #147ee1;
+}
+
+@media (max-width: 1100px) {
+  .om-proof-strip {
+    justify-content: center;
+  }
+
+  .om-workflow-grid,
+  .om-scenarios-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .om-feature-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .om-feature-media>img {
+    height: 350px;
+  }
+
+  .om-page .ep2-hero-inner {
+    width: 55% !important;
+  }
+
+  .om-page .omnia-room-visual {
+    width: 55%;
+    right: -7%;
+  }
+}
+
+@media (max-width: 850px) {
+  .om-page .ep2-hero {
+    display: flex;
+    flex-direction: column;
+    padding-top: 90px !important;
+  }
+
+  .om-page .ep2-hero-inner {
+    width: 100% !important;
+    padding: 60px 0 8px !important;
+  }
+
+  .om-page .ep2-hero-inner h1 {
+    max-width: 720px;
+  }
+
+  .om-page .omnia-room-visual {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    height: clamp(240px, 50vw, 430px);
+    margin: 0 auto 32px;
+  }
+
+  .om-intro,
+  .om-delivery-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .om-section-heading {
+    display: block;
+  }
+
+  .om-section-heading>p {
+    max-width: 660px;
+    margin-top: 24px;
+  }
+
+  .om-capabilities-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .om-final-layout {
+    display: block;
+  }
+
+  .om-primary-cta {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 560px) {
+  .om-proof-strip span:first-child {
+    display: none;
+  }
+
+  .om-proof-strip {
+    justify-content: start;
+    gap: 14px 20px;
+  }
+
+  .om-proof-strip span {
+    white-space: normal;
+    font-size: .72rem;
+  }
+
+  .om-intro {
+    padding-block: 76px;
+  }
+
+  .om-workflow,
+  .om-showcase,
+  .om-scenarios,
+  .om-delivery {
+    padding-block: 74px;
+  }
+
+  .om-capabilities {
+    padding-block: 74px;
+  }
+
+  .om-workflow-grid,
+  .om-capabilities-grid,
+  .om-scenarios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .om-workflow-card {
+    min-height: 245px;
+  }
+
+  .om-workflow-card-top {
+    margin-bottom: 35px;
+  }
+
+  .om-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .om-tab {
+    border-radius: 10px;
+    justify-content: center;
+    padding: 12px 8px;
+    gap: 7px;
+    font-size: .73rem;
+  }
+
+  .om-feature-panel {
+    padding: 25px 18px;
+  }
+
+  .om-feature-media {
+    min-height: 200px;
+  }
+
+  .om-feature-media>img {
+    height: 210px;
+  }
+
+  .om-scenario-img {
+    height: 230px;
+  }
+
+  .om-page .ep2-hero-inner h1 {
+    font-size: clamp(2.8rem, 10vw, 4rem) !important;
+  }
+
+  .om-final-cta {
+    padding-block: 78px;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+
+  .om-feature-panel,
+  .om-workflow-card,
+  .om-scenario-img img,
+  .om-primary-cta svg,
+  .om-text-link svg {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* Match the shared MXR page gutters around the retained hero. */
+.mxr-react-page .omnia-page .ep2-hero {
+  padding-inline: var(--page-gutter)
+}
+
+.mxr-react-page .omnia-page .ep2-hero .ep2-hero-inner {
+  padding-inline: 0;
+  margin: 0
+}
+
+/* MXR palette and restrained, architectural product surfaces. */
+.mxr-react-page .om-page {
+  --om-blue: #0b66c3;
+  --om-navy: #0d2338;
+  --om-ink: #10263d;
+  --om-line: #dbe5ef;
+  --product-accent: #0b66c3;
+  background: #fff
+}
+
+.om-page .om-workflow,
+.om-page .om-final-cta {
+  background: #eef5fb
+}
+
+.om-page .om-showcase,
+.om-page .om-delivery {
+  background: #0d2338
+}
+
+.om-page .om-feature-panel {
+  background: #142d44;
+  border-color: #395268
+}
+
+.om-page .om-workflow-card,
+.om-page .om-capability-card,
+.om-page .om-scenario-card,
+.om-page .om-feature-panel,
+.om-page .om-feature-media,
+.om-page .om-feature-media>img,
+.om-page .om-delivery-cards>div {
+  border-radius: 2px;
+  box-shadow: none
+}
+
+.om-page .om-capability-icon {
+  border-radius: 2px;
+  background: #eef5fb;
+  color: #0b66c3
+}
+
+.om-page .om-tab {
+  border-radius: 2px
+}
+
+.om-page .om-tab.is-active {
+  background: #0b66c3;
+  border-color: #1684e8;
+  color: #fff
+}
+
+.om-page .om-primary-cta {
+  box-shadow: none
+}
+
+.om-page .om-scenario-img span {
+  background: #fff;
+  color: #10263d
+}
+
+.om-page .om-workflow-card:hover {
+  border-color: #0b66c3;
+  box-shadow: none
+}
+
+.om-page .om-eyebrow,
+.om-page .om-text-link {
+  color: #0b66c3
+}
+
+.om-page .om-section-heading-dark .om-eyebrow,
+.om-page .om-delivery .om-eyebrow {
+  color: #8cc8ff
+}
+
+/* Explicit page palette wins over shared product and comparison styles. */
+.mxr-react-page main.om-page {
+  --blue: #0b66c3;
+  --accent: #0b66c3;
+  --color-primary: #0b66c3;
+  --product-accent: #0b66c3 !important;
+  color: #10263d !important;
+  background: #fff !important
+}
+
+.mxr-react-page main.om-page :is(.om-intro, .om-capabilities) {
+  background: #fff !important
+}
+
+.mxr-react-page main.om-page :is(.om-workflow, .om-scenarios, .om-final-cta, .om-proof-strip) {
+  background: #f3f5f7 !important;
+  background-image: none !important
+}
+
+.mxr-react-page main.om-page :is(.om-showcase, .om-delivery) {
+  background: #0d2338 !important;
+  background-image: none !important
+}
+
+.mxr-react-page main.om-page :is(.om-workflow-card, .om-capability-card, .om-scenario-card) {
+  background: #fff !important;
+  background-image: none !important
+}
+
+.mxr-react-page main.om-page :is(h2, h3) {
+  color: #10263d !important
+}
+
+.mxr-react-page main.om-page :is(.om-showcase, .om-delivery) :is(h2, h3) {
+  color: #fff !important
+}
+
+.mxr-react-page main.om-page :is(.om-intro, .om-workflow, .om-capabilities, .om-scenarios, .om-final-cta) p {
+  color: #5d6875 !important
+}
+
+.mxr-react-page main.om-page :is(.om-eyebrow, .om-text-link) {
+  color: #0b66c3 !important
+}
+
+.mxr-react-page main.om-page :is(.om-showcase, .om-delivery) .om-eyebrow {
+  color: #8cc8ff !important
+}
+
+.mxr-react-page main.om-page .ep2-hero h1 em {
+  color: #66b5ff !important;
+  -webkit-text-fill-color: #66b5ff !important;
+  background: none !important
+}
+
+.mxr-react-page main.om-page :is(.om-primary-cta, .om-tab.is-active) {
+  background: #0b66c3 !important;
+  color: #fff !important
+}
+
+.mxr-react-page main.om-page :is(.om-capability-icon, .om-workflow-card-top) {
+  color: #0b66c3 !important
+}
+
+.mxr-react-page main.om-page .om-capability-icon {
+  background: #eef5fb !important
+}
+
+.om-page .om-delivery.home-wave-section>.om-container,
+.om-page .om-showcase.home-wave-section>.om-container {
+  position: relative;
+  z-index: 1
+}
+
+.om-page .om-showcase.home-wave-section:before {
+  display: none
+}
+
+.mxr-react-page main.om-page .final-cta.home-wave-cta h2 {
+  color: #fff !important
+}
+
+.mxr-react-page main.om-page .final-cta.home-wave-cta .eyebrow {
+  color: #8cc8ff !important
+}
+
+/* ---- Theme alignment: full container width, rounded boxes, one section rhythm, theme type scale ---- */
+.om-container {
+  max-width: none;
+  width: calc(100% - 2 * var(--page-gutter, 6vw));
+}
+
+/* Rhythm: white (no background) > light > dark > white > dark video > dark video CTA */
+.mxr-react-page main.om-page .om-workflow {
+  background: #fff !important;
+}
+
+.mxr-react-page main.om-page .om-showcase {
+  background: var(--color-light) !important;
+  color: var(--color-dark);
+}
+
+.mxr-react-page main.om-page .om-showcase .home-wave-media {
+  display: none;
+}
+
+.mxr-react-page main.om-page .om-capabilities {
+  background: var(--color-dark) !important;
+  padding-block: 100px 100px;
+}
+
+.mxr-react-page main.om-page .om-scenarios {
+  background: #fff !important;
+}
+
+/* Rounded boxes (the theme card radius) */
+.mxr-react-page main.om-page :is(.om-workflow-card, .om-capability-card, .om-scenario-card, .om-feature-panel, .om-delivery-cards > div) {
+  border-radius: var(--card-radius, 16px);
+}
+
+.mxr-react-page main.om-page .om-feature-media {
+  border-radius: 14px;
+}
+
+.mxr-react-page main.om-page .om-feature-media>img {
+  border-radius: 10px;
+}
+
+.mxr-react-page main.om-page .om-tab {
+  border-radius: 999px;
+}
+
+.mxr-react-page main.om-page .om-scenario-img span {
+  border-radius: 999px;
+}
+
+/* Light "Inside the platform" panel */
+.mxr-react-page main.om-page .om-showcase :is(h2, h3) {
+  color: var(--color-dark) !important;
+}
+
+.mxr-react-page main.om-page .om-showcase .om-section-heading>p {
+  color: #62788a !important;
+}
+
+.mxr-react-page main.om-page .om-tab {
+  background: #fff;
+  border-color: #dbe5ef;
+  color: #3c5369;
+}
+
+.mxr-react-page main.om-page .om-tab:hover {
+  border-color: #0b66c3;
+  color: #0b66c3;
+}
+
+.mxr-react-page main.om-page .om-tab.is-active {
+  border-color: #0b66c3;
+}
+
+.mxr-react-page main.om-page .om-feature-panel {
+  background: #fff;
+  border-color: #dbe5ef;
+  box-shadow: var(--card-shadow, 0 10px 30px #0f3a4a0d);
+}
+
+.mxr-react-page main.om-page .om-feature-kicker {
+  color: #0b66c3 !important;
+}
+
+.mxr-react-page main.om-page .om-feature-copy>p:not(.om-feature-kicker) {
+  color: #62788a;
+}
+
+.mxr-react-page main.om-page .om-feature-copy li {
+  color: #3c5369;
+}
+
+.mxr-react-page main.om-page .om-feature-media {
+  background: var(--color-light);
+  border-color: #dbe5ef;
+  box-shadow: none;
+}
+
+/* Dark capabilities band */
+.mxr-react-page main.om-page .om-capabilities :is(h2, h3) {
+  color: #fff !important;
+}
+
+.mxr-react-page main.om-page .om-capabilities .om-eyebrow {
+  color: #8cc8ff !important;
+}
+
+.mxr-react-page main.om-page .om-capabilities .om-section-heading>p {
+  color: #a1b5c7 !important;
+}
+
+.mxr-react-page main.om-page .om-capabilities .om-capability-card {
+  background: rgba(255, 255, 255, .06) !important;
+  border-color: rgba(255, 255, 255, .14);
+}
+
+.mxr-react-page main.om-page .om-capabilities .om-capability-card p {
+  color: #a1b5c7 !important;
+}
+
+.mxr-react-page main.om-page .om-capabilities .om-capability-arrow {
+  color: #8cc8ff;
+}
+
+/* Card text: the theme card scale (title 1.15rem / 600, body .93rem / 400 / 1.65) */
+.mxr-react-page main.om-page :is(.om-workflow-card, .om-capability-card, .om-scenario-copy) h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0;
+  margin: 0 0 10px;
+}
+
+.mxr-react-page main.om-page :is(.om-workflow-card, .om-capability-card, .om-scenario-copy) p {
+  font-size: .93rem;
+  font-weight: 400;
+  line-height: 1.65;
+  max-width: none;
+}
+
+.mxr-react-page main.om-page :is(.om-workflow-card, .om-scenario-copy) p {
+  color: #62788a !important;
+}
+
+.om-delivery-cards strong {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.om-delivery-cards span {
+  font-size: .93rem;
+  line-height: 1.65;
+}
+
+.mxr-react-page main.om-page .om-section-heading>p {
+  font-size: 1rem;
+  line-height: 1.65;
+  max-width: 420px;
+}
+
+/* Icon tiles (colours come from the --icon-* tokens in icons.css) */
+body .om-capability-icon,
+body .om-workflow-card-top>svg,
+body .om-delivery-cards>div>svg {
+  box-sizing: content-box;
+  border: 1px solid var(--icon-border);
+  border-radius: 12px;
+  background: var(--icon-bg) !important;
+  color: var(--icon-fg) !important;
+}
+
+body .om-workflow-card-top>svg,
+body .om-delivery-cards>div>svg {
+  padding: 12px;
+}
+
+.om-workflow-card-top {
+  align-items: center;
+}
+
+.om-delivery-cards>div {
+  grid-template-columns: 54px 1fr;
+}
+
+/* Beat the older explicit icon / eyebrow colours above */
+.mxr-react-page main.om-page .om-capability-icon {
+  background: var(--icon-bg) !important;
+  color: var(--icon-fg) !important;
+  border-radius: var(--card-radius, 16px);
+  border: 1px solid var(--icon-border);
+}
+
+.mxr-react-page main.om-page :is(.om-workflow-card-top, .om-delivery-cards > div)>svg {
+  color: var(--icon-fg) !important;
+}
+
+.mxr-react-page main.om-page .om-showcase .om-eyebrow {
+  color: #0b66c3 !important;
+}
+
+.mxr-react-page main.om-page .om-feature-copy h3 {
+  margin: 0 0 22px;
+}
+
+/* Delivery section: light background, no video (same treatment as the other light sections) */
+.mxr-react-page main.om-page .om-delivery {
+  background: var(--color-light) !important;
+  background-image: none !important;
+  padding: 100px 0 100px;
+}
+
+.mxr-react-page main.om-page .om-delivery .home-wave-media {
+  display: none;
+}
+
+.mxr-react-page main.om-page .om-delivery :is(h2, h3) {
+  color: var(--color-dark) !important;
+}
+
+.mxr-react-page main.om-page .om-delivery .om-eyebrow {
+  color: #0b66c3 !important;
+}
+
+.mxr-react-page main.om-page .om-delivery-content>div:first-child>p:not(.eyebrow) {
+  color: #62788a !important;
+}
+
+.mxr-react-page main.om-page .om-delivery-cards>div {
+  background: #fff;
+  border: 1px solid #dbe5ef;
+  box-shadow: var(--card-shadow, 0 10px 30px #0f3a4a0d);
+}
+
+.mxr-react-page main.om-page .om-delivery-cards strong {
+  color: var(--color-dark);
+}
+
+.mxr-react-page main.om-page .om-delivery-cards span {
+  color: #62788a;
+}
+
+.mxr-react-page main.om-page .om-outline-link {
+  color: #0b66c3;
+  border-color: #0b66c3;
+}
+
+/* One lead-paragraph style for every section on the page: the theme call-to-action paragraph (1.05rem / 400 / 1.6) */
+.mxr-react-page main.om-page .om-section-heading>p,
+.mxr-react-page main.om-page .om-delivery-content>div:first-child>p:not(.eyebrow) {
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.mxr-react-page main.om-page .om-delivery-content>div:first-child>p:not(.eyebrow) {
+  max-width: 560px;
+  margin: 0 0 35px;
+}
+
+.mxr-react-page main.om-page .om-delivery h2 {
+  margin: 0 0 25px;
+}
+
+/* Eyebrows: blue on light sections, the theme dark-background blue (#64b7ff) on dark ones.
+   (Two light sections were grey because the section paragraph colour also matched the eyebrow <p>.) */
+.mxr-react-page main.om-page :is(.om-workflow, .om-showcase, .om-scenarios, .om-delivery) p.om-eyebrow {
+  color: #0b66c3 !important;
+}
+
+.mxr-react-page main.om-page :is(.om-capabilities, .om-delivery-dark) p.om-eyebrow {
+  color: #64b7ff !important;
+}
+
+.mxr-react-page main.om-page .final-cta.home-wave-cta .eyebrow {
+  color: #64b7ff !important;
+}
+
+/* Workflow cards: same type as the home partnership cards (navy title, small grey-blue number) */
+.mxr-react-page main.om-page .om-workflow-card h3 {
+  color: var(--navy) !important;
+}
+
+.mxr-react-page main.om-page .om-workflow-card-top span {
+  color: #b0c8de;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+}

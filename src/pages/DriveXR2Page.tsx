@@ -507,7 +507,7 @@ export default function DriveXR2Page() {
           <div className="dx-section-heading">
             <p className="dx-kicker">BUILT FOR REAL-WORLD READINESS</p>
             <h2>A more connected training system.</h2>
-            <p>DriveXR 2 integrates simulation, instructor control and performance intelligence in a single, coherent environment.</p>
+            <p>DriveXR integrates simulation, instructor control and performance intelligence in a single, coherent environment.</p>
           </div>
           <div className="dx-bento">
             <figure className="dx-bento-photo">

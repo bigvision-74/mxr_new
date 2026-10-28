@@ -10,7 +10,7 @@
 
 :is(
   .pp-experience, .epc, .epd, .panorama-panel, .service-feature, .featured-products, .final-cta, .process,
-  .capability-grid, .contact-banner, .mxr-effect-section, .dx-hero, .ep2-hero, .about-hero, [data-theme="dark"]
+  .capability-grid, .om-capabilities, .contact-banner, .mxr-effect-section, .dx-hero, .ep2-hero, .about-hero, [data-theme="dark"]
 ) {
   --icon-bg: linear-gradient(145deg, #2aa0f5, #0b66c3);
   --icon-border: transparent;
