@@ -20,7 +20,7 @@ body,
   .feature-band, .benefit-strip, .outcomes, .experience-section,
   .about-capabilities, .about-direction, .purpose-alternative,
   .pp-hero, .pp-benefits, .pp-features, .pp-experience, .pp-audience, .pp-cta,
-  .service-deliver, .service-outcome, .service-steps, .service-related,
+  .service-deliver, .service-outcome, .service-steps, .service-related, .service-rnd,
   .drive-problem, .drive-evidence, .drive-deployment,
   .ix-hero, .ix-capabilities, .ix-intelligence, .ix-value,
   .ix-sales-hero, .ix-sales-benefits, .ix-sales-capabilities, .ix-sales-fit, .ix-sales-cta,
@@ -100,7 +100,7 @@ body,
 
   .mxr-react-page :is(.section, .pp-benefits, .pp-features, .pp-experience,
     .pp-audience, .service-deliver, .service-outcome, .service-steps,
-    .service-related, .ix-sales-capabilities, .ix-capabilities, .ix-intelligence,
+    .service-related, .service-rnd, .ix-sales-capabilities, .ix-capabilities, .ix-intelligence,
     .ix-value, .purpose-alternative) {
     padding-block: 6rem;
   }

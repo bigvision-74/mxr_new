@@ -17,6 +17,10 @@ import './assets/css/blog.css'
 import './assets/css/events.css'
 import './assets/css/case-studies.css'
 import './assets/css/cards.css'
+import './assets/css/xr-development.css'
+import './assets/css/platform-development.css'
+import './assets/css/ai-solutions.css'
+import './assets/css/simulator-development.css'
 import './assets/css/icons.css'
 
 // HubSpot chat widget. Loaded here, not in index.html, so it appears on every page whichever HTML file serves it.
