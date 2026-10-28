@@ -13,7 +13,7 @@ import clinicalPractice from '../assets/images/eprium/challenge-placement.webp'
 
 export default function EpriumPage() {
   return (
-    <main className={"pp ep-page"} style={{ "--product-accent": "#087f8c" } as CSSProperties}>
+    <main className={"pp ep-page"} style={{ "--product-accent": "#0b66c3" } as CSSProperties}>
       <section className="ep2-hero">
         <video className="ep2-bg" autoPlay muted loop playsInline preload="metadata" aria-hidden="true"><source src={defaultBanner} type="video/mp4" /></video>
         <div className="ep2-shade" aria-hidden="true" />

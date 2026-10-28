@@ -48,8 +48,8 @@ export default function BlogPage() {
                 </div>
                 <h3 className="blog-card-title">{blog.shorttitle.trim()}</h3>
                 <p className="blog-card-desc">{blog.shortdesc.trim()}</p>
-                <a href={`/blog/${blog.slug}`} className="btn btn-primary btn-small">
-                  Read more <ArrowRight size={14} />
+                <a href={`/blog/${blog.slug}`} className="blog-card-link">
+                  Read more →
                 </a>
               </div>
             </article>

@@ -6,7 +6,7 @@ import defaultBanner from '../assets/videos/defaultbanner.mp4'
 // Same banner as EPRium. Headline, lead and background image are placeholders until the Omnia copy and artwork arrive.
 export default function OmniaPage() {
   return (
-    <main className={"pp ep-page"} style={{ "--product-accent": "#087f8c" } as CSSProperties}>
+    <main className={"pp ep-page"} style={{ "--product-accent": "#0b66c3" } as CSSProperties}>
       <ProductHero title="Meet" accent="Omnia." lead="Omnia product description goes here." demoSubject="Omnia demonstration" secondaryHref="#omnia-overview-heading" secondaryLabel="Explore Omnia" video={defaultBanner} />
 
       {/* Coming-soon notice: replace the copy below with the Omnia content when it is ready. */}

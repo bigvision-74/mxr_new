@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react'
 import { ArrowRight } from 'lucide-react'
 import defaultBanner from '../assets/videos/defaultbanner.mp4'
+import RelatedServices from '../components/RelatedServices'
 
 export default function SimulatorDevelopmentPage() {
   return (
@@ -193,40 +194,7 @@ export default function SimulatorDevelopmentPage() {
           </article>
         </div>
       </section>
-      <section className={"section service-related"}>
-        <p className={"eyebrow"}>
-          {"CONNECTED CAPABILITIES"}
-        </p>
-        <h2>
-          {"Explore our other services."}
-        </h2>
-        <div>
-          <a href={"/xr-development"}>
-            {"XR Development"}
-            <span>
-              {"↗"}
-            </span>
-          </a>
-          <a href={"/immersive-rooms"}>
-            {"Immersive Rooms"}
-            <span>
-              {"↗"}
-            </span>
-          </a>
-          <a href={"/ai-solutions"}>
-            {"AI Solutions"}
-            <span>
-              {"↗"}
-            </span>
-          </a>
-          <a href={"/platform-development"}>
-            {"Platform Development"}
-            <span>
-              {"↗"}
-            </span>
-          </a>
-        </div>
-      </section>
+      <RelatedServices />
       <section className={"final-cta home-wave-section home-wave-cta"}>
         <div className={"home-wave-media"} aria-hidden={"true"}>
           <video autoPlay={true} muted={true} loop={true} playsInline={true} preload={"metadata"}>

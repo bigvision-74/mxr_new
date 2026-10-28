@@ -16,7 +16,7 @@
 }
 
 .cs-sidebyside-col h2 {
-    font-size: 1.15rem !important;
+    font-size: 1.4rem !important;
     font-weight: 700;
     color: #10263d;
     letter-spacing: -.01em;
@@ -26,9 +26,9 @@
 }
 
 .cs-sidebyside-col p {
-    font-size: .97rem;
-    color: #4a6278;
-    line-height: 1.72;
+    font-size: 1.02rem;
+    color: #2c3e55;
+    line-height: 1.82;
     margin-bottom: 12px;
 }
 
@@ -42,9 +42,9 @@
 }
 
 .cs-sidebyside-col ul li {
-    font-size: .9rem !important;
+    font-size: .97rem !important;
     color: #2c3e55 !important;
-    line-height: 1.65 !important;
+    line-height: 1.72 !important;
     padding: 10px 14px !important;
     background: #fff !important;
     border-radius: 8px !important;
@@ -76,7 +76,6 @@
     border: 1px solid #dbe8f5;
     border-radius: 14px;
     padding: 32px 28px 28px;
-    text-align: center;
     background: #fff;
     transition: box-shadow .2s, border-color .2s, transform .2s;
 }
@@ -121,7 +120,7 @@
 }
 
 .cs-feature-title {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     font-weight: 700;
     color: #147ee1;
     margin: 0 0 10px;
@@ -129,9 +128,9 @@
 }
 
 .cs-feature-desc {
-    font-size: .92rem;
+    font-size: .97rem;
     color: #4a6278;
-    line-height: 1.68;
+    line-height: 1.72;
     margin: 0;
 }
 
@@ -185,9 +184,9 @@
 
 .cs-meta-label {
     display: block;
-    font-size: .72rem;
-    font-weight: 700;
-    letter-spacing: .08em;
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: .14em;
     text-transform: uppercase;
     color: #7a96b0;
     margin-bottom: 3px;
@@ -195,7 +194,7 @@
 
 .cs-meta-value {
     display: block;
-    font-size: .95rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #10263d;
     line-height: 1.4;
@@ -213,7 +212,6 @@
 .cs-hero-image {
     border-radius: 18px;
     overflow: hidden;
-    background: #f0f6fb;
     border: 1px solid #dbe8f5;
     display: flex;
     align-items: center;
@@ -264,7 +262,7 @@
 
 .cs-blockquote cite {
     display: block;
-    font-size: .85rem;
+    font-size: .95rem;
     font-weight: 700;
     color: #147ee1;
     font-style: normal;
@@ -362,7 +360,7 @@
     margin: 24px 0;
     border-radius: 14px;
     border: 2px dashed #d4e3f0;
-    background: #f4f8fd;
+    background: var(--color-light);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -370,7 +368,7 @@
 }
 
 .cs-video-placeholder span {
-    font-size: .9rem;
+    font-size: .95rem;
     font-weight: 600;
     color: #7a96b0;
 }
@@ -395,7 +393,160 @@
     display: block !important;
 }
 
-.case-challenge .section-heading > p {
+.case-challenge .section-heading>p {
     margin-top: 16px !important;
     max-width: 780px;
+}
+
+/* ── Case study detail: full-width bands in the theme colours ─────────────────
+   Dark = --color-dark, light = --color-light, plus white; accents use --color-primary. */
+.cs-page .blog-detail-body-wrap {
+    background: #fff;
+    padding-bottom: 56px;
+}
+
+.cs-band {
+    padding: 72px var(--page-gutter);
+}
+
+.cs-band--white {
+    background: #fff;
+}
+
+.cs-band--light {
+    background: var(--color-light);
+}
+
+.cs-band--dark {
+    background: var(--color-dark);
+}
+
+/* The article card styling is dropped: the band itself is the container, full page width */
+.cs-page .cs-band-inner.blog-detail-content {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.cs-band-inner>.cs-section-title:first-child {
+    margin-top: 0;
+}
+
+/* Theme colours instead of the older blue/navy values */
+.cs-page .blog-detail-content h2,
+.cs-page .cs-sidebyside-col h2,
+.cs-page .cs-meta-value {
+    color: var(--color-dark);
+}
+
+.cs-page .blog-detail-content h2 {
+    border-bottom-color: #dbe8f5 !important;
+}
+
+.cs-page .cs-feature-title,
+.cs-page .cs-role-card span,
+.cs-page .cs-blockquote cite,
+.cs-page .cs-meta-item,
+.cs-page .blog-detail-content a {
+    color: var(--color-primary);
+}
+
+.cs-page .cs-sidebyside-col ul li,
+.cs-page .blog-detail-content ul li {
+    border-left-color: var(--color-primary) !important;
+}
+
+.cs-page .cs-blockquote {
+    border-left-color: var(--color-primary);
+}
+
+.cs-page .cs-blockquote::before {
+    color: var(--color-primary);
+}
+
+/* White cards on the light band, light cards on white */
+.cs-band--light .blog-detail-content ul li {
+    background: #fff;
+}
+
+.cs-band--white .blog-detail-content ul li {
+    background: var(--color-light);
+}
+
+/* Dark band: light text, translucent cards */
+.cs-band--dark .blog-detail-content h2 {
+    color: #fff;
+    border-bottom-color: rgba(255, 255, 255, .16) !important;
+}
+
+.cs-band--dark .blog-detail-content p {
+    color: #c9d6e4;
+}
+
+.cs-band--dark .blog-detail-content ul li {
+    background: rgba(255, 255, 255, .06);
+    color: #e3ecf5;
+}
+
+.cs-band--dark .blog-detail-content ul li b {
+    color: #fff;
+}
+
+.cs-band--dark .blog-detail-content a {
+    color: var(--blue-dark);
+}
+
+.cs-band--dark .cs-blockquote {
+    background: rgba(255, 255, 255, .06);
+    border-left-color: var(--hero-accent);
+}
+
+.cs-band--dark .cs-blockquote::before {
+    color: var(--hero-accent);
+}
+
+.cs-band--dark .cs-blockquote p {
+    color: #fff !important;
+}
+
+.cs-band--dark .cs-blockquote cite {
+    color: var(--blue-dark);
+}
+
+@media (max-width: 700px) {
+    .cs-band {
+        padding: 48px var(--page-gutter);
+    }
+}
+
+/* Side-by-side columns: white cards on the light band */
+.cs-band--light .cs-sidebyside-col {
+    background: white;
+}
+
+.cs-band--light .cs-sidebyside-col ul li {
+    background: var(--color-light) !important;
+}
+/* Section headings on the case study page use the same size, weight and spacing as every other page's section headings (banner.css) */
+.cs-page .cs-band-inner h2,
+.cs-page .cs-sidebyside-col h2 {
+    font-family: var(--font-family) !important;
+    font-size: clamp(2.5rem, 4vw, 4.2rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.08 !important;
+    letter-spacing: -.045em !important;
+    margin: 0 0 28px !important;
+    padding-bottom: 0 !important;
+    border-bottom: 0 !important;
+}
+
+@media (max-width: 700px) {
+    .cs-page .cs-band-inner h2,
+    .cs-page .cs-sidebyside-col h2 {
+        font-size: clamp(1.9rem, 8vw, 2.5rem) !important;
+    }
 }

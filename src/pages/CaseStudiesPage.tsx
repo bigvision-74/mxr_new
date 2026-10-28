@@ -48,7 +48,7 @@ export default function CaseStudiesPage() {
                                 </div>
                                 <h3 className="blog-card-title">{cs.shorttitle}</h3>
                                 <p className="blog-card-desc">{cs.shortdesc}</p>
-                                <a href={`/case-studies/${cs.slug}`} className="btn btn-primary btn-small">
+                                <a href={`/case-studies/${cs.slug}`} className="btn btn-primary">
                                     Read more <ArrowRight size={14} />
                                 </a>
                             </div>

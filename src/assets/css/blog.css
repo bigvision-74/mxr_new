@@ -36,28 +36,27 @@
 
 /* ── Blog Grid Section ──────────────────────────────────────────── */
 .blog-grid-section {
-  padding: 72px var(--page-gutter) 100px;
-  background: #f4f8fd;
+  padding: 56px var(--page-gutter) 80px;
+  background: var(--color-light);
 }
 
 .blog-grid-header {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  margin-bottom: 44px;
+  margin-bottom: 32px;
   gap: 16px;
   flex-wrap: wrap;
 }
 
 .blog-grid-header h2 {
-  font-size: 1.6rem;
-  font-weight: 700;
+  /* size, weight, font and spacing come from the shared section-heading rule in banner.css (same as the home page) */
   color: #10263d;
-  letter-spacing: -.02em;
+  margin: 0;
 }
 
 .blog-count {
-  font-size: .82rem;
+  font-size: .95rem;
   color: #7a96b0;
   font-weight: 500;
 }
@@ -79,19 +78,18 @@
 /* ── Blog Card ───────────────────────────────────────────────────── */
 .blog-card {
   background: #fff;
-  border-radius: 18px;
+  border-radius: 2px;
   overflow: hidden;
-  box-shadow: 0 2px 14px rgba(16, 38, 61, .07), 0 1px 3px rgba(16, 38, 61, .04);
   display: flex;
   flex-direction: column;
-  border: 1px solid rgba(212, 227, 240, .6);
+  border: 1px solid #dce6ef;
   transition: transform .22s ease, box-shadow .22s ease;
 }
 
 .blog-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 16px 44px rgba(11, 95, 208, .14), 0 2px 8px rgba(16, 38, 61, .07);
-  border-color: rgba(22, 132, 232, .3);
+  box-shadow: 0 20px 46px rgba(20, 43, 63, .13);
+  border-color: #b6cfe8;
 }
 
 .blog-card-img {
@@ -127,19 +125,19 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: .72rem;
-  font-weight: 700;
-  color: #147ee1;
-  letter-spacing: .06em;
+  font-size: .76rem;
+  font-weight: 800;
+  color: var(--blue);
+  letter-spacing: .18em;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
 .blog-card-title {
-  font-size: 1.02rem;
+  font-size: 1.22rem;
   font-weight: 700;
-  color: #10263d;
-  line-height: 1.42;
+  color: var(--navy);
+  line-height: 1.2;
   margin-bottom: 10px;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -148,8 +146,8 @@
 }
 
 .blog-card-desc {
-  font-size: .875rem;
-  color: #4a6278;
+  font-size: .9rem;
+  color: #5e7587;
   line-height: 1.65;
   flex: 1;
   display: -webkit-box;
@@ -159,11 +157,26 @@
   margin-bottom: 22px;
 }
 
-/* The read-more pill uses the global .btn .btn-primary from buttons.css,
-   but scoped inside the card so it sits at the bottom */
+/* The read-more pill uses the global .btn .btn-primary from buttons.css (same size, weight and colour as every
+   other button); it hugs the left edge of the card instead of stretching across it. */
 .blog-card-body .btn {
   align-self: flex-start;
+  width: auto;
   margin-top: auto;
+}
+
+.blog-card-link {
+  align-self: flex-start;
+  margin-top: auto;
+  color: var(--blue);
+  font-size: .84rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color .15s;
+}
+
+.blog-card-link:hover {
+  color: var(--color-primary-hover);
 }
 
 /* ── Blog Detail Page ───────────────────────────────────────────── */
@@ -192,34 +205,18 @@
 
 /* ── Blog Detail Body ───────────────────────────────────────────── */
 .blog-detail-body-wrap {
-  background: #f4f8fd;
+  background: var(--color-light);
   padding: 56px var(--page-gutter) 96px;
 }
 
 .blog-detail-inner {
-  max-width: 1400px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
 }
 
+/* Back link is the global theme button (.btn .btn-primary, buttons.css); only its spacing is set here. */
 .blog-detail-back {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: .82rem;
-  font-weight: 600;
-  color: #147ee1;
-  text-decoration: none;
   margin-bottom: 32px;
-  padding: 9px 18px;
-  background: #fff;
-  border-radius: 999px;
-  border: 1px solid #d4e3f0;
-  transition: background .15s, border-color .15s;
-}
-
-.blog-detail-back:hover {
-  background: #eef5fd;
-  border-color: #147ee1;
 }
 
 .blog-detail-content {
@@ -263,7 +260,7 @@
   color: #2c3e55;
   line-height: 1.72;
   padding: 12px 18px;
-  background: #f4f8fd;
+  background: var(--color-light);
   border-radius: 10px;
   border-left: 3px solid #147ee1;
 }
@@ -312,3 +309,33 @@
   color: #4a6278;
   font-size: 1rem;
 }
+
+/* Banner copy needs more room than the default 760px so the title wraps as "Ideas, research & / perspectives" */
+.blog-page .contact-banner-copy,
+.events-page .contact-banner-copy {
+  max-width: min(1100px, 100%);
+}
+.blog-page .contact-banner-copy .banner-title,
+.events-page .contact-banner-copy .banner-title {
+  margin-top: 28px;
+}
+
+/* ── Article banner (blog + case study): taller, like the service-page heroes, with the shared banner text colours ── */
+.mxr-react-page .blog-detail-page .contact-banner {
+  min-height: clamp(600px, 78vh, 800px);
+}
+
+.blog-detail-page .contact-banner .eyebrow {
+  color: var(--hero-accent);
+  border-left-color: var(--hero-accent);
+}
+
+.blog-detail-page .contact-banner .banner-lead {
+  max-width: 48rem;
+  color: #e3ecf5;
+}
+
+/* Article body uses the theme colours (same as the case study page) */
+.blog-detail-page .blog-detail-content h2 { color: var(--color-dark); }
+.blog-detail-page .blog-detail-content a { color: var(--color-primary); }
+.blog-detail-page .blog-detail-content ul li { border-left-color: var(--color-primary); }

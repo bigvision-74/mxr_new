@@ -5,10 +5,45 @@
 .extra-product-preview{display:block;text-align:center;color:#b0c4d7;font-size:.55rem;letter-spacing:.12em;margin-top:1rem}
 .featured-products .extra-product-slide .modal-copy h2{font-size:clamp(2.8rem,4.5vw,5rem);overflow-wrap:anywhere}
 .featured-products .product-slider-controls .product-dots{flex-wrap:wrap;justify-content:center;gap:.5rem}
-.featured-products .product-slider-controls .product-dots>button.product-name-tab{width:auto;height:auto;min-height:2.5rem;border-radius:0;padding:.6rem .85rem;background:transparent;border:1px solid #8da9c044;color:#b5c8d8;font-size:.7rem;line-height:1.2}
-.featured-products .product-slider-controls .product-dots>button.product-name-tab.active{color:#fff;background:#0b66c3;border-color:#1684e8}.product-name-tab:focus-visible{outline:2px solid #8ed7ff;outline-offset:3px}
-@media(max-width:820px){.featured-products .extra-product-art{min-height:19rem}.extra-product-art-photo img{height:22rem}.extra-product-art-screen img{transform:none}.featured-products .product-slider-controls{gap:1rem}.featured-products .product-slider-controls .product-dots>button.product-name-tab{font-size:.65rem;padding:.6rem}}
+.featured-products .product-slider-controls .product-dots>button.product-name-tab{width:auto;height:auto;min-height:2.5rem;border-radius:999px;padding:.6rem 1.1rem;background:transparent;border:1px solid #8da9c044;color:#b5c8d8;font-family:var(--font-family);font-size:.875rem;font-weight:600;letter-spacing:0;text-transform:none;line-height:1.25}
+.featured-products .product-slider-controls .product-dots>button.product-name-tab.active{color:#fff;background:var(--color-primary);border-color:#1684e8}.product-name-tab:focus-visible{outline:2px solid #8ed7ff;outline-offset:3px}
+@media(max-width:820px){.featured-products .extra-product-art{min-height:19rem}.extra-product-art-photo img{height:22rem}.extra-product-art-screen img{transform:none}.featured-products .product-slider-controls{gap:1rem}.featured-products .product-slider-controls .product-dots>button.product-name-tab{font-size:.8rem;padding:.6rem .9rem}}
 @media(prefers-reduced-motion:reduce){.extra-product-art-screen img{transform:none}}
 
 .featured-products .px-badge svg{width:1.4rem;height:1.4rem;flex-shrink:0}
 .featured-products .extra-product-art-simulator img{max-height:34rem;object-fit:contain;filter:drop-shadow(0 20px 30px #0004)}
+
+/* Featured product controls: round arrows and no blue (active tab is white, arrows brighten on hover) */
+.featured-products .product-arrow {
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  line-height: 1;
+}
+
+.featured-products .product-arrow:hover {
+  background: rgba(255, 255, 255, .18);
+  border-color: rgba(255, 255, 255, .6);
+}
+
+.featured-products .product-slider-controls .product-dots>button.product-name-tab.active {
+  background: #fff;
+  border-color: #fff;
+  color: var(--color-dark);
+}
+
+.featured-products .product-slider-controls .product-dots>button.product-name-tab:hover:not(.active) {
+  border-color: rgba(255, 255, 255, .6);
+  color: #fff;
+}
+
+/* Featured product titles: the whole name is white (MODAL3D, EPRium, DriveXR ...) */
+.featured-products .modal-copy h2,
+.featured-products .modal-copy h2 span { color: #fff !important; }
+
+/* Product name tabs: white text on every tab (the selected one is a white pill with dark text) */
+.featured-products .product-slider-controls .product-dots>button.product-name-tab:not(.active) {
+  color: #fff;
+  border-color: rgba(255, 255, 255, .4);
+}

@@ -8,6 +8,8 @@
   --font-family: 'Inter Variable', Inter, system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
   --color-dark: #0d1826;
   --color-light: #f8fafc;
+  --color-primary: #0b66c3;
+  --color-primary-hover: #147ee1;
   --navy: var(--color-dark);
   --pale: var(--color-light);
   /* Blue accent for text on dark backgrounds (eyebrow labels, highlights). Change it here and it updates everywhere. */

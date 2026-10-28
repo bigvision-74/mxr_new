@@ -251,7 +251,7 @@
 .mxr-purpose-outcomes span:before {
   content: '';
   display: inline-block;
-  background: #147ee1;
+  background: var(--color-primary-hover);
   width: 4px;
   height: 4px;
   border-radius: 50%;
@@ -544,7 +544,7 @@
   position: relative !important;
   isolation: isolate;
   overflow: hidden;
-  background: #102638 !important
+  background: var(--color-dark) !important
 }
 
 .home-wave-media {
@@ -904,7 +904,7 @@
 }
 
 .pp-record-body aside {
-  background: #087f8c;
+  background: var(--color-primary);
   color: white;
   display: flex;
   flex-direction: column;
@@ -946,7 +946,7 @@
   border: 1px solid #d6e9e9;
   padding: 12px 6px;
   text-align: center;
-  color: #087f8c;
+  color: #0b66c3;
   font-size: 1.1875rem;
   border-radius: 5px
 }
@@ -1899,7 +1899,7 @@
   left: 0;
   min-width: 250px;
   padding: 10px;
-  background: #10263df5;
+  background: var(--color-dark);
   border: 1px solid #ffffff30;
   border-radius: 15px;
   box-shadow: 0 15px 35px #0004;
@@ -2716,7 +2716,7 @@
   width: 10px;
   height: 10px;
   border-radius: 3px;
-  background: #147ee1;
+  background: var(--color-primary-hover);
   box-shadow: 4px -4px #a9d9ff
 }
 
@@ -2854,7 +2854,7 @@
 }
 
 .ix-sales-benefits {
-  background: #102c46;
+  background: var(--color-dark);
   color: #fff;
   border: 0;
   padding-top: 22px;
@@ -4179,5 +4179,99 @@ section.why .pillars p {
     position: relative;
     z-index: 1;
     grid-column: 2
+  }
+}
+
+/* Connected capabilities: numbered cards with a circular arrow that fills on hover (matches the rounded, soft-shadow product cards) */
+.service-related>div {
+  counter-reset: svc;
+  gap: 18px
+}
+
+.service-related a {
+  counter-increment: svc;
+  position: relative;
+  overflow: hidden;
+  gap: 18px;
+  padding: 30px 28px 30px 30px;
+  border-radius: 20px;
+  background: linear-gradient(120deg, #fff 40%, #eef5fc);
+  border: 1px solid #dbe7f3;
+  box-shadow: 0 10px 30px #0f3a4a0d;
+  color: #10263d;
+  font-size: 1.1rem;
+  letter-spacing: -.01em;
+  transition: transform .25s, box-shadow .25s, border-color .25s
+}
+
+.service-related a::before {
+  content: counter(svc, decimal-leading-zero);
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid #0B66C3;
+  color: #0B66C3;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .04em
+}
+
+.service-related a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 22%;
+  bottom: 22%;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
+  background: var(--color-primary);
+  transform: scaleY(0);
+  transition: transform .25s
+}
+
+.service-related a>span {
+  order: 3;
+  margin-left: auto;
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #e8f1fb;
+  color: #0B66C3;
+  font-size: 1.1rem;
+  transition: background .25s, color .25s, transform .25s
+}
+
+.service-related a:hover {
+  background: linear-gradient(120deg, #fff 30%, #e3eefb);
+  border-color: #0B66C3;
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px #0B66C31f
+}
+
+.service-related a:hover::after {
+  transform: scaleY(1)
+}
+
+.service-related a:hover>span {
+  background: var(--color-primary);
+  color: #fff;
+  transform: rotate(45deg)
+}
+
+.service-related--tint a {
+  background: linear-gradient(120deg, #fff 40%, #eef5fc)
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .service-related a,
+  .service-related a>span,
+  .service-related a::after {
+    transition: none
   }
 }

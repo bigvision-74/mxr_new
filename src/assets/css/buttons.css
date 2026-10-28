@@ -34,13 +34,13 @@ body :is(.btn, .dx-button, .ep-button) {
 
 /* Main action: blue */
 body :is(.btn-primary, .dx-button, .ep-button) {
-  background: #0b66c3 !important;
+  background: var(--color-primary) !important;
   color: #fff !important;
   box-shadow: 0 0 0 1px rgba(22, 132, 232, .6) !important;
 }
 
 body :is(.btn-primary, .dx-button, .ep-button):hover {
-  background: #147ee1 !important;
+  background: var(--color-primary-hover) !important;
   color: #fff !important;
   box-shadow: 0 0 0 1px rgba(22, 132, 232, .6) !important;
 }
@@ -53,7 +53,7 @@ body :is(.btn-secondary, .btn-ghost, .btn-white, .dx-button[style]) {
 }
 
 body :is(.btn-secondary, .btn-ghost, .btn-white, .dx-button[style]):hover {
-  background: #111827 !important;
+  background: var(--color-dark) !important;
   color: #fff !important;
   box-shadow: 0 0 0 1px rgba(255, 255, 255, .25) !important;
 }

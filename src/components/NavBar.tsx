@@ -119,7 +119,7 @@ export function NavBar({ overlay = false }: NavBarProps) {
           })}
           <a
             href="/contact"
-            className="mxr-hero-contact group ml-1 flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-[#10263D] transition-all duration-300 hover:bg-[#EEF5FB]"
+            className="mxr-hero-contact group ml-1 flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-[#0d1826] transition-all duration-300 hover:bg-[#EEF5FB]"
           >
             Contact us
             <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -198,7 +198,7 @@ export function NavBar({ overlay = false }: NavBarProps) {
             <a
               href="/contact"
               onClick={() => setMenuOpen(false)}
-              className="mxr-hero-contact mt-2 flex items-center justify-between rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-[#10263D]"
+              className="mxr-hero-contact mt-2 flex items-center justify-between rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-[#0d1826]"
             >
               Contact us <ArrowRight className="h-4 w-4" />
             </a>

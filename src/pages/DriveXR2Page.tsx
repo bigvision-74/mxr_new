@@ -1,4 +1,3 @@
-import podTransparent from '../assets/images/drivexr/pod-transparent.webp'
 import { ArrowRight } from 'lucide-react'
 import { useEffect, useRef, useState, type ReactElement, type CSSProperties } from 'react'
 import brochureResponse from '../assets/images/drivexr/brochure-response.webp'
@@ -8,79 +7,9 @@ import brochureSimulator from '../assets/images/drivexr/brochure-simulator.webp'
 import dxVehicles from '../assets/videos/DXR2_vehicles.mp4'
 import dxAmbulanceData from '../assets/images/drivexr/holo-training.webp'
 import crewPanorama from '../assets/images/drivexr/crew-panorama.webp'
-import simulatorRig from '../assets/images/drivexr/rig-side.webp'
 import ambulanceData from '../assets/images/drivexr/analytics-ambulance.webp'
 import stageSetup from '../assets/images/drivexr/stage-setup.webp'
 import stageDrive from '../assets/images/drivexr/stage-drive.webp'
-
-const ALL_TAGS = ['Instructor', 'Blue-Light', 'High-Fidelity', 'UK', 'Dynamic', 'Scenario', 'Performance', 'Multi-Screen']
-
-const SPOTS = [
-  {
-    id: 1, x: 72, y: 60,
-    title: 'Instructor Control Station',
-    desc: 'Control scenarios, inject hazards and monitor performance live.',
-    benefit: 'Structured training and assessment.',
-    activeTag: 'Instructor',
-    tags: ALL_TAGS,
-  },
-  {
-    id: 2, x: 38, y: 31,
-    title: 'Blue-Light Priority Simulation',
-    desc: 'Train legal and safe emergency response under lights and sirens.',
-    benefit: 'Improves decision making under pressure.',
-    activeTag: 'Blue-Light',
-    tags: ALL_TAGS,
-  },
-  {
-    id: 3, x: 57.5, y: 72,
-    title: 'High-Fidelity Vehicle Dynamics',
-    desc: 'Realistic steering, braking, acceleration and road handling.',
-    benefit: 'Builds muscle memory and realistic vehicle control.',
-    activeTag: 'High-Fidelity',
-    tags: ALL_TAGS,
-  },
-  {
-    id: 4, x: 30, y: 17,
-    title: 'UK Emergency Road Environments',
-    desc: 'Urban, rural, motorway and dual carriageway training environments.',
-    benefit: 'Familiar operational training conditions.',
-    activeTag: 'UK',
-    tags: ALL_TAGS,
-  },
-  {
-    id: 5, x: 60, y: 14,
-    title: 'Dynamic AI Traffic System',
-    desc: 'Live traffic behaviours, hazards and unpredictable road users.',
-    benefit: 'Develops situational awareness.',
-    activeTag: 'Dynamic',
-    tags: ALL_TAGS,
-  },
-  {
-    id: 6, x: 66.5, y: 29,
-    title: 'Scenario Playback & Debrief',
-    desc: 'Replay sessions for performance review.',
-    benefit: 'Stronger reflection and learning retention.',
-    activeTag: 'Scenario',
-    tags: ALL_TAGS,
-  },
-  {
-    id: 7, x: 86.5, y: 45,
-    title: 'Performance Analytics Dashboard',
-    desc: 'Track behaviour, reactions and compliance metrics.',
-    benefit: 'Objective, measurable improvement.',
-    activeTag: 'Performance',
-    tags: ALL_TAGS,
-  },
-  {
-    id: 8, x: 18.5, y: 23,
-    title: 'Multi-Screen / VR Compatible',
-    desc: 'Cab-based or fully immersive VR deployment.',
-    benefit: 'Flexible training delivery.',
-    activeTag: 'Multi-Screen',
-    tags: ALL_TAGS,
-  },
-]
 
 type LogItem = { t: string; msg: string; status: string; cls: 's-info' | 's-ok' | 's-warn' }
 
@@ -373,19 +302,15 @@ function AnalyticsSection() {
   )
 }
 
+// pod artwork is not in the repo yet; add the file at this public path to show it
+const podTransparent = '/assets/images/drivexr/pod-transparent.webp'
 export default function DriveXR2Page() {
-  const [activeSpot, setActiveSpot] = useState(1)
-
-  const spot = SPOTS.find(s => s.id === activeSpot) ?? SPOTS[0]
-  const total = SPOTS.length
-  const goPrev = () => setActiveSpot(s => s > 1 ? s - 1 : total)
-  const goNext = () => setActiveSpot(s => s < total ? s + 1 : 1)
 
   return (
     <main className="dx-page dx2">
       <section className="dx-hero">
         <div className="dx-ring">
-          <img src={podTransparent} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+          <img src={podTransparent} alt="" onError={(e) => { e.currentTarget.style.visibility = 'hidden' }} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
         </div>
         <div className="dx-hero-copy">
 
@@ -396,12 +321,6 @@ export default function DriveXR2Page() {
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 30 }}>
             <a className="dx-button" href="mailto:hello@mxr.ai?subject=DriveXR%202%20demonstration">
               Book a live demonstration{' '}
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M4 12h16m-6-6 6 6-6 6" />
-              </svg>
-            </a>
-            <a className="dx-button" href="#capabilities" style={{ background: 'transparent', border: '1.5px solid rgba(255,255,255,0.6)', color: '#fff' }}>
-              Explore the simulator{' '}
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M4 12h16m-6-6 6 6-6 6" />
               </svg>
@@ -533,69 +452,7 @@ export default function DriveXR2Page() {
 
       </section>
 
-      {/* ── Simulator Spotlight: interactive hotspot ── */}
-      <section className="dx-spotlight" id="capabilities">
-        <div className="dx-spotlight-head dx-wrap">
-          <div>
-            <p className="dx-kicker">
-              {' '}KEY FEATURES
-            </p>
-            <h2>Built for real-world readiness.</h2>
-          </div>
-          <p>Tap the numbered points on the simulator to explore each capability.</p>
-        </div>
-        <div className="dx-spotlight-layout dx-wrap">
-          {/* Image with hotspot pins */}
-          <div className="dx-spotlight-imgwrap">
-            <img src={simulatorRig} alt="DriveXR 2 simulator cab with numbered capability hotspots" loading="lazy" />
-            {SPOTS.map(s => (
-              <button
-                key={s.id}
-                className={`dx-spot-pin${activeSpot === s.id ? ' active' : ''}`}
-                style={{ left: `${s.x}%`, top: `${s.y}%` }}
-                onClick={() => setActiveSpot(s.id)}
-                aria-label={`Feature ${s.id}: ${s.title}`}
-                aria-pressed={activeSpot === s.id}
-              >
-                {s.id}
-              </button>
-            ))}
-          </div>
-          {/* Detail panel */}
-          <div className="dx-spotlight-panel">
-            <div className="dx-spot-header">
-              <span className="dx-spot-counter">
-                {String(activeSpot).padStart(2, '0')} / {String(total).padStart(2, '0')}
-              </span>
-              <div className="dx-spot-nav">
-                <button onClick={goPrev} aria-label="Previous feature">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M15 18l-6-6 6-6" />
-                  </svg>
-                </button>
-                <button onClick={goNext} aria-label="Next feature">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M9 18l6-6-6-6" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <h3 className="dx-spot-title">{spot.title}</h3>
-            <p className="dx-spot-desc">{spot.desc}</p>
-            <div className="dx-spot-benefit">
-              <span>BENEFIT</span>
-              <strong>{spot.benefit}</strong>
-            </div>
-            {spot.tags.length > 0 && (
-              <div className="dx-spot-tags">
-                {spot.tags.map(t => (
-                  <span key={t} className={t === spot.activeTag ? 'active' : ''}>{t}</span>
-                ))}
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
+      <AnalyticsSection />
 
       <section className="dx-instructor">
         <div className="dx-instructor-grid dx-wrap">
@@ -645,8 +502,6 @@ export default function DriveXR2Page() {
           </div>
         </div>
       </section>
-
-      <AnalyticsSection />
 
       <section className="dx-capabilities">
         <div className="dx-wrap">

@@ -344,7 +344,7 @@ a.contact-card:hover .contact-card-arrow {
     font-weight: 400;
     color: #10263d;
     padding: 12px 16px;
-    background: #f4f8fd;
+    background: var(--color-light);
     border: 1.5px solid #d4e3f0;
     border-radius: 10px;
     outline: none;
@@ -549,7 +549,7 @@ a.contact-card:hover .contact-card-arrow {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: #147ee1;
+    background: var(--color-primary-hover);
     box-shadow: 0 0 0 4px rgba(22, 132, 232, .3)
 }
 
@@ -870,7 +870,7 @@ a.contact-card:hover .contact-card-arrow {
 }
 
 .ep2-float>span {
-    background: #0b66c3
+    background: var(--color-primary)
 }
 
 .ep2-float b {
