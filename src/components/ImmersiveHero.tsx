@@ -7,7 +7,8 @@ import omniaLogo from '../assets/images/omnia.svg'
 import insightLogo from '../assets/images/insightxr.svg'
 import modalLogo from '../assets/images/modal3d.svg'
 // import bannerVideo from '../assets/videos/banner/HV9-MD_grok_take002.mp4'
-import bannerVideo from '../assets/videos/banner/HV9_showcase_cut_v004_A_1920.mp4'
+// TODO: replace with ../assets/videos/banner/HV9_showcase_cut_v004_A_1920.mp4 once added
+import bannerVideo from '../assets/videos/defaultbanner.mp4'
 
 type ShinyTextProps = {
   children: ReactNode
