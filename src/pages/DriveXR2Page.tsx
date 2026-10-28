@@ -9,6 +9,7 @@ import crewPanorama from '../assets/images/drivexr/crew-panorama.webp'
 import ambulanceData from '../assets/images/drivexr/analytics-ambulance.webp'
 import stageSetup from '../assets/images/drivexr/stage-setup.webp'
 import stageDrive from '../assets/images/drivexr/stage-drive.webp'
+import dxrHeroVideo from '../assets/images/drivexr/DXR_hero.mp4'
 
 type LogItem = { t: string; msg: string; status: string; cls: 's-info' | 's-ok' | 's-warn' }
 
@@ -301,16 +302,23 @@ function AnalyticsSection() {
   )
 }
 
-// pod artwork is not in the repo yet; add the file at this public path to show it
-const podTransparent = '/assets/images/drivexr/pod-transparent.webp'
 export default function DriveXR2Page() {
 
   return (
     <main className="dx-page dx2">
       <section className="dx-hero">
-        <div className="dx-ring">
-          <img src={podTransparent} alt="" onError={(e) => { e.currentTarget.style.visibility = 'hidden' }} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-        </div>
+        <video
+          className="dx-hero-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
+        >
+          <source src={dxrHeroVideo} type="video/mp4" />
+        </video>
+        <div className="dx-hero-overlay" aria-hidden="true" />
         <div className="dx-hero-copy">
 
           <div className="dx-title">
