@@ -8,7 +8,7 @@ import { DroneExperience } from '../components/DroneExperience'
 export default function Modal3DPage() {
   return (
     <main className={"pp modal3d-page"} style={{ "--product-accent": "#0b66c3" } as CSSProperties}>
-      <ProductHero title="Complex assets." accent="Clear understanding." lead="Explore ordnance in interactive 3D. Connect component views, technical information and AR in one organised library." demoSubject="MODAL3D demonstration" secondaryHref="#product-benefits" secondaryLabel="Explore MODAL3D" image={environment} visual={<ModalAssetBanner />} />
+      <ProductHero title="Understand every asset." accent="Prepare for every challenge." lead="Explore ordnance in interactive 3D. Connect component views, technical information and AR in one organised library." demoSubject="MODAL3D demonstration" secondaryHref="#product-benefits" secondaryLabel="Explore MODAL3D" image={environment} visual={<ModalAssetBanner />} />
       <section className={"pp-benefits"} id={"product-benefits"}>
         <div className={"pp-heading"}>
           <div>

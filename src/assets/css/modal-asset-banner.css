@@ -25,3 +25,13 @@
 
 /* Give the ordnance reference group greater presence alongside the drone. */
 .modal-asset-banner{grid-template-columns:46% 48%;grid-template-rows:50% 43%;gap:7% 6%}.modal-banner-ammo img{width:122%;max-width:none;height:calc(100% - 1.2rem);margin-left:-11%;object-fit:contain}.modal3d-page .ep2-hero>.ep2-bg{opacity:.9;object-position:center 65%}.modal3d-page .ep2-shade{background:linear-gradient(90deg,rgba(5,13,22,.94),rgba(5,13,22,.82) 34%,rgba(5,13,22,.16) 78%),linear-gradient(0deg,#07111d99,transparent 60%)}@media(max-width:600px){.modal-banner-ammo img{width:114%;margin-left:-7%}.modal-asset-banner{height:29rem}}
+
+/* Two-asset composition: a smaller airborne drone above a grounded tank. */
+.modal-asset-banner.modal-two-assets{display:block;height:clamp(32rem,40vw,42rem);background:none}
+.modal-two-assets>div.modal-banner-drone{position:absolute;width:48%;height:35%;top:1%;left:39%;animation:modal-drone-hover 9s ease-in-out infinite}
+.modal-two-assets>div.modal-banner-tank{position:absolute;width:100%;height:61%;bottom:2%;right:0;animation:none}
+.modal-two-assets .modal-banner-tank img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 22px 15px #0006)}
+.modal-two-assets .modal-banner-drone img{width:100%;height:100%;object-fit:contain}
+@media(max-width:1000px){.modal-asset-banner.modal-two-assets{height:36rem;max-width:52rem}}
+@media(max-width:600px){.modal-asset-banner.modal-two-assets{height:25rem}.modal-two-assets>div.modal-banner-drone{width:48%;left:40%;top:0}.modal-two-assets>div.modal-banner-tank{height:63%;bottom:1%}}
+@media(prefers-reduced-motion:reduce){.modal-two-assets>div.modal-banner-drone{animation:none}}

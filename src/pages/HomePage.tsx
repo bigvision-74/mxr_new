@@ -1,3 +1,4 @@
+import epriumDebriefImage from '../assets/images/eprium/eprium-devices.png'
 ﻿import type { CSSProperties } from 'react'
 import { ArrowRight, Printer, ScanLine, Glasses, ClipboardList, Users, ShieldCheck, ChartNoAxesCombined } from 'lucide-react'
 import { useState, useRef, useEffect } from 'react'
@@ -143,9 +144,6 @@ export default function HomePage() {
                 </span>
               </div>
             </div>
-            <a href={"/simulator-development"}>
-              {"Explore Simulator Development →"}
-            </a>
           </article>
           <div className={"service-secondary"}>
             <article className={"service-card service-compact reveal visible"}>
@@ -163,9 +161,6 @@ export default function HomePage() {
               <p>
                 {"Bespoke AR, VR and mixed reality experiences for training, visualisation and operational support."}
               </p>
-              <a href={"/xr-development"}>
-                {"Explore service →"}
-              </a>
             </article>
             <article className={"service-card service-compact reveal visible"}>
               <div className={"service-top"}>
@@ -182,9 +177,6 @@ export default function HomePage() {
               <p>
                 {"Shared projection-led environments for collaborative simulation, learning and decision-making."}
               </p>
-              <a href={"/immersive-rooms"}>
-                {"Explore service →"}
-              </a>
             </article>
             <article className={"service-card service-compact reveal visible"}>
               <div className={"service-top"}>
@@ -201,9 +193,6 @@ export default function HomePage() {
               <p>
                 {"Practical AI for intelligent assistants, adaptive simulations and content workflows."}
               </p>
-              <a href={"/ai-solutions"}>
-                {"Explore service →"}
-              </a>
             </article>
             <article className={"service-card service-compact reveal visible"}>
               <div className={"service-top"}>
@@ -220,9 +209,6 @@ export default function HomePage() {
               <p>
                 {"Secure web, mobile and desktop platforms designed around real operational workflows."}
               </p>
-              <a href={"/platform-development"}>
-                {"Explore service →"}
-              </a>
             </article>
           </div>
         </div>
@@ -481,10 +467,10 @@ export default function HomePage() {
           </div>
           <div className={"eprium-product-visual"} style={{ background: "transparent", backgroundImage: "none", backgroundColor: "transparent", backdropFilter: "none", boxShadow: "none", border: "none" }}>
             <img
-              src={"/assets/images/Home/Dashboard EPRium.png"}
-              alt={"EPRium dashboard screenshot"}
+              src={epriumDebriefImage}
+              alt={"EPRium dashboard across tablet, phone and simulation devices"}
               loading="lazy"
-              style={{ width: "120%", height: "580px", objectFit: "contain", borderRadius: "10px", display: "block", boxShadow: "none", transform: "perspective(900px) rotateY(6deg)", margin: "auto" }}
+              style={{ width: "100%", height: "auto", maxHeight: "580px", objectFit: "contain", borderRadius: "10px", display: "block", boxShadow: "none", transform: "none", margin: "auto" }}
             />
           </div>
           <div className="px-feat-list">

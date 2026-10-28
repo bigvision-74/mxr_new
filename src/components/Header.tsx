@@ -1,12 +1,11 @@
 import { useState } from 'react'
-import { products, services } from '../data/navigation'
+import { products } from '../data/navigation'
 import mxrLogo from '../assets/images/mxr-logo.png'
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [dropdown, setDropdown] = useState<string | null>(null)
   const groups = [
-    { name: 'Services', links: services.map(s => [s.title, `/${s.slug}.html`]) },
     { name: 'Products', links: products.map(([title, slug]) => [title, `/${slug}.html`]) },
     { name: 'Resources', links: [['Case Studies', '/case-study-xr-readiness.html'], ['Support', 'mailto:hello@mxr.ai']] },
   ]

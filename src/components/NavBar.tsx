@@ -7,7 +7,6 @@ import mxrLogo from '../assets/images/mxr-logo.png'
 const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
-  { label: 'Services', href: '#' },
   { label: 'Products', href: '#' },
   { label: 'Resources', href: '#' },
 ]
