@@ -1,8 +1,8 @@
+import ammunition from '../assets/images/modal3d/banner/ordnance-reference.webp'
 import '../assets/css/modal-asset-banner.css'
 
 // tank/ammunition artwork is not in the repo yet; drop the files at these public paths to show them
 const tank = '/assets/images/modal3d/banner/tank.png'
-const ammunition = '/assets/images/modal3d/banner/ammunition.png'
 const hideBroken = (e: React.SyntheticEvent<HTMLImageElement>) => { e.currentTarget.style.visibility = 'hidden' }
 
 export function ModalAssetBanner(){

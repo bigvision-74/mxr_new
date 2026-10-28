@@ -20,3 +20,8 @@
 @media(max-width:1000px){.mxr-react-page main.pp.modal3d-page .ep2-hero{display:flex;padding-top:6rem}.mxr-react-page main.pp.modal3d-page .ep2-hero .ep2-hero-inner{width:100%;padding-block:3rem 0;order:0}.modal3d-page .ep2-hero>.modal-asset-banner{position:relative;top:auto;right:auto;width:100%;order:1;margin-top:1rem;margin-bottom:2rem}.modal3d-page .ep2-hero-inner h1{max-width:18ch}}
 
 .modal3d-page .ep2-hero-inner .ep2-lead{width:100%;max-width:32rem}.modal3d-page .ep2-hero-inner h1{line-height:1.05}
+
+.modal3d-page .ep2-hero>.ep2-bg{opacity:.65;object-position:center}.modal3d-page .ep2-shade{background:linear-gradient(90deg,rgba(5,13,22,.96) 0%,rgba(5,13,22,.86) 34%,rgba(5,13,22,.26) 75%),linear-gradient(0deg,#07111ddd,transparent 60%)}.modal3d-page .ep2-grid{opacity:.18}.modal-asset-banner{background:none}.modal-asset-grid{opacity:.2}.modal-banner-ammo img{filter:drop-shadow(0 12px 18px #0007)}
+
+/* Give the ordnance reference group greater presence alongside the drone. */
+.modal-asset-banner{grid-template-columns:46% 48%;grid-template-rows:50% 43%;gap:7% 6%}.modal-banner-ammo img{width:122%;max-width:none;height:calc(100% - 1.2rem);margin-left:-11%;object-fit:contain}.modal3d-page .ep2-hero>.ep2-bg{opacity:.9;object-position:center 65%}.modal3d-page .ep2-shade{background:linear-gradient(90deg,rgba(5,13,22,.94),rgba(5,13,22,.82) 34%,rgba(5,13,22,.16) 78%),linear-gradient(0deg,#07111d99,transparent 60%)}@media(max-width:600px){.modal-banner-ammo img{width:114%;margin-left:-7%}.modal-asset-banner{height:29rem}}

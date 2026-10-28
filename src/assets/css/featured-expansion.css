@@ -47,3 +47,5 @@
   color: #fff;
   border-color: rgba(255, 255, 255, .4);
 }
+.featured-products .extra-product-art-omnia img{width:100%;height:auto;max-height:34rem;object-fit:contain;mask-image:none!important;-webkit-mask-image:none!important;filter:none!important;border-radius:0}.featured-products .extra-product-art-omnia{overflow:visible}
+
