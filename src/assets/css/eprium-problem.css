@@ -677,9 +677,14 @@
         margin-top: 20px
     }
 }
-.pp .epr-gap{background:var(--color-light)}
 
-.pp .epr-gap{background:transparent}
+.pp .epr-gap {
+    background: var(--color-light)
+}
+
+.pp .epr-gap {
+    background: transparent
+}
 
 /* "Train for the reality of digital care": step numbers are circles in the theme blue */
 .epr-gap-tag>span {
@@ -713,4 +718,15 @@
     display: block;
     width: 100%;
     height: auto
+}
+
+/* Stronger lower scrim keeps the challenge caption readable over photography. */
+.ep-page .epr-gap-main:after {
+    background: linear-gradient(to top, rgba(3, 16, 25, .94) 0%, rgba(3, 16, 25, .8) 24%, rgba(3, 16, 25, .3) 52%, transparent 76%)
+}
+
+.ep-page .epr-gap-main-copy h3,
+.ep-page .epr-gap-main-copy p {
+    color: #fff;
+    text-shadow: 0 1px 3px #0005
 }

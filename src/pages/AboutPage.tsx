@@ -296,38 +296,20 @@ export default function AboutPage() {
           </p>
         </div>
         <div className={"about-why-grid"}>
-          <article className={"reveal visible"}>
-            <span>
-              {"01"}
-            </span>
-            <h3>
-              {"Outcome-led"}
-            </h3>
-            <p>
-              {"We begin with the problem, users and evidence of success,not a predetermined technology."}
-            </p>
+          <article className={"service-compact reveal visible"}>
+            <b aria-hidden="true">{"01"}</b>
+            <h3>{"Outcome-led"}</h3>
+            <p>{"We begin with the problem, users and evidence of success, not a predetermined technology."}</p>
           </article>
-          <article className={"reveal visible"}>
-            <span>
-              {"02"}
-            </span>
-            <h3>
-              {"Multidisciplinary"}
-            </h3>
-            <p>
-              {"Strategy, design, development, immersive content and data expertise work as one team."}
-            </p>
+          <article className={"service-compact reveal visible"}>
+            <b aria-hidden="true">{"02"}</b>
+            <h3>{"Multidisciplinary"}</h3>
+            <p>{"Strategy, design, development, immersive content and data expertise work as one team."}</p>
           </article>
-          <article className={"reveal visible"}>
-            <span>
-              {"03"}
-            </span>
-            <h3>
-              {"Built to scale"}
-            </h3>
-            <p>
-              {"Solutions are designed for long-term use, adoption and expansion across your organisation."}
-            </p>
+          <article className={"service-compact reveal visible"}>
+            <b aria-hidden="true">{"03"}</b>
+            <h3>{"Built to scale"}</h3>
+            <p>{"Solutions are designed for long-term use, adoption and expansion across your organisation."}</p>
           </article>
         </div>
       </section>

@@ -1,13 +1,14 @@
 import type { CSSProperties } from 'react'
 import { ArrowRight } from 'lucide-react'
 import { ProductHero } from '../components/ProductHero'
-import defaultBanner from '../assets/videos/defaultbanner.mp4'
+import room from '../assets/images/omnia/healthcare-room-three-walls.webp'
+import '../assets/css/omnia-hero.css'
 
 // Same banner as EPRium. Headline, lead and background image are placeholders until the Omnia copy and artwork arrive.
 export default function OmniaPage() {
   return (
-    <main className={"pp ep-page"} style={{ "--product-accent": "#0b66c3" } as CSSProperties}>
-      <ProductHero title="Meet" accent="Omnia." lead="Omnia product description goes here." demoSubject="Omnia demonstration" secondaryHref="#omnia-overview-heading" secondaryLabel="Explore Omnia" video={defaultBanner} />
+    <main className={"pp ep-page omnia-page"} style={{ "--product-accent": "#0b66c3" } as CSSProperties}>
+      <ProductHero title="Meet" accent="Omnia." lead="Immersive environments for connected learning and realistic healthcare simulation." demoSubject="Omnia demonstration" secondaryHref="#omnia-overview-heading" secondaryLabel="Explore Omnia" visual={<div className="omnia-room-visual"><img src={room} alt="Three-wall immersive healthcare room with left, back and right projection walls and three overhead projectors" fetchPriority="high" /></div>} />
 
       {/* Coming-soon notice: replace the copy below with the Omnia content when it is ready. */}
       <section className={"epr-gap"} aria-labelledby={"omnia-overview-heading"}>
