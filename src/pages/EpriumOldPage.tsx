@@ -27,7 +27,7 @@ export default function EpriumOldPage() {
             {"Connect patient encounters, clinical reasoning and digital records in one safe place to practise."}
           </p>
           <div className={"ep-hero-actions"}>
-            <a className={"ep-button"} href={"mailto:hello@mxr.ai?subject=EPRium%20demonstration"}>
+            <a className={"ep-button"} href="/contact">
               {"Book a demonstration "}
               <svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.5"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}>
                 <path d={"M4 12h16m-6-6 6 6-6 6"}>
@@ -682,7 +682,7 @@ export default function EpriumOldPage() {
           <p>
             {"Explore how EPRium can fit your learners, teaching and clinical training goals."}
           </p>
-          <a className={"ep-button"} href={"mailto:hello@mxr.ai?subject=EPRium%20demonstration"}>
+          <a className={"ep-button"} href="/contact">
             {"Book a demonstration "}
             <svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.5"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}>
               <path d={"M4 12h16m-6-6 6 6-6 6"}>

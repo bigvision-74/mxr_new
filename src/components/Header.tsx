@@ -20,6 +20,6 @@ export function Header() {
         <div className="dropdown" id={`nav-${group.name}`}>{group.links.map(([title, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)}>{title}</a>)}</div>
       </div>)}
     </nav>
-    <div className="header-actions"><a className="btn btn-primary btn-small" href="mailto:hello@mxr.ai?subject=Talk%20to%20MXR">Get in Touch</a></div>
+    <div className="header-actions"><a className="btn btn-primary btn-small" href="/contact">Get in Touch</a></div>
   </header>
 }

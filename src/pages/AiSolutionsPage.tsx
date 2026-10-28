@@ -82,7 +82,7 @@ export default function AiSolutionsPage() {
           <div className="button-row">
             <a
               className="group inline-flex items-center gap-3 rounded-full bg-[#0B66C3] px-6 py-3 text-sm font-semibold text-white ring-1 ring-[#1684E8]/60 transition-all duration-300 hover:bg-[#1684E8] md:px-8 md:py-4 md:text-base"
-              href="mailto:hello@mxr.ai?subject=AI%20Solutions%20enquiry"
+              href="/contact"
             >
               {"Discuss your project"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
@@ -425,7 +425,7 @@ export default function AiSolutionsPage() {
           <p>{"Tell us what you want to achieve. We'll help you define the right AI approach and a practical next step."}</p>
         </div>
         <div className="button-row">
-          <a className="btn btn-primary" href="mailto:hello@mxr.ai?subject=AI%20Solutions%20enquiry">
+          <a className="btn btn-primary" href="/contact">
             {"Talk to Our Team"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </a>
         </div>

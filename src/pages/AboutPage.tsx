@@ -335,7 +335,7 @@ export default function AboutPage() {
           </p>
         </div>
         <div className={"button-row"}>
-          <a className={"btn btn-primary"} href={"mailto:hello@mxr.ai?subject=New%20MXR%20Project"}>{"Talk to Our Team"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
+          <a className={"btn btn-primary"} href="/contact">{"Talk to Our Team"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
         </div>
       </section>
     </main>

@@ -32,7 +32,7 @@ export default function DrivexrPage() {
           <p className="banner-lead">
             {"Build blue-light driving confidence in a controlled, immersive environment. Train for the unexpected. Measure every improvement."}
           </p>
-          <a className={"dx-button"} href={"mailto:hello@mxr.ai?subject=DriveXR%20demonstration"}>
+          <a className={"dx-button"} href="/contact">
             {"Book a live demonstration "}
             <svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.5"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}>
               <path d={"M4 12h16m-6-6 6 6-6 6"}>
@@ -415,7 +415,7 @@ export default function DrivexrPage() {
         </p>
       </div>
       <div className={"button-row"}>
-        <a className={"btn btn-primary"} href={"mailto:hello@mxr.ai?subject=DriveXR%202%20demonstration"}>{"Talk to Our Team"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
+        <a className={"btn btn-primary"} href="/contact">{"Talk to Our Team"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
       </div>
     </section>
     </main>

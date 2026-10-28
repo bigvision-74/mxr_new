@@ -22,7 +22,7 @@ export default function EpriumPage() {
           <h1 className="banner-title banner-title--stacked">Simulated EPR. Real<em>Clinical Practice.</em></h1>
           <p className="ep2-lead banner-lead">EPRium gives healthcare students a realistic environment to practise patient interactions, clinical decision-making and electronic patient records, before they have to do it for real.</p>
           <div className="ep2-actions">
-            <a href="mailto:hello@mxr.ai?subject=EPRium%20demonstration" className="group inline-flex items-center gap-3 rounded-full bg-[#0B66C3] px-6 py-3 text-sm font-semibold text-white ring-1 ring-[#1684E8]/60 transition-all duration-300 hover:bg-[#1684E8] md:px-8 md:py-4 md:text-base">Book a Demonstration <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
+            <a href="/contact" className="group inline-flex items-center gap-3 rounded-full bg-[#0B66C3] px-6 py-3 text-sm font-semibold text-white ring-1 ring-[#1684E8]/60 transition-all duration-300 hover:bg-[#1684E8] md:px-8 md:py-4 md:text-base">Book a Demonstration <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
 
           </div>
         </div>
