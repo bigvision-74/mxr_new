@@ -1,4 +1,4 @@
-import outcomesImage from '../assets/images/eprium/g3.webp'
+import outcomesImage from '../assets/images/eprium/educational-outcomes.webp'
 
 const outcomes = [
   ['Practice readiness', 'Rehearse digital workflows before placement or clinical deployment.'],

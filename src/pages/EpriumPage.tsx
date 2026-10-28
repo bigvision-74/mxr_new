@@ -7,9 +7,9 @@ import { EpriumOutcomes } from '../components/EpriumOutcomes'
 import { EpriumCapabilities } from "../components/EpriumCapabilities"
 import { EpriumFaculty } from "../components/EpriumFaculty"
 import defaultBanner from '../assets/videos/defaultbanner.mp4'
-import clinicalLearning from '../assets/images/eprium/clinical-learning.jpg'
+import clinicalLearning from '../assets/images/eprium/challenge-workflow.webp'
 import epriumScreen from '../assets/images/eprium/epriumss.png'
-import clinicalPractice from '../assets/images/eprium/clinical-practice.jpg'
+import clinicalPractice from '../assets/images/eprium/challenge-placement.webp'
 
 export default function EpriumPage() {
   return (
@@ -41,7 +41,7 @@ export default function EpriumPage() {
         </div>
         <div className={"epr-gap-grid"}>
           <article className={"epr-gap-main"}>
-            <img src={clinicalLearning} alt={"EPRium on a laptop alongside patient record, observation and medication screens"} loading={"lazy"} />
+            <img src={clinicalLearning} alt={"Nursing student documenting a simulated patient workflow beside a training mannequin"} loading={"lazy"} />
             <div className={"epr-gap-top"}>
               <span className={"epr-gap-number"}>
                 {"01"}
@@ -76,7 +76,7 @@ export default function EpriumPage() {
               </p>
             </div>
             <div className={"epr-gap-photo"}>
-              <img src={clinicalPractice} alt={"Healthcare professional using a digital device"} loading={"lazy"} />
+              <img src={clinicalPractice} alt={"Healthcare students rehearsing a patient handover with an educator"} loading={"lazy"} />
             </div>
           </article>
         </div>

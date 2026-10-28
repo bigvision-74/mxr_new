@@ -1,38 +1,42 @@
 import { useState, type CSSProperties } from 'react'
 import { ClipboardPlus, Stethoscope, FlaskConical, Activity, LineChart, Presentation } from 'lucide-react'
-import clinicalLearning from '../assets/images/eprium/clinical-learning.jpg'
-import clinicalPractice from '../assets/images/eprium/clinical-practice.jpg'
+import admissionImage from '../assets/images/eprium/journey-admission.webp'
+import assessmentImage from '../assets/images/eprium/journey-assessment.webp'
+import decisionsImage from '../assets/images/eprium/journey-decisions.webp'
+import treatmentImage from '../assets/images/eprium/journey-treatment.webp'
+import monitoringImage from '../assets/images/eprium/journey-monitoring.webp'
+import debriefImage from '../assets/images/eprium/journey-debrief.webp'
 
 const stages = [
   {
     icon: ClipboardPlus, name: 'Admission', title: 'Understand the patient and context.',
     text: 'Learners open the record, review the presenting situation and history, and build a picture of the patient before acting.',
-    tags: ['Patient context', 'History', 'Handover'], image: clinicalPractice,
+    tags: ['Patient context', 'History', 'Handover'], image: admissionImage,
   },
   {
     icon: Stethoscope, name: 'Assessment', title: 'Record observations and findings.',
     text: 'Observations and examination findings go straight into a realistic digital record, just as they would on the ward.',
-    tags: ['Observations', 'Examination', 'Documentation'], image: clinicalLearning,
+    tags: ['Observations', 'Examination', 'Documentation'], image: assessmentImage,
   },
   {
     icon: FlaskConical, name: 'Decisions', title: 'Request tests, imaging, medication or input.',
     text: 'Learners prioritise and act: requesting investigations, prescribing and escalating as the clinical picture develops.',
-    tags: ['Investigations', 'Imaging', 'Medication', 'Escalation'], image: clinicalPractice,
+    tags: ['Investigations', 'Imaging', 'Medication', 'Escalation'], image: decisionsImage,
   },
   {
     icon: Activity, name: 'Treatment', title: 'Document interventions and respond.',
     text: 'Interventions are recorded as they happen, and the simulated patient responds to what the learner did.',
-    tags: ['Interventions', 'Patient response', 'Communication'], image: clinicalLearning,
+    tags: ['Interventions', 'Patient response', 'Communication'], image: treatmentImage,
   },
   {
     icon: LineChart, name: 'Monitoring', title: 'Review trends, results and response.',
     text: 'Results are released and trends update, so learners must reassess and adjust care in context.',
-    tags: ['Trends', 'Results release', 'Reassessment'], image: clinicalPractice,
+    tags: ['Trends', 'Results release', 'Reassessment'], image: monitoringImage,
   },
   {
     icon: Presentation, name: 'Debrief', title: 'Reflect on decisions, documentation and outcomes.',
     text: 'Educators replay the complete journey, using the recorded trail for specific feedback and reflection.',
-    tags: ['Timeline replay', 'Feedback', 'Reflection'], image: clinicalLearning,
+    tags: ['Timeline replay', 'Feedback', 'Reflection'], image: debriefImage,
   },
 ]
 

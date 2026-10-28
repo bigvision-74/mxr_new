@@ -1,5 +1,5 @@
 import { Rocket, SlidersHorizontal, Mic } from 'lucide-react'
-import facultyImage from '../assets/images/eprium/g3.webp'
+import facultyImage from '../assets/images/eprium/faculty-control.webp'
 
 const items = [
   { icon: Rocket, title: 'Proven immersive training innovation',

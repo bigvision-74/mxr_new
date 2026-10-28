@@ -3,11 +3,11 @@ import { useEffect, useRef } from 'react'
 // One video with two views stacked on top of each other (top: outside of the product, bottom: the same moment as a cutaway).
 // The outside view always shows; the cutaway is drawn on a second canvas that is only revealed inside a circular lens that
 // follows the pointer. Both halves come from the same frame, so they can never drift out of sync.
-// Source is 1600 x 1800: two 1600 x 900 halves. The half is scaled to cover the whole banner, shifted so the product sits
-// on the right (POD_X of the banner width); the bare theme background shows to its left, where the video fades out.
+// Source is 1600 x 1800: two 1600 x 900 halves. The half is scaled to cover the whole banner, shifted so the main vehicle sits
+// towards the right (POD_X of the banner width), leaving more breathing room on the left; the bare theme background shows to its left, where the video fades out.
 const SRC_W = 1600
 const HALF_H = 900
-const POD_X = 0.7
+const POD_X = 0.8
 const ZOOM = 0.85 // below 1 makes the product a little smaller; it never drops below the banner height
 
 export function HoverCutawayVideo({ src, label }: { src: string; label?: string }) {
