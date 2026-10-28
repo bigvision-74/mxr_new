@@ -1,12 +1,9 @@
-﻿import type { CSSProperties } from 'react'
-import { ArrowRight } from 'lucide-react'
+import type { CSSProperties } from 'react'
+import { ArrowRight, Printer, ScanLine, Glasses, ClipboardList, Users, ShieldCheck, ChartNoAxesCombined } from 'lucide-react'
 import { useState, useRef, useEffect } from 'react'
 import { ImmersiveHero } from '../components/ImmersiveHero'
 import { AdditionalFeaturedProducts, extraProducts } from '../components/AdditionalFeaturedProducts'
 import { PanoramaSolutions } from '../components/PanoramaSolutions'
-import defenceSecurityImage from '../assets/images/solutions/defence-security.png'
-import enterpriseTrainingImage from '../assets/images/solutions/enterprise-training.jpg'
-import customSolutionsImage from '../assets/images/solutions/custom-solutions.jpg'
 import '@google/model-viewer'
 
 export default function HomePage() {
@@ -99,79 +96,6 @@ export default function HomePage() {
   return (
     <main>
       <ImmersiveHero />
-      <section className={"section intro"} id={"solutions"}>
-        <div className={"section-heading reveal visible"}>
-          <div>
-            <p className={"eyebrow"}>
-              {"SOLUTIONS FOR A COMPLEX WORLD"}
-            </p>
-            <h2>
-              {"Built for Real-World Impact."}
-            </h2>
-          </div>
-          <p>
-            {"MXR develops simulation technologies that turn complex knowledge into confident action, across high-consequence industries where better preparation matters."}
-          </p>
-        </div>
-        <div className={"card-grid solutions-grid"}>
-          <article className={"image-card reveal visible"}>
-            <div className={"card-image defence"} style={{ backgroundImage: `url(${defenceSecurityImage})`, backgroundPosition: 'center 45%' }}>
-
-            </div>
-            <div className={"card-content"}>
-              <h3>
-                {"Defence & Security"}
-              </h3>
-              <p>
-                {"Rehearse missions safely."}<br />
-                {"Build real-world readiness."}
-              </p>
-            </div>
-          </article>
-          <article className={"image-card reveal visible"}>
-            <div className={"card-image healthcare"}>
-
-            </div>
-            <div className={"card-content"}>
-              <h3>
-                {"Healthcare Simulation"}
-              </h3>
-              <p>
-                {"Practise clinical skills safely."}<br />
-                {"Prepare for real patient care."}
-              </p>
-            </div>
-          </article>
-          <article className={"image-card reveal visible"}>
-            <div className={"card-image enterprise"} style={{ backgroundImage: `url(${enterpriseTrainingImage})`, backgroundPosition: 'center 40%' }}>
-
-            </div>
-            <div className={"card-content"}>
-              <h3>
-                {"Enterprise Training"}
-              </h3>
-              <p>
-                {"Train for workplace challenges."}<br />
-                {"Build skills and confidence."}
-              </p>
-            </div>
-          </article>
-          <article className={"image-card reveal visible"}>
-            <div className={"card-image custom"} style={{ backgroundImage: `url(${customSolutionsImage})`, backgroundPosition: 'center 45%' }}>
-
-            </div>
-            <div className={"card-content"}>
-              <h3>
-                {"Custom Solutions"}
-              </h3>
-              <p>
-                {"Built around your requirements."}<br />
-                {"From concept to deployment."}
-              </p>
-            </div>
-          </article>
-        </div>
-      </section>
       <PanoramaSolutions />
       <section className={"section services"} id={"services"}>
         <div className={"services-heading reveal visible"}>
@@ -522,7 +446,7 @@ export default function HomePage() {
           </div>
           <div className="px-feat-list">
             <div className="px-feat-row">
-              <div className="px-badge">STL</div>
+              <div className="px-badge"><Printer aria-hidden="true" strokeWidth={1.6} /></div>
               <div className="px-feat-body">
                 <div className="px-feat-meta">
                   <h4>3D Printable Asset Library</h4>
@@ -532,7 +456,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="px-feat-row">
-              <div className="px-badge px-badge--ar">AR</div>
+              <div className="px-badge px-badge--ar"><ScanLine aria-hidden="true" strokeWidth={1.6} /></div>
               <div className="px-feat-body">
                 <div className="px-feat-meta">
                   <h4>Augmented Reality App</h4>
@@ -542,7 +466,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="px-feat-row">
-              <div className="px-badge px-badge--mr">MR</div>
+              <div className="px-badge px-badge--mr"><Glasses aria-hidden="true" strokeWidth={1.6} /></div>
               <div className="px-feat-body">
                 <div className="px-feat-meta">
                   <h4>Mixed Reality Environment</h4>
@@ -571,7 +495,7 @@ export default function HomePage() {
           </div>
           <div className="px-feat-list">
             <div className="px-feat-row">
-              <div className="px-badge">EHR</div>
+              <div className="px-badge"><ClipboardList aria-hidden="true" strokeWidth={1.6} /></div>
               <div className="px-feat-body">
                 <div className="px-feat-meta">
                   <h4>High-Fidelity EHR Mirror</h4>
@@ -581,7 +505,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="px-feat-row">
-              <div className="px-badge px-badge--collab">CO</div>
+              <div className="px-badge px-badge--collab"><Users aria-hidden="true" strokeWidth={1.6} /></div>
               <div className="px-feat-body">
                 <div className="px-feat-meta">
                   <h4>Multi-User Sessions</h4>
@@ -591,7 +515,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="px-feat-row">
-              <div className="px-badge px-badge--risk">RC</div>
+              <div className="px-badge px-badge--risk"><ShieldCheck aria-hidden="true" strokeWidth={1.6} /></div>
               <div className="px-feat-body">
                 <div className="px-feat-meta">
                   <h4>Risk-Free Critical Care</h4>
@@ -601,7 +525,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="px-feat-row">
-              <div className="px-badge px-badge--data">DA</div>
+              <div className="px-badge px-badge--data"><ChartNoAxesCombined aria-hidden="true" strokeWidth={1.6} /></div>
               <div className="px-feat-body">
                 <div className="px-feat-meta">
                   <h4>Data-Driven Feedback</h4>
@@ -614,11 +538,11 @@ export default function HomePage() {
         </article>
         <AdditionalFeaturedProducts active={activeProduct} />
         <div className={"product-slider-controls"}>
-          <button onClick={() => setActiveProduct(p => (p - 1 + 6) % 6)} className={"product-arrow product-prev"} aria-label={"Previous featured product"}>{"←"}</button>
+          <button onClick={() => setActiveProduct(p => (p - 1 + 5) % 5)} className={"product-arrow product-prev"} aria-label={"Previous featured product"}>{"←"}</button>
           <div className="product-dots" role="tablist" aria-label="Choose featured product">
             {['MODAL3D','EPRium',...extraProducts.map(p=>p.name)].map((name,index)=><button key={name} onClick={()=>setActiveProduct(index)} aria-selected={activeProduct===index} className={`product-name-tab${activeProduct===index?' active':''}`} role="tab" aria-label={`Show ${name}`} data-product-go={index}>{name}</button>)}
           </div>
-          <button onClick={() => setActiveProduct(p => (p + 1) % 6)} className={"product-arrow product-next"} aria-label={"Next featured product"}>{"→"}</button>
+          <button onClick={() => setActiveProduct(p => (p + 1) % 5)} className={"product-arrow product-next"} aria-label={"Next featured product"}>{"→"}</button>
         </div>
       </section>
 

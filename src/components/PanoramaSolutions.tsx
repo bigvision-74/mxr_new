@@ -14,7 +14,7 @@ const solutions = [
 
 export function PanoramaSolutions() {
   return (
-    <section className="solutions-panorama" aria-labelledby="panorama-heading">
+    <section className="solutions-panorama" id="solutions" aria-labelledby="panorama-heading">
       <div className="panorama-heading">
         <div>
           <p className="eyebrow">SOLUTIONS IN FOCUS</p>
