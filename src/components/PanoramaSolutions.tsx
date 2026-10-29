@@ -16,7 +16,9 @@ export function PanoramaSolutions() {
   return (
     <section className="solutions-panorama" id="solutions" aria-label="Solutions in focus">
       <div className="panorama-heading">
-        <p>Explore the environments we help people prepare for, and the technology that takes them further.</p>
+        <div><p className={"eyebrow"}>{"SOLUTIONS IN FOCUS"}</p>
+        <h2>{"A wider world of possibilities."}</h2></div>
+        <p>{"Explore the environments we help people prepare for, and the technology that takes them further."}</p>
       </div>
       <div className="panorama-rail">
         {solutions.map(({ title, label, description, image, position, Icon }, index) => (

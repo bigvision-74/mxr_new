@@ -81,7 +81,7 @@ export default function AboutPage() {
             {"OUR DIRECTION"}
           </p>
           <h2 id={"purpose-alt-heading"}>
-            {"One direction."}
+            {"One direction."}<br/>
             <span>
               {"Two commitments."}
             </span>

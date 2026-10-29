@@ -1,4 +1,4 @@
-import epriumDebriefImage from '../assets/images/eprium/eprium-devices.png'
+﻿import epriumDebriefImage from '../assets/images/eprium/eprium-devices.png'
 ﻿import type { CSSProperties } from 'react'
 import { ArrowRight, Printer, ScanLine, Glasses, ClipboardList, Users, ShieldCheck, ChartNoAxesCombined } from 'lucide-react'
 import { useState, useRef, useEffect } from 'react'
@@ -6,6 +6,7 @@ import { ImmersiveHero } from '../components/ImmersiveHero'
 import { AdditionalFeaturedProducts, extraProducts } from '../components/AdditionalFeaturedProducts'
 import { PanoramaSolutions } from '../components/PanoramaSolutions'
 import { DroneLoop } from '../components/DroneLoop'
+import devices from '../assets/images/eprium/eprium-devices.png'
 import '@google/model-viewer'
 
 export default function HomePage() {
@@ -111,7 +112,7 @@ export default function HomePage() {
             </h2>
           </div>
           <p>
-            {"We combine simulation, immersive technology, artificial intelligence and robust platform engineering to deliver complete solutions—from early concept through to deployment and support."}
+            {"We combine simulation, immersive technology, artificial intelligence and robust platform engineering to deliver complete solutions, from early concept through to deployment and support."}
           </p>
         </div>
         <div className={"service-mosaic"}>
@@ -460,15 +461,15 @@ export default function HomePage() {
         <article hidden={activeProduct !== 1} className={"product-slide modal-showcase eprium-showcase" + (activeProduct === 1 ? " active" : "")} data-product-slide={"1"}>
           <div className={"modal-copy"}>
             <p className={"eyebrow light"}>{"FEATURED PRODUCTS"}</p>
-            <h2>{"EPR"}<span style={{ color: "#147ee1" }}>{"ium"}</span></h2>
+            <h2>{"EPRium"}</h2>
             <h3>{"Clinical practice before clinical placement."}</h3>
             <p>{"Give healthcare learners a safe, realistic way to practise patient encounters, clinical reasoning and electronic patient records."}</p>
             <a className={"btn btn-primary"} href={"/eprium"}>{"Explore EPRium"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
           </div>
           <div className={"eprium-product-visual"} style={{ background: "transparent", backgroundImage: "none", backgroundColor: "transparent", backdropFilter: "none", boxShadow: "none", border: "none" }}>
             <img
-              src={epriumDebriefImage}
-              alt={"EPRium dashboard across tablet, phone and simulation devices"}
+              src={devices}
+              alt={"EPRium dashboard screenshot"}
               loading="lazy"
               style={{ width: "100%", height: "auto", maxHeight: "580px", objectFit: "contain", borderRadius: "10px", display: "block", boxShadow: "none", transform: "none", margin: "auto" }}
             />

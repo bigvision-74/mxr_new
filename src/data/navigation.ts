@@ -1,6 +1,6 @@
 export const resources = [
   { title: 'Blog', slug: 'blog' },
-  { title: 'Events', slug: 'events' },
+  //{ title: 'Events', slug: 'events' },
   { title: 'Case Studies', slug: 'case-studies' },
 ] as const
 

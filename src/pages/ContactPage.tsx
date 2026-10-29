@@ -77,7 +77,6 @@ export default function ContactPage() {
       <section className="contact-main">
         <aside className="contact-info">
           <p className="eyebrow">GET IN TOUCH</p>
-          <h2>We'd love to hear from you.</h2>
           <p className="contact-info-lead">Whether you have a question, a project in mind, or just want to learn more about what we do — our team is ready to help.</p>
           <div className="contact-cards">
             {channels.map(({ icon: Icon, label, value, href, note }) => {
