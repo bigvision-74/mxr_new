@@ -1,8 +1,8 @@
 import { useState, type CSSProperties } from 'react'
 import {
-  ArrowRight, ArrowUpRight, Box, Boxes, BrainCircuit, Clapperboard,
+  ArrowRight, ArrowUpRight, Box, Boxes, BrainCircuit,
   Compass, Film, GraduationCap, Headset, HeartPulse, Layers3,
-  Link2, MessageCircle, Monitor, Move3D,
+  Link2, MessageCircle, Monitor, Move3D, Plane,
   ScanLine, ShieldCheck, Video
 } from 'lucide-react'
 import { ProductHero } from '../components/ProductHero'
@@ -61,7 +61,7 @@ const capabilityCards = [
 
 const scenarios = [
   { tag: 'HEALTHCARE', title: 'Clinical environments', body: 'Create ward, outpatient and field-hospital training spaces.', image: 'room-editor.webp', alt: 'Omnia outpatient clinical simulation room', Icon: HeartPulse },
-  { tag: 'AVIATION', title: 'In-flight emergencies', body: 'Guide participants through a cabin-based medical response.', image: 'aircraft-emergency.webp', alt: 'Omnia aircraft medical emergency scene', Icon: Clapperboard },
+  { tag: 'AVIATION', title: 'In-flight emergencies', body: 'Guide participants through a cabin-based medical response.', image: 'aircraft-emergency.webp', alt: 'Omnia aircraft medical emergency scene', Icon: Plane },
   { tag: 'DEFENCE & RESPONSE', title: 'Incident readiness', body: 'Explore hangar and CBRN exercises with objectives and zone indicators.', image: 'field-hospital.webp', alt: 'Omnia incident-response field-hospital scene', Icon: ShieldCheck },
   { tag: 'OPERATIONAL', title: 'Field environments', body: 'Work with trench and vehicle-based scenarios with interactive characters.', image: 'battlefield.webp', alt: 'Omnia battlefield trench environment', Icon: ScanLine },
 ]

@@ -8,8 +8,7 @@ import CaseStudyXrReadinessPage from './pages/CaseStudyXrReadinessPage'
 import Modal3DPage from './pages/Modal3DPage'
 import EpriumPage from './pages/EpriumPage'
 import EpriumOldPage from './pages/EpriumOldPage'
-import DrivexrPage from './pages/DrivexrPage'
-import DriveXR2Page from './pages/DriveXR2Page'
+import DrivexrPage from './pages/DriveXR2Page'
 import InsightxrPage from './pages/InsightxrPage'
 import OmniaPage from './pages/OmniaPage'
 import SimulatorDevelopmentPage from './pages/SimulatorDevelopmentPage'
@@ -44,15 +43,14 @@ import CarbonReductionPage from './pages/CarbonReductionPage'
 import EnvironmentalPolicyPage from './pages/EnvironmentalPolicyPage'
 
 export const pages: Record<string, { Component: () => any; title: string; description: string; bodyClass: string }> = {
-    "index.html": { Component: HomePage, title: "MXR.ai \u2014 Technology for a Safer, Smarter Tomorrow", description: "MXR creates immersive simulation, XR and AI solutions for defence, healthcare and enterprise training.", bodyClass: "" },
+    "index.html": { Component: HomePage, title: "MXR.ai \u2014 Your Vision. Our Technology.", description: "MXR creates immersive simulation, XR and AI solutions for defence, healthcare and enterprise training.", bodyClass: "" },
     "about.html": { Component: AboutPage, title: "About MXR \u2014 Technology for Real-World Impact", description: "Meet MXR, a technology partner creating immersive simulation, AI and software solutions for education, training and enterprise.", bodyClass: "" },
     "defence-security.html": { Component: DefenceSecurityPage, title: "Defence & Security Solutions \u2014 MXR.ai", description: "MXR defence and security simulation solutions help teams build knowledge, rehearse safely and improve operational readiness.", bodyClass: "" },
     "case-study.html": { Component: CaseStudyXrReadinessPage, title: "Enhancing Readiness Through XR Training \u2014 MXR Case Study", description: "Discover how MXR used extended reality to support safer, repeatable and measurable operational training.", bodyClass: "" },
     "modal3d.html": { Component: Modal3DPage, title: "MODAL3D | MXR.ai", description: "Explore ordnance in interactive 3D. Connect component views, technical information and AR in one organised library.", bodyClass: "" },
     "eprium.html": { Component: EpriumPage, title: "EPRium | MXR.ai", description: "Give healthcare learners a safe place to practise patient encounters, clinical reasoning and digital documentation.", bodyClass: "" },
     "eprium-old.html": { Component: EpriumOldPage, title: "EPRium_old | MXR.ai", description: "Give healthcare learners a safe place to practise patient encounters, clinical reasoning and digital documentation.", bodyClass: "" },
-    "drivexr.html": { Component: DrivexrPage, title: "DriveXR | MXR.ai", description: "Build emergency driving readiness through realistic scenarios, instructor control and evidence-led feedback.", bodyClass: "" },
-    "drivexr-2.html": { Component: DriveXR2Page, title: "DriveXR 2 | MXR.ai", description: "Next-generation emergency driver simulation — richer environments, deeper data and a more connected training experience.", bodyClass: "drivexr2-page" },
+    "drivexr.html": { Component: DrivexrPage, title: "DriveXR | MXR.ai", description: "Next-generation emergency driver simulation — richer environments, deeper data and a more connected training experience.", bodyClass: "drivexr2-page" },
     "insightxr.html": { Component: InsightxrPage, title: "InsightXR | MXR.ai", description: "Bring content, learners, devices and performance data together to deliver a connected XR learning programme.", bodyClass: "" },
     "omnia.html": { Component: OmniaPage, title: "Omnia | MXR.ai", description: "Omnia by MXR.ai.", bodyClass: "" },
     "simulator-development.html": { Component: SimulatorDevelopmentPage, title: "Simulator Development | MXR.ai", description: "Purpose-built simulators help teams practise complex tasks, build confidence and explore decisions in a safe, repeatable environment.", bodyClass: "" },

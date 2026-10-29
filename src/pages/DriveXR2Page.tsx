@@ -452,7 +452,8 @@ export default function DriveXR2Page() {
           <div className="dx-instructor-copy">
             <p className="dx-kicker">INSTRUCTOR CONTROL STATION</p>
             <h2>Run the scenario.<br />Watch every decision.</h2>
-            <p>Instructors control the scenario, inject hazards and monitor performance live. Try it: switch on lights and sirens, then inject a hazard.</p>
+            <p>Instructors can manage driving scenarios, introduce hazards in real time, control emergency lights and sirens, and monitor driver behaviour and performance throughout each session.
+              Explore the controls by activating the lights and sirens, then introducing a hazard to see how the scenario responds.</p>
             {/* <img src={stageSetup} alt="Instructor monitoring a live DriveXR session" loading="lazy" /> */}
           </div>
 
@@ -507,7 +508,7 @@ export default function DriveXR2Page() {
           </div>
           <div className="dx-bento">
             <figure className="dx-bento-photo">
-              <img src={stageSetup} alt="Instructor using the DriveXR 2 connected dashboard" loading="lazy" />
+              <img src={stageSetup} alt="Instructor using the DriveXR connected dashboard" loading="lazy" />
               <figcaption>
                 Smarter tools.<br />Sharper outcomes.
               </figcaption>
@@ -517,7 +518,7 @@ export default function DriveXR2Page() {
                 <path d="M4 7h16M4 17h16M8 4v6m8 4v6" />
               </svg>
               <h3>Live hazard injection</h3>
-              <p>Instructors introduce incidents in real time — pedestrians, junction conflicts, signal failures — without stopping the session.</p>
+              <p>Instructors introduce incidents in real time, including pedestrians, junction conflicts and signal failures, without stopping the session.</p>
             </article>
             <article>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -525,7 +526,7 @@ export default function DriveXR2Page() {
                 <path d="m11 8 5 4-5 4z" />
               </svg>
               <h3>Multi-session replay</h3>
-              <p>Compare a driver's behaviour across sessions side by side — spot improvement, flag risk and plan targeted practice.</p>
+              <p>Compare a driver's behaviour across sessions side by side to identify improvements, flag risks and plan targeted practice.</p>
             </article>
             <article>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -540,7 +541,7 @@ export default function DriveXR2Page() {
                 <path d="M8 22h8m-4-5v5" />
               </svg>
               <h3>VR & cab compatible</h3>
-              <p>Dual delivery — immersive VR headset or multi-screen cab — selectable per session with no hardware swap needed.</p>
+              <p>Choose between an immersive VR headset or a multi-screen cab for each session, without the need to swap hardware.</p>
             </article>
           </div>
         </div>

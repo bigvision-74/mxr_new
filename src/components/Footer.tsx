@@ -17,13 +17,13 @@ export function Footer() { return (
           <h3>
             {"Solutions"}
           </h3>
-          <a href={"/defence-security"}>
+          <a href={"#"}>
             {"Defence"}
           </a>
-          <a href={"/eprium"}>
+          <a href={"#"}>
             {"Healthcare"}
           </a>
-          <a href={"/#solutions"}>
+          <a href={"#"}>
             {"Enterprise"}
           </a>
         </div>
@@ -62,7 +62,7 @@ export function Footer() { return (
           <h3>
             {"Resources"}
           </h3>
-          <a href={"/case-study-xr-readiness"}>
+          <a href={"/case-studies"}>
             {"Case Studies"}
           </a>
           <a href={"/contact"}>
@@ -82,7 +82,7 @@ export function Footer() { return (
         <a href={"/terms-and-conditions"}>
           {"Terms"}
         </a>
-        <a href={"#"}>
+        <a href={"/cookie-policy"}>
           {"Cookies"}
         </a>
       </div>

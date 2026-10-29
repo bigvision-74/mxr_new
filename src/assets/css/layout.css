@@ -176,7 +176,7 @@ body,
    Identical height, padding, spacing, typography and layout on every page.
    Matches the Home page "Get in Touch" / contact section. */
 .mxr-react-page main .final-cta.home-wave-cta {
-  min-height: 320px !important;
+  min-height: 352px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;

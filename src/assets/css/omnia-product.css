@@ -926,6 +926,10 @@
   color: #10263d
 }
 
+.om-page .om-scenario-img span svg {
+  color: #0b66c3
+}
+
 .om-page .om-workflow-card:hover {
   border-color: #0b66c3;
   box-shadow: none

@@ -17,7 +17,7 @@ type ShinyTextProps = {
 function ShinyText({ children, duration = 3 }: ShinyTextProps) {
   return (
     <motion.span
-      className="block bg-clip-text text-transparent"
+      className="block bg-clip-text pb-[0.14em] -mb-[0.14em] text-transparent"
       style={{
         backgroundImage: 'var(--hero-shine)',
         backgroundSize: '200% 100%',
@@ -114,13 +114,13 @@ export function ImmersiveHero() {
         <div>
           <motion.h1
             className="banner-title max-w-6xl text-5xl font-medium leading-[.85] tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
-            aria-label="Technology for a Safer, Smarter Tomorrow."
+            aria-label="Your Vision. Our Technology."
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
-            <span className="block text-white" aria-hidden="true">Technology for</span>
-            <span aria-hidden="true"><ShinyText>a Safer, Smarter<br />Tomorrow.</ShinyText></span>
+            <span className="block text-white" aria-hidden="true">Your Vision.</span>
+            <span aria-hidden="true"><ShinyText>Our Technology.</ShinyText></span>
           </motion.h1>
 
           <motion.p

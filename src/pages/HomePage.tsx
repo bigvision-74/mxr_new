@@ -1,5 +1,5 @@
 ﻿import epriumDebriefImage from '../assets/images/eprium/eprium-devices.png'
-﻿import type { CSSProperties } from 'react'
+import type { CSSProperties } from 'react'
 import { ArrowRight, Printer, ScanLine, Glasses, ClipboardList, Users, ShieldCheck, ChartNoAxesCombined } from 'lucide-react'
 import { useState, useRef, useEffect } from 'react'
 import { ImmersiveHero } from '../components/ImmersiveHero'
@@ -112,7 +112,7 @@ export default function HomePage() {
             </h2>
           </div>
           <p>
-            {"We combine simulation, immersive technology, artificial intelligence and robust platform engineering to deliver complete solutions, from early concept through to deployment and support."}
+            {"We bring together simulation, immersive technologies, artificial intelligence and platform engineering to create innovative, reliable solutions. From initial concept and development to deployment and ongoing support, we turn ambitious ideas into practical, high-impact technology."}
           </p>
         </div>
         <div className={"service-mosaic"}>

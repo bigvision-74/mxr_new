@@ -94,7 +94,7 @@
 .contact-info-lead {
     color: #5b7186;
     font-size: 1rem;
-    max-width: 440px;
+    max-width: 500px;
     margin: 0 0 26px
 }
 
@@ -1270,6 +1270,7 @@ a.contact-card:hover .contact-card-arrow {
 .ep2-workflow {
     background: transparent
 }
+
 /* Banner background video (same clip as Simulator Development), under the shade and text */
 .contact-banner-video {
     position: absolute;
