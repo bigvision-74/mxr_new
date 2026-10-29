@@ -1,3 +1,4 @@
+import '../assets/css/eprium-hero-video.css'
 import type { CSSProperties } from 'react'
 import { ArrowRight, Glasses, Brain, BarChart3, FileText } from 'lucide-react'
 import { EpriumJourney } from '../components/EpriumJourney'
@@ -5,14 +6,14 @@ import { EpriumDebrief } from '../components/EpriumDebrief'
 import { EpriumAudiences } from '../components/EpriumAudiences'
 import { EpriumCapabilities } from "../components/EpriumCapabilities"
 import { EpriumFaculty } from "../components/EpriumFaculty"
-import defaultBanner from '../assets/videos/defaultbanner.mp4'
+const defaultBanner = '/assets/videos/eprium-hero-showcase.mp4'
 import clinicalLearning from '../assets/images/eprium/challenge-workflow.webp'
 import epriumScreen from '../assets/images/eprium/epriumss.png'
 import clinicalPractice from '../assets/images/eprium/challenge-placement.webp'
 
 export default function EpriumPage() {
   return (
-    <main className={"pp ep-page"} style={{ "--product-accent": "#0b66c3" } as CSSProperties}>
+    <main className={"pp ep-page eprium-product-page"} style={{ "--product-accent": "#0b66c3" } as CSSProperties}>
       <section className="ep2-hero">
         <video className="ep2-bg" autoPlay muted loop playsInline preload="metadata" aria-hidden="true"><source src={defaultBanner} type="video/mp4" /></video>
         <div className="ep2-shade" aria-hidden="true" />

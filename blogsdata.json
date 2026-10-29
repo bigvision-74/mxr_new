@@ -1,5 +1,142 @@
 [
   {
+    "shorttitle": "Lighter VR Hardware: What It Could Mean for Immersive Training",
+    "title": "Introduction",
+    "image": "assets/images/blog/Virtual-reality.jpg",
+    "slug": "lighter-vr-hardware-training-design",
+    "date": "29 October 2026",
+    "shortdesc": "Recent VR hardware announcements put comfort and interaction in focus. Here is what training teams should evaluate before adopting a new device.",
+    "bannerHeading": "Lighter VR Hardware: What It Could Mean for Immersive Training",
+    "subHeading": "Recent VR hardware announcements put comfort and interaction in focus. Here is what training teams should evaluate before adopting a new device.",
+    "bannerImg": "Virtual-reality.jpg",
+    "metatag": "Lighter VR Hardware: What It Could Mean for Immersive Training | MXR",
+    "body": [
+      {
+        "type": "para",
+        "content": [
+          "At Meta Connect in September 2026, Meta announced VR Glasses: a lighter form factor with a separate computing unit. Meta describes a device weighing about 100 grams, with visual passthrough and interaction through voice, gaze and hand gestures. The company says availability is planned for spring 2027. These are manufacturer announcements, rather than evidence of classroom or workplace training outcomes."
+        ]
+      },
+      {
+        "type": "title",
+        "content": "Why comfort matters to learning"
+      },
+      {
+        "type": "para",
+        "content": [
+          "MXR perspective: equipment should support the learning task without becoming the task. A lighter form factor could make some sessions easier to organise, but comfort also depends on fit, visual demands, accessibility and the duration of the activity. Teams should test with representative learners before choosing a platform."
+        ]
+      },
+      {
+        "type": "title",
+        "content": "Evaluate the workflow, not just the specifications"
+      },
+      {
+        "type": "list",
+        "content": [
+          "Check whether required applications and interaction methods are supported.",
+          "Test text legibility, object inspection and learner movement in the intended room.",
+          "Plan charging, cleaning, supervision and device management.",
+          "Measure task performance and feedback quality against the current training method."
+        ]
+      },
+      {
+        "type": "title",
+        "content": "A practical next step"
+      },
+      {
+        "type": "para",
+        "content": [
+          "Start with one learning objective and a small supervised pilot. Compare the experience with your existing approach, record friction points and agree what improvement would justify wider deployment. Hardware progress creates possibilities; good scenario design turns those possibilities into useful practice."
+        ]
+      },
+      {
+        "type": "title",
+        "content": "Source"
+      },
+      {
+        "type": "para",
+        "content": [
+          "<a href=\"https://about.fb.com/news/2026/09/introducing-meta-vr-glasses-3d-movies-immersive-live-sports-100-grams/\" target=\"_blank\" rel=\"noopener noreferrer\">Meta: Introducing Meta VR Glasses, 23 September 2026</a>. Announcement reviewed 29 October 2026. Illustrative XR image; not a photograph of the announced device."
+        ]
+      }
+    ]
+  },
+  {
+    "shorttitle": "AI Glasses and the Next Step in Contextual Learning",
+    "title": "Introduction",
+    "image": "assets/images/blog/Augmented-Reality.jpg",
+    "slug": "ai-glasses-contextual-workplace-learning",
+    "date": "29 October 2026",
+    "shortdesc": "New developer tools are expanding wearable AI possibilities. For learning teams, the opportunity starts with focused, well-governed assistance.",
+    "bannerHeading": "AI Glasses and the Next Step in Contextual Learning",
+    "subHeading": "New developer tools are expanding wearable AI possibilities. For learning teams, the opportunity starts with focused, well-governed assistance.",
+    "bannerImg": "Augmented-Reality.jpg",
+    "metatag": "AI Glasses and the Next Step in Contextual Learning | MXR",
+    "body": [
+      {
+        "type": "para",
+        "content": [
+          "Meta’s September 2026 developer update outlined several routes for building AI glasses experiences: extending mobile applications, creating web applications for display glasses, and connecting services to Meta AI. The update also distinguished supported releases from developer-preview capabilities. Availability and access need checking for each intended deployment."
+        ]
+      },
+      {
+        "type": "title",
+        "content": "From information access to useful assistance"
+      },
+      {
+        "type": "para",
+        "content": [
+          "MXR perspective: wearable assistance could help learners retrieve an approved instruction, ask a contextual question or reflect on a completed activity without repeatedly switching to another screen. These are potential applications, not a claim that every device or platform already supports a complete training workflow."
+        ]
+      },
+      {
+        "type": "title",
+        "content": "Design for a small, clear task"
+      },
+      {
+        "type": "para",
+        "content": [
+          "A good pilot might offer a short approved checklist or a searchable learning resource. Keep prompts brief, give the learner control, and provide a clear route to an instructor when an answer is uncertain. Avoid treating generated output as an authoritative procedure."
+        ]
+      },
+      {
+        "type": "title",
+        "content": "Build trust into the experience"
+      },
+      {
+        "type": "list",
+        "content": [
+          "Use reviewed content and identify where answers come from.",
+          "Explain when microphones or cameras are active and obtain appropriate permissions.",
+          "Define what information can be captured, retained and shared.",
+          "Provide accessible alternatives and an easy way to stop the experience.",
+          "Evaluate usefulness, distraction and accuracy with real users."
+        ]
+      },
+      {
+        "type": "title",
+        "content": "Connect the experience to the programme"
+      },
+      {
+        "type": "para",
+        "content": [
+          "Wearable interfaces should fit into a broader learning journey, with preparation, practice and debrief. The strongest starting point is a specific user need, followed by a controlled trial and a realistic assessment of the support required."
+        ]
+      },
+      {
+        "type": "title",
+        "content": "Source"
+      },
+      {
+        "type": "para",
+        "content": [
+          "<a href=\"https://developers.meta.com/blog/meta-connect-recap-ai-glasses/\" target=\"_blank\" rel=\"noopener noreferrer\">Meta developer update: How to Build for AI Glasses and Reach an Audience, 24 September 2026</a>. Reviewed 29 October 2026. Image illustrates augmented reality; it is not a product specification."
+        ]
+      }
+    ]
+  },
+  {
     "shorttitle": " Mapping Curricula to VR, AR, and Immersive",
     "title": "Introduction",
     "image": "assets/images/blog/Mapping-Curricula-image.jpg",
@@ -24,7 +161,6 @@
           "Concerns about resources, time constraints, and where to begin often impede progress. Having recently collaborated with two UK colleges, I've gained valuable insights into overcoming these challenges. By understanding their pain points and working closely with their teams, I've discovered effective strategies that can help other institutions seamlessly transition to immersive learning."
         ]
       },
-
       {
         "type": "title",
         "content": "Understanding the Challenges"
@@ -55,7 +191,9 @@
       },
       {
         "type": "para",
-        "content": ["<b>1. Partnering with Subject Matter Experts (SMEs)</b>"]
+        "content": [
+          "<b>1. Partnering with Subject Matter Experts (SMEs)</b>"
+        ]
       },
       {
         "type": "para",
@@ -70,7 +208,6 @@
           "• <b>Streamlined Development:</b> Our collaborative approach accelerates the process, reducing time-to-implementation for mapping modules to immersive experiences while significantly cutting costs."
         ]
       },
-
       {
         "type": "para",
         "content": [
@@ -85,10 +222,11 @@
           "• <b> Minimising Costs:</b> Utilising what you already have reduces the need for extensive new content creation, saving time and money."
         ]
       },
-
       {
         "type": "para",
-        "content": ["<b>3. Understanding the Curriculum</b>"]
+        "content": [
+          "<b>3. Understanding the Curriculum</b>"
+        ]
       },
       {
         "type": "para",
@@ -132,7 +270,6 @@
           "Enhanced engagement leads to better understanding and retention of information. Students are more likely to participate actively when learning is interactive and immersive. Experiencing concepts in a virtual environment can deepen understanding and memory. Familiarity with advanced technologies prepares students for the evolving demands of the workforce."
         ]
       },
-
       {
         "type": "title",
         "content": "Industry Insights: Discover the Latest Trends in Immersive Education"
@@ -147,7 +284,6 @@
         "type": "para",
         "content": [
           " 1. <a  target='_blank' rel='noreferrer noopener' href='https://www.timeshighereducation.com/campus/should-we-be-worried-educators-introduction-metaverse'>An educators’ introduction to the metaverse </a>",
-
           "<i>Jisc Guide</i>"
         ]
       },
@@ -155,7 +291,6 @@
         "type": "para",
         "content": [
           "2. <a  target='_blank' rel='noreferrer noopener' href='https://iscresearch.com/vr-and-ar-transforming-education/'>How VR and AR are Transforming the Classroom</a>",
-
           "<i>Education Technology Article</i>"
         ]
       },
@@ -163,7 +298,6 @@
         "type": "para",
         "content": [
           "3. <a  target='_blank' rel='noreferrer noopener' href='https://www.uxconnections.com/3-use-cases-of-virtual-reality-in-higher-education/'> Use Cases Of Virtual Reality In Higher Education </a>",
-
           "<i>UX Connections</i>"
         ]
       },
@@ -171,7 +305,6 @@
         "type": "para",
         "content": [
           "4. <a  target='_blank' rel='noreferrer noopener' href='https://assets.publishing.service.gov.uk/media/5ca360bee5274a77d479facc/DfE-Education_Technology_Strategy.pdf'>Realising the Potential of Technology in Education</a>",
-
           "<i>UK Government Strategy</i>"
         ]
       },
@@ -179,7 +312,6 @@
         "type": "para",
         "content": [
           "  5. <a  target='_blank' rel='noreferrer noopener' href='https://iuk.immersivetechnetwork.org/news/immersive-economy-in-the-uk-report-launches/'>Immersive Economy in the UK Report launches</a>",
-
           "<i>Innovate UK</i>"
         ]
       },
@@ -201,11 +333,15 @@
       },
       {
         "type": "para",
-        "content": [" <b> Find the Right Partner</b>"]
+        "content": [
+          " <b> Find the Right Partner</b>"
+        ]
       },
       {
         "type": "para",
-        "content": [" Seek out an immersive training provider who:"]
+        "content": [
+          " Seek out an immersive training provider who:"
+        ]
       },
       {
         "type": "list",
@@ -217,7 +353,9 @@
       },
       {
         "type": "para",
-        "content": ["<b> Engage Your Internal Teams</b>"]
+        "content": [
+          "<b> Engage Your Internal Teams</b>"
+        ]
       },
       {
         "type": "list",
@@ -228,7 +366,9 @@
       },
       {
         "type": "para",
-        "content": [" <b>Utilise Existing Materials</b>"]
+        "content": [
+          " <b>Utilise Existing Materials</b>"
+        ]
       },
       {
         "type": "list",
@@ -347,7 +487,6 @@
         "paraImg": "Innovative-Anxiety-Solutions5.jpg",
         "content": "What MXR is Doing: Partnering for Impact"
       },
-
       {
         "type": "para",
         "content": [
@@ -355,12 +494,10 @@
           "By integrating insights from the latest research, we ensure our solutions are both innovative and effective. Our partnerships with educators and mental health professionals are crucial in developing tools that are practical, impactful, and tailored to the needs of young people."
         ]
       },
-
       {
         "type": "title",
         "content": "Keeping You Informed"
       },
-
       {
         "type": "para",
         "content": [
@@ -417,7 +554,6 @@
           "Health T Levels prepare students for a variety of roles in the healthcare sector, where practical experience is crucial. MXR works with colleges to develop VR content that simulates real-life scenarios encountered by healthcare professionals. This allows students to practice and refine their skills in a risk-free environment, making virtual reality in health T Level training a powerful tool for education."
         ]
       },
-
       {
         "type": "list",
         "content": [
@@ -427,7 +563,6 @@
           "Dental Nurse: For dental nursing students, VR can simulate a dental surgery environment where they can practice assisting dentists during procedures, sterilising equipment, and managing patient care, illustrating how virtual reality in health T Level training can support diverse healthcare roles."
         ]
       },
-
       {
         "type": "title",
         "content": "Immersive Content for Healthcare Science T Levels"
@@ -550,7 +685,6 @@
       {
         "type": "title",
         "paraImg": "Understanding-Generative-AI.jpg",
-
         "content": "The Rise of T-levels and Apprenticeships in the UK"
       },
       {
@@ -571,14 +705,12 @@
       },
       {
         "type": "para",
-
         "content": [
           "One of the key challenges in delivering effective T-level and apprenticeship programmes is catering to the individual learning styles and needs of students. Traditional, one-size-fits-all educational content can be insufficient for students who learn at different paces or have varied levels of prior knowledge."
         ]
       },
       {
         "type": "para",
-
         "content": [
           "Generative AI can address this challenge by creating personalised learning experiences tailored to each student’s unique needs. For example, AI can generate specific study materials that focus on the areas where a student may be struggling, whether it’s a complex concept in digital technology or a practical skill in engineering. This level of customisation ensures that students receive the support they need to succeed in their chosen field."
         ]
@@ -601,7 +733,6 @@
       },
       {
         "paraImg": "education-revolution2.jpg",
-
         "type": "title",
         "content": "Supporting Universities and Colleges in the Transition to New Qualifications"
       },
@@ -694,7 +825,6 @@
       },
       {
         "type": "para",
-
         "content": [
           "1. Custom Content Development: We work closely with curriculum developers to create engaging and interactive content that fits seamlessly into existing educational frameworks.",
           "2. InsideXR Platform: Our InsideXR platform allows colleges to manage their content, run various training scenarios, and fully integrate their hardware into everyday teaching. With InsideXR, managing and utilising immersive technology becomes effortless and effective."
@@ -760,7 +890,6 @@
         "type": "title",
         "content": "Five Reasons Why UK Businesses Should Implement an AR Strategy"
       },
-
       {
         "type": "title",
         "content": "1. Boost Customer Engagement"
@@ -813,7 +942,6 @@
       },
       {
         "paraImg": "Ar2Image.jpg",
-
         "type": "title",
         "content": "How AR Can Support Your Business in the UK"
       },
@@ -889,7 +1017,6 @@
           "By answering these questions, you can begin to understand how AR can fit into your business strategy and where it can add the most value."
         ]
       },
-
       {
         "type": "title",
         "content": "Elevate Your Business with MXR"
@@ -945,10 +1072,8 @@
           "Better teamwork, collaboration, and collective decision-making"
         ]
       },
-
       {
         "paraImg": "ArVrShaping.jpg",
-
         "type": "title",
         "content": "The Necessity of Adapting Technology in Business"
       },
@@ -1000,7 +1125,6 @@
       },
       {
         "paraImg": "ArVrShaping2.jpg",
-
         "type": "title",
         "content": "Faster Industrial Maintenance with XR"
       },
@@ -1151,7 +1275,6 @@
       },
       {
         "paraImg": "Reduced-Training-Time-and-Costs.jpg",
-
         "type": "title",
         "content": "Project Planning"
       },
@@ -1229,7 +1352,6 @@
     "shorttitle": "What is Mixed Reality?",
     "title": "What is Mixed Reality?",
     "image": "assets/images/blog/mixReality.jpg",
-
     "slug": "what-is-mixed-reality",
     "date": "August 11th, 2022",
     "shortdesc": "Mixed Reality (MR) is a combination of multiple advanced technologies, primarily Virtual Reality and Augmented Reality.",
@@ -1239,7 +1361,6 @@
     "text": "Share The Virtual Reality Post!",
     "img": "<i className=\"fa fa-desktop\" aria-hidden=\"true\"></i>",
     "metatag": "What is Mixed Reality? - MXR",
-
     "body": [
       {
         "type": "para",
@@ -1275,7 +1396,6 @@
       },
       {
         "paraImg": "mixed-reality-training.jpg",
-
         "type": "title",
         "content": "Mixed Reality’s Training Benefits"
       },
@@ -1338,7 +1458,6 @@
       },
       {
         "paraImg": "specific-Mixed.jpg",
-
         "type": "title",
         "content": "Welcome to the future of MR training!"
       },
@@ -1349,7 +1468,6 @@
         ]
       }
     ],
-
     "author": "mario",
     "id": 1
   },
@@ -1421,7 +1539,6 @@
       },
       {
         "paraImg": "vrImage2.jpg",
-
         "type": "title",
         "content": "Education"
       },
@@ -1553,7 +1670,6 @@
       },
       {
         "paraImg": "ARImage2.jpg",
-
         "type": "title",
         "content": "Maintenance and Repairs"
       },
