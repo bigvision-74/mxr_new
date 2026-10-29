@@ -59,7 +59,7 @@ export default function ImmersiveRoomsPage() {
   return (
     <main className="service-detail">
 
-      {/* ── HERO — full-bleed room photo with gradient overlay ─────────────── */}
+      {/* ── HERO , full-bleed room photo with gradient overlay ─────────────── */}
       <section className="service-detail-hero">
         <div style={{ maxWidth: '46vw' }}>
           <div className="about-hero-title">
@@ -69,7 +69,7 @@ export default function ImmersiveRoomsPage() {
             </h1>
           </div>
           <p className="banner-lead">
-            {"Large-format projection environments that place a group inside a scene — no headsets, no barriers, just a room that becomes anywhere you need it to be."}
+            {"Large-format projection environments that place a group inside a scene , no headsets, no barriers, just a room that becomes anywhere you need it to be."}
           </p>
           <div className="button-row">
             <a
@@ -99,7 +99,7 @@ export default function ImmersiveRoomsPage() {
           <div className="xrd-cap-card" style={{ borderRight: '1px solid rgba(0,0,0,.08)', borderBottom: '1px solid rgba(0,0,0,.08)' }}>
             <div className="xrd-cap-icon">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+                <rect x="2" y="3" width="20" height="14" rx="2" /><path d="M8 21h8M12 17v4" />
               </svg>
             </div>
             <div className="xrd-cap-body">
@@ -110,7 +110,7 @@ export default function ImmersiveRoomsPage() {
           <div className="xrd-cap-card" style={{ borderRight: '1px solid rgba(0,0,0,.08)', borderBottom: '1px solid rgba(0,0,0,.08)' }}>
             <div className="xrd-cap-icon">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <rect x="2" y="6" width="14" height="10" rx="2"/><path d="M18 9l4-2v10l-4-2M7 9v6"/>
+                <rect x="2" y="6" width="14" height="10" rx="2" /><path d="M18 9l4-2v10l-4-2M7 9v6" />
               </svg>
             </div>
             <div className="xrd-cap-body">
@@ -121,7 +121,7 @@ export default function ImmersiveRoomsPage() {
           <div className="xrd-cap-card" style={{ borderRight: '1px solid rgba(0,0,0,.08)', borderBottom: '1px solid rgba(0,0,0,.08)' }}>
             <div className="xrd-cap-icon">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/>
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><path d="M14 2v6h6M8 13h8M8 17h5" />
               </svg>
             </div>
             <div className="xrd-cap-body">
@@ -132,12 +132,12 @@ export default function ImmersiveRoomsPage() {
           <div className="xrd-cap-card" style={{ borderRight: '1px solid rgba(0,0,0,.08)', borderBottom: '1px solid rgba(0,0,0,.08)' }}>
             <div className="xrd-cap-icon">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
               </svg>
             </div>
             <div className="xrd-cap-body">
               <p className="xrd-cap-title" style={{ color: 'var(--color-dark)' }}>{"Hardware & installation"}</p>
-              <p className="xrd-cap-desc" style={{ color: 'rgba(13,24,38,.55)' }}>{"Projection hardware specified, supplied and installed for your space — calibrated and ready to use."}</p>
+              <p className="xrd-cap-desc" style={{ color: 'rgba(13,24,38,.55)' }}>{"Projection hardware specified, supplied and installed for your space , calibrated and ready to use."}</p>
             </div>
           </div>
         </div>
@@ -149,24 +149,24 @@ export default function ImmersiveRoomsPage() {
           <div className="xrd-approach-text">
             <p className="eyebrow" style={{ color: '#0b66c3' }}>{"CONTENT & EXPERIENCES"}</p>
             <h2>{"What runs in the room."}</h2>
-            <p>{"The room is a delivery surface. Content is built to your scenario and objectives — from on-site footage to fully interactive 3D environments."}</p>
+            <p>{"The room is a delivery surface. Content is built to your scenario and objectives , from on-site footage to fully interactive 3D environments."}</p>
             <div className="xrd-approach-devices">
               <div className="xrd-device-row">
                 <div className="xrd-device-row-icon">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"/><path d="M2 12h4M18 12h4M12 2v4M12 18v4"/>
-                    <circle cx="12" cy="12" r="4"/>
+                    <circle cx="12" cy="12" r="10" /><path d="M2 12h4M18 12h4M12 2v4M12 18v4" />
+                    <circle cx="12" cy="12" r="4" />
                   </svg>
                 </div>
                 <div>
                   <p className="xrd-device-row-title">{"360° video"}</p>
-                  <p className="xrd-device-row-desc">{"Immersive footage captured on location — wards, sites, vehicles, environments — played back at room scale."}</p>
+                  <p className="xrd-device-row-desc">{"Immersive footage captured on location , wards, sites, vehicles, environments , played back at room scale."}</p>
                 </div>
               </div>
               <div className="xrd-device-row">
                 <div className="xrd-device-row-icon">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
                   </svg>
                 </div>
                 <div>
@@ -177,23 +177,23 @@ export default function ImmersiveRoomsPage() {
               <div className="xrd-device-row">
                 <div className="xrd-device-row-icon">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" />
                   </svg>
                 </div>
                 <div>
                   <p className="xrd-device-row-title">{"Photogrammetry capture"}</p>
-                  <p className="xrd-device-row-desc">{"High-fidelity scans of physical spaces, equipment and assets — brought into the room as accurate 3D models."}</p>
+                  <p className="xrd-device-row-desc">{"High-fidelity scans of physical spaces, equipment and assets , brought into the room as accurate 3D models."}</p>
                 </div>
               </div>
               <div className="xrd-device-row">
                 <div className="xrd-device-row-icon">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                   </svg>
                 </div>
                 <div>
                   <p className="xrd-device-row-title">{"Data & overlay layers"}</p>
-                  <p className="xrd-device-row-desc">{"Live feeds, sensor data and contextual overlays displayed alongside environments — ideal for ops and planning."}</p>
+                  <p className="xrd-device-row-desc">{"Live feeds, sensor data and contextual overlays displayed alongside environments , ideal for ops and planning."}</p>
                 </div>
               </div>
             </div>
@@ -213,11 +213,11 @@ export default function ImmersiveRoomsPage() {
         <div className="ais-stats-inner">
           <div className="ais-stat-item">
             <div className="ais-stat-num">30<em>+</em></div>
-            <p className="ais-stat-label">{"participants in a single session — no headsets, no individual setup"}</p>
+            <p className="ais-stat-label">{"participants in a single session , no headsets, no individual setup"}</p>
           </div>
           <div className="ais-stat-item">
             <div className="ais-stat-num">3</div>
-            <p className="ais-stat-label">{"wall configurations — single, dual and full panoramic (360°)"}</p>
+            <p className="ais-stat-label">{"wall configurations , single, dual and full panoramic (360°)"}</p>
           </div>
           <div className="ais-stat-item">
             <div className="ais-stat-num">1<em>×</em></div>
@@ -263,7 +263,7 @@ export default function ImmersiveRoomsPage() {
               <FloorPanoramic />
             </div>
             <small>{"PANORAMIC (360°)"}</small>
-            <h3>{"Full surround — total shared presence."}</h3>
+            <h3>{"Full surround , total shared presence."}</h3>
             <div>
               <b>{"BEST FOR"}</b>
               <span>{"Clinical simulation, fire and hazmat response, defence rehearsal, large-scale multi-team exercises."}</span>
@@ -277,12 +277,12 @@ export default function ImmersiveRoomsPage() {
       <section className="ais-trust">
         <p className="eyebrow" style={{ color: '#0b66c3' }}>{"WHO USES IMMERSIVE ROOMS"}</p>
         <h2>{"Built for high-stakes training."}</h2>
-        <p className="ais-trust-lead">{"Immersive rooms are deployed where the cost of under-preparation is highest — and where shared, group-based rehearsal makes the difference."}</p>
+        <p className="ais-trust-lead">{"Immersive rooms are deployed where the cost of under-preparation is highest , and where shared, group-based rehearsal makes the difference."}</p>
         <div className="ais-trust-cols">
           <div className="ais-trust-col">
             <div className="ais-trust-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
               </svg>
             </div>
             <h3>{"Healthcare & clinical"}</h3>
@@ -291,7 +291,7 @@ export default function ImmersiveRoomsPage() {
           <div className="ais-trust-col">
             <div className="ais-trust-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
               </svg>
             </div>
             <h3>{"Defence & security"}</h3>
@@ -300,7 +300,7 @@ export default function ImmersiveRoomsPage() {
           <div className="ais-trust-col">
             <div className="ais-trust-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M1.5 8.5A14.4 14.4 0 0 1 12 4c4.1 0 7.8 1.7 10.5 4.5M5 12a10 10 0 0 1 14 0M8.5 15.5A5 5 0 0 1 12 14c1.4 0 2.6.5 3.5 1.5M12 19h.01"/>
+                <path d="M1.5 8.5A14.4 14.4 0 0 1 12 4c4.1 0 7.8 1.7 10.5 4.5M5 12a10 10 0 0 1 14 0M8.5 15.5A5 5 0 0 1 12 14c1.4 0 2.6.5 3.5 1.5M12 19h.01" />
               </svg>
             </div>
             <h3>{"Fire & emergency"}</h3>
@@ -309,7 +309,7 @@ export default function ImmersiveRoomsPage() {
           <div className="ais-trust-col">
             <div className="ais-trust-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2M12 12v5M9.5 14.5h5"/>
+                <rect x="2" y="7" width="20" height="14" rx="2" /><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2M12 12v5M9.5 14.5h5" />
               </svg>
             </div>
             <h3>{"Industrial & safety"}</h3>
@@ -323,7 +323,7 @@ export default function ImmersiveRoomsPage() {
         <div className="service-outcome-text">
           <p className="eyebrow" style={{ color: '#0b66c3' }}>{"THE APPROACH"}</p>
           <h2>{"Design the room around what happens in it."}</h2>
-          <p>{"We work from your learning objectives and physical space outward — selecting projection format, content platform and facilitator tooling once we understand exactly what your people need to be able to do."}</p>
+          <p>{"We work from your learning objectives and physical space outward , selecting projection format, content platform and facilitator tooling once we understand exactly what your people need to be able to do."}</p>
           <div className="service-approach-modes">
             <span className="service-approach-pill">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><rect x="1" y="1" width="12" height="12" rx="1.5" stroke="currentColor" strokeWidth="1.3" /><rect x="1" y="1" width="12" height="3.5" rx="1" fill="currentColor" opacity=".4" /></svg>
@@ -432,7 +432,7 @@ export default function ImmersiveRoomsPage() {
               </svg>
             </span>
             <strong>{"XR DEVELOPMENT"}</strong>
-            <p>{"VR, AR and MR experiences for individual learners — a natural complement to group room-based training."}</p>
+            <p>{"VR, AR and MR experiences for individual learners , a natural complement to group room-based training."}</p>
             <span className="service-card-link">{"Explore"} <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="#0B66C3" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg></span>
           </a>
           <a href="/simulator-development" className="service-card">

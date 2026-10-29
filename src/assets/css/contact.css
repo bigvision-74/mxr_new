@@ -445,7 +445,7 @@ a.contact-card:hover .contact-card-arrow {
     margin-bottom: 4px
 }
 
-/* reCAPTCHA notice — tiny, right-aligned footnote */
+/* reCAPTCHA notice , tiny, right-aligned footnote */
 #hubspotForm .hs-recaptcha {
     text-align: right !important;
     margin-top: 6px !important
@@ -783,7 +783,7 @@ a.contact-card:hover .contact-card-arrow {
     }
 }
 
-/* EPRium hero — aligned with the home hero (font, weight, accent, buttons, backdrop) */
+/* EPRium hero , aligned with the home hero (font, weight, accent, buttons, backdrop) */
 .ep2-hero,
 .ep2-workflow {
     font-family: var(--font-family)
@@ -890,7 +890,7 @@ a.contact-card:hover .contact-card-arrow {
     font-weight: 600
 }
 
-/* EPRium hero — full-bleed layout like the home hero */
+/* EPRium hero , full-bleed layout like the home hero */
 .ep2-hero {
     display: flex;
     align-items: flex-end;
@@ -1014,7 +1014,7 @@ a.contact-card:hover .contact-card-arrow {
     }
 }
 
-/* EPRium hero — match home hero exactly: Inter everywhere, darker photo, content starts under the nav */
+/* EPRium hero , match home hero exactly: Inter everywhere, darker photo, content starts under the nav */
 .ep2-hero * {
     font-family: var(--font-family)
 }
@@ -1099,7 +1099,7 @@ a.contact-card:hover .contact-card-arrow {
     }
 }
 
-/* EPRium hero — buttons use the home hero's classes; tagline sits on its own row after them */
+/* EPRium hero , buttons use the home hero's classes; tagline sits on its own row after them */
 .ep2-hero-inner .ep2-actions {
     display: flex;
     flex-wrap: wrap;

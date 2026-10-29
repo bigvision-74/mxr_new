@@ -105,7 +105,7 @@ export function ImmersiveHero() {
         <div className="absolute -left-36 top-1/3 h-96 w-96 rounded-full bg-[#0B66C3]/20 blur-[120px]" />
       </div>
 
-      {/* Shared nav — overlay mode sits on top of the video */}
+      {/* Shared nav , overlay mode sits on top of the video */}
       <NavBar overlay />
       <div className="relative z-10 site-page-gutter"><div className="border-t border-white/15" /></div>
 

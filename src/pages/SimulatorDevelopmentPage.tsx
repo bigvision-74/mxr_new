@@ -74,7 +74,7 @@ export default function SimulatorDevelopmentPage() {
         </div>
       </section>
 
-      {/* ── IMPACT STATS — dark navy strip ──────────────────────────────── */}
+      {/* ── IMPACT STATS , dark navy strip ──────────────────────────────── */}
       <div className="sim-impact">
         <div className="sim-impact-inner">
           <div className="sim-impact-item">
@@ -124,7 +124,7 @@ export default function SimulatorDevelopmentPage() {
         <div className={"service-outcome-text"}>
           <p className={"eyebrow"}>{"THE APPROACH"}</p>
           <h2>{"Make practice practical."}</h2>
-          <p>{"We align fidelity, hardware and interaction with your learning objectives — shaping each simulator around the tasks that matter most."}</p>
+          <p>{"We align fidelity, hardware and interaction with your learning objectives , shaping each simulator around the tasks that matter most."}</p>
           <div className={"service-approach-modes"}>
             <span className={"service-approach-pill"}>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><rect x="1" y="3" width="12" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.4" /><path d="M5 11h4M7 10v1" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" /></svg>
@@ -151,7 +151,7 @@ export default function SimulatorDevelopmentPage() {
         </div>
       </section>
 
-      {/* ── SIMULATOR TYPES — dark grid ──────────────────────────────────── */}
+      {/* ── SIMULATOR TYPES , dark grid ──────────────────────────────────── */}
       <section className="sim-types">
         <div className="sim-types-head">
           <div>
@@ -159,7 +159,7 @@ export default function SimulatorDevelopmentPage() {
             <h2>{"The right platform for your task."}</h2>
           </div>
           <div className="sim-types-head-right">
-            <p>{"We build across the full fidelity spectrum — from lightweight desktop simulators to full hardware-in-the-loop rigs — selecting the approach that best serves your training objectives and budget."}</p>
+            <p>{"We build across the full fidelity spectrum , from lightweight desktop simulators to full hardware-in-the-loop rigs , selecting the approach that best serves your training objectives and budget."}</p>
           </div>
         </div>
         <div className="sim-types-grid">
@@ -208,7 +208,7 @@ export default function SimulatorDevelopmentPage() {
           <div className="sim-benefits-intro">
             <p className={"eyebrow"}>{"KEY BENEFITS"}</p>
             <h2>{"Why simulation changes the outcome."}</h2>
-            <p>{"Simulation isn't a substitute for real experience — it's what makes real experience safer, faster and more effective."}</p>
+            <p>{"Simulation isn't a substitute for real experience , it's what makes real experience safer, faster and more effective."}</p>
           </div>
           <div className="sim-benefits-list">
             <div className="sim-benefit-item">
@@ -253,7 +253,7 @@ export default function SimulatorDevelopmentPage() {
               </div>
               <div>
                 <p className="sim-benefit-title">{"Higher engagement"}</p>
-                <p className="sim-benefit-desc">{"Active, immersive practice is far more engaging than passive instruction — leading to better retention and stronger motivation to learn."}</p>
+                <p className="sim-benefit-desc">{"Active, immersive practice is far more engaging than passive instruction , leading to better retention and stronger motivation to learn."}</p>
               </div>
             </div>
             <div className="sim-benefit-item">
@@ -262,7 +262,7 @@ export default function SimulatorDevelopmentPage() {
               </div>
               <div>
                 <p className="sim-benefit-title">{"Consistent delivery"}</p>
-                <p className="sim-benefit-desc">{"Every trainee receives the same environment, the same scenarios and the same assessment criteria — regardless of when or where training takes place."}</p>
+                <p className="sim-benefit-desc">{"Every trainee receives the same environment, the same scenarios and the same assessment criteria , regardless of when or where training takes place."}</p>
               </div>
             </div>
           </div>
@@ -274,7 +274,7 @@ export default function SimulatorDevelopmentPage() {
         <div className={"service-outcome-text"}>
           <p className={"eyebrow"}>{"PERFORMANCE DATA"}</p>
           <h2>{"See what your people can do."}</h2>
-          <p>{"Every simulator session generates structured data. Our analytics layer turns trainee actions into actionable insight — so instructors can track progress, identify gaps and demonstrate training effectiveness over time."}</p>
+          <p>{"Every simulator session generates structured data. Our analytics layer turns trainee actions into actionable insight , so instructors can track progress, identify gaps and demonstrate training effectiveness over time."}</p>
           <div className={"service-approach-modes"}>
             <span className={"service-approach-pill"}>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 11l3-4 3 3 2-5 3 4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" /></svg>
@@ -300,7 +300,7 @@ export default function SimulatorDevelopmentPage() {
         </div>
       </section>
 
-      {/* ── WORKING WITH MXR — dark wave ─────────────────────────────────── */}
+      {/* ── WORKING WITH MXR , dark wave ─────────────────────────────────── */}
       <section className={"final-cta home-wave-section home-wave-cta"}>
         <div className={"home-wave-media"} aria-hidden={"true"}>
           <video autoPlay={true} muted={true} loop={true} playsInline={true} preload={"metadata"}>

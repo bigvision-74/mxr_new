@@ -93,7 +93,7 @@ function EventCard({ event }: { event: Event }) {
 export default function EventsPage() {
   return (
     <main className="events-page">
-      {/* Banner — same structure as Blog and Policies */}
+      {/* Banner , same structure as Blog and Policies */}
       <section className="contact-banner" style={{ backgroundImage: `url(${bannerImg})` }}>
         <video className="contact-banner-video" autoPlay muted loop playsInline preload="metadata" aria-hidden="true"><source src={defaultBanner} type="video/mp4" /></video>
         <div className="contact-banner-overlay" />
@@ -116,7 +116,7 @@ export default function EventsPage() {
         <div className="events-list">
           {upcoming.length > 0
             ? upcoming.map(e => <EventCard key={e.id} event={e} />)
-            : <p className="events-empty">No upcoming events at the moment — check back soon.</p>
+            : <p className="events-empty">No upcoming events at the moment , check back soon.</p>
           }
         </div>
       </section>

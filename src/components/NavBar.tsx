@@ -52,7 +52,7 @@ export function NavBar({ overlay = false }: NavBarProps) {
         <a href="/" className="flex shrink-0 items-center" aria-label="MXR home">
           <img
             src={mxrLogo}
-            alt="MXR — Where vision becomes reality"
+            alt="MXR , Where vision becomes reality"
             className="h-11 w-auto object-contain sm:h-12"
           />
         </a>

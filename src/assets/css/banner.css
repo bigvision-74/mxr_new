@@ -1,10 +1,11 @@
-/* Shared banner typography — reference: DriveXR 2 hero.
+/* Shared banner typography , reference: DriveXR 2 hero.
    Lives in its own cascade layer so it wins over page-specific !important rules
    without raising selector specificity. */
 @layer banner {
+
   /* Large banner title (the original home banner size) used on every page. */
   .banner-title {
-    font-family:var(--font-family) !important;
+    font-family: var(--font-family) !important;
     font-size: clamp(2.8rem, 5.6vw, 6.4rem) !important;
     font-weight: 500 !important;
     line-height: .95 !important;
@@ -36,8 +37,8 @@
   /* Highlighted words in every banner title use one colour (--hero-accent in tokens.css) with the same flowing
      blue flow as the home banner. */
   .banner-title em,
-  .banner-title > br + span,
-  .mxr-react-page :is(.about-hero, .service-detail-hero) .about-hero-title h1 > span:last-child {
+  .banner-title>br+span,
+  .mxr-react-page :is(.about-hero, .service-detail-hero) .about-hero-title h1>span:last-child {
     color: var(--hero-accent) !important;
     background-image: var(--hero-shine) !important;
     background-size: 200% 100% !important;
@@ -52,8 +53,8 @@
   }
 
   /* A highlighted word nested inside a highlighted line shows the line's gradient instead of drawing its own. */
-  .banner-title > br + span em,
-  .mxr-react-page :is(.about-hero, .service-detail-hero) .about-hero-title h1 > span:last-child em {
+  .banner-title>br+span em,
+  .mxr-react-page :is(.about-hero, .service-detail-hero) .about-hero-title h1>span:last-child em {
     background: none !important;
     animation: none;
   }
@@ -81,7 +82,7 @@
   }
 
   .banner-lead {
-    font-family:var(--font-family) !important;
+    font-family: var(--font-family) !important;
     font-size: 1.1rem !important;
     font-weight: 400 !important;
     line-height: 1.65 !important;
@@ -97,23 +98,36 @@
 
 /* The gradient starts and ends on the same blue and repeats, so it loops with no gaps: the text is always filled. */
 @keyframes hero-shine {
-  from { background-position: 0 0; }
-  to { background-position: 200% 0; }
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 200% 0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .banner-title em,
-  .banner-title > br + span,
-  .mxr-react-page :is(.about-hero, .service-detail-hero) .about-hero-title h1 > span:last-child {
+  .banner-title>br+span,
+  .mxr-react-page :is(.about-hero, .service-detail-hero) .about-hero-title h1>span:last-child {
     animation: none;
     background-position: 0 0;
   }
 }
 
 /* Site-wide typeface: Inter for header, banner, body text and buttons */
-html, body, button, input, select, textarea,
-body *, body *::before, body *::after {
-    font-family:var(--font-family) !important
+html,
+body,
+button,
+input,
+select,
+textarea,
+body *,
+body *::before,
+body *::after {
+  font-family: var(--font-family) !important
 }
 
 /* About and Service hero: uses the shared banner typography (Inter 500, same size scale as the Contact and policy banners),
@@ -122,7 +136,7 @@ body *, body *::before, body *::after {
   min-height: clamp(760px, 92vh, 960px);
 }
 
-.mxr-react-page .service-detail-hero > div:first-child {
+.mxr-react-page .service-detail-hero>div:first-child {
   min-height: clamp(760px, 92vh, 960px);
 }
 
@@ -141,27 +155,27 @@ body *, body *::before, body *::after {
   margin: 20px 0 26px;
 }
 
-.mxr-react-page :is(.about-hero, .service-detail-hero) .about-hero-title h1 > span {
+.mxr-react-page :is(.about-hero, .service-detail-hero) .about-hero-title h1>span {
   display: block;
   white-space: normal;
   color: #fff;
 }
 
 /* Accent colour matches the Contact banner */
-.mxr-react-page :is(.about-hero, .service-detail-hero) .about-hero-title h1 > span:last-child,
+.mxr-react-page :is(.about-hero, .service-detail-hero) .about-hero-title h1>span:last-child,
 .mxr-react-page :is(.about-hero, .service-detail-hero) .about-hero-title h1 em {
   color: var(--hero-accent);
   font-style: normal;
 }
 
-.mxr-react-page :is(.about-hero .about-hero-copy, .service-detail-hero > div:first-child) > .banner-lead {
+.mxr-react-page :is(.about-hero .about-hero-copy, .service-detail-hero > div:first-child)>.banner-lead {
   max-width: 40rem;
   color: #e3ecf5;
 }
 
 /* Small banner text: breadcrumbs, tags and note lines were 10-12px. One larger scale for every banner.
    (Section headings / eyebrows are styled once, in the banner layer at the top of this file.) */
-.mxr-react-page main > section:first-of-type :is(.pp-breadcrumb, .breadcrumbs, .breadcrumbs a, .breadcrumbs b, .breadcrumbs span) {
+.mxr-react-page main>section:first-of-type :is(.pp-breadcrumb, .breadcrumbs, .breadcrumbs a, .breadcrumbs b, .breadcrumbs span) {
   font-size: .875rem !important;
 }
 
@@ -169,7 +183,7 @@ body *, body *::before, body *::after {
   font-size: .875rem !important;
 }
 
-.mxr-react-page .pp-actions > a:not(.btn) {
+.mxr-react-page .pp-actions>a:not(.btn) {
   font-size: 1rem !important;
   font-weight: 600 !important;
 }

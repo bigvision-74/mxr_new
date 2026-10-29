@@ -7,13 +7,15 @@ export const equalOpportunitiesSections: DpSection[] = [
       'This document sets out META EXTENDED REALITY policy on equal opportunities. This policy does not form part of your contract of employment but is a policy statement on the way in which equal opportunities issues are dealt with in META EXTENDED REALITY.',
       'META EXTENDED REALITY has introduced this equal opportunity policy as a commitment to make full use of the talents and resource of all its employees and to provide a healthy environment which will encourage good and productive working operations within the organisation. This document describes how the policy is to be applied throughout META EXTENDED REALITY.',
       'META EXTENDED REALITY is particularly concerned that equality of opportunity is maintained in the following areas:',
-      { list: [
-        'recruitment and selection;',
-        'promotion, appraisal, transfer and training',
-        'terms of employment, benefits, facilities and services',
-        'grievance and disciplinary procedures',
-        'dismissals, resignations and redundancies.',
-      ] },
+      {
+        list: [
+          'recruitment and selection;',
+          'promotion, appraisal, transfer and training',
+          'terms of employment, benefits, facilities and services',
+          'grievance and disciplinary procedures',
+          'dismissals, resignations and redundancies.',
+        ]
+      },
       'META EXTENDED REALITY will ensure that all managers and supervisors with responsibility for any of the areas of concern listed above are provided with the appropriate equal opportunities training where necessary which may be updated as required. Other staff may also be required to attend equal opportunities training. Attendance at training will be compulsory if you are notified that you should attend a course. Up-to-date literature on equal opportunities is always available from the Human Resources department.',
     ],
   },
@@ -23,18 +25,20 @@ export const equalOpportunitiesSections: DpSection[] = [
       'An equal opportunities policy statement will be displayed on all notice boards and sent to all staff. A copy of this policy is available from the Human Resources department.',
       'META EXTENDED REALITY statement of principle on equal opportunities is:',
       '“META EXTENDED REALITY is committed to a policy of treating all its employees, workers and job applicants equally. No employee or potential employee shall receive less favourable treatment on the grounds of:',
-      { list: [
-        'race, colour, nationality, ethnic or national origins',
-        'religion or belief',
-        'sex or marital/civil partner status',
-        'sexual orientation',
-        'gender reassignment',
-        'age (or perceived age)',
-        'disability (past or present)',
-        'trade union membership (or non-membership)',
-        'part-time or fixed term status',
-        'pregnancy or maternity',
-      ] },
+      {
+        list: [
+          'race, colour, nationality, ethnic or national origins',
+          'religion or belief',
+          'sex or marital/civil partner status',
+          'sexual orientation',
+          'gender reassignment',
+          'age (or perceived age)',
+          'disability (past or present)',
+          'trade union membership (or non-membership)',
+          'part-time or fixed term status',
+          'pregnancy or maternity',
+        ]
+      },
       'The above categories include ‘Protected Characteristics’. The Equality Act 2010 is concerned with discrimination and harassment in respect of nine protected characteristics namely, age; disability; gender reassignment; marriage and civil partnership; pregnancy and maternity; race; religion or belief; sex; and sexual orientation. No employee or potential employee shall be disadvantaged by any conditions of employment that cannot be justified as necessary on operational grounds. META EXTENDED REALITY aims to encourage, value and manage diversity and is committed to equality for its entire staff. META EXTENDED REALITY wishes to attain a workforce which is representative of the communities from which it is drawn.”',
       'Employees are expected to work with META EXTENDED REALITY to these aims. In certain circumstances an employee can be personally liable for discrimination against a fellow employee or a job applicant.',
       'All staff have a duty to act in accordance with this policy and treat colleagues with dignity at all times and not to discriminate against or harass other members of staff regardless of their status.',
@@ -45,12 +49,14 @@ export const equalOpportunitiesSections: DpSection[] = [
     title: 'Principles',
     blocks: [
       'There should be no discrimination, whether direct or indirect, on any of the grounds set out in META EXTENDED REALITY statement of principle on equal opportunities. Discrimination can occur in the following forms:',
-      { terms: [
-        ['Direct discrimination', 'this is treating someone less favourably because of their Protected Characteristics. An example of this is paying someone less because of their sex or because they belong to a particular racial group.'],
-        ['Indirect discrimination', 'occurs where someone is disadvantaged by an unjustified provision, criterion or practice that also puts other people with the same Protected Characteristics at a particular disadvantage. An example of this is telling everyone they have to work late at night — although applied to everyone, it will adversely affect those employees with childcare responsibilities and these tend to be women.'],
-        ['Victimisation', 'this is less favourable treatment of someone who has complained or given information about discrimination or harassment, or supported someone else’s complaint. An example of this would be an employee claiming that they had been discriminated on the grounds of their disability and then their manager deciding when they left not to give them a reference because they had claimed disability discrimination.'],
-        ['Harassment', 'harassment related to any of the Protected Characteristics is prohibited. Harassment is unwanted conduct that has the purpose or effect of violating someone’s dignity, or creating an intimidating, hostile, degrading, humiliating or offensive environment for them. More information on what can constitute harassment is set out in META EXTENDED REALITY anti-harassment policy.'],
-      ] },
+      {
+        terms: [
+          ['Direct discrimination', 'this is treating someone less favourably because of their Protected Characteristics. An example of this is paying someone less because of their sex or because they belong to a particular racial group.'],
+          ['Indirect discrimination', 'occurs where someone is disadvantaged by an unjustified provision, criterion or practice that also puts other people with the same Protected Characteristics at a particular disadvantage. An example of this is telling everyone they have to work late at night , although applied to everyone, it will adversely affect those employees with childcare responsibilities and these tend to be women.'],
+          ['Victimisation', 'this is less favourable treatment of someone who has complained or given information about discrimination or harassment, or supported someone else’s complaint. An example of this would be an employee claiming that they had been discriminated on the grounds of their disability and then their manager deciding when they left not to give them a reference because they had claimed disability discrimination.'],
+          ['Harassment', 'harassment related to any of the Protected Characteristics is prohibited. Harassment is unwanted conduct that has the purpose or effect of violating someone’s dignity, or creating an intimidating, hostile, degrading, humiliating or offensive environment for them. More information on what can constitute harassment is set out in META EXTENDED REALITY anti-harassment policy.'],
+        ]
+      },
       'META EXTENDED REALITY will appoint, train, develop, reward and promote on the basis of merit and ability.',
       'All employees have personal responsibility for the practical application of META EXTENDED REALITY equal opportunities policy, which extends to the treatment of job applicants, employees (including former employees), customers/clients and visitors.',
       'Special responsibility for the practical application of META EXTENDED REALITY equal opportunities policy falls upon managers, supervisors and the Human Resources department members involved in the recruitment, selection, appraisal, promotion and training of employees and the way their terms of employment are fixed.',
@@ -63,57 +69,65 @@ export const equalOpportunitiesSections: DpSection[] = [
     title: 'Recruitment and Selection',
     blocks: [
       'The following principles should apply whenever recruitment or selection for positions takes place, whether externally or internally:',
-      { list: [
-        'individuals will be assessed according to their personal capability to carry out a given job',
-        'assumptions that only certain types of person will be able to perform certain types of work must not be made',
-        'any qualifications or requirements applied to a job which have or may have the effect of inhibiting applications from certain types of person should only be retained if they can be justified in terms of the job to be done',
-        'any age limits applied to a job should only be retained if they can be objectively justified in terms of the job to be done — in most cases this will not be the case and managers should consult the Human Resources department if considering an age limit for a particular post',
-        'the use of years of experience as a criteria for a particular role will need to be objectively justified',
-        'recruitment solely or primarily by word of mouth should be avoided as its effect is or may be to prevent certain types of person from applying',
-        'selection tests should be specifically related to job requirements and should measure the person’s actual or inherent ability to do or train for the work',
-        'selection tests should be reviewed regularly to ensure they remain relevant and free from any unjustifiable bias, either in content or in scoring mechanism',
-        'applications from different types of person should be processed in the same way and the same questions asked at interview',
-        'written records of interviews and reasons for appointment and non-appointment should be kept',
-        'questions at interview should relate to the requirements of the job',
-        'where any provision, criterion or practice for recruitment and selection puts disabled people at a substantial disadvantage due to a reason connected with their disability, reasonable adjustments should be made to eliminate or, if that is not reasonably practicable, reduce the disadvantage. This could include, for example, making different interview arrangements for an applicant with mobility problems or arranging for facilities for applicants with sight or hearing impairments',
-        'decisions regarding the method of recruitment or selection or who is recruited or selected should only be made by a person who has read and understood this policy and undergone relevant training.',
-      ] },
+      {
+        list: [
+          'individuals will be assessed according to their personal capability to carry out a given job',
+          'assumptions that only certain types of person will be able to perform certain types of work must not be made',
+          'any qualifications or requirements applied to a job which have or may have the effect of inhibiting applications from certain types of person should only be retained if they can be justified in terms of the job to be done',
+          'any age limits applied to a job should only be retained if they can be objectively justified in terms of the job to be done , in most cases this will not be the case and managers should consult the Human Resources department if considering an age limit for a particular post',
+          'the use of years of experience as a criteria for a particular role will need to be objectively justified',
+          'recruitment solely or primarily by word of mouth should be avoided as its effect is or may be to prevent certain types of person from applying',
+          'selection tests should be specifically related to job requirements and should measure the person’s actual or inherent ability to do or train for the work',
+          'selection tests should be reviewed regularly to ensure they remain relevant and free from any unjustifiable bias, either in content or in scoring mechanism',
+          'applications from different types of person should be processed in the same way and the same questions asked at interview',
+          'written records of interviews and reasons for appointment and non-appointment should be kept',
+          'questions at interview should relate to the requirements of the job',
+          'where any provision, criterion or practice for recruitment and selection puts disabled people at a substantial disadvantage due to a reason connected with their disability, reasonable adjustments should be made to eliminate or, if that is not reasonably practicable, reduce the disadvantage. This could include, for example, making different interview arrangements for an applicant with mobility problems or arranging for facilities for applicants with sight or hearing impairments',
+          'decisions regarding the method of recruitment or selection or who is recruited or selected should only be made by a person who has read and understood this policy and undergone relevant training.',
+        ]
+      },
     ],
   },
   {
     title: 'Promotion, Transfer and Training',
     blocks: [
       'The following principles should apply to appointments for promotion, transfer and training:',
-      { list: [
-        'assessment criteria and appraisal schemes should be carefully examined to ensure that they are not discriminatory, whether directly or indirectly',
-        'assessment criteria and appraisal schemes should be monitored on a regular basis and, where such criteria or schemes result in predominantly one group of workers gaining access to promotion, transfer or training or being awarded a particular appraisal grade, they should be checked to make sure this is not due to any hidden or indirect discrimination',
-        'promotion and career development patterns will be regularly monitored to ensure that access to promotion, training and career development opportunities is not denied to particular groups or types of workers',
-        'traditional qualifications and requirements for promotion, transfer and training, such as length of service, years of experience or age may discriminate against certain workers and will need to be objectively justified by reference to the job requirements',
-        'policies and practices regarding selection for training, day release and personal development should not normally result in an imbalance in training between groups of workers',
-        'where any provision, criterion or practice relating to promotion, appraisal, transfer or training puts disabled workers at a substantial disadvantage for a reason connected with their disability, reasonable adjustments will be made to eliminate or, if that is not reasonably practicable, reduce the disadvantage. For example, this could be making training available for a disabled worker in a different way, in a different location or at a different time.',
-      ] },
+      {
+        list: [
+          'assessment criteria and appraisal schemes should be carefully examined to ensure that they are not discriminatory, whether directly or indirectly',
+          'assessment criteria and appraisal schemes should be monitored on a regular basis and, where such criteria or schemes result in predominantly one group of workers gaining access to promotion, transfer or training or being awarded a particular appraisal grade, they should be checked to make sure this is not due to any hidden or indirect discrimination',
+          'promotion and career development patterns will be regularly monitored to ensure that access to promotion, training and career development opportunities is not denied to particular groups or types of workers',
+          'traditional qualifications and requirements for promotion, transfer and training, such as length of service, years of experience or age may discriminate against certain workers and will need to be objectively justified by reference to the job requirements',
+          'policies and practices regarding selection for training, day release and personal development should not normally result in an imbalance in training between groups of workers',
+          'where any provision, criterion or practice relating to promotion, appraisal, transfer or training puts disabled workers at a substantial disadvantage for a reason connected with their disability, reasonable adjustments will be made to eliminate or, if that is not reasonably practicable, reduce the disadvantage. For example, this could be making training available for a disabled worker in a different way, in a different location or at a different time.',
+        ]
+      },
     ],
   },
   {
     title: 'Terms of Employment, Benefits, Facilities and Services',
     blocks: [
       'The following principles shall apply to terms of employment, benefits, facilities and services:',
-      { list: [
-        'the terms of employment, benefits, facilities and services available to workers should be reviewed regularly to ensure that they are provided in a way which is free from unlawful discrimination',
-        'part-time workers should receive pay, benefits, facilities and services on a pro rata basis to their full-time comparator unless otherwise objectively justified — managers who are responsible for part-time workers should, in particular, take advice when assessing pay and benefits for part-time workers',
-        'where any provision, criterion or practice relating to terms of employment, benefits, facilities and services puts disabled workers at a substantial disadvantage due to a reason connected with their disability, reasonable adjustments will be made to eliminate or, if that is not reasonably practicable, reduce the disadvantage. Managers responsible for disabled workers should, in particular, take advice when assessing pay and benefits for disabled workers',
-        'pay and bonus criteria, policies and practices should be carefully examined and regularly monitored, and if it appears that any group of workers are disadvantaged by them they will be checked to make sure that this is not due to any hidden or indirect discrimination.',
-      ] },
+      {
+        list: [
+          'the terms of employment, benefits, facilities and services available to workers should be reviewed regularly to ensure that they are provided in a way which is free from unlawful discrimination',
+          'part-time workers should receive pay, benefits, facilities and services on a pro rata basis to their full-time comparator unless otherwise objectively justified , managers who are responsible for part-time workers should, in particular, take advice when assessing pay and benefits for part-time workers',
+          'where any provision, criterion or practice relating to terms of employment, benefits, facilities and services puts disabled workers at a substantial disadvantage due to a reason connected with their disability, reasonable adjustments will be made to eliminate or, if that is not reasonably practicable, reduce the disadvantage. Managers responsible for disabled workers should, in particular, take advice when assessing pay and benefits for disabled workers',
+          'pay and bonus criteria, policies and practices should be carefully examined and regularly monitored, and if it appears that any group of workers are disadvantaged by them they will be checked to make sure that this is not due to any hidden or indirect discrimination.',
+        ]
+      },
     ],
   },
   {
     title: 'Grievances, Disciplinary Procedures, Dismissals and Redundancies',
-    blocks: [{ list: [
-      'Workers who, in good faith, bring a grievance (or assist another to do so) either under this policy or otherwise in relation to an equal opportunities matter will not be disciplined, dismissed or otherwise suffer any adverse treatment for having done so.',
-      'No member of a particular group of workers will be disciplined or dismissed for performance or behaviour which would be overlooked or condoned in another group unless there is genuine and lawful justification for different treatment.',
-      'Redundancy criteria and procedures will be carefully examined to ensure that they are not applied and do not operate in an unlawfully discriminatory manner.',
-      'The provision of any voluntary redundancy benefits will be equally available to all workers unless there is a genuine and lawful justification for doing otherwise.',
-    ] }],
+    blocks: [{
+      list: [
+        'Workers who, in good faith, bring a grievance (or assist another to do so) either under this policy or otherwise in relation to an equal opportunities matter will not be disciplined, dismissed or otherwise suffer any adverse treatment for having done so.',
+        'No member of a particular group of workers will be disciplined or dismissed for performance or behaviour which would be overlooked or condoned in another group unless there is genuine and lawful justification for different treatment.',
+        'Redundancy criteria and procedures will be carefully examined to ensure that they are not applied and do not operate in an unlawfully discriminatory manner.',
+        'The provision of any voluntary redundancy benefits will be equally available to all workers unless there is a genuine and lawful justification for doing otherwise.',
+      ]
+    }],
   },
   {
     title: 'Disability Policy',
@@ -121,26 +135,30 @@ export const equalOpportunitiesSections: DpSection[] = [
       'It is META EXTENDED REALITY policy that disabled people, including job applicants and employees, should be able to participate in all of META EXTENDED REALITY activities fully on an equal basis with people who are not disabled.',
       'Due to the wide variety of potential disabilities and the likelihood of a disability affecting different people in different ways, it would be inappropriate to prescribe rigid rules on how issues concerning disabled people should be dealt with. What is essential, however, is that all managers, supervisors take all reasonably practical steps to ensure that disabled people are not less favourably treated or disadvantaged by comparison to people who are not disabled in relation to their work, working environment, or by any provision, criterion or practice used by META EXTENDED REALITY. Managers and supervisors need to be aware in particular that an employee on long-term sick leave or with intermittent sickness absence may be disabled.',
       'META EXTENDED REALITY is particularly concerned that disabled workers are treated equally in the following areas:',
-      { list: [
-        'recruitment and selection',
-        'promotion, transfer and training',
-        'terms of employment, benefits, facilities and services',
-        'dismissals, resignations and redundancies',
-      ] },
+      {
+        list: [
+          'recruitment and selection',
+          'promotion, transfer and training',
+          'terms of employment, benefits, facilities and services',
+          'dismissals, resignations and redundancies',
+        ]
+      },
       'For the purpose of this policy, disabilities are either physical or mental impairments that have a substantial and long term effect upon a person’s ability to carry out normal day-to-day activities. Particular conditions such as HIV and some forms of cancer are covered from the point of diagnosis and do not have to already be long term.',
       'Some disabilities are immediately obvious, for example use of a wheelchair, while other disabilities may not be apparent at all, for example HIV infection. Certain conditions are not considered to be disabilities, for example poor eyesight which is corrected simply by wearing prescription spectacles, or addiction to alcohol or other substances.',
       'The general equal opportunity principles set out earlier in this policy will apply in relation to disabled people whether they currently have a disability or whether they had a disability in the past. META EXTENDED REALITY will take all reasonably practicable steps to ensure that disabled people are able to participate in its business and activities on an equal basis with people who are not disabled.',
       'META EXTENDED REALITY will not, for a reason relating to a person’s disability, treat disabled people less favourably than it treats, or would treat, others to whom the same reason does not or would not apply, unless that treatment would be justified.',
       'If any provision, criterion or practice used by or on behalf of META EXTENDED REALITY, or any physical feature of premises occupied by META EXTENDED REALITY, puts disabled people at a substantial disadvantage compared to people who are not disabled, META EXTENDED REALITY will take such reasonably practicable steps as it can to prevent this disadvantage. This is known as the duty to make reasonable adjustments.',
       'The following general steps should always be considered where issues concerning disabilities arise or may arise:',
-      { list: [
-        'Be flexible. There may be many different ways to avoid discrimination or to minimise the effects of discrimination. A small adjustment may be all an employee needs.',
-        'Consider any performance or attendance problems in the context of the person’s disability and its effect on their ability to meet performance and attendance targets.',
-        'Do not make assumptions. Whenever possible talk to the disabled person to find out how their disability affects them and what steps they think might help.',
-        'Do not discipline or dismiss a disabled employee for performance or attendance-based reasons without first establishing whether the employee’s performance or attendance is affected by the disability and that appropriate adjustments to accommodate the disability have been made.',
-        'Seek expert advice. Disability issues can be complex and you may need expert medical advice about a person’s disability, or expert technical advice about adjustments to technology or premises that might help the disabled person.',
-        'Think ahead. Try to anticipate the effects that certain changes may have on disabled people, even if there are no disabled employees at the time, to prevent problems occurring in the future.',
-      ] },
+      {
+        list: [
+          'Be flexible. There may be many different ways to avoid discrimination or to minimise the effects of discrimination. A small adjustment may be all an employee needs.',
+          'Consider any performance or attendance problems in the context of the person’s disability and its effect on their ability to meet performance and attendance targets.',
+          'Do not make assumptions. Whenever possible talk to the disabled person to find out how their disability affects them and what steps they think might help.',
+          'Do not discipline or dismiss a disabled employee for performance or attendance-based reasons without first establishing whether the employee’s performance or attendance is affected by the disability and that appropriate adjustments to accommodate the disability have been made.',
+          'Seek expert advice. Disability issues can be complex and you may need expert medical advice about a person’s disability, or expert technical advice about adjustments to technology or premises that might help the disabled person.',
+          'Think ahead. Try to anticipate the effects that certain changes may have on disabled people, even if there are no disabled employees at the time, to prevent problems occurring in the future.',
+        ]
+      },
     ],
   },
 ]

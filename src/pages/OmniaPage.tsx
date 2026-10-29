@@ -44,7 +44,7 @@ const featureTabs = [
   {
     label: 'Guided Scenarios', kicker: 'STRUCTURED LEARNING',
     title: 'Training with a clear sense of direction.',
-    description: 'Build on scenario-based experiences with objectives, narrated cues, interactive characters and learning checks — from emergency response to clinical procedures.',
+    description: 'Build on scenario-based experiences with objectives, narrated cues, interactive characters and learning checks , from emergency response to clinical procedures.',
     points: ['Objective prompts and scene guidance', 'Quizzes and learning interactions', 'Scenario-specific tools and indicators'],
     image: 'field-hospital.webp', alt: 'Omnia field hospital scenario with triage team, radiation indicator and zone map', Icon: GraduationCap,
   },

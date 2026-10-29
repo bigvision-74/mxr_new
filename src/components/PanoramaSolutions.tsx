@@ -1,5 +1,5 @@
 import { GraduationCap, HeartPulse, Layers3, ShieldCheck } from 'lucide-react'
-import healthcareImage from '../assets/images/H4_clinical-simulation.webp'
+import healthcareImage from '../assets/images/eprium/healthcare-vr.webp'
 import enterpriseImage from '../assets/images/solutions/enterprise-factory-vr.webp'
 import defenceImage from '../assets/images/solutions/defence-security.png'
 import customImage from '../assets/images/solutions/custom-solutions.jpg'
@@ -7,7 +7,7 @@ import '../assets/css/panorama-solutions.css'
 
 const solutions = [
   { title: 'Defence & Security', label: 'Readiness', description: 'Rehearse complex scenarios. Prepare people for the moments that matter.', image: defenceImage, position: '44% center', Icon: ShieldCheck },
-  { title: 'Healthcare Simulation', label: 'Clinical practice', description: 'Create space to practise safely and build confidence before patient care.', image: healthcareImage, position: '50% center', Icon: HeartPulse },
+  { title: 'Healthcare', label: 'Clinical practice', description: 'Rehearse procedures and protocols in controlled environments, with opportunities for team practice.', image: healthcareImage, position: '50% center', Icon: HeartPulse },
   { title: 'Enterprise Training', label: 'Workplace skills', description: 'Turn everyday challenges into practical learning and stronger performance.', image: enterpriseImage, position: '48% center', Icon: GraduationCap },
   { title: 'Custom Solutions', label: 'Bespoke technology', description: 'Connect your vision with immersive technology, AI and platforms built around you.', image: customImage, position: '59% center', Icon: Layers3 },
 ]

@@ -2242,7 +2242,7 @@
   isolation: isolate
 }
 
-.service-steps > *:not([aria-hidden]) {
+.service-steps>*:not([aria-hidden]) {
   position: relative;
   z-index: 1
 }
@@ -3585,7 +3585,7 @@
 }
 
 .mxr-immersive-hero {
-  font-family:var(--font-family);
+  font-family: var(--font-family);
   background: var(--color-dark);
   isolation: isolate;
 }
@@ -4082,15 +4082,26 @@
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 0.2; transform: scale(0.8); }
-  50% { opacity: 1; transform: scale(1.2); }
+
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
 }
 
-/* ── More Than Simulation — redesigned light section ── */
+/* ── More Than Simulation , redesigned light section ── */
 section.why {
   background: #f8fafc;
   padding: clamp(80px, 10vw, 140px) clamp(24px, 8vw, 120px);
@@ -4163,7 +4174,7 @@ section.why .why-heading h2 em {
   background-clip: text;
 }
 
-section.why .why-heading > p:last-child {
+section.why .why-heading>p:last-child {
   color: #4a6070;
   font-size: 1rem;
   line-height: 1.7;
@@ -4600,6 +4611,7 @@ section.why .pillars p {
 }
 
 @media(prefers-reduced-motion:reduce) {
+
   .service-related .service-card,
   .service-card-icon,
   .service-card-link {

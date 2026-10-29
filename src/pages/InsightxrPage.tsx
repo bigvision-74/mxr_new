@@ -7,8 +7,8 @@ export default function InsightxrPage() {
   return (
     <main className={"pp insight-product ixm-page"} style={{ "--product-accent": "#0b66c3" } as CSSProperties}>
       <section className="ixm-hero">
-        <div className="ixm-hero-copy"><p className="eyebrow">INSIGHTXR / XR LEARNING & ANALYTICS</p><h1>Your XR training.<br/><em>Connected. Controlled.<br/>Understood.</em></h1><p>Manage devices. Deliver immersive content. Turn learner interactions into useful insight — all from one connected platform.</p><div className="button-row"><a className="btn btn-primary" href="/contact">Book a Demonstration <ArrowRight size={18}/></a><a className="ixm-text-link" href="#ix-platform">Explore the platform <ArrowRight size={16}/></a></div></div>
-        <div className="ixm-hero-product"><span className="ixm-product-orbit" aria-hidden="true"/><video src="/assets/videos/insightxr-imac.webm" autoPlay muted loop playsInline preload="metadata" aria-label="InsightXR product demonstration on an iMac"/><div className="ixm-product-caption"><span>ONE PLATFORM</span><p>Devices · Content · Insights</p></div></div>
+        <div className="ixm-hero-copy"><h1>Your XR training.<br /><em>Connected. Controlled.<br />Understood.</em></h1><p>Manage devices. Deliver immersive content. Turn learner interactions into useful insight , all from one connected platform.</p><div className="button-row"><a className="btn btn-primary" href="/contact">Book a Demonstration <ArrowRight size={18} /></a></div></div>
+        <div className="ixm-hero-product"><span className="ixm-product-orbit" aria-hidden="true" /><video src="/assets/videos/insightxr-imac.webm" autoPlay muted loop playsInline preload="metadata" aria-label="InsightXR product demonstration on an iMac" /><div className="ixm-product-caption"></div></div>
       </section>
       <InsightOverview />
       <section className={"final-cta home-wave-section home-wave-cta"}>

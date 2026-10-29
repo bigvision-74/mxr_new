@@ -660,3 +660,18 @@
     flex-direction: column;
   }
 }
+
+/* ── Section h2: match site-wide heading standard ── */
+/* Matches .section-heading h2 / .services-heading h2 in base.css */
+#xr-modes h2,
+.xrd-benefits-intro h2,
+.xrd-capabilities-head h2,
+.xrd-approach-text h2,
+.service-related h2 {
+  font-size: clamp(2.5rem, 4vw, 4.2rem);
+  line-height: 1.08;
+  letter-spacing: -.045em;
+  font-weight: 500;
+  font-family: var(--font-family);
+  margin: 0;
+}

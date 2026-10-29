@@ -1,6 +1,6 @@
-/* ── Blog Detail Banner — smaller title than default banner-title scale ── */
+/* ── Blog Detail Banner , smaller title than default banner-title scale ── */
 .blog-detail-banner-title {
-  font-family:var(--font-family);
+  font-family: var(--font-family);
   font-size: clamp(1.2rem, 2vw, 1.75rem);
   font-weight: 500;
   line-height: 1.25;
@@ -11,7 +11,7 @@
 
 /* ── Blog Listing Page ──────────────────────────────────────────── */
 
-/* Pills row under the banner lead — reuses contact-banner structure */
+/* Pills row under the banner lead , reuses contact-banner structure */
 .blog-page .contact-banner h1 em {
   font-style: normal;
   color: #3ea0ff;
@@ -68,11 +68,16 @@
 }
 
 @media (max-width: 1024px) {
-  .blog-grid { grid-template-columns: repeat(2, 1fr); }
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 600px) {
-  .blog-grid { grid-template-columns: 1fr; gap: 20px; }
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
 
 /* ── Blog Card ───────────────────────────────────────────────────── */
@@ -244,7 +249,9 @@
   border-bottom: 2px solid #eef5fd;
 }
 
-.blog-detail-content h2:first-child { margin-top: 0; }
+.blog-detail-content h2:first-child {
+  margin-top: 0;
+}
 
 .blog-detail-content ul {
   margin: 0 0 22px;
@@ -315,6 +322,7 @@
 .events-page .contact-banner-copy {
   max-width: min(1100px, 100%);
 }
+
 .blog-page .contact-banner-copy .banner-title,
 .events-page .contact-banner-copy .banner-title {
   margin-top: 28px;
@@ -336,6 +344,14 @@
 }
 
 /* Article body uses the theme colours (same as the case study page) */
-.blog-detail-page .blog-detail-content h2 { color: var(--color-dark); }
-.blog-detail-page .blog-detail-content a { color: var(--color-primary); }
-.blog-detail-page .blog-detail-content ul li { border-left-color: var(--color-primary); }
+.blog-detail-page .blog-detail-content h2 {
+  color: var(--color-dark);
+}
+
+.blog-detail-page .blog-detail-content a {
+  color: var(--color-primary);
+}
+
+.blog-detail-page .blog-detail-content ul li {
+  border-left-color: var(--color-primary);
+}

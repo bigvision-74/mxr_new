@@ -40,38 +40,44 @@ export const securityPolicySections: DpSection[] = [
     title: 'Responsibilities',
     blocks: [
       'All the roles involved and their responsibilities in the enforcement of the policies in this document:',
-      { table: { head: ['Roles', 'Responsibilities'], rows: [
-        ['Chief Information Officer', 'Accountable for all aspects of the Organization’s information security.'],
-        ['Information Security Officer', [
-          'Responsible for the security of the IT infrastructure.',
-          'Plan against security threats, vulnerabilities, and risks.',
-          'Implement and maintain Security Policy documents.',
-          'Ensure security training programs.',
-          'Ensure IT infrastructure supports Security Policies.',
-          'Respond to information security incidents.',
-          'Help in disaster recovery plans.',
-        ].join('\n')],
-        ['Information Owners', [
-          'Help with the security requirements for their specific area.',
-          'Determine the privileges and access rights to the resources within their areas.',
-        ].join('\n')],
-        ['IT Security Team', [
-          'Implements and operates IT security.',
-          'Implements the privileges and access rights to the resources.',
-          'Supports Security Policies.',
-        ].join('\n')],
-        ['Users', ['Meet Security Policies.', 'Report any attempted security breaches.'].join('\n')],
-      ] } },
+      {
+        table: {
+          head: ['Roles', 'Responsibilities'], rows: [
+            ['Chief Information Officer', 'Accountable for all aspects of the Organization’s information security.'],
+            ['Information Security Officer', [
+              'Responsible for the security of the IT infrastructure.',
+              'Plan against security threats, vulnerabilities, and risks.',
+              'Implement and maintain Security Policy documents.',
+              'Ensure security training programs.',
+              'Ensure IT infrastructure supports Security Policies.',
+              'Respond to information security incidents.',
+              'Help in disaster recovery plans.',
+            ].join('\n')],
+            ['Information Owners', [
+              'Help with the security requirements for their specific area.',
+              'Determine the privileges and access rights to the resources within their areas.',
+            ].join('\n')],
+            ['IT Security Team', [
+              'Implements and operates IT security.',
+              'Implements the privileges and access rights to the resources.',
+              'Supports Security Policies.',
+            ].join('\n')],
+            ['Users', ['Meet Security Policies.', 'Report any attempted security breaches.'].join('\n')],
+          ]
+        }
+      },
     ],
   },
   {
     title: 'General Policy Definitions',
-    blocks: [{ list: [
-      'Exceptions to the policies defined in any part of this document may only be authorized by the Information Security Officer. In those cases, specific procedures may be put in place to handle request and authorization for exceptions.',
-      'Every time a policy exception is invoked, an entry must be entered into a security log specifying the date and time, description, reason for the exception and how the risk was managed.',
-      'All the IT services should be used in compliance with the technical and security requirements defined in the design of the services.',
-      'Infractions of the policies in this document may lead to disciplinary actions. In some serious cases they could even lead to prosecution.',
-    ] }],
+    blocks: [{
+      list: [
+        'Exceptions to the policies defined in any part of this document may only be authorized by the Information Security Officer. In those cases, specific procedures may be put in place to handle request and authorization for exceptions.',
+        'Every time a policy exception is invoked, an entry must be entered into a security log specifying the date and time, description, reason for the exception and how the risk was managed.',
+        'All the IT services should be used in compliance with the technical and security requirements defined in the design of the services.',
+        'Infractions of the policies in this document may lead to disciplinary actions. In some serious cases they could even lead to prosecution.',
+      ]
+    }],
   },
   policySection(
     'IT Assets Policy',
@@ -164,7 +170,7 @@ export const securityPolicySections: DpSection[] = [
       'The use of Messenger service is permitted for business purposes.',
       'Access to pornographic sites, hacking sites, and other risky sites is strongly discouraged.',
       'Downloading is a privilege assigned to some users. It can be requested as a service.',
-      'Internet access is mainly for business purpose — some limited personal navigation is permitted if in doing so there is no perceptible consumption of the Organization system resources and the productivity of the work is not affected. Personal navigation is discouraged during working hours.',
+      'Internet access is mainly for business purpose , some limited personal navigation is permitted if in doing so there is no perceptible consumption of the Organization system resources and the productivity of the work is not affected. Personal navigation is discouraged during working hours.',
       'Inbound and outbound traffic must be regulated using firewalls in the perimeter. Back to back configuration is strongly recommended for firewalls.',
       'In accessing Internet, users must behave in a way compatible with the prestige of the Organization. Attacks like denial of service, spam, fishing, fraud, hacking, distribution of questionable material, infraction of copyrights and others are strictly forbidden.',
       'Internet traffic should be monitored at firewalls. Any attack or abuse should be promptly reported to the Information Security Officer.',
@@ -216,23 +222,27 @@ export const securityPolicySections: DpSection[] = [
     ],
   ),
   {
-    title: 'Annex — Glossary',
+    title: 'Annex , Glossary',
     blocks: [
       'This section of the Security Policy provides the definitions of terms, acronyms, and abbreviations required to understand this document.',
-      { table: { head: ['Term', 'Definition'], rows: [
-        ['Access Management', 'The process responsible for allowing users to make use of IT services, data or other assets.'],
-        ['Asset', 'Any resource or capability. The assets of a service provider include anything that could contribute to the delivery of a service.'],
-        ['Audit', 'Formal inspection and verification to check whether a standard or set of guidelines is being followed, that records are accurate, or that efficiency and effectiveness targets are being met.'],
-        ['Confidentiality', 'A security principle that requires that data should only be accessed by authorized people.'],
-        ['External Service Provider', 'An IT service provider that is part of a different organization from its customer.'],
-        ['Identity', 'A unique name that is used to identify a user, person or role.'],
-        ['Information Security Policy', 'The policy that governs the organization’s approach to information security management.'],
-        ['Outsourcing', 'Using an external service provider to manage IT services.'],
-        ['Policy', 'Formally documented management expectations and intentions. Policies are used to direct decisions, and to ensure consistent and appropriate development and implementation of processes, standards, roles, activities, IT infrastructure etc.'],
-        ['Risk', 'A possible event that could cause harm or loss, or affect the ability to achieve objectives.'],
-        ['Service Level', 'Measured and reported achievement against one or more service level targets.'],
-        ['Warranty', 'Assurance that a product or service will meet agreed requirements.'],
-      ] } },
+      {
+        table: {
+          head: ['Term', 'Definition'], rows: [
+            ['Access Management', 'The process responsible for allowing users to make use of IT services, data or other assets.'],
+            ['Asset', 'Any resource or capability. The assets of a service provider include anything that could contribute to the delivery of a service.'],
+            ['Audit', 'Formal inspection and verification to check whether a standard or set of guidelines is being followed, that records are accurate, or that efficiency and effectiveness targets are being met.'],
+            ['Confidentiality', 'A security principle that requires that data should only be accessed by authorized people.'],
+            ['External Service Provider', 'An IT service provider that is part of a different organization from its customer.'],
+            ['Identity', 'A unique name that is used to identify a user, person or role.'],
+            ['Information Security Policy', 'The policy that governs the organization’s approach to information security management.'],
+            ['Outsourcing', 'Using an external service provider to manage IT services.'],
+            ['Policy', 'Formally documented management expectations and intentions. Policies are used to direct decisions, and to ensure consistent and appropriate development and implementation of processes, standards, roles, activities, IT infrastructure etc.'],
+            ['Risk', 'A possible event that could cause harm or loss, or affect the ability to achieve objectives.'],
+            ['Service Level', 'Measured and reported achievement against one or more service level targets.'],
+            ['Warranty', 'Assurance that a product or service will meet agreed requirements.'],
+          ]
+        }
+      },
     ],
   },
 ]

@@ -909,7 +909,7 @@ body .dx-page .dx-intelligence h2 {
     }
 }
 
-/* ── Solution section — change variables here only to retheme the whole block ── */
+/* ── Solution section , change variables here only to retheme the whole block ── */
 .dx-solution {
     --sol-bg: #0d1826;
     --sol-text: #fff;
@@ -1006,7 +1006,7 @@ body .dx-page .dx-intelligence h2 {
     margin: 0
 }
 
-/* Feature cards — 2 col 3 row grid */
+/* Feature cards , 2 col 3 row grid */
 .dx-solution-cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1184,7 +1184,7 @@ body .dx-page .dx-hero h1>em {
     color: #75c7ff !important
 }
 
-/* Banner font consistency — explicit family + unified scale on all supporting text */
+/* Banner font consistency , explicit family + unified scale on all supporting text */
 .dx-page .dx-hero,
 .dx-page .dx-hero h1,
 .dx-page .dx-hero p,
@@ -1193,7 +1193,7 @@ body .dx-page .dx-hero h1>em {
 .dx-page .dx-hero .dx-hero-note,
 .dx-page .dx-hero .dx-caption,
 .dx-page .dx-hero .dx-caption span {
-    font-family:var(--font-family)
+    font-family: var(--font-family)
 }
 
 .dx-page .dx-hero .dx-kicker {
@@ -1212,13 +1212,13 @@ body .dx-page .dx-hero h1>em {
     font-size: 0.9375rem
 }
 
-/* ── DriveXR 2 — match homepage fluid container + typography ── */
+/* ── DriveXR 2 , match homepage fluid container + typography ── */
 .dx-page.dx2,
 .dx-page.dx2 h1,
 .dx-page.dx2 h2,
 .dx-page.dx2 h3,
 .dx-page.dx2 p {
-    font-family:var(--font-family)
+    font-family: var(--font-family)
 }
 
 .dx-page.dx2 h2,
@@ -1298,7 +1298,7 @@ body .dx-page .dx-hero h1>em {
     color: rgba(255, 255, 255, .6)
 }
 
-/* ── DriveXR 2 — banner proper height ── */
+/* ── DriveXR 2 , banner proper height ── */
 .dx-page.dx2 .dx-hero {
     min-height: max(760px, 88vh)
 }
@@ -1307,7 +1307,7 @@ body .dx-page .dx-hero h1>em {
     padding-bottom: 90px
 }
 
-/* ── DriveXR 2 — solution section: theme-aligned typography ── */
+/* ── DriveXR 2 , solution section: theme-aligned typography ── */
 
 /* Kicker "THE MXR SOLUTION": same scale/weight/spacing as site .eyebrow;
    light blue for legibility on the dark panoramic overlay */
@@ -1322,7 +1322,7 @@ body .dx-page .dx-hero h1>em {
     background: #4eb8ff
 }
 
-/* "Train. Measure. Improve." — matches site section h2 scale */
+/* "Train. Measure. Improve." , matches site section h2 scale */
 .dx-page.dx2 .dx-solution h2 {
     font-size: clamp(2.5rem, 4vw, 4.2rem) !important;
     line-height: 1.08;
@@ -1331,7 +1331,7 @@ body .dx-page .dx-hero h1>em {
     margin-bottom: 28px
 }
 
-/* Description paragraph — matches site lead text */
+/* Description paragraph , matches site lead text */
 .dx-page.dx2 .dx-solution-bottom>p {
     font-size: 1rem !important;
     line-height: 1.8
@@ -1407,7 +1407,7 @@ body .dx-page .dx-hero h1>em {
     padding-bottom: 8px
 }
 
-/* Two-column layout: equal split — image smaller, panel gets more room */
+/* Two-column layout: equal split , image smaller, panel gets more room */
 .dx-spotlight-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1444,7 +1444,7 @@ body .dx-page .dx-hero h1>em {
     color: #0d1c2e;
     font-size: 0.75rem;
     font-weight: 700;
-    font-family:var(--font-family);
+    font-family: var(--font-family);
     display: grid;
     place-items: center;
     cursor: pointer;
@@ -1520,7 +1520,7 @@ body .dx-page .dx-hero h1>em {
     height: 15px
 }
 
-/* Large bold title — anchors the panel */
+/* Large bold title , anchors the panel */
 .dx-spot-title {
     font-size: clamp(3rem, 4.4vw, 4.4rem);
     font-weight: 700;
@@ -2143,6 +2143,7 @@ body .dx-page .dx-hero h1>em {
     padding: 0;
     align-self: start
 }
+
 /* ── How it works ── */
 .dx-page.dx2 .dx-how {
     background: #0d1826;
@@ -2269,8 +2270,13 @@ body .dx-page .dx-hero h1>em {
 }
 
 @media(max-width:960px) {
-    .dx-how-grid { grid-template-columns: 1fr }
-    .dx-page.dx2 .dx-how { padding: 56px 0 64px }
+    .dx-how-grid {
+        grid-template-columns: 1fr
+    }
+
+    .dx-page.dx2 .dx-how {
+        padding: 56px 0 64px
+    }
 }
 
 .dx-page.dx2 .dx-how {
@@ -2556,6 +2562,7 @@ body .dx-page .dx-hero h1>em {
 }
 
 @media(max-width:960px) {
+
     .dx-data-head,
     .dx-data-body {
         grid-template-columns: 1fr;
@@ -2586,7 +2593,7 @@ body .dx-page .dx-hero h1>em {
     }
 }
 
-/* DriveXR 2 — hero heading: readable line spacing, kept clear of the vehicle image */
+/* DriveXR 2 , hero heading: readable line spacing, kept clear of the vehicle image */
 .dx-page.dx2 .dx-title {
     width: min(100%, 44vw)
 }
@@ -2610,7 +2617,7 @@ body .dx-page .dx-hero h1>em {
     }
 }
 
-/* DriveXR 2 — hero refinements: wider copy, original banner height, tidy buttons and tagline */
+/* DriveXR 2 , hero refinements: wider copy, original banner height, tidy buttons and tagline */
 .dx-page.dx2 .dx-hero {
     min-height: 700px
 }
@@ -2679,7 +2686,7 @@ body .dx-page .dx-hero h1>em {
     }
 }
 
-/* DriveXR 2 — hero heading as two wide lines (like the home hero), free to run over the image */
+/* DriveXR 2 , hero heading as two wide lines (like the home hero), free to run over the image */
 .dx-page.dx2 .dx-hero-copy {
     width: auto;
     max-width: none;
@@ -2715,7 +2722,7 @@ body .dx-page .dx-hero h1>em {
     }
 }
 
-/* DriveXR 2 — hero tagline as a list: one item per phrase, "/" divider between items */
+/* DriveXR 2 , hero tagline as a list: one item per phrase, "/" divider between items */
 .dx-page.dx2 .dx-hero ul.dx-hero-note {
     list-style: none;
     display: flex;
@@ -2745,13 +2752,14 @@ body .dx-page .dx-hero h1>em {
     }
 }
 
-/* DriveXR 2 — hero typography aligned with the home hero (Inter, medium weight, tight leading) */
+/* DriveXR 2 , hero typography aligned with the home hero (Inter, medium weight, tight leading) */
 .dx-page.dx2 .dx-hero,
 .dx-page.dx2 .dx-hero * {
-    font-family:var(--font-family) !important
+    font-family: var(--font-family) !important
 }
 
 @media(min-width:1101px) {
+
     .dx-page.dx2 .dx-title h1,
     .dx-page.dx2 .dx-hero h1 {
         font-size: clamp(2.8rem, 5.6vw, 6.4rem) !important;
@@ -2765,8 +2773,9 @@ body .dx-page .dx-hero h1>em {
     }
 }
 
-/* DriveXR 2 — wide enough for each heading phrase to sit on one line */
+/* DriveXR 2 , wide enough for each heading phrase to sit on one line */
 @media(min-width:1101px) {
+
     .dx-page.dx2 .dx-hero-copy,
     .dx-page.dx2 .dx-title {
         width: 72vw
@@ -2809,7 +2818,7 @@ body .dx-page .dx-hero h1>em {
     pointer-events: none;
     z-index: 0;
     background: linear-gradient(90deg, rgba(6, 13, 23, 0.85) 0%, rgba(6, 13, 23, 0.5) 40%, rgba(6, 13, 23, 0.1) 70%, transparent 100%),
-                linear-gradient(0deg, rgba(6, 13, 23, 0.6) 0%, transparent 35%);
+        linear-gradient(0deg, rgba(6, 13, 23, 0.6) 0%, transparent 35%);
 }
 
 .dx-ring {
@@ -3140,7 +3149,7 @@ body .dx-page .dx-capabilities .dx-bento article svg {
 }
 
 /* Capability icons: the same blue gradient tile with a white icon as the EPRium and Modal3D pages */
-body .dx-page .dx-bento article > svg {
+body .dx-page .dx-bento article>svg {
     box-sizing: content-box;
     width: 22px;
     height: 22px;

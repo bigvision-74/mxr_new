@@ -16,7 +16,7 @@ const SOLUTIONS: Record<Solution, {
     num: '01',
     title: 'Knowledge Assistants',
     headline: 'Instant answers from your own content.',
-    body: 'Conversational AI that draws exclusively from your approved documentation and knowledge bases — giving teams accurate, citable answers without the noise of general-purpose models.',
+    body: 'Conversational AI that draws exclusively from your approved documentation and knowledge bases , giving teams accurate, citable answers without the noise of general-purpose models.',
     features: [
       'Retrieval-augmented generation (RAG)',
       'Source citation and traceability',
@@ -27,7 +27,7 @@ const SOLUTIONS: Record<Solution, {
     num: '02',
     title: 'Content Workflows',
     headline: 'Draft faster. Review with confidence.',
-    body: 'AI-assisted authoring that speeds up creation of learning content and documentation — with human review built into every step to maintain accuracy and compliance.',
+    body: 'AI-assisted authoring that speeds up creation of learning content and documentation , with human review built into every step to maintain accuracy and compliance.',
     features: [
       'Content drafting from source material',
       'Assessment and quiz generation',
@@ -38,7 +38,7 @@ const SOLUTIONS: Record<Solution, {
     num: '03',
     title: 'Adaptive Experiences',
     headline: 'Learning that responds to the learner.',
-    body: 'Use interaction data and performance signals to shape more relevant learning journeys — adjusting content, pace and challenge level to match each individual.',
+    body: 'Use interaction data and performance signals to shape more relevant learning journeys , adjusting content, pace and challenge level to match each individual.',
     features: [
       'Dynamic content sequencing',
       'Performance-triggered interventions',
@@ -49,7 +49,7 @@ const SOLUTIONS: Record<Solution, {
     num: '04',
     title: 'Platform Integration',
     headline: 'AI inside the tools your teams already use.',
-    body: 'Connect AI capabilities to your existing LMS, workforce platforms and operational systems — extending what you already have rather than replacing it.',
+    body: 'Connect AI capabilities to your existing LMS, workforce platforms and operational systems , extending what you already have rather than replacing it.',
     features: [
       'LMS and LRS integration (SCORM / xAPI)',
       'API-first architecture',
@@ -142,7 +142,7 @@ export default function AiSolutionsPage() {
             </div>
           </div>
 
-          {/* Right — image panel */}
+          {/* Right , image panel */}
           <div className="ais-solutions-right">
             <div className="ais-panel-visual">
               <img src="/assets/images/services/futuristic.jpg" alt="" className="ais-panel-img" />
@@ -169,7 +169,7 @@ export default function AiSolutionsPage() {
           </div>
           <div className="ais-stat-item">
             <div className="ais-stat-num">100<em>%</em></div>
-            <p className="ais-stat-label">{"human-reviewed outputs — every AI workflow keeps people in the loop"}</p>
+            <p className="ais-stat-label">{"human-reviewed outputs , every AI workflow keeps people in the loop"}</p>
           </div>
         </div>
       </div>
@@ -215,7 +215,7 @@ export default function AiSolutionsPage() {
           <div className="ais-split-text">
             <p className="eyebrow">{"THE APPROACH"}</p>
             <h2>{"Useful AI. Carefully integrated."}</h2>
-            <p>{"We define a focused use case, evaluate your data and build a reviewable prototype — with security, governance and human oversight shaped in from the start, not added afterwards."}</p>
+            <p>{"We define a focused use case, evaluate your data and build a reviewable prototype , with security, governance and human oversight shaped in from the start, not added afterwards."}</p>
             <div className="ais-split-points">
               <div className="ais-split-point">
                 <div className="ais-split-point-icon">
@@ -227,7 +227,7 @@ export default function AiSolutionsPage() {
                 </div>
                 <div>
                   <p className="ais-split-point-title">Grounded in your content</p>
-                  <p className="ais-split-point-desc">RAG pipelines tie model responses to your documents — answers are always traceable.</p>
+                  <p className="ais-split-point-desc">RAG pipelines tie model responses to your documents , answers are always traceable.</p>
                 </div>
               </div>
               <div className="ais-split-point">
@@ -266,7 +266,7 @@ export default function AiSolutionsPage() {
       <section className="ais-trust">
         <p className="eyebrow">{"RESPONSIBLE AI"}</p>
         <h2>{"Built to be trusted, not just used."}</h2>
-        <p className="ais-trust-lead">{"Every solution we build puts human oversight, data accountability and explainability at its core — not as an afterthought."}</p>
+        <p className="ais-trust-lead">{"Every solution we build puts human oversight, data accountability and explainability at its core , not as an afterthought."}</p>
         <div className="ais-trust-cols">
           <div className="ais-trust-col">
             <div className="ais-trust-icon">
@@ -306,7 +306,7 @@ export default function AiSolutionsPage() {
               </svg>
             </div>
             <h3>Audit logging</h3>
-            <p>Every interaction is logged with user, context and output — supporting governance reviews and continuous improvement.</p>
+            <p>Every interaction is logged with user, context and output , supporting governance reviews and continuous improvement.</p>
           </div>
         </div>
       </section>

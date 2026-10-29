@@ -1,4 +1,4 @@
-# MXR.ai — React + Vite + TypeScript
+# MXR.ai , React + Vite + TypeScript
 
 The MXR corporate website uses native React components and strict TypeScript, built with Vite. Page content lives in `src/pages/*.tsx`; it does not load HTML templates or inject page markup.
 

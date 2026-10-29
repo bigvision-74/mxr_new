@@ -14,11 +14,11 @@
   align-items: start;
 }
 
-.ais-solutions-left > .eyebrow {
+.ais-solutions-left>.eyebrow {
   margin-bottom: 1.2rem;
 }
 
-.ais-solutions-left > h2 {
+.ais-solutions-left>h2 {
   margin-bottom: 2.5rem;
 }
 
@@ -166,12 +166,12 @@
   letter-spacing: .07em;
   padding: 4px 12px;
   border-radius: 100px;
-  background: rgba(11,102,195,.07);
-  border: 1px solid rgba(11,102,195,.18);
+  background: rgba(11, 102, 195, .07);
+  border: 1px solid rgba(11, 102, 195, .18);
   color: #0B66C3;
 }
 
-/* Right panel — visual */
+/* Right panel , visual */
 .ais-solutions-right {
   position: sticky;
   top: 100px;
@@ -182,7 +182,7 @@
   background: #071626;
   aspect-ratio: 4 / 3.2;
   overflow: hidden;
-  box-shadow: 0 28px 70px rgba(7,22,38,.22);
+  box-shadow: 0 28px 70px rgba(7, 22, 38, .22);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -195,8 +195,8 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(11,102,195,.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(11,102,195,.06) 1px, transparent 1px);
+    linear-gradient(rgba(11, 102, 195, .06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11, 102, 195, .06) 1px, transparent 1px);
   background-size: 36px 36px;
   pointer-events: none;
 }
@@ -209,7 +209,7 @@
   transition: opacity .4s ease, background .4s ease;
   width: 260px;
   height: 260px;
-  background: rgba(11,102,195,.25);
+  background: rgba(11, 102, 195, .25);
   top: -60px;
   right: -40px;
   opacity: 1;
@@ -220,7 +220,7 @@
   font-weight: 900;
   letter-spacing: -.1em;
   line-height: 1;
-  color: rgba(255,255,255,.04);
+  color: rgba(255, 255, 255, .04);
   position: absolute;
   top: 1.5rem;
   left: 2rem;
@@ -242,7 +242,7 @@
 .ais-panel-body {
   font-size: .88rem;
   line-height: 1.7;
-  color: rgba(255,255,255,.5);
+  color: rgba(255, 255, 255, .5);
   margin: 0;
   position: relative;
   z-index: 1;
@@ -259,12 +259,12 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
-  border-left: 1px solid rgba(255,255,255,.07);
+  border-left: 1px solid rgba(255, 255, 255, .07);
 }
 
 .ais-stat-item {
   padding: 3.5rem 3rem;
-  border-right: 1px solid rgba(255,255,255,.07);
+  border-right: 1px solid rgba(255, 255, 255, .07);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -286,7 +286,7 @@
 .ais-stat-label {
   font-size: .82rem;
   line-height: 1.55;
-  color: rgba(255,255,255,.45);
+  color: rgba(255, 255, 255, .45);
   max-width: 200px;
 }
 
@@ -313,7 +313,7 @@
   margin-bottom: .75rem;
 }
 
-.ais-cap-intro > p {
+.ais-cap-intro>p {
   color: #536b80;
   font-size: .95rem;
   line-height: 1.75;
@@ -340,7 +340,9 @@
 .ais-cap-item::before {
   content: "";
   position: absolute;
-  top: 0; left: -1px; bottom: 0;
+  top: 0;
+  left: -1px;
+  bottom: 0;
   width: 2px;
   background: #0B66C3;
   opacity: 0;
@@ -359,7 +361,7 @@
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  background: rgba(11,102,195,.09);
+  background: rgba(11, 102, 195, .09);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -422,7 +424,7 @@
 }
 
 .ais-foundations-head-right p {
-  color: rgba(255,255,255,.48);
+  color: rgba(255, 255, 255, .48);
   font-size: .95rem;
   line-height: 1.7;
   margin: 0;
@@ -433,15 +435,15 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
-  border-top: 1px solid rgba(255,255,255,.08);
-  border-left: 1px solid rgba(255,255,255,.08);
+  border-top: 1px solid rgba(255, 255, 255, .08);
+  border-left: 1px solid rgba(255, 255, 255, .08);
   max-width: 1100px;
 }
 
 .ais-found-card {
   background: transparent;
-  border-right: 1px solid rgba(255,255,255,.08);
-  border-bottom: 1px solid rgba(255,255,255,.08);
+  border-right: 1px solid rgba(255, 255, 255, .08);
+  border-bottom: 1px solid rgba(255, 255, 255, .08);
   padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
@@ -453,7 +455,9 @@
 .ais-found-card::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 2px;
   background: #64B7FF;
   opacity: 0;
@@ -461,7 +465,7 @@
 }
 
 .ais-found-card:hover {
-  background: rgba(100,183,255,.04);
+  background: rgba(100, 183, 255, .04);
 }
 
 .ais-found-card:hover::before {
@@ -472,7 +476,7 @@
   width: 46px;
   height: 46px;
   border-radius: 12px;
-  background: rgba(100,183,255,.1);
+  background: rgba(100, 183, 255, .1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -480,7 +484,7 @@
 }
 
 .ais-found-card:hover .ais-found-icon {
-  background: rgba(100,183,255,.2);
+  background: rgba(100, 183, 255, .2);
 }
 
 .ais-found-icon svg {
@@ -499,7 +503,7 @@
 .ais-found-desc {
   font-size: .875rem;
   line-height: 1.65;
-  color: rgba(255,255,255,.42);
+  color: rgba(255, 255, 255, .42);
   margin: 0;
 }
 
@@ -526,7 +530,7 @@
   margin-bottom: 1rem;
 }
 
-.ais-responsible-text > p {
+.ais-responsible-text>p {
   color: #536b80;
   font-size: .95rem;
   line-height: 1.75;
@@ -558,7 +562,7 @@
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: rgba(11,102,195,.1);
+  background: rgba(11, 102, 195, .1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -648,12 +652,10 @@
 .ais-panel-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(7, 22, 38, .96) 35%,
-    rgba(7, 22, 38, .55) 70%,
-    rgba(7, 22, 38, .3) 100%
-  );
+  background: linear-gradient(to top,
+      rgba(7, 22, 38, .96) 35%,
+      rgba(7, 22, 38, .55) 70%,
+      rgba(7, 22, 38, .3) 100%);
   z-index: 0;
 }
 
@@ -700,7 +702,7 @@
   margin-bottom: 1rem;
 }
 
-.ais-split-text > p {
+.ais-split-text>p {
   color: #536b80;
   font-size: .95rem;
   line-height: 1.75;
@@ -860,6 +862,7 @@
 }
 
 @media (max-width: 900px) {
+
   .ais-solutions-inner,
   .ais-split-inner {
     grid-template-columns: 1fr;
@@ -896,7 +899,7 @@
   }
 
   .ais-stat-item:last-child {
-    border-top: 1px solid rgba(255,255,255,.07);
+    border-top: 1px solid rgba(255, 255, 255, .07);
     grid-column: 1 / -1;
   }
 

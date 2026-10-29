@@ -21,7 +21,7 @@ const MODES: Record<Mode, {
     abbr: 'VR',
     label: 'Virtual Reality',
     headline: 'Fully immersive training environments.',
-    body: 'Place learners inside high-fidelity 3D worlds where they can practise complex procedures, rehearse high-stakes scenarios and build real confidence — without real-world risk, resource cost or physical constraints.',
+    body: 'Place learners inside high-fidelity 3D worlds where they can practise complex procedures, rehearse high-stakes scenarios and build real confidence , without real-world risk, resource cost or physical constraints.',
     platforms: ['Meta Quest', 'PCVR / SteamVR', 'Headset-agnostic'],
     useCases: [
       'Clinical and surgical simulation',
@@ -34,7 +34,7 @@ const MODES: Record<Mode, {
     abbr: 'AR',
     label: 'Augmented Reality',
     headline: 'Guidance layered onto the real world.',
-    body: 'Overlay step-by-step instructions, 3D schematics and live data directly onto physical equipment and environments — giving operators exactly the right information at exactly the right moment.',
+    body: 'Overlay step-by-step instructions, 3D schematics and live data directly onto physical equipment and environments , giving operators exactly the right information at exactly the right moment.',
     platforms: ['Mobile & tablet', 'Smart glasses', 'WebAR'],
     useCases: [
       'On-machine maintenance guides',
@@ -47,7 +47,7 @@ const MODES: Record<Mode, {
     abbr: 'MR',
     label: 'Mixed Reality',
     headline: 'Physical and digital, blended seamlessly.',
-    body: 'Combine real-world spatial awareness with persistent digital objects — allowing learners to interact with holograms anchored to their physical environment in collaborative, instructor-led sessions.',
+    body: 'Combine real-world spatial awareness with persistent digital objects , allowing learners to interact with holograms anchored to their physical environment in collaborative, instructor-led sessions.',
     platforms: ['HoloLens 2', 'Magic Leap', 'Spatial computing'],
     useCases: [
       'Anatomy and medical visualisation',
@@ -98,7 +98,7 @@ export default function XrDevelopmentPage() {
   return (
     <main style={{ background: '#fff', color: '#10263d' }}>
 
-      {/* ── HERO — dark, full-width video ─────────────────────────────────── */}
+      {/* ── HERO , dark, full-width video ─────────────────────────────────── */}
       <section className={"service-detail-hero"}>
         <div>
           <div className={"about-hero-title"}>
@@ -108,7 +108,7 @@ export default function XrDevelopmentPage() {
             </h1>
           </div>
           <p className="banner-lead">
-            {"Virtual, augmented and mixed reality experiences that help people understand, practise and perform at their best — built by a team that has been doing this since the technology was new."}
+            {"Virtual, augmented and mixed reality experiences that help people understand, practise and perform at their best , built by a team that has been doing this since the technology was new."}
           </p>
           <div className={"button-row"}>
             <a
@@ -132,7 +132,7 @@ export default function XrDevelopmentPage() {
         </div>
       </section>
 
-      {/* ── XR MODE SWITCHER — interactive, white ─────────────────────────── */}
+      {/* ── XR MODE SWITCHER , interactive, white ─────────────────────────── */}
       <section
         id="xr-modes"
         style={{
@@ -143,7 +143,7 @@ export default function XrDevelopmentPage() {
         <p className="eyebrow">{"VR · AR · MR"}</p>
         <h2 style={{ marginBottom: '.75rem' }}>{"Three technologies, one team."}</h2>
         <p style={{ color: '#536b80', fontSize: '1.05rem', lineHeight: 1.7, maxWidth: 560, marginBottom: '3rem' }}>
-          {"We work across the full extended reality spectrum — selecting and combining technologies to match your users, their context and the task at hand."}
+          {"We work across the full extended reality spectrum , selecting and combining technologies to match your users, their context and the task at hand."}
         </p>
 
         {/* Tab selector */}
@@ -197,14 +197,14 @@ export default function XrDevelopmentPage() {
                 loading="lazy"
               />
             ) : activeMode === 'ar' ? (
-              /* Placeholder — replace src with the relevant image */
+              /* Placeholder , replace src with the relevant image */
               <img
                 src={ar}
                 alt="Meta Quest 3 headset for VR training experiences"
                 loading="lazy"
               />
             ) : (
-              /* Placeholder — replace src with the relevant image */
+              /* Placeholder , replace src with the relevant image */
               <img
                 src={mr}
                 alt="Meta Quest 3 headset for VR training experiences"
@@ -216,7 +216,7 @@ export default function XrDevelopmentPage() {
         </div>
       </section>
 
-      {/* ── IMPACT STATS — dark navy strip ──────────────────────────────── */}
+      {/* ── IMPACT STATS , dark navy strip ──────────────────────────────── */}
       <div className="xrd-impact">
         <div className="xrd-impact-inner">
           <div className="xrd-impact-item">
@@ -233,7 +233,7 @@ export default function XrDevelopmentPage() {
           </div>
           <div className="xrd-impact-item">
             <div className="xrd-impact-num">3<em>+</em></div>
-            <p className="xrd-impact-label">{"delivery platforms — headset, tablet, smart glasses or browser"}</p>
+            <p className="xrd-impact-label">{"delivery platforms , headset, tablet, smart glasses or browser"}</p>
           </div>
         </div>
       </div>
@@ -244,7 +244,7 @@ export default function XrDevelopmentPage() {
           <div className="xrd-benefits-intro">
             <p className="eyebrow">{"KEY BENEFITS"}</p>
             <h2>{"Why XR changes the outcome."}</h2>
-            <p>{"Immersive technology goes beyond engagement — it changes how people learn, retain and perform."}</p>
+            <p>{"Immersive technology goes beyond engagement , it changes how people learn, retain and perform."}</p>
           </div>
           <div className="xrd-benefits-list">
             <div className="xrd-benefit-item">
@@ -305,7 +305,7 @@ export default function XrDevelopmentPage() {
         </div>
       </section>
 
-      {/* ── APP CAPABILITIES — dark, 2-col icon-left cards ───────────────── */}
+      {/* ── APP CAPABILITIES , dark, 2-col icon-left cards ───────────────── */}
       <section className="xrd-capabilities">
         <div className="xrd-capabilities-head">
           <div className="xrd-capabilities-head-left">
@@ -356,7 +356,7 @@ export default function XrDevelopmentPage() {
         </div>
       </section>
 
-      {/* ── THE APPROACH — light grey with device grid + image ───────────── */}
+      {/* ── THE APPROACH , light grey with device grid + image ───────────── */}
       <section className="xrd-approach" aria-labelledby="xrd-approach-heading">
         <div className="xrd-approach-inner">
           <div className="xrd-approach-text">
@@ -390,7 +390,7 @@ export default function XrDevelopmentPage() {
                 <div className="xrd-device-row-icon"><SpatialIcon /></div>
                 <div>
                   <p className="xrd-device-row-title">Spatial / MR</p>
-                  <p className="xrd-device-row-desc">{"Holographic content anchored to the real world — for collaborative and high-precision tasks."}</p>
+                  <p className="xrd-device-row-desc">{"Holographic content anchored to the real world , for collaborative and high-precision tasks."}</p>
                 </div>
               </div>
             </div>
@@ -404,7 +404,7 @@ export default function XrDevelopmentPage() {
         </div>
       </section>
 
-      {/* ── WORKING WITH MXR — matches SimulatorDevelopmentPage layout ─────── */}
+      {/* ── WORKING WITH MXR , matches SimulatorDevelopmentPage layout ─────── */}
       <section className={"final-cta home-wave-section home-wave-cta"}>
         <div className={"home-wave-media"} aria-hidden={"true"}>
           <video autoPlay={true} muted={true} loop={true} playsInline={true} preload={"metadata"}>
@@ -439,7 +439,7 @@ export default function XrDevelopmentPage() {
         </div>
       </section>
 
-      {/* ── CONNECTED CAPABILITIES — white, card grid ────────────────────── */}
+      {/* ── CONNECTED CAPABILITIES , white, card grid ────────────────────── */}
       <section className={"section service-related service-related--cards"}>
         <p className={"eyebrow"}>{"CONNECTED CAPABILITIES"}</p>
         <h2>{"Explore our other services."}</h2>
@@ -505,7 +505,7 @@ export default function XrDevelopmentPage() {
         </div>
       </section>
 
-      {/* ── FINAL CTA — dark wave video ───────────────────────────────────── */}
+      {/* ── FINAL CTA , dark wave video ───────────────────────────────────── */}
       <section className={"final-cta home-wave-section home-wave-cta"}>
         <div className={"home-wave-media"} aria-hidden="true">
           <video autoPlay muted loop playsInline preload="metadata">

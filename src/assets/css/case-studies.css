@@ -1,4 +1,4 @@
-/* ── Case Studies — extra styles on top of shared blog.css ─── */
+/* ── Case Studies , extra styles on top of shared blog.css ─── */
 
 /* ── Side-by-side two-column layout ─────────────────────────── */
 .cs-sidebyside {
@@ -381,7 +381,7 @@
 
 /* ── Case study layout overrides ────────────────────────────────── */
 
-/* 1. Hero text + image always side-by-side — push collapse breakpoint down to 700px */
+/* 1. Hero text + image always side-by-side , push collapse breakpoint down to 700px */
 @media (min-width: 701px) {
     .case-hero {
         grid-template-columns: 52% 48% !important;
@@ -531,6 +531,7 @@
 .cs-band--light .cs-sidebyside-col ul li {
     background: var(--color-light) !important;
 }
+
 /* Section headings on the case study page use the same size, weight and spacing as every other page's section headings (banner.css) */
 .cs-page .cs-band-inner h2,
 .cs-page .cs-sidebyside-col h2 {
@@ -545,6 +546,7 @@
 }
 
 @media (max-width: 700px) {
+
     .cs-page .cs-band-inner h2,
     .cs-page .cs-sidebyside-col h2 {
         font-size: clamp(1.9rem, 8vw, 2.5rem) !important;
