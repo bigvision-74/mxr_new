@@ -1,41 +1,30 @@
 import type { DpSection } from './data-protection'
 
 export const carbonReductionSections: DpSection[] = [
-  {
-    title: 'Evergreen Level 1 Statement',
-    blocks: [
-      'MXR confirms that it meets the NHS Supply Chain Evergreen Sustainable Supplier Assessment Level 1 requirements. We have published a Carbon Reduction Plan aligned to PPN 006/21, covering Scope 1, Scope 2 and relevant Scope 3 emissions, with a commitment to Net Zero by 2050 and annual review of progress.',
-    ],
-  },
-  {
-    title: 'Statement of Intent',
-    blocks: [
-      'Although MXR operates as a micro-entity and falls below the statutory threshold for mandatory Procurement Policy Note (PPN) 006/21 carbon reporting, we are fully committed to reducing our environmental impact. As an organisation specialised in information technology, data operations, and immersive virtual environments, we recognise that our primary carbon footprint stems from digital infrastructure, data storage, hardware lifecycles, and travel.',
-      'Our objective is to minimise our greenhouse gas (GHG) emissions and align our operations with the UK’s national target of achieving Net Zero carbon emissions by 2050.',
-    ],
-  },
+
   {
     title: 'Commitment to Achieving Net Zero',
     blocks: [
-      'MXR is committed to achieving Net Zero greenhouse gas emissions by 2050 or earlier, in line with UK Government policy and NHS Net Zero ambitions.',
+      'MXR Ltd is committed to achieving Net Zero greenhouse gas emissions across its UK operations by 2050 or earlier. This Carbon Reduction Plan applies to MXR Ltd as the bidding supplier.',
     ],
   },
   {
-    title: 'Organisational Profile',
+    title: 'Organisational boundary and calculation approach',
     blocks: [
-      'MXR is a UK SME. Operations include a 1,700 sq ft office in Slough with hybrid working arrangements, deployment of approximately 30 VR systems per annum, and light cloud storage / SaaS usage.',
+      'MXR is a UK SME developing and supplying immersive simulation, XR training systems and software. It operates an approximately 1,700 sq ft electrically heated office in Slough with hybrid working. MXR does not own a routine company vehicle fleet; staff use private cars for reimbursed business journeys and vehicles may be hired when necessary. Reimbursed journeys are treated as Scope 3 business travel, not Scope 1. The footprint should use the operational-control boundary, the GHG Protocol Corporate Standard and relevant UK Government greenhouse gas conversion factors. Figures below are drawn from the previously published MXR policy and earlier indicative working estimates. They require source-data verification and consistent period definitions before the declaration of full conformity can be signed.',
     ],
   },
   {
     title: 'Baseline Emissions Footprint (2026)',
     blocks: [
+      'Proposed baseline year: 2026. NOTE: 2026 is not yet complete. The following published figures are estimates rather than verified full-year actuals. MXR must confirm whether to retain 2026 as a forecast baseline or adopt its latest completed 12-month reporting period before final publication.',
       {
         table: {
           head: ['Source', 'tCO2e'],
           rows: [
             ['Scope 1', '0.0'],
             ['Scope 2', '2.0'],
-            ['Scope 3', '15.7'],
+            ['Scope 3 — five mandatory categories', '15.7'],
             ['Total', '17.7'],
           ],
         },
@@ -59,44 +48,29 @@ export const carbonReductionSections: DpSection[] = [
     ],
   },
   {
-    title: 'Target Core Areas and Action Plan',
+    title: 'Emissions reduction targets',
     blocks: [
-      { h: 'A. Low-Carbon Digital Infrastructure and Cloud Architecture' },
-      {
-        terms: [
-          ['Green Cloud Hosting', 'We contractually prioritise cloud service providers (such as AWS, Google Cloud, or Microsoft Azure) that utilise 100% renewable energy zones to host our data operations, software builds, and extended reality (XR) platforms.'],
-          ['Data Efficiency', 'Our Data Operations Manager routinely audits our databases to delete redundant data, optimise code efficiency, and compress assets, directly reducing the processing power and server cooling energy required by our digital systems.'],
-          ['Remote Software Deployment', 'Our software deployment and support capability is delivered remotely, removing the need for on-site engineering visits for routine updates and support.'],
-        ],
-      },
-      { h: 'B. Sustainable Hardware and E-Waste Management' },
-      {
-        terms: [
-          ['Lifecycle Extensions', 'We actively combat e-waste by maintaining a strict procurement policy that favours high-performance, easily repairable development machines and VR headsets, extending their operational lifespan to a minimum of 4–5 years.'],
-          ['Circular Economy Donations', 'In line with our social value model, 100% of decommissioned but functional IT equipment and test VR headsets are refurbished and donated to local underfunded alternative education schools and community hubs, bypassing the landfill lifecycle.'],
-          ['Certified Recycling', 'Any hardware that reaches a total end-of-life state is contractually recycled via licensed Waste Electrical and Electronic Equipment (WEEE) certified facilities to ensure raw materials are recovered sustainably.'],
-          ['Consolidated Logistics', 'VR hardware deployments are consolidated and route-planned to minimise the number of separate shipments and journeys required.'],
-        ],
-      },
-      { h: 'C. Minimising Operational Energy and Travel' },
-      {
-        terms: [
-          ['Digital-First & Hybrid Working', 'We operate a highly flexible, remote-first workplace model. By utilising video conferencing and collaborative cloud environments for internal milestones, director reviews, and developer syncs, we eliminate daily commuting emissions.'],
-          ['Virtual Client Deliverables', 'Leveraging our core product line, we actively encourage clients to conduct design consultations, product testing, and framework training within virtual immersive spaces, significantly reducing carbon-heavy business travel and physical shipping requirements.'],
-          ['Public Transit Priority', 'Where physical site visits or client deployments are unavoidable, MXR policy dictates that staff must utilise public rail networks rather than private cars wherever logistically viable.'],
-        ],
-      },
+      'MXR will target a 25% reduction in absolute annual emissions by 2031 against its verified 2026 baseline, alongside its commitment to Net Zero by 2050. If the published 17.70 tCO₂e baseline is verified and is calculated on a like-for-like boundary, the indicative 2031 target is 13.28 tCO₂e (a reduction of 4.42 tCO₂e).',
+'This is a proposed management target, not an established historic commitment. The Board must approve the percentage and baseline before publication. Annual progress will be assessed using consistent organisational boundaries and categories; changes in business scale and data quality will be explained. A 2026-to-2031 reduction trajectory may be refined as source data improves.'
+
     ],
   },
   {
-    title: 'Future Carbon Reduction Initiatives',
+    title: 'Carbon reduction initiatives and environmental management measures',
     blocks: [
+      'Measures currently described in MXR’s published policy, to be confirmed as operational and applied when performing NHS contracts:',
       {
         list: [
-          'Explore on-site power generation at our facility, augmented by solar power.',
-          'Transition company vehicles to electric vehicles (EVs) to further reduce our footprint.',
+          'Hybrid working, digital meetings and remote software deployment/support to reduce avoidable travel.',
+          'Energy-efficient office operation, equipment power-down practices and efficient cloud/data management.',
+'Extending the useful life of VR and IT hardware through maintenance, repair and reuse.',
+'Responsible WEEE recycling of end-of-life electronic equipment; refurbishment or donation where practicable.',
+'Consolidating deliveries and planning customer site visits to minimise transport activity.',
+'Considering public transport for suitable journeys and energy efficiency in procurement.'
         ],
       },
+      'Planned initiatives: assess renewable electricity and potential on-site generation where feasible; review opportunities for lower-emission hired vehicles; improve supplier data, travel mileage logs, waste records and electricity metering; assess embodied and use-phase impacts of XR systems.',
+'Completed emissions reductions since baseline: [NOT YET QUANTIFIED]. MXR should not claim a quantified reduction until comparable measured or appropriately estimated periods are available.'
     ],
   },
   {
@@ -113,8 +87,13 @@ export const carbonReductionSections: DpSection[] = [
   {
     title: 'Declaration and Sign Off',
     blocks: [
-      'This Carbon Reduction Plan and Evergreen Level 1 Statement have been completed in accordance with PPN 006/21 and associated UK Government guidance, and reflect MXR’s approach as submitted to the NHS Supply Chain Medical Simulation and Technologies 2027 framework.',
-      'PPN 006/21 compliant. Updated 1 January 2026.',
+      'Following verification of the emissions schedule and conversion factors, the Board confirms that this Carbon Reduction Plan has been completed in accordance with PPN 006 and its associated reporting standard; that the applicable emissions are recorded in accordance with the GHG Protocol Corporate Standard and the Corporate Value Chain (Scope 3) Standard; and that appropriate UK Government emissions conversion factors have been used. Scope 1 and 2 are reported in line with relevant SECR requirements where applicable',
+      'This Carbon Reduction Plan has been reviewed and approved by the Board of Directors of MXR Ltd.',
+      'Name of director: Pouname Khaira',
+      'Position: Managing Director',
+      'Board approval date: 29 October 2026',
+      'Signed on behalf of MXR Ltd: Pouname Khaira',
+      'Date signed: 29 October 2026'
     ],
   },
 ]
