@@ -1,14 +1,15 @@
 import { InsightOverview } from '../components/InsightOverview'
 import type { CSSProperties } from 'react'
 import { ArrowRight } from 'lucide-react'
-import { ProductHero } from '../components/ProductHero'
-import defaultBanner from '../assets/videos/defaultbanner.mp4'
-import insightxrPlatform from '../assets/images/insightxr-platform.png'
+
 
 export default function InsightxrPage() {
   return (
-    <main className={"pp"} style={{ "--product-accent": "#0b66c3" } as CSSProperties}>
-      <ProductHero title="Manage immersive learning." accent="Measure what matters." lead="Bring content, learners, devices and performance data together to deliver a connected XR learning programme." demoSubject="InsightXR demonstration" secondaryHref="#product-benefits" secondaryLabel="Explore InsightXR" video={defaultBanner} />
+    <main className={"pp insight-product ixm-page"} style={{ "--product-accent": "#0b66c3" } as CSSProperties}>
+      <section className="ixm-hero">
+        <div className="ixm-hero-copy"><p className="eyebrow">INSIGHTXR / XR LEARNING & ANALYTICS</p><h1>Your XR training.<br/><em>Connected. Controlled.<br/>Understood.</em></h1><p>Manage devices. Deliver immersive content. Turn learner interactions into useful insight — all from one connected platform.</p><div className="button-row"><a className="btn btn-primary" href="/contact">Book a Demonstration <ArrowRight size={18}/></a><a className="ixm-text-link" href="#ix-platform">Explore the platform <ArrowRight size={16}/></a></div></div>
+        <div className="ixm-hero-product"><span className="ixm-product-orbit" aria-hidden="true"/><video src="/assets/videos/insightxr-imac.webm" autoPlay muted loop playsInline preload="metadata" aria-label="InsightXR product demonstration on an iMac"/><div className="ixm-product-caption"><span>ONE PLATFORM</span><p>Devices · Content · Insights</p></div></div>
+      </section>
       <InsightOverview />
       <section className={"final-cta home-wave-section home-wave-cta"}>
         <div className={"home-wave-media"} aria-hidden={"true"}>
@@ -18,11 +19,11 @@ export default function InsightxrPage() {
         </div>
         <div>
           <p className={"eyebrow"}>{"SEE INSIGHTXR IN ACTION"}</p>
-          <h2>{"See how it fits your organisation."}</h2>
-          <p>{"Explore the experience with our team, around your training goals."}</p>
+          <h2>{"See what connected XR can do for you."}</h2>
+          <p>{"Book a demonstration shaped around your devices, your content and your training goals."}</p>
         </div>
         <div className={"button-row"}>
-          <a className={"btn btn-primary"} href="/contact">{"Talk to Our Team"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
+          <a className={"btn btn-primary"} href="/contact">{"Book a Demonstration"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
         </div>
       </section>
     </main>
