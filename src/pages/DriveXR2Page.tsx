@@ -466,7 +466,7 @@ export default function DriveXR2Page() {
             <video autoPlay muted loop playsInline preload="metadata" aria-hidden="true">
               <source src={sliderVid} type="video/mp4" />
             </video>
-            <span>SETUP · TRAINING · REVIEW</span>
+
           </div>
           <div>
             <p className="dx-kicker">HOW IT WORKS</p>
