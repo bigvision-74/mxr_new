@@ -72,7 +72,7 @@
     align-items: start;
     padding: 40px 10vw 50px;
     overflow: hidden;
-    background: radial-gradient(circle at 0 100%, #1a62c4 0, #0b3a80 8%, transparent 24%), linear-gradient(180deg, var(--color-light), var(--color-light))
+    background: linear-gradient(180deg, var(--color-light), var(--color-light))
 }
 
 .contact-info {

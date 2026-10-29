@@ -9,6 +9,7 @@ import crewPanorama from '../assets/images/drivexr/crew-panorama.webp'
 import ambulanceData from '../assets/images/drivexr/analytics-ambulance.webp'
 import stageSetup from '../assets/images/drivexr/stage-setup.webp'
 import stageDrive from '../assets/images/drivexr/stage-drive.webp'
+import sliderVid from '../assets/images/drivexr/slider vid.mp4'
 import dxrHeroVideo from '../assets/images/drivexr/DXR_hero.mp4'
 
 type LogItem = { t: string; msg: string; status: string; cls: 's-info' | 's-ok' | 's-warn' }
@@ -324,7 +325,7 @@ export default function DriveXR2Page() {
           <div className="dx-title">
             <h1 className="banner-title banner-title--stacked">Ready for the<br />moments that <em>matter.</em></h1>
           </div>
-          <p className="banner-lead">Build blue-light driving confidence in a controlled, immersive environment. Train for the unexpected. Measure every improvement.</p>
+          <p className="banner-lead">DriveXR is MXR's advanced emergency vehicle driver training simulator, built for ambulance services, emergency response organisations and blue-light training providers.</p>
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 30 }}>
             <a className="dx-button" href="/contact">
               Book a live demonstration{' '}
@@ -337,22 +338,7 @@ export default function DriveXR2Page() {
 
       </section>
 
-      {/* ── Intro: Immersive by design ── */}
-      <section className="dx-intro">
-        <div className="dx-intro-copy">
-          <h2>
-            Immersive by design.{' '}
-            <em>Data-driven by default.</em>
-          </h2>
-          <p>
-            DriveXR is MXR's advanced emergency vehicle driver training simulator, built for ambulance services, emergency response organisations and blue-light training providers.
-          </p>
-        </div>
-        <figure className="dx-intro-figure">
-          <video src={dxVehicles} aria-label="Ambulance inside a DriveXR multi-screen immersive simulator" autoPlay muted loop playsInline preload="metadata" />
-          <figcaption>FROM CLASSROOM TO BLUE-LIGHT READINESS</figcaption>
-        </figure>
-      </section>
+
 
       {/* ── Industry Challenge ── */}
       <section className="dx-industry">
@@ -467,7 +453,7 @@ export default function DriveXR2Page() {
             <p className="dx-kicker">INSTRUCTOR CONTROL STATION</p>
             <h2>Run the scenario.<br />Watch every decision.</h2>
             <p>Instructors control the scenario, inject hazards and monitor performance live. Try it: switch on lights and sirens, then inject a hazard.</p>
-            <img src={stageSetup} alt="Instructor monitoring a live DriveXR session" loading="lazy" />
+            {/* <img src={stageSetup} alt="Instructor monitoring a live DriveXR session" loading="lazy" /> */}
           </div>
 
           <InstructorConsole />
@@ -477,7 +463,9 @@ export default function DriveXR2Page() {
       <section className="dx-how">
         <div className="dx-delivery dx-wrap">
           <div className="dx-delivery-image">
-            <img src={stageDrive} alt="Crew driving a live emergency response scenario in the simulator" loading="lazy" />
+            <video autoPlay muted loop playsInline preload="metadata" aria-hidden="true">
+              <source src={sliderVid} type="video/mp4" />
+            </video>
             <span>SETUP · TRAINING · REVIEW</span>
           </div>
           <div>

@@ -8,57 +8,7 @@ import brochureSimulator from '../assets/images/drivexr/brochure-simulator.webp'
 export default function DrivexrPage() {
   return (
     <main className={"dx-page"}>
-      <section className={"dx-hero"}>
-        <div className={"dx-hero-image"}>
-          <img src={brochureResponse} alt={"Emergency ambulance response scene from the DriveXR brochure"} fetchPriority={"high"} />
-        </div>
-        <div className={"dx-hero-copy"}>
-          <p className={"dx-kicker"}>
-            {"EMERGENCY DRIVER SIMULATION"}
-          </p>
-          <div className={"dx-title"}>
-            <h1 className="banner-title">
-              <span>
-                {"Ready for"}
-              </span>
-              <span>
-                {"the moments"}
-              </span>
-              <em>
-                {"that matter."}
-              </em>
-            </h1>
-          </div>
-          <p className="banner-lead">
-            {"Build blue-light driving confidence in a controlled, immersive environment. Train for the unexpected. Measure every improvement."}
-          </p>
-          <a className={"dx-button"} href="/contact">
-            {"Book a live demonstration "}
-            <svg viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"1.5"} strokeLinecap={"round"} strokeLinejoin={"round"} aria-hidden={"true"}>
-              <path d={"M4 12h16m-6-6 6 6-6 6"}>
 
-              </path>
-            </svg>
-          </a>
-          <div className={"dx-hero-note"}>
-            {"REAL SCENARIOS "}
-            <span>
-              {" / "}
-            </span>
-            {" CLEARER INSIGHT "}
-            <span>
-              {" / "}
-            </span>
-            {" STRONGER READINESS"}
-          </div>
-        </div>
-        <div className={"dx-caption"}>
-          {"DriveXR "}
-          <span>
-            {"Immersive by design. Data-driven by default."}
-          </span>
-        </div>
-      </section>
       <section className={"dx-challenge dx-wrap"}>
         <div className={"dx-section-heading"}>
           <p className={"dx-kicker"}>
@@ -398,26 +348,26 @@ export default function DrivexrPage() {
         </div>
       </section>
       <section className={"final-cta home-wave-section home-wave-cta"}>
-      <div className={"home-wave-media"} aria-hidden={"true"}>
-        <video autoPlay={true} muted={true} loop={true} playsInline={true} preload={"metadata"}>
-          <source src={"https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260815_034306_165449ef-7d2e-4e81-850f-1939c5cb442d.mp4"} type={"video/mp4"} />
-        </video>
-      </div>
-      <div>
-        <p className={"eyebrow"}>
-          {"SEE DRIVEXR 2 IN ACTION"}
-        </p>
-        <h2>
-          <>{"Ready to see"}<br />{"what's next?"}</>
-        </h2>
-        <p>
-          {"Explore a DriveXR 2 training setup built around your people and operational goals."}
-        </p>
-      </div>
-      <div className={"button-row"}>
-        <a className={"btn btn-primary"} href="/contact">{"Talk to Our Team"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
-      </div>
-    </section>
+        <div className={"home-wave-media"} aria-hidden={"true"}>
+          <video autoPlay={true} muted={true} loop={true} playsInline={true} preload={"metadata"}>
+            <source src={"https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260815_034306_165449ef-7d2e-4e81-850f-1939c5cb442d.mp4"} type={"video/mp4"} />
+          </video>
+        </div>
+        <div>
+          <p className={"eyebrow"}>
+            {"SEE DRIVEXR 2 IN ACTION"}
+          </p>
+          <h2>
+            <>{"Ready to see"}<br />{"what's next?"}</>
+          </h2>
+          <p>
+            {"Explore a DriveXR 2 training setup built around your people and operational goals."}
+          </p>
+        </div>
+        <div className={"button-row"}>
+          <a className={"btn btn-primary"} href="/contact">{"Talk to Our Team"} <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" /></a>
+        </div>
+      </section>
     </main>
   )
 }

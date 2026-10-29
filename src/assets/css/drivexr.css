@@ -2155,7 +2155,8 @@ body .dx-page .dx-hero h1>em {
     padding: 0
 }
 
-.dx-how .dx-delivery-image img {
+.dx-how .dx-delivery-image img,
+.dx-how .dx-delivery-image video {
     display: block;
     width: 100%;
     max-height: none;
