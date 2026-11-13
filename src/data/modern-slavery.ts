@@ -4,7 +4,7 @@ export const modernSlaverySections: DpSection[] = [
   {
     title: 'Statement of Commitment',
     blocks: [
-      'MXR Ltd (Meta Extended Reality Ltd) , January 2026',
+      'MXR Ltd (Meta Extended Reality Ltd), January 2026',
       'Although Meta Extended Reality Ltd (MXR) operates as a micro-entity and falls well below the statutory turnover threshold requiring a formal statement under Section 54 of the Modern Slavery Act 2015, we maintain a strict zero-tolerance approach to modern slavery, human trafficking, and forced labour within our business operations and wider supply chains.',
     ],
   },

@@ -117,7 +117,7 @@ export default function CaseStudyXrReadinessPage() {
               {"THE CHALLENGE"}
             </p>
             <h2>
-              {"Make complex training easier to access,and easier to assess."}
+              {"Make complex training easier to access, and easier to assess."}
             </h2>
           </div>
           <p>

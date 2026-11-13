@@ -69,7 +69,7 @@ export default function ImmersiveRoomsPage() {
             </h1>
           </div>
           <p className="banner-lead">
-            {"Large-format projection environments that place a group inside a scene , no headsets, no barriers, just a room that becomes anywhere you need it to be."}
+            {"Large-format projection environments that place a group inside a scene, no headsets, no barriers, just a room that becomes anywhere you need it to be."}
           </p>
           <div className="button-row">
             <a
@@ -137,7 +137,7 @@ export default function ImmersiveRoomsPage() {
             </div>
             <div className="xrd-cap-body">
               <p className="xrd-cap-title" style={{ color: 'var(--color-dark)' }}>{"Hardware & installation"}</p>
-              <p className="xrd-cap-desc" style={{ color: 'rgba(13,24,38,.55)' }}>{"Projection hardware specified, supplied and installed for your space , calibrated and ready to use."}</p>
+              <p className="xrd-cap-desc" style={{ color: 'rgba(13,24,38,.55)' }}>{"Projection hardware specified, supplied and installed for your space, calibrated and ready to use."}</p>
             </div>
           </div>
         </div>
@@ -149,7 +149,7 @@ export default function ImmersiveRoomsPage() {
           <div className="xrd-approach-text">
             <p className="eyebrow" style={{ color: '#0b66c3' }}>{"CONTENT & EXPERIENCES"}</p>
             <h2>{"What runs in the room."}</h2>
-            <p>{"The room is a delivery surface. Content is built to your scenario and objectives , from on-site footage to fully interactive 3D environments."}</p>
+            <p>{"The room is a delivery surface. Content is built to your scenario and objectives, from on-site footage to fully interactive 3D environments."}</p>
             <div className="xrd-approach-devices">
               <div className="xrd-device-row">
                 <div className="xrd-device-row-icon">
@@ -160,7 +160,7 @@ export default function ImmersiveRoomsPage() {
                 </div>
                 <div>
                   <p className="xrd-device-row-title">{"360° video"}</p>
-                  <p className="xrd-device-row-desc">{"Immersive footage captured on location , wards, sites, vehicles, environments , played back at room scale."}</p>
+                  <p className="xrd-device-row-desc">{"Immersive footage captured on location, wards, sites, vehicles, environments played back at room scale."}</p>
                 </div>
               </div>
               <div className="xrd-device-row">
@@ -182,7 +182,7 @@ export default function ImmersiveRoomsPage() {
                 </div>
                 <div>
                   <p className="xrd-device-row-title">{"Photogrammetry capture"}</p>
-                  <p className="xrd-device-row-desc">{"High-fidelity scans of physical spaces, equipment and assets , brought into the room as accurate 3D models."}</p>
+                  <p className="xrd-device-row-desc">{"High-fidelity scans of physical spaces, equipment and assets, brought into the room as accurate 3D models."}</p>
                 </div>
               </div>
               <div className="xrd-device-row">
@@ -193,7 +193,7 @@ export default function ImmersiveRoomsPage() {
                 </div>
                 <div>
                   <p className="xrd-device-row-title">{"Data & overlay layers"}</p>
-                  <p className="xrd-device-row-desc">{"Live feeds, sensor data and contextual overlays displayed alongside environments , ideal for ops and planning."}</p>
+                  <p className="xrd-device-row-desc">{"Live feeds, sensor data and contextual overlays displayed alongside environments, ideal for ops and planning."}</p>
                 </div>
               </div>
             </div>
@@ -213,11 +213,11 @@ export default function ImmersiveRoomsPage() {
         <div className="ais-stats-inner">
           <div className="ais-stat-item">
             <div className="ais-stat-num">30<em>+</em></div>
-            <p className="ais-stat-label">{"participants in a single session , no headsets, no individual setup"}</p>
+            <p className="ais-stat-label">{"participants in a single session, no headsets, no individual setup"}</p>
           </div>
           <div className="ais-stat-item">
             <div className="ais-stat-num">3</div>
-            <p className="ais-stat-label">{"wall configurations , single, dual and full panoramic (360°)"}</p>
+            <p className="ais-stat-label">{"wall configurations, single, dual and full panoramic (360°)"}</p>
           </div>
           <div className="ais-stat-item">
             <div className="ais-stat-num">1<em>×</em></div>
@@ -263,7 +263,7 @@ export default function ImmersiveRoomsPage() {
               <FloorPanoramic />
             </div>
             <small>{"PANORAMIC (360°)"}</small>
-            <h3>{"Full surround , total shared presence."}</h3>
+            <h3>{"Full surround, total shared presence."}</h3>
             <div>
               <b>{"BEST FOR"}</b>
               <span>{"Clinical simulation, fire and hazmat response, defence rehearsal, large-scale multi-team exercises."}</span>
@@ -277,7 +277,7 @@ export default function ImmersiveRoomsPage() {
       <section className="ais-trust">
         <p className="eyebrow" style={{ color: '#0b66c3' }}>{"WHO USES IMMERSIVE ROOMS"}</p>
         <h2>{"Built for high-stakes training."}</h2>
-        <p className="ais-trust-lead">{"Immersive rooms are deployed where the cost of under-preparation is highest , and where shared, group-based rehearsal makes the difference."}</p>
+        <p className="ais-trust-lead">{"Immersive rooms are deployed where the cost of under-preparation is highest, and where shared, group-based rehearsal makes the difference."}</p>
         <div className="ais-trust-cols">
           <div className="ais-trust-col">
             <div className="ais-trust-icon">
@@ -323,7 +323,7 @@ export default function ImmersiveRoomsPage() {
         <div className="service-outcome-text">
           <p className="eyebrow" style={{ color: '#0b66c3' }}>{"THE APPROACH"}</p>
           <h2>{"Design the room around what happens in it."}</h2>
-          <p>{"We work from your learning objectives and physical space outward , selecting projection format, content platform and facilitator tooling once we understand exactly what your people need to be able to do."}</p>
+          <p>{"We work from your learning objectives and physical space outward, selecting projection format, content platform and facilitator tooling once we understand exactly what your people need to be able to do."}</p>
           <div className="service-approach-modes">
             <span className="service-approach-pill">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><rect x="1" y="1" width="12" height="12" rx="1.5" stroke="currentColor" strokeWidth="1.3" /><rect x="1" y="1" width="12" height="3.5" rx="1" fill="currentColor" opacity=".4" /></svg>
@@ -432,7 +432,7 @@ export default function ImmersiveRoomsPage() {
               </svg>
             </span>
             <strong>{"XR DEVELOPMENT"}</strong>
-            <p>{"VR, AR and MR experiences for individual learners , a natural complement to group room-based training."}</p>
+            <p>{"VR, AR and MR experiences for individual learners, a natural complement to group room-based training."}</p>
             <span className="service-card-link">{"Explore"} <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="#0B66C3" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg></span>
           </a>
           <a href="/simulator-development" className="service-card">

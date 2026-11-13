@@ -52,7 +52,7 @@ export const equalOpportunitiesSections: DpSection[] = [
       {
         terms: [
           ['Direct discrimination', 'this is treating someone less favourably because of their Protected Characteristics. An example of this is paying someone less because of their sex or because they belong to a particular racial group.'],
-          ['Indirect discrimination', 'occurs where someone is disadvantaged by an unjustified provision, criterion or practice that also puts other people with the same Protected Characteristics at a particular disadvantage. An example of this is telling everyone they have to work late at night , although applied to everyone, it will adversely affect those employees with childcare responsibilities and these tend to be women.'],
+          ['Indirect discrimination', 'occurs where someone is disadvantaged by an unjustified provision, criterion or practice that also puts other people with the same Protected Characteristics at a particular disadvantage. An example of this is telling everyone they have to work late at night, although applied to everyone, it will adversely affect those employees with childcare responsibilities and these tend to be women.'],
           ['Victimisation', 'this is less favourable treatment of someone who has complained or given information about discrimination or harassment, or supported someone else’s complaint. An example of this would be an employee claiming that they had been discriminated on the grounds of their disability and then their manager deciding when they left not to give them a reference because they had claimed disability discrimination.'],
           ['Harassment', 'harassment related to any of the Protected Characteristics is prohibited. Harassment is unwanted conduct that has the purpose or effect of violating someone’s dignity, or creating an intimidating, hostile, degrading, humiliating or offensive environment for them. More information on what can constitute harassment is set out in META EXTENDED REALITY anti-harassment policy.'],
         ]
@@ -74,7 +74,7 @@ export const equalOpportunitiesSections: DpSection[] = [
           'individuals will be assessed according to their personal capability to carry out a given job',
           'assumptions that only certain types of person will be able to perform certain types of work must not be made',
           'any qualifications or requirements applied to a job which have or may have the effect of inhibiting applications from certain types of person should only be retained if they can be justified in terms of the job to be done',
-          'any age limits applied to a job should only be retained if they can be objectively justified in terms of the job to be done , in most cases this will not be the case and managers should consult the Human Resources department if considering an age limit for a particular post',
+          'any age limits applied to a job should only be retained if they can be objectively justified in terms of the job to be done, in most cases this will not be the case and managers should consult the Human Resources department if considering an age limit for a particular post',
           'the use of years of experience as a criteria for a particular role will need to be objectively justified',
           'recruitment solely or primarily by word of mouth should be avoided as its effect is or may be to prevent certain types of person from applying',
           'selection tests should be specifically related to job requirements and should measure the person’s actual or inherent ability to do or train for the work',
@@ -111,7 +111,7 @@ export const equalOpportunitiesSections: DpSection[] = [
       {
         list: [
           'the terms of employment, benefits, facilities and services available to workers should be reviewed regularly to ensure that they are provided in a way which is free from unlawful discrimination',
-          'part-time workers should receive pay, benefits, facilities and services on a pro rata basis to their full-time comparator unless otherwise objectively justified , managers who are responsible for part-time workers should, in particular, take advice when assessing pay and benefits for part-time workers',
+          'part-time workers should receive pay, benefits, facilities and services on a pro rata basis to their full-time comparator unless otherwise objectively justified, managers who are responsible for part-time workers should, in particular, take advice when assessing pay and benefits for part-time workers',
           'where any provision, criterion or practice relating to terms of employment, benefits, facilities and services puts disabled workers at a substantial disadvantage due to a reason connected with their disability, reasonable adjustments will be made to eliminate or, if that is not reasonably practicable, reduce the disadvantage. Managers responsible for disabled workers should, in particular, take advice when assessing pay and benefits for disabled workers',
           'pay and bonus criteria, policies and practices should be carefully examined and regularly monitored, and if it appears that any group of workers are disadvantaged by them they will be checked to make sure that this is not due to any hidden or indirect discrimination.',
         ]

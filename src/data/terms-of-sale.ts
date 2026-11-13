@@ -12,7 +12,7 @@ export const termsOfSaleSections: DpSection[] = [
     title: 'Commercial Invoicing and Payment Terms',
     blocks: [
       { terms: [
-        ['Invoice Issuance', 'MXR will issue electronic invoices for software licenses, setup fees, or subscription renewals as specified in your Order Form.'],
+        ['Invoice Issuance', 'MXR will issue electronic invoices for software licences, setup fees, or subscription renewals as specified in your Order Form.'],
         ['Payment Due Date', 'All corporate bank invoices must be settled in full within 30 days from the date of the invoice (Net 30) via BACS, CHAPS, or authorised bank wire transfer, unless a different payment term is explicitly stated on the face of the invoice. All payments must be made in British Pounds (GBP) unless otherwise specified.'],
         ['Late Payments', 'If an invoice remains unpaid after its due date, we reserve the right to charge interest on the overdue amount at a rate of 4% per annum above the Bank of England base rate, calculated daily from the final due date until payment is settled in full. You will also be responsible for all reasonable legal and debt collection costs incurred by us.'],
       ] },
@@ -33,7 +33,7 @@ export const termsOfSaleSections: DpSection[] = [
     blocks: [
       { terms: [
         ['Reservation of Rights', 'MXR retains full, exclusive, and absolute ownership of all intellectual property rights embedded within our services. This includes, but is not limited to, proprietary software code, custom on-device edge AI algorithms, trained machine learning model weights, spatial user interface designs, and text-to-3D asset generation systems.'],
-        ['License Grant', 'Subject to your timely payment of all issued invoices, MXR grants you a non-exclusive, non-transferable, revocable, time-limited business license to install and run our XR applications solely for your internal business operations.'],
+        ['Licence Grant', 'Subject to your timely payment of all issued invoices, MXR grants you a non-exclusive, non-transferable, revocable, time-limited business licence to install and run our XR applications solely for your internal business operations.'],
         ['Explicit Restrictions', 'You must not copy, modify, distribute, create derivative works of, sell, lease, or sub-license our software. Reverse engineering or attempting to extract our raw model weights, source code, or proprietary spatial tracking architecture is strictly prohibited and constitutes a material breach of contract.'],
       ] },
     ],

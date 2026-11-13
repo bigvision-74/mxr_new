@@ -159,7 +159,7 @@ export default function SimulatorDevelopmentPage() {
             <h2>{"The right platform for your task."}</h2>
           </div>
           <div className="sim-types-head-right">
-            <p>{"We build across the full fidelity spectrum, from lightweight desktop simulators to full hardware-in-the-loop rigs , selecting the approach that best serves your training objectives and budget."}</p>
+            <p>{"We build across the full fidelity spectrum, from lightweight desktop simulators to full hardware-in-the-loop rigs, selecting the approach that best serves your training objectives and budget."}</p>
           </div>
         </div>
         <div className="sim-types-grid">
@@ -253,7 +253,7 @@ export default function SimulatorDevelopmentPage() {
               </div>
               <div>
                 <p className="sim-benefit-title">{"Higher engagement"}</p>
-                <p className="sim-benefit-desc">{"Active, immersive practice is far more engaging than passive instruction , leading to better retention and stronger motivation to learn."}</p>
+                <p className="sim-benefit-desc">{"Active, immersive practice is far more engaging than passive instruction, leading to better retention and stronger motivation to learn."}</p>
               </div>
             </div>
             <div className="sim-benefit-item">
@@ -262,7 +262,7 @@ export default function SimulatorDevelopmentPage() {
               </div>
               <div>
                 <p className="sim-benefit-title">{"Consistent delivery"}</p>
-                <p className="sim-benefit-desc">{"Every trainee receives the same environment, the same scenarios and the same assessment criteria , regardless of when or where training takes place."}</p>
+                <p className="sim-benefit-desc">{"Every trainee receives the same environment, the same scenarios and the same assessment criteria, regardless of when or where training takes place."}</p>
               </div>
             </div>
           </div>

@@ -19,8 +19,8 @@ export const lifecycleSections: DpSection[] = [
     blocks: [
       'MXR software versions cycle through three distinct operational phases:',
       { terms: [
-        ['Active Support (Included with Valid License/Subscription)', 'The current production build. As long as the partner maintains an active, fully paid software license or subscription, the software receives new feature enhancements, performance optimisations, and routine bug fixes at no additional cost.'],
-        ['End of Sale (EOS)', 'The date after which a specific software version, license tier, or module can no longer be purchased or renewed for new deployments.'],
+        ['Active Support (Included with Valid Licence/Subscription)', 'The current production build. As long as the partner maintains an active, fully paid software licence or subscription, the software receives new feature enhancements, performance optimisations, and routine bug fixes at no additional cost.'],
+        ['End of Sale (EOS)', 'The date after which a specific software version, licence tier, or module can no longer be purchased or renewed for new deployments.'],
         ['End of Life (EOL)', 'The final phase where a specific software version or build branch reaches its terminal state. Complimentary technical support, code troubleshooting, and platform optimisations for that specific version are permanently discontinued.'],
       ] },
     ],
@@ -30,8 +30,8 @@ export const lifecycleSections: DpSection[] = [
     blocks: [
       'To ensure clarity following project delivery, MXR enforces strict licensing boundaries:',
       { terms: [
-        ['Paid License Requirement', 'Upon formal technical delivery and handover of any custom software, module, or XR training simulation to the partner, all technical support, bug fixing, and software maintenance are strictly conditional upon the partner maintaining an active, paid MXR software license or subscription agreement.'],
-        ['Exclusion of Free Support', 'Project handover does not include, imply, or confer any complimentary or lifelong technical support. If a partner lets their software license or subscription lapse, MXR’s obligation to provide troubleshooting, platform compatibility updates, or customer service immediately terminates, regardless of when the software was delivered.'],
+        ['Paid Licence Requirement', 'Upon formal technical delivery and handover of any custom software, module, or XR training simulation to the partner, all technical support, bug fixing, and software maintenance are strictly conditional upon the partner maintaining an active, paid MXR software licence or subscription agreement.'],
+        ['Exclusion of Free Support', 'Project handover does not include, imply, or confer any complimentary or lifelong technical support. If a partner lets their software licence or subscription lapse, MXR’s obligation to provide troubleshooting, platform compatibility updates, or customer service immediately terminates, regardless of when the software was delivered.'],
       ] },
     ],
   },
@@ -62,7 +62,7 @@ export const lifecycleSections: DpSection[] = [
       { terms: [
         ['Feature Freeze', 'Immediately upon EOS announcement, the affected software version enters a strict feature freeze. No new capabilities, non-critical optimisations, or cosmetic bug fixes will be developed.'],
         ['Legacy API Phase-Out', 'Deprecated internal software features or APIs are maintained strictly to prevent immediate system crashes during the 3-month transition period, after which they are permanently deactivated.'],
-        ['Complimentary Security & Blocking Updates', 'MXR will provide fixes only for critical security vulnerabilities and catastrophic blocking bugs for a maximum of 3 months (90 days) post-EOS at no additional charge, provided the client’s base license remains active. Following this 3-month window, complimentary software updates cease completely.'],
+        ['Complimentary Security & Blocking Updates', 'MXR will provide fixes only for critical security vulnerabilities and catastrophic blocking bugs for a maximum of 3 months (90 days) post-EOS at no additional charge, provided the client’s base licence remains active. Following this 3-month window, complimentary software updates cease completely.'],
         ['Critical Vulnerability Definition', 'For the purpose of this policy, a “critical security vulnerability” is strictly defined as a flaw that allows remote code execution, unauthorised data exfiltration, or complete system compromise, scoring 9.0 or higher on the Common Vulnerability Scoring System (CVSS). Final determination of vulnerability severity remains at the sole discretion of MXR’s engineering team.'],
       ] },
     ],

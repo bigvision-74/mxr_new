@@ -545,7 +545,7 @@ export default function HomePage() {
               <div className="px-product" key="eprium">
                 <p className="px-sector px-sector--health">HEALTHCARE</p>
                 <h3>EPR<span>ium</span></h3>
-                <p className="px-desc">Clinical practice before clinical placement , a safe, realistic way to practise patient encounters, clinical reasoning and electronic patient records.</p>
+                <p className="px-desc">Clinical practice before clinical placement, a safe, realistic way to practise patient encounters, clinical reasoning and electronic patient records.</p>
                 <a href="/eprium" className="px-cta">Explore EPRium →</a>
               </div>
             )}

@@ -170,7 +170,7 @@ export const securityPolicySections: DpSection[] = [
       'The use of Messenger service is permitted for business purposes.',
       'Access to pornographic sites, hacking sites, and other risky sites is strongly discouraged.',
       'Downloading is a privilege assigned to some users. It can be requested as a service.',
-      'Internet access is mainly for business purpose , some limited personal navigation is permitted if in doing so there is no perceptible consumption of the organisation system resources and the productivity of the work is not affected. Personal navigation is discouraged during working hours.',
+      'Internet access is mainly for business purpose, some limited personal navigation is permitted if in doing so there is no perceptible consumption of the organisation system resources and the productivity of the work is not affected. Personal navigation is discouraged during working hours.',
       'Inbound and outbound traffic must be regulated using firewalls in the perimeter. Back to back configuration is strongly recommended for firewalls.',
       'In accessing Internet, users must behave in a way compatible with the prestige of the organisation. Attacks like denial of service, spam, phishing, fraud, hacking, distribution of questionable material, infraction of copyrights and others are strictly forbidden.',
       'Internet traffic should be monitored at firewalls. Any attack or abuse should be promptly reported to the Information Security Officer.',
@@ -222,7 +222,7 @@ export const securityPolicySections: DpSection[] = [
     ],
   ),
   {
-    title: 'Annex , Glossary',
+    title: 'Annex, Glossary',
     blocks: [
       'This section of the Security Policy provides the definitions of terms, acronyms, and abbreviations required to understand this document.',
       {

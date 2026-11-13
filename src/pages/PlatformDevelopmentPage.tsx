@@ -25,7 +25,7 @@ export default function PlatformDevelopmentPage() {
             </h1>
           </div>
           <p className="banner-lead">
-            {"Web, mobile and desktop platforms that connect users, content and workflows , engineered for performance, accessibility and long-term use."}
+            {"Web, mobile and desktop platforms that connect users, content and workflows, engineered for performance, accessibility and long-term use."}
           </p>
           <div className="button-row">
             <a
@@ -53,12 +53,12 @@ export default function PlatformDevelopmentPage() {
           <article>
             <span>{"01"}</span>
             <h3>{"Application development"}</h3>
-            <p>{"Responsive web, mobile and desktop tools built around your users' real workflows , tested across devices and designed to last."}</p>
+            <p>{"Responsive web, mobile and desktop tools built around your users' real workflows, tested across devices and designed to last."}</p>
           </article>
           <article>
             <span>{"02"}</span>
             <h3>{"UI & UX design"}</h3>
-            <p>{"Interfaces shaped around how real people work , from information hierarchy to micro-interactions and WCAG accessibility compliance."}</p>
+            <p>{"Interfaces shaped around how real people work, from information hierarchy to micro-interactions and WCAG accessibility compliance."}</p>
           </article>
           <article>
             <span>{"03"}</span>
@@ -105,7 +105,7 @@ export default function PlatformDevelopmentPage() {
             </div>
             <small>{"WEB APPLICATION"}</small>
             <h3>{"Scalable, responsive web platforms."}</h3>
-            <p>{"Portals, dashboards and SaaS tools built with modern frameworks , optimised for performance and designed around your users' real workflows."}</p>
+            <p>{"Portals, dashboards and SaaS tools built with modern frameworks, optimised for performance and designed around your users' real workflows."}</p>
           </article>
 
           <article>
@@ -114,7 +114,7 @@ export default function PlatformDevelopmentPage() {
             </div>
             <small>{"MOBILE APPLICATION"}</small>
             <h3>{"Native feel, cross-platform reach."}</h3>
-            <p>{"iOS and Android apps from a single shared codebase , offline-capable, push-ready and built for the devices your teams already carry in the field."}</p>
+            <p>{"iOS and Android apps from a single shared codebase, offline-capable, push-ready and built for the devices your teams already carry in the field."}</p>
           </article>
 
           <article>
@@ -133,7 +133,7 @@ export default function PlatformDevelopmentPage() {
       <section className="ais-trust">
         <p className="eyebrow">{"CORE CAPABILITIES"}</p>
         <h2>{"Everything your platform needs."}</h2>
-        <p className="ais-trust-lead">{"We cover the full scope of platform engineering , from first architecture decisions to ongoing deployment and care."}</p>
+        <p className="ais-trust-lead">{"We cover the full scope of platform engineering, from first architecture decisions to ongoing deployment and care."}</p>
         <div className="ais-trust-cols">
           <div className="ais-trust-col">
             <div className="ais-trust-icon">
@@ -142,7 +142,7 @@ export default function PlatformDevelopmentPage() {
               </svg>
             </div>
             <h3>{"ARCHITECTURE & SCALABILITY"}</h3>
-            <p>{"Scalable, secure structures planned from the first sprint , built to grow alongside your requirements, user base and data volumes without costly rewrites."}</p>
+            <p>{"Scalable, secure structures planned from the first sprint, built to grow alongside your requirements, user base and data volumes without costly rewrites."}</p>
           </div>
           <div className="ais-trust-col">
             <div className="ais-trust-icon">
@@ -151,7 +151,7 @@ export default function PlatformDevelopmentPage() {
               </svg>
             </div>
             <h3>{"PERFORMANCE & SECURITY"}</h3>
-            <p>{"Authentication, role-based access, encryption and hosting strategy considered throughout , not as an afterthought when go-live approaches."}</p>
+            <p>{"Authentication, role-based access, encryption and hosting strategy considered throughout, not as an afterthought when go-live approaches."}</p>
           </div>
           <div className="ais-trust-col">
             <div className="ais-trust-icon">

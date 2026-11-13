@@ -116,7 +116,7 @@ export default function EventsPage() {
         <div className="events-list">
           {upcoming.length > 0
             ? upcoming.map(e => <EventCard key={e.id} event={e} />)
-            : <p className="events-empty">No upcoming events at the moment , check back soon.</p>
+            : <p className="events-empty">No upcoming events at the moment, check back soon.</p>
           }
         </div>
       </section>
