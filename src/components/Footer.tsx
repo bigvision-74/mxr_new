@@ -63,9 +63,7 @@ export function Footer() {
             <h3>
               {"Resources"}
             </h3>
-            <a href={"/case-studies"}>
-              {"Case Studies"}
-            </a>
+           
             <a href={"/contact"}>
               {"Support"}
             </a>

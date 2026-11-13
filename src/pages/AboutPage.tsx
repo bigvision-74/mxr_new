@@ -62,7 +62,7 @@ export default function AboutPage() {
         </div>
         <div className={"about-story-copy reveal visible"}>
           <p className={"about-large"}>
-            {"MXR was founded with a belief that technology should make complex learning, training and operations more effective,not more complicated."}
+            {"MXR was founded with a belief that technology should make complex learning, training and operations more effective, not more complicated."}
           </p>
           <div className={"about-copy-columns"}>
             <p>

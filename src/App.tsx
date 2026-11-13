@@ -24,7 +24,7 @@ export default function App() {
 
   useEffect(() => {
     if (isBlogDetail || isCaseStudyDetail) return
-    document.title = page?.title ?? 'Page not found | MXR.ai'
+    document.title = page?.title ?? 'Page not found | MXR'
     document.querySelector('meta[name="description"]')?.setAttribute('content', page?.description || '')
     window._hsq = window._hsq || []
     window._hsq.push(['setPath', window.location.pathname])

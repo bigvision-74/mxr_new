@@ -538,7 +538,7 @@ export default function HomePage() {
               <div className="px-product" key="modal">
                 <p className="px-sector">DEFENCE &amp; SECURITY</p>
                 <h3>MODAL<span>3D</span></h3>
-                <p className="px-desc">The digital ammunition and ordnance library , highly accurate 3D models with AR access, detailed specifications and training resources.</p>
+                <p className="px-desc">The digital ammunition and ordnance library, highly accurate 3D models with AR access, detailed specifications and training resources.</p>
                 <a href="/modal3d" className="px-cta">Explore MODAL3D →</a>
               </div>
             ) : (

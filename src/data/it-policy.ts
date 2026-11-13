@@ -3,7 +3,7 @@ import type { DpSection } from './data-protection'
 export const itPolicySections: DpSection[] = [
   {
     title: 'Introduction',
-    blocks: ['Meta Extended Reality (MXR) is committed to providing its employees with access to technology and IT resources that promote productivity and efficiency. To ensure that our IT resources are used in a responsible and ethical manner, this IT Policy has been developed to outline the acceptable use of IT resources within our organization.'],
+    blocks: ['Meta Extended Reality (MXR) is committed to providing its employees with access to technology and IT resources that promote productivity and efficiency. To ensure that our IT resources are used in a responsible and ethical manner, this IT Policy has been developed to outline the acceptable use of IT resources within our organisation.'],
   },
   {
     title: 'Scope',

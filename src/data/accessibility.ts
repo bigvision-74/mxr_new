@@ -8,7 +8,7 @@ export const accessibilitySections: DpSection[] = [
   {
     title: 'Our Accessibility Targets',
     blocks: [
-      'We aim to ensure that our digital assets conform to the Web Content Accessibility Guidelines (WCAG) 2.2 Level AA standards. Our ongoing optimization roadmap includes:',
+      'We aim to ensure that our digital assets conform to the Web Content Accessibility Guidelines (WCAG) 2.2 Level AA standards. Our ongoing optimisation roadmap includes:',
       { terms: [
         ['Full Keyboard Navigability', 'Structuring our customer portals and billing interfaces so they can be navigated completely without a mouse, using standard tab sequences and keyboard commands.'],
         ['Screen Reader Compatibility', 'Adding comprehensive ARIA landmarks, page structural hierarchies, and explicit image alternative text (Alt Text) to allow text-to-speech software to translate our documentation clearly.'],

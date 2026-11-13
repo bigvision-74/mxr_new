@@ -3,7 +3,7 @@ import type { DpSection } from './data-protection'
 export const privacyGdprSections: DpSection[] = [
   {
     title: 'Introduction',
-    blocks: ['Meta Extended Reality Ltd (‘Meta XR’, ‘we’, ‘our’ or ‘us’) respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, store and protect personal information when you visit our website, use our software, AI platforms, XR applications, mobile applications or interact with us.'],
+    blocks: ['Meta Extended Reality Ltd (‘MXR’, ‘we’, ‘our’ or ‘us’) respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, store and protect personal information when you visit our website, use our software, AI platforms, XR applications, mobile applications or interact with us.'],
   },
   {
     title: 'Company Information',
@@ -68,7 +68,7 @@ export const privacyGdprSections: DpSection[] = [
   },
   {
     title: 'Children’s Privacy',
-    blocks: ['Our core services, software platforms, and XR software packages are directed at corporate entities and adults. They are not intended for use by children. We do not knowingly collect data from children under the age of 13. If we discover that any personal data from an individual under 13 has been collected without verifiable parental authorization, it will be deleted immediately from our infrastructure.'],
+    blocks: ['Our core services, software platforms, and XR software packages are directed at corporate entities and adults. They are not intended for use by children. We do not knowingly collect data from children under the age of 13. If we discover that any personal data from an individual under 13 has been collected without verifiable parental authorisation, it will be deleted immediately from our infrastructure.'],
   },
   {
     title: 'Third-Party Websites',
@@ -92,9 +92,9 @@ export const privacyGdprSections: DpSection[] = [
       { table: { head: ['Category', 'Example', 'Purpose', 'Retention'], rows: [
         ['Identity', 'Full name, user ID, profile picture, Meta account credentials.', 'Account creation, identity verification, cross-platform profiles, and user authentication.', 'For the duration of the active account lifecycle, plus 30 days following a deletion request.'],
         ['Contact', 'Email address, mobile phone number, billing address.', 'Transaction receipts, service alerts, policy updates, and identity recovery.', 'For the duration of the active account lifecycle, plus 30 days following a deletion request.'],
-        ['Technical & Telemetry', 'IP address, device serial number, OS version, Wi-Fi signal strength, error logs.', 'System performance optimization, security monitoring, crash reporting, and regional access control.', 'Standard system logs are automatically deleted or fully anonymized after 180 days.'],
+        ['Technical & Telemetry', 'IP address, device serial number, OS version, Wi-Fi signal strength, error logs.', 'System performance optimisation, security monitoring, crash reporting, and regional access control.', 'Standard system logs are automatically deleted or fully anonymized after 180 days.'],
         ['Support', 'Customer helpdesk tickets, chat logs, diagnostic files, hardware RMA records.', 'Troubleshooting technical issues, resolving billing disputes, and product safety reviews.', '3 years from the closure of the support ticket, unless required longer for legal claims.'],
-        ['Marketing', 'Opt-in preferences, ad engagement logs, promotional email clicks.', 'Delivery of personalized newsletters, localized event invitations, and tailored app recommendations.', 'Retained until consent is withdrawn (immediate suppression upon user opt-out).'],
+        ['Marketing', 'Opt-in preferences, ad engagement logs, promotional email clicks.', 'Delivery of personalised newsletters, localized event invitations, and tailored app recommendations.', 'Retained until consent is withdrawn (immediate suppression upon user opt-out).'],
         ['Spatial & Environmental Data (AI-Generated)', 'Raw camera feeds, point clouds, 3D room layouts, physical boundary dimensions.', 'On-Device AI: Obstacle avoidance, inside-out tracking, and environmental depth mapping.', 'Raw video/imagery is deleted instantly. Calculated spatial point clouds remain local to the device.'],
         ['Biometric Inputs & Models (AI-Generated)', 'Numerical tracking models of hand gestures, body posture, and eye movement.', 'On-Device AI: Real-time avatar animation, hands-free UI navigation, and gaze-directed rendering.', 'Raw infrared and camera data is deleted instantly on-device. Abstract mathematical tracking models are wiped upon powering down the headset.'],
         ['Multimodal Vision Data (AI-Generated)', 'Cloud-transmitted camera frames of real-world objects or text.', 'Cloud AI: Visual search processing, real-time translations, and AI-driven object description.', 'Automatically anonymized and decoupled from user IDs immediately after processing. Deleted within 30 days.'],

@@ -70,7 +70,7 @@ export const dpSections: DpSection[] = [
           ['Data minimisation', 'Only collect and retain what is necessary for the purpose.'],
           ['Accuracy', 'Keep data up to date; correct or delete inaccurate data without undue delay.'],
           ['Storage limitation', 'Retain only as long as needed, then delete or anonymise (subject to legal holds).'],
-          ['Integrity & confidentiality (security)', 'Protect data against unauthorized or unlawful processing, accidental loss, damage, destruction.'],
+          ['Integrity & confidentiality (security)', 'Protect data against unauthorised or unlawful processing, accidental loss, damage, destruction.'],
           ['Accountability', 'Be able to demonstrate compliance (via logs, ROPA, audits, reviews).'],
         ]
       },

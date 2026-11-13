@@ -71,7 +71,7 @@ export default function DefenceSecurityPage() {
             {"Complex environments demand better preparation."}
           </h2>
           <p>
-            {"Traditional training can be restricted by time, location, equipment availability and risk. MXR brings practical learning closer to the point of need,helping teams explore complex subjects, repeat critical activities and build confidence before entering real environments."}
+            {"Traditional training can be restricted by time, location, equipment availability and risk. MXR brings practical learning closer to the point of need, helping teams explore complex subjects, repeat critical activities and build confidence before entering real environments."}
           </p>
         </div>
       </section>
