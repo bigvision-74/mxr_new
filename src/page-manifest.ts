@@ -43,7 +43,7 @@ import CarbonReductionPage from './pages/CarbonReductionPage'
 import EnvironmentalPolicyPage from './pages/EnvironmentalPolicyPage'
 
 export const pages: Record<string, { Component: () => any; title: string; description: string; bodyClass: string }> = {
-    "index.html": { Component: HomePage, title: "MXR | AR, VR & Mixed Reality Solutions in the UK .", description: "MXR creates immersive simulation, XR and AI solutions for defence, healthcare and enterprise training.", bodyClass: "" },
+    "index.html": { Component: HomePage, title: "MXR | AR, VR & Mixed Reality Solutions in the UK.", description: "MXR creates immersive simulation, XR and AI solutions for defence, healthcare and enterprise training.", bodyClass: "" },
     "about.html": { Component: AboutPage, title: "About MXR \u2014 Technology for Real-World Impact", description: "Meet MXR, a technology partner creating immersive simulation, AI and software solutions for education, training and enterprise.", bodyClass: "" },
     "defence-security.html": { Component: DefenceSecurityPage, title: "Defence & Security Solutions \u2014 MXR", description: "MXR defence and security simulation solutions help teams build knowledge, rehearse safely and improve operational readiness.", bodyClass: "" },
     "case-study.html": { Component: CaseStudyXrReadinessPage, title: "Enhancing Readiness Through XR Training \u2014 MXR Case Study", description: "Discover how MXR used extended reality to support safer, repeatable and measurable operational training.", bodyClass: "" },

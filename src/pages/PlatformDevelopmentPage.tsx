@@ -160,7 +160,7 @@ export default function PlatformDevelopmentPage() {
               </svg>
             </div>
             <h3>{"CONTENT & ADMIN TOOLS"}</h3>
-            <p>{"Role-based CMS, user management and operational controls that put your team in charge of their own platform from day one , no dev required."}</p>
+            <p>{"Role-based CMS, user management and operational controls that put your team in charge of their own platform from day one, no dev required."}</p>
           </div>
           <div className="ais-trust-col">
             <div className="ais-trust-icon">
@@ -169,7 +169,7 @@ export default function PlatformDevelopmentPage() {
               </svg>
             </div>
             <h3>{"ANALYTICS & REPORTING"}</h3>
-            <p>{"Data captured where it matters, surfaced in ways that make decisions clearer , from xAPI activity streams to custom operational dashboards."}</p>
+            <p>{"Data captured where it matters, surfaced in ways that make decisions clearer, from xAPI activity streams to custom operational dashboards."}</p>
           </div>
         </div>
       </section>
@@ -184,7 +184,7 @@ export default function PlatformDevelopmentPage() {
             <p className="eyebrow">{"PLATFORMS WE'VE BUILT"}</p>
             <h2>{"Software already in use."}</h2>
             <p style={{ fontSize: '1rem', color: '#4e6278', lineHeight: 1.75, margin: '1.25rem 0 2rem' }}>
-              {"From clinical LMS platforms to XR analytics dashboards , platforms trusted by teams across healthcare, defence and enterprise training. Purpose-built, not templated."}
+              {"From clinical LMS platforms to XR analytics dashboards, platforms trusted by teams across healthcare, defence and enterprise training. Purpose-built, not templated."}
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
               <div className="xrd-device-row">
@@ -237,12 +237,12 @@ export default function PlatformDevelopmentPage() {
               {"Every component built for the long term."}
             </h2>
             <p style={{ color: 'rgba(255,255,255,.5)', fontSize: '1rem', lineHeight: 1.75, margin: 0 }}>
-              {"We build with documented component libraries, consistent design tokens and clean API boundaries , so every future feature costs less and every future dev can hit the ground running."}
+              {"We build with documented component libraries, consistent design tokens and clean API boundaries, so every future feature costs less and every future dev can hit the ground running."}
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
               {[
                 { num: '3×', label: 'deployment targets from one codebase' },
-                { num: '100%', label: 'custom , no templates or licensing' },
+                { num: '100%', label: 'custom, no templates or licensing' },
                 { num: 'Day 1', label: 'SCORM & xAPI compliance built in' },
                 { num: 'Full', label: 'WCAG accessibility from wireframe' },
               ].map(stat => (
@@ -261,7 +261,7 @@ export default function PlatformDevelopmentPage() {
         <div className="service-outcome-text">
           <p className="eyebrow">{"THE APPROACH"}</p>
           <h2>{"From first requirement to everyday use."}</h2>
-          <p>{"We combine experience design and engineering with an iterative delivery process , making sure you see working software early and often, not in one big reveal."}</p>
+          <p>{"We combine experience design and engineering with an iterative delivery process, making sure you see working software early and often, not in one big reveal."}</p>
           <div className="service-approach-modes">
             <span className="service-approach-pill">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><rect x="1" y="2" width="12" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.3" /><path d="M4 10h6M7 9v1" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" /></svg>
@@ -307,7 +307,7 @@ export default function PlatformDevelopmentPage() {
             </div>
             <small>{"ONE TEAM"}</small>
             <h3>{"Designers, developers and architects together."}</h3>
-            <p>{"No handoffs between separate agencies. Design, front-end, back-end and infrastructure working from a shared brief , so nothing gets lost between disciplines."}</p>
+            <p>{"No handoffs between separate agencies. Design, front-end, back-end and infrastructure working from a shared brief, so nothing gets lost between disciplines."}</p>
             <div>
               <b>{"WHAT THIS MEANS"}</b>
               <span>{"Faster decisions, fewer integration issues, consistent output from first wireframe to final deployment."}</span>
@@ -323,7 +323,7 @@ export default function PlatformDevelopmentPage() {
             </div>
             <small>{"STANDARDS COMPLIANCE"}</small>
             <h3>{"SCORM and xAPI compliance from day one."}</h3>
-            <p>{"Learning standards built in from the start , not bolted on at the end. Your platform connects cleanly to your LMS, feeds activity data to your analytics and stays auditable."}</p>
+            <p>{"Learning standards built in from the start, not bolted on at the end. Your platform connects cleanly to your LMS, feeds activity data to your analytics and stays auditable."}</p>
             <div>
               <b>{"WHAT THIS MEANS"}</b>
               <span>{"No costly re-engineering later. Compliant from first delivery and compatible with your existing ecosystem."}</span>
@@ -339,7 +339,7 @@ export default function PlatformDevelopmentPage() {
             </div>
             <small>{"LONG-TERM DELIVERY"}</small>
             <h3>{"A clear roadmap and support model from launch."}</h3>
-            <p>{"Reusable components and documented patterns keep quality consistent and future development costs predictable. We plan for your platform to evolve , not just ship and move on."}</p>
+            <p>{"Reusable components and documented patterns keep quality consistent and future development costs predictable. We plan for your platform to evolve, not just ship and move on."}</p>
             <div>
               <b>{"WHAT THIS MEANS"}</b>
               <span>{"Predictable enhancement costs, lower maintenance overhead and a codebase that stays maintainable as your team grows."}</span>

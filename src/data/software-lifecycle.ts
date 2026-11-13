@@ -5,7 +5,7 @@ export const lifecycleSections: DpSection[] = [
     title: 'Policy Summary',
     blocks: [
       { terms: [
-        ['Scope', 'All software applications, enterprise builds, modules, and XR training simulations developed, owned and licensed by MXR Meta Extended Reality Ltd. Software lifecycle, support, and deprecation are governed by MXR’s Software Lifecycle & Deprecation Policy, which may be updated from time to time.'],
+        ['Scope', 'All software applications, enterprise builds, modules, and XR training simulations developed, owned and licensed by MXR Meta Extended Reality Ltd(MXR). Software lifecycle, support, and deprecation are governed by MXR’s Software Lifecycle & Deprecation Policy, which may be updated from time to time.'],
         ['Effective Date', 'January 2026'],
       ] },
     ],
