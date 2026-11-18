@@ -4,8 +4,8 @@ import { privacyGdprSections } from '../data/privacy-gdpr'
 export default function PrivacyGdprPage() {
   return <PolicyDoc
     longTitle
-    title={<>Privacy Policy <em>(MXR-GDPR-001)</em></>}
-    lead="Detailed GDPR privacy policy covering personal data collection, AI/XR services, data sharing, retention, and your rights."
+    title={<>Website & Platform <em>Privacy Policy</em></>}
+    lead="How MXR collects, uses, and protects personal data across our website, software platforms, AI, and XR services, aligned with UK GDPR and ISO/IEC 27001:2022."
     sections={privacyGdprSections}
     contactLabel="Questions about your privacy?" />
 }

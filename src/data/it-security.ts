@@ -7,12 +7,47 @@ const updates = (what: string): [string, string] => ['Regular software updates',
 
 export const itSecuritySections: DpSection[] = [
   {
+    title: 'Document Information',
+    blocks: [
+      { terms: [
+        ['Document ID', 'ISMS-POL-001'],
+        ['Version', '1.0'],
+        ['Effective Date', '01/01/2026'],
+        ['Next Review Date', '31/12/2026'],
+        ['Policy Owner', 'Director (ISMS Lead)'],
+        ['Approval Authority', 'Director / Senior Management'],
+        ['Standard Alignment', 'ISO/IEC 27001:2022'],
+        ['Classification', 'Internal — Mandatory'],
+      ] },
+    ],
+  },
+  {
+    title: 'Policy Statement & Commitment',
+    blocks: [
+      'Meta Extended Reality Ltd (MXR) is committed to safeguarding the confidentiality, integrity, and availability of all corporate information, intellectual property, source code, and client data entrusted to our care. Information security is integral to our design, development, integration, testing, deployment, and support of augmented, virtual, and mixed reality applications, immersive room and simulation software, and web, mobile, and e-learning platforms.',
+      'In accordance with ISO/IEC 27001:2022, MXR formally commits to:',
+      { terms: [
+        ['Legal & Regulatory Compliance', 'Satisfying all applicable legal, statutory, regulatory, and contractual requirements relating to information security and data protection (including UK GDPR, the Data Protection Act 2018, and India’s Digital Personal Data Protection Act 2023).'],
+        ['Security Objectives', 'Establishing, monitoring, and reviewing measurable Information Security Objectives at least annually.'],
+        ['Continual Improvement', 'Continually improving the Information Security Management System (ISMS) to adapt to emerging cyber threats, technological changes, and business growth.'],
+      ] },
+    ],
+  },
+  {
     title: 'Purpose',
-    blocks: ['The purpose of this IT security policy is to ensure the protection of Meta Extended Reality’s assets, data, and intellectual property from potential security threats. This policy aims to provide a comprehensive set of guidelines that all employees and contractors must follow to maintain a secure IT environment. By doing so, Meta Extended Reality can protect against unauthorised access, maintain the integrity of data, and ensure the availability of IT systems.'],
+    blocks: ['This policy establishes the mandatory governance framework, security rules, and operational controls required to protect MXR, its personnel, its physical offices, and its clients against internal and external information security risks.'],
   },
   {
     title: 'Scope',
-    blocks: ['This IT security policy applies to all employees, contractors, and vendors of Meta Extended Reality who have access to the organisation’s IT systems, data, and intellectual property. It covers all IT assets, including hardware, software, and data, regardless of where they are stored or how they are accessed.'],
+    blocks: [
+      'This policy applies without exception to all MXR personnel—including Directors, permanent employees, contractors, temporary workers, interns, and third-party partners granted access to MXR information systems—operating from MXR’s designated office premises:',
+      { terms: [
+        ['UK Head Office', '267 Argyll Avenue, Slough, England, SL1 4HE'],
+        ['India Development Centre', 'E-302 Vista Towers, Phase 8A, Mohali, Punjab'],
+      ] },
+      { h: 'Office-Based Operational Requirement' },
+      'Remote or home working is not permitted under standard operational arrangements. All day-to-day operational and development activities are conducted on-site from MXR’s designated offices. Any exceptional, temporary off-site access requires prior written authorisation from the Director.',
+    ],
   },
   {
     title: 'Components and Security Controls',
@@ -30,7 +65,7 @@ export const itSecuritySections: DpSection[] = [
       { terms: [
         accessControlsPc,
         encryption,
-        ['Norton antivirus software', 'All devices used by Meta Extended Reality employees must have Norton antivirus software installed to protect against malware. Antivirus software must be updated regularly to ensure that it is effective in detecting and preventing malware infections.'],
+        ['Bitdefender antivirus software', 'All devices used by Meta Extended Reality employees must have Bitdefender antivirus software installed to protect against malware. Antivirus software must be updated regularly to ensure that it is effective in detecting and preventing malware infections.'],
       ] },
       { h: 'SONICWALL Firewall' },
       'The SonicWall firewall is critical to protecting Meta Extended Reality\'s network from external threats',

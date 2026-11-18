@@ -34,7 +34,7 @@ export function PolicyDoc({ title, lead, sections, contactLabel, longTitle }: Pr
                 if ('h' in b) return <h3 key={j} className="cookie-h">{b.h}</h3>
                 if ('list' in b) return <ul key={j}>{b.list.map((li) => <li key={li}><Linkify text={li} /></li>)}</ul>
                 if ('ordered' in b) return <ol key={j}>{b.ordered.map((li) => <li key={li}><Linkify text={li} /></li>)}</ol>
-                if ('terms' in b) return <ul key={j}>{b.terms.map(([k, v]) => <li key={k}><strong>{k}</strong> , <Linkify text={v} /></li>)}</ul>
+                if ('terms' in b) return <ul key={j}>{b.terms.map(([k, v]) => <li key={k}><strong>{k}:-</strong> <Linkify text={v} /></li>)}</ul>
                 return (
                   <div key={j} className="dp-table-wrap">
                     <table className="dp-table">

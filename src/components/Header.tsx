@@ -7,7 +7,7 @@ export function Header() {
   const [dropdown, setDropdown] = useState<string | null>(null)
   const groups = [
     { name: 'Products', links: products.map(([title, slug]) => [title, `/${slug}.html`]) },
-    { name: 'Resources', links: [['Case Studies', '/case-study-xr-readiness.html'], ['Support', 'mailto:hello@mxr.ai']] },
+   
   ]
   return <header className="site-header" id="top" onKeyDown={e => { if (e.key === 'Escape') { setDropdown(null); setMenuOpen(false) } }}>
     <a className="brand brand-logo" href="/index.html" aria-label="MXR home"><img src={mxrLogo} alt="MXR , Where vision becomes reality" /></a>

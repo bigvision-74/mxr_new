@@ -3,8 +3,8 @@ import { itSecuritySections } from '../data/it-security'
 
 export default function ItSecurityPage() {
   return <PolicyDoc
-    title={<>IT Security <em>Policy</em></>}
-    lead="How MXR protects its assets, data, and intellectual property from security threats."
+    title={<>Information Security <em>Policy</em></>}
+    lead="Our ISO/IEC 27001:2022-aligned commitment to protecting the confidentiality, integrity, and availability of corporate information, source code, and client data."
     sections={itSecuritySections}
-    contactLabel="Questions about IT security?" />
+    contactLabel="Questions about information security?" />
 }

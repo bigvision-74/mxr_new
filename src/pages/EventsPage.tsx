@@ -26,8 +26,6 @@ const events: Event[] = [
     title: 'Join MXR at the ASPiH Conference in Edinburgh!',
     eventName: 'ASPiH Conference 2024',
     location: 'Edinburgh International Conference Centre',
-    website: 'https://aspihconference.co.uk',
-    websiteLabel: 'aspihconference.co.uk',
     description:
       "We're excited to be part of the ASPiH Conference, which focuses on innovation in healthcare simulation. At the event, we'll be showcasing our AR overlay app in partnership with Simulation Collective, enhancing training mannequins with real-time anatomical visualisations. Come talk to us about how immersive technology, including AR and VR, can transform healthcare training.",
     image: event2, // <-- Added here

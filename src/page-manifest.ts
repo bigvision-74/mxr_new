@@ -4,7 +4,7 @@ import EventsPage from './pages/EventsPage'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import DefenceSecurityPage from './pages/DefenceSecurityPage'
-import CaseStudyXrReadinessPage from './pages/CaseStudyXrReadinessPage'
+//import CaseStudyXrReadinessPage from './pages/CaseStudyXrReadinessPage'
 import Modal3DPage from './pages/Modal3DPage'
 import EpriumPage from './pages/EpriumPage'
 import EpriumOldPage from './pages/EpriumOldPage'
@@ -41,12 +41,13 @@ import HealthSafetyRemotePage from './pages/HealthSafetyRemotePage'
 import WhistleblowingPage from './pages/WhistleblowingPage'
 import CarbonReductionPage from './pages/CarbonReductionPage'
 import EnvironmentalPolicyPage from './pages/EnvironmentalPolicyPage'
+import EmployeePrivacyPage from './pages/EmployeePrivacyPage'
 
 export const pages: Record<string, { Component: () => any; title: string; description: string; bodyClass: string }> = {
     "index.html": { Component: HomePage, title: "MXR | AR, VR & Mixed Reality Solutions in the UK.", description: "MXR creates immersive simulation, XR and AI solutions for defence, healthcare and enterprise training.", bodyClass: "" },
     "about.html": { Component: AboutPage, title: "About MXR \u2014 Technology for Real-World Impact", description: "Meet MXR, a technology partner creating immersive simulation, AI and software solutions for education, training and enterprise.", bodyClass: "" },
     "defence-security.html": { Component: DefenceSecurityPage, title: "Defence & Security Solutions \u2014 MXR", description: "MXR defence and security simulation solutions help teams build knowledge, rehearse safely and improve operational readiness.", bodyClass: "" },
-    "case-study.html": { Component: CaseStudyXrReadinessPage, title: "Enhancing Readiness Through XR Training \u2014 MXR Case Study", description: "Discover how MXR used extended reality to support safer, repeatable and measurable operational training.", bodyClass: "" },
+    //"case-study.html": { Component: CaseStudyXrReadinessPage, title: "Enhancing Readiness Through XR Training \u2014 MXR Case Study", description: "Discover how MXR used extended reality to support safer, repeatable and measurable operational training.", bodyClass: "" },
     "modal3d.html": { Component: Modal3DPage, title: "MODAL3D | MXR", description: "Explore ordnance in interactive 3D. Connect component views, technical information and AR in one organised library.", bodyClass: "" },
     "eprium.html": { Component: EpriumPage, title: "EPRium | MXR", description: "Give healthcare learners a safe place to practise patient encounters, clinical reasoning and digital documentation.", bodyClass: "" },
     "eprium-old.html": { Component: EpriumOldPage, title: "EPRium_old | MXR", description: "Give healthcare learners a safe place to practise patient encounters, clinical reasoning and digital documentation.", bodyClass: "" },
@@ -71,7 +72,7 @@ pages['data-protection-policy.html'] = { Component: DataProtectionPage, title: '
 pages['data-retention-and-deletion-policy.html'] = { Component: DataRetentionPage, title: 'Data Retention & Deletion Policy | MXR', description: 'How MXR manages the retention, archiving, deletion, and anonymisation of personal data.', bodyClass: '' }
 pages['mxr-data-protection-policy.html'] = { Component: MxrDataProtectionPage, title: 'MXR Data Protection Policy | MXR', description: 'How MXR protects, processes, and governs personal data across its products and services.', bodyClass: '' }
 pages['privacy-policy.html'] = { Component: PrivacyPolicyPage, title: 'Privacy Policy | MXR', description: 'How we collect, use, and protect your personal data in line with our legal obligations.', bodyClass: '' }
-pages['privacy-policy-gdpr.html'] = { Component: PrivacyGdprPage, title: 'Privacy Policy (MXR-GDPR-001) | MXR', description: 'Detailed GDPR privacy policy covering personal data collection, AI/XR services, data sharing, retention, and your rights.', bodyClass: '' }
+pages['privacy-policy-gdpr.html'] = { Component: PrivacyGdprPage, title: 'Website & Platform Privacy Policy (ISMS-POL-008) | MXR', description: 'How MXR collects, uses, and protects personal data across our website, software platforms, AI, and XR services, aligned with UK GDPR and ISO/IEC 27001:2022.', bodyClass: '' }
 pages['acceptable-use-policy.html'] = { Component: AcceptableUsePage, title: 'Acceptable Use Policy | MXR', description: 'The permitted and prohibited uses of our virtual spaces, software, developer tools, and generative AI engines.', bodyClass: '' }
 pages['modern-slavery-statement.html'] = { Component: ModernSlaveryPage, title: 'Modern Slavery and Human Trafficking Statement | MXR', description: 'Our commitment to combating modern slavery and human trafficking in our business and supply chains.', bodyClass: '' }
 pages['software-lifecycle-and-deprecation-policy.html'] = { Component: SoftwareLifecyclePage, title: 'Software Lifecycle & Deprecation Policy | MXR', description: 'Our software lifecycle phases, support timelines, and deprecation process for XR applications, enterprise builds, and training simulations.', bodyClass: '' }
@@ -79,7 +80,7 @@ pages['terms-of-sale-and-licensing.html'] = { Component: TermsOfSalePage, title:
 pages['accessibility-statement.html'] = { Component: AccessibilityPage, title: 'Website Accessibility Statement | MXR', description: 'Our commitment to digital accessibility, WCAG 2.2 AA targets, platform limitations, and how to give accessibility feedback.', bodyClass: '' }
 pages['disaster-recovery-plan.html'] = { Component: DisasterRecoveryPage, title: 'Disaster Recovery Plan | MXR', description: 'Our business continuity and disaster recovery procedures to ensure minimum disruption following any unforeseen disaster.', bodyClass: '' }
 pages['it-policy.html'] = { Component: ItPolicyPage, title: 'IT Policy | MXR', description: 'Acceptable use of technology and IT resources within MXR.', bodyClass: '' }
-pages['it-security-policy.html'] = { Component: ItSecurityPage, title: 'IT Security Policy | MXR', description: 'How MXR protects its assets, data, and intellectual property from security threats.', bodyClass: '' }
+pages['it-security-policy.html'] = { Component: ItSecurityPage, title: 'Information Security Policy (ISMS-POL-001) | MXR', description: 'Our ISO/IEC 27001:2022-aligned commitment to protecting the confidentiality, integrity, and availability of corporate information, source code, and client data.', bodyClass: '' }
 pages['security-policy.html'] = { Component: SecurityPolicyPage, title: 'Security Policy | MXR', description: 'Security requirements for the proper and secure use of Information Technology services, covering IT assets, access control, passwords, email, internet, remote access, and outsourcing.', bodyClass: '' }
 pages['disciplinary-policy.html'] = { Component: DisciplinaryPage, title: 'Disciplinary Policy | MXR', description: 'Our disciplinary procedure setting out the standards of conduct expected of staff and the process for addressing misconduct.', bodyClass: '' }
 pages['equal-opportunities-and-discrimination-policy.html'] = { Component: EqualOpportunitiesPage, title: 'Equal Opportunities and Discrimination Policy | MXR', description: 'Our commitment to treating all employees, workers, and job applicants equally.', bodyClass: '' }
@@ -88,3 +89,4 @@ pages['health-and-safety-policy-remote-hybrid.html'] = { Component: HealthSafety
 pages['carbon-reduction-plan.html'] = { Component: CarbonReductionPage, title: 'Carbon Reduction Plan & Evergreen Level 1 | MXR', description: 'Our PPN 006/21-aligned Carbon Reduction Plan, emissions baseline, and commitment to Net Zero by 2050.', bodyClass: '' }
 pages['environmental-policy.html'] = { Component: EnvironmentalPolicyPage, title: 'Environmental Policy | MXR', description: 'Our approach to minimising environmental impact across our offices, supply chain, and operations.', bodyClass: '' }
 pages['whistleblowing-policy.html'] = { Component: WhistleblowingPage, title: 'Whistleblowing Policy | MXR', description: 'How workers can raise concerns about malpractice or wrongdoing in the workplace, confidentially and without fear of reprisals.', bodyClass: '' }
+pages['employee-privacy-notice.html'] = { Component: EmployeePrivacyPage, title: 'Employee Privacy Notice | MXR', description: 'How MXR collects, uses, and protects the personal data of employees, workers, and contractors in the UK and India.', bodyClass: '' }
