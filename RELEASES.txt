@@ -1,0 +1,8 @@
+MXR Website — Release Log
+=========================
+
+v1.0.0 — 2026-11-19 00:00
+Commit: ff2550d
+Changes:
+  - Baseline version (policy pages, spelling and punctuation fixes)
+
