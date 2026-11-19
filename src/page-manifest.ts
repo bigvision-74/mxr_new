@@ -4,6 +4,8 @@ import EventsPage from './pages/EventsPage'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import DefenceSecurityPage from './pages/DefenceSecurityPage'
+import { EnterpriseSolutionPage, HealthcareSolutionPage } from './pages/SectorSolutions'
+import CustomSolutionPage from './pages/CustomSolutionPage'
 //import CaseStudyXrReadinessPage from './pages/CaseStudyXrReadinessPage'
 import Modal3DPage from './pages/Modal3DPage'
 import EpriumPage from './pages/EpriumPage'
@@ -43,11 +45,14 @@ import CarbonReductionPage from './pages/CarbonReductionPage'
 import EnvironmentalPolicyPage from './pages/EnvironmentalPolicyPage'
 import EmployeePrivacyPage from './pages/EmployeePrivacyPage'
 
-export const pages: Record<string, { Component: () => any; title: string; description: string; bodyClass: string }> = {
+export const pages: Record<string, { Component: () => any; title: string; description: string; keywords?: string; bodyClass: string }> = {
     "index.html": { Component: HomePage, title: "MXR | AR, VR & Mixed Reality Solutions in the UK.", description: "MXR creates immersive simulation, XR and AI solutions for defence, healthcare and enterprise training.", bodyClass: "" },
     "about.html": { Component: AboutPage, title: "About MXR \u2014 Technology for Real-World Impact", description: "Meet MXR, a technology partner creating immersive simulation, AI and software solutions for education, training and enterprise.", bodyClass: "" },
     "defence-security.html": { Component: DefenceSecurityPage, title: "Defence & Security Solutions \u2014 MXR", description: "MXR defence and security simulation solutions help teams build knowledge, rehearse safely and improve operational readiness.", bodyClass: "" },
-    //"case-study.html": { Component: CaseStudyXrReadinessPage, title: "Enhancing Readiness Through XR Training \u2014 MXR Case Study", description: "Discover how MXR used extended reality to support safer, repeatable and measurable operational training.", bodyClass: "" },
+    "healthcare-simulation.html": { Component: HealthcareSolutionPage, title: "Healthcare Simulation & Clinical XR Training \u2014 MXR", description: "MXR healthcare simulation connects immersive rooms, simulated electronic patient records, AR anatomy and ambulance driver training to prepare clinical learners.", keywords: "healthcare simulation, clinical simulation training, medical VR training, nursing simulation, simulated electronic patient records, EPR training, AR anatomy, immersive hospital rooms, ambulance driver training, healthcare XR", bodyClass: "" },
+    "enterprise-training.html": { Component: EnterpriseSolutionPage, title: "Enterprise XR Training Solutions \u2014 MXR", description: "MXR builds workplace XR training for onboarding, skills development and hazard awareness, turning your workplace knowledge into practical confidence.", keywords: "enterprise training, workplace VR training, corporate XR training, employee onboarding VR, skills development simulation, hazard awareness training, forklift VR training, immersive workforce training, health and safety VR", bodyClass: "" },
+    "custom-solutions.html": { Component: CustomSolutionPage, title: "Custom XR, Simulation & Software Solutions \u2014 MXR", description: "MXR designs bespoke VR, AR, mixed reality, interactive 3D and workflow software built around your goals, from first brief to rollout and support.", keywords: "custom XR development, bespoke VR solutions, bespoke AR development, mixed reality development, custom simulation software, interactive 3D, immersive environments, equipment familiarisation, workflow software, XR development company UK", bodyClass: "" },
+//"case-study.html": { Component: CaseStudyXrReadinessPage, title: "Enhancing Readiness Through XR Training \u2014 MXR Case Study", description: "Discover how MXR used extended reality to support safer, repeatable and measurable operational training.", bodyClass: "" },
     "modal3d.html": { Component: Modal3DPage, title: "MODAL3D | MXR", description: "Explore ordnance in interactive 3D. Connect component views, technical information and AR in one organised library.", bodyClass: "" },
     "eprium.html": { Component: EpriumPage, title: "EPRium | MXR", description: "Give healthcare learners a safe place to practise patient encounters, clinical reasoning and digital documentation.", bodyClass: "" },
     "eprium-old.html": { Component: EpriumOldPage, title: "EPRium_old | MXR", description: "Give healthcare learners a safe place to practise patient encounters, clinical reasoning and digital documentation.", bodyClass: "" },

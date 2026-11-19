@@ -26,6 +26,17 @@ export default function App() {
     if (isBlogDetail || isCaseStudyDetail) return
     document.title = page?.title ?? 'Page not found | MXR'
     document.querySelector('meta[name="description"]')?.setAttribute('content', page?.description || '')
+    let keywordsMeta = document.querySelector('meta[name="keywords"]')
+    if (page?.keywords) {
+      if (!keywordsMeta) {
+        keywordsMeta = document.createElement('meta')
+        keywordsMeta.setAttribute('name', 'keywords')
+        document.head.appendChild(keywordsMeta)
+      }
+      keywordsMeta.setAttribute('content', page.keywords)
+    } else {
+      keywordsMeta?.remove()
+    }
     window._hsq = window._hsq || []
     window._hsq.push(['setPath', window.location.pathname])
     window._hsq.push(['trackPageView'])
