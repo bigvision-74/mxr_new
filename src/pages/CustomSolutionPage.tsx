@@ -38,11 +38,9 @@ export default function CustomSolutionPage() {
       <img src={hero} alt="A design team reviewing a digital prototype in the studio" fetchPriority="high"/>
       <div className="ss-hero-shade"/>
       <div className="ss-hero-copy">
-        <p className="eyebrow">MXR SOLUTIONS / BESPOKE DEVELOPMENT</p>
         <h1>Your goals.<br/><em>Built into the solution.</em></h1>
         <p>Tell us what you want to improve. We design and build immersive training, simulations and software around your people, your processes and the results you need.</p>
         <a className="btn btn-primary" href="#start-a-project">Start a conversation <ArrowDown size={18} aria-hidden="true"/></a>
-        <nav className="bespoke-jump" aria-label="On this page"><a href="#bespoke-goals">Capabilities</a><a href="#bespoke-sectors">Sectors</a><a href="#bespoke-process">Our process</a></nav>
       </div>
     </section>
     <section className="bespoke-capabilities bespoke-band" aria-labelledby="bespoke-goals">

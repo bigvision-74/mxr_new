@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowRight, Menu, X } from 'lucide-react'
-import { services, products, resources } from '../data/navigation'
+import { services, solutions, products, resources } from '../data/navigation'
 import mxrLogo from '../assets/images/mxr-logo.png'
 
 const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
+  { label: 'Solutions', href: '#' },
   { label: 'Products', href: '#' },
   { label: 'Resources', href: '#' },
 ]
@@ -20,6 +21,10 @@ function isLinkActive(href: string): boolean {
 
 function isServicesActive(): boolean {
   return services.some(s => pathname === `/${s.slug}` || pathname.startsWith(`/${s.slug}/`))
+}
+
+function isSolutionsActive(): boolean {
+  return solutions.some(s => pathname === `/${s.slug}` || pathname.startsWith(`/${s.slug}/`))
 }
 
 function isProductsActive(): boolean {
@@ -60,6 +65,21 @@ export function NavBar({ overlay = false }: NavBarProps) {
         {/* Desktop pill nav */}
         <div className={`hidden items-center rounded-full p-1.5 lg:flex border border-gray-700/80 bg-black/20 backdrop-blur-md`}>
           {navLinks.map((link) => {
+            if (link.label === 'Solutions') {
+              const active = isSolutionsActive()
+              return (
+                <div className="mxr-service-nav" key="Solutions">
+                  <button type="button" className={`rounded-full border-0 px-4 py-2 text-base font-medium text-white hover:bg-white/10 cursor-pointer transition-all duration-300 ${active ? 'nav-active' : ''}`}>
+                    Solutions
+                  </button>
+                  <div className="mxr-service-dropdown">
+                    {solutions.map(s => (
+                      <a href={`/${s.slug}`} key={s.slug} className={pathname === `/${s.slug}` || pathname.startsWith(`/${s.slug}/`) ? 'nav-item-active' : ''}>{s.title}</a>
+                    ))}
+                  </div>
+                </div>
+              )
+            }
             if (link.label === 'Products') {
               const active = isProductsActive()
               return (
@@ -149,6 +169,17 @@ export function NavBar({ overlay = false }: NavBarProps) {
             transition={{ duration: 0.22 }}
           >
             {navLinks.map((link) => {
+              if (link.label === 'Solutions') {
+                const active = isSolutionsActive()
+                return (
+                  <details className="mxr-mobile-services" key="Solutions" open={active || undefined}>
+                    <summary className={active ? 'nav-item-active' : ''}>Solutions</summary>
+                    {solutions.map(s => (
+                      <a href={`/${s.slug}`} key={s.slug} className={pathname === `/${s.slug}` || pathname.startsWith(`/${s.slug}/`) ? 'nav-item-active' : ''}>{s.title}</a>
+                    ))}
+                  </details>
+                )
+              }
               if (link.label === 'Products') {
                 const active = isProductsActive()
                 return (

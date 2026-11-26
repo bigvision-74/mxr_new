@@ -1,6 +1,17 @@
 MXR Website — Release Log
 =========================
 
+v1.0.2 — 2026-11-19 22:46
+Commit: 3f26291
+Changes:
+  - Uncommitted changes in 11 file(s)
+
+v1.0.1 — 2026-11-19 16:52
+Commit: 3f26291
+Changes:
+  - Add automatic build versioning and release log
+  - Solution and Privacy Pages
+
 v1.0.0 — 2026-11-19 00:00
 Commit: ff2550d
 Changes:

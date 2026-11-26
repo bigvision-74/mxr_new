@@ -4,6 +4,13 @@ export const resources = [
   //{ title: 'Case Studies', slug: 'case-studies' },
 ] as const
 
+export const solutions = [
+  { title: 'Defence & Security', slug: 'defence-security' },
+  { title: 'Healthcare Simulation', slug: 'healthcare-simulation' },
+  { title: 'Enterprise Training', slug: 'enterprise-training' },
+  { title: 'Custom Solutions', slug: 'custom-solutions' },
+] as const
+
 export const services = [
   {
     "title": "Simulator Development",

@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react'
+import { solutions, products, resources } from '../data/navigation'
 import mxrLogo from '../assets/images/mxr-logo.png'
 
 export function Footer() {
@@ -18,35 +18,17 @@ export function Footer() {
             <h3>
               {"Solutions"}
             </h3>
-            <a href={"#"}>
-              {"Defence"}
-            </a>
-            <a href={"#"}>
-              {"Healthcare"}
-            </a>
-            <a href={"#"}>
-              {"Enterprise"}
-            </a>
+            {solutions.map(s => (
+              <a href={`/${s.slug}`} key={s.slug}>{s.title}</a>
+            ))}
           </div>
           <div>
             <h3>
               {"Products"}
             </h3>
-            <a href={"/modal3d"}>
-              {"MODAL3D"}
-            </a>
-            <a href={"/eprium"}>
-              {"EPRium"}
-            </a>
-            <a href={"/drivexr"}>
-              {"DriveXR"}
-            </a>
-            <a href={"/insightxr"}>
-              {"InsightXR"}
-            </a>
-            <a href={"/omnia"}>
-              {"Omnia"}
-            </a>
+            {products.map(([label, slug]) => (
+              <a href={`/${slug}`} key={slug}>{label}</a>
+            ))}
           </div>
           <div>
             <h3>
@@ -63,7 +45,9 @@ export function Footer() {
             <h3>
               {"Resources"}
             </h3>
-           
+            {resources.map(r => (
+              <a href={`/${r.slug}`} key={r.slug}>{r.title}</a>
+            ))}
             <a href={"/contact"}>
               {"Support"}
             </a>
@@ -83,6 +67,9 @@ export function Footer() {
           </a>
           <a href={"/cookie-policy"}>
             {"Cookies"}
+          </a>
+          <a href={"#cookie-settings"} onClick={(e) => { e.preventDefault(); window.dispatchEvent(new Event('mxr-open-cookie-settings')) }}>
+            {"Cookie Preferences"}
           </a>
         </div>
       </div>

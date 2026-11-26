@@ -22,21 +22,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
     rel="stylesheet">
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQNK4HY6ZF"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-CQNK4HY6ZF');
-  </script>
+  <!-- Analytics (Google tag, HubSpot) load only after cookie consent: see src/components/CookieBanner.tsx -->
 </head>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/143987629.js"></script>
   <script>
     function myFunction() {
       document.getElementById("myDropdown").classList.toggle("show");
