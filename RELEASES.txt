@@ -1,6 +1,11 @@
 MXR Website — Release Log
 =========================
 
+v1.0.3 — 2026-11-26 11:45
+Commit: 52a1027
+Changes:
+  - meta tags
+
 v1.0.2 — 2026-11-19 22:46
 Commit: 3f26291
 Changes:

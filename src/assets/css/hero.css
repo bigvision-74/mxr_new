@@ -1942,30 +1942,90 @@
   color: #fff
 }
 
-.mxr-mobile-services summary.nav-item-active {
-  color: #fff;
-  font-weight: 600
+.mxr-mobile-menu a.mxr-mobile-link {
+  color: #fff
 }
 
-.mxr-mobile-services a.nav-item-active {
-  color: #fff;
-  font-weight: 500
+.mxr-mobile-menu a.mxr-mobile-link.nav-item-active {
+  color: var(--blue-dark)
 }
 
 .mxr-mobile-services {
-  padding: 12px 16px;
-  color: #fff;
-  font-size: 0.875rem
+  margin: 2px 0;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  color: #fff
 }
 
 .mxr-mobile-services summary {
-  cursor: pointer
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 48px;
+  padding: 12px 16px;
+  border-radius: 1rem;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  list-style: none;
+  transition: background .2s
+}
+
+.mxr-mobile-services summary::-webkit-details-marker {
+  display: none
+}
+
+.mxr-mobile-services summary::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+  opacity: .7;
+  transition: transform .25s
+}
+
+.mxr-mobile-services[open] > summary::after {
+  transform: rotate(-135deg) translateY(-2px)
+}
+
+.mxr-mobile-services summary:hover,
+.mxr-mobile-services[open] > summary {
+  background: rgba(255, 255, 255, .08)
+}
+
+.mxr-mobile-services summary.nav-item-active {
+  color: var(--blue-dark);
+  font-weight: 600
 }
 
 .mxr-mobile-services a {
   display: block;
-  padding: 10px;
-  color: var(--blue-dark)
+  margin: 2px 0 2px 24px;
+  padding: 11px 16px;
+  border-left: 2px solid rgba(255, 255, 255, .18);
+  border-radius: 0 .75rem .75rem 0;
+  color: #fff;
+  line-height: 1.35;
+  transition: background .2s, border-color .2s
+}
+
+.mxr-mobile-services a:hover {
+  background: rgba(255, 255, 255, .08)
+}
+
+.mxr-mobile-services a.nav-item-active {
+  color: var(--blue-dark);
+  font-weight: 600;
+  border-left-color: var(--blue-dark);
+  background: rgba(100, 183, 255, .1)
+}
+
+.mxr-mobile-services[open] {
+  padding-bottom: 6px
 }
 
 .service-detail {

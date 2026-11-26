@@ -162,7 +162,7 @@ export function NavBar({ overlay = false }: NavBarProps) {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            className="absolute left-[8vw] right-[8vw] top-24 z-30 rounded-3xl border border-white/15 bg-black/90 p-4 shadow-2xl backdrop-blur-xl lg:hidden"
+            className="mxr-mobile-menu absolute left-[8vw] right-[8vw] top-24 z-30 rounded-3xl border border-white/15 bg-black/90 p-4 shadow-2xl backdrop-blur-xl lg:hidden"
             initial={{ opacity: 0, y: -12 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
@@ -219,7 +219,7 @@ export function NavBar({ overlay = false }: NavBarProps) {
                   key={link.label}
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className={`block rounded-2xl px-4 py-3 text-sm font-medium text-white transition hover:bg-white/10 ${active ? 'bg-white/10' : ''}`}
+                  className={`mxr-mobile-link block rounded-2xl px-4 py-3 text-sm font-medium transition hover:bg-white/10 ${active ? 'nav-item-active bg-white/10' : ''}`}
                 >
                   {link.label}
                 </a>

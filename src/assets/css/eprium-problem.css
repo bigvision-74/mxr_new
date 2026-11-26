@@ -730,3 +730,36 @@
     color: #fff;
     text-shadow: 0 1px 3px #0005
 }
+
+/* Tablet and mobile: cards 02 and 03 stack, so their media shows in full below the text */
+@media(max-width:900px) {
+    .epr-gap-small {
+        grid-template-columns: minmax(0, 1fr);
+        height: auto;
+        min-height: 0
+    }
+
+    .epr-gap-small-copy {
+        padding: 28px 26px 22px
+    }
+
+    .epr-gap-record.epr-gap-shot {
+        width: calc(100% - 48px);
+        max-width: 440px;
+        margin: 0 auto 24px;
+        transform: none;
+        animation: none
+    }
+
+    .epr-gap-photo {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        margin: 0;
+        aspect-ratio: 3 / 2
+    }
+
+    .epr-gap-photo:after {
+        background: linear-gradient(180deg, #fff, transparent 18%)
+    }
+}

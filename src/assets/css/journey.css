@@ -830,6 +830,103 @@
   }
 }
 
+/* Tablet and mobile: all stages stay in one row so the progress line still connects them */
+@media(max-width:900px) {
+  .epj-stages {
+    --icon: 56px;
+    grid-template-columns: repeat(6, minmax(0, 1fr))
+  }
+
+  .epj-stages:before {
+    display: block
+  }
+
+  .epj-stages:before,
+  .epj-stages:after {
+    top: calc(var(--icon) / 2 - 1px)
+  }
+
+  .epj-stage-icon {
+    width: var(--icon);
+    height: var(--icon)
+  }
+
+  .epj-num {
+    font-size: 6rem
+  }
+}
+
+/* Phones: icons only (the card below names the selected stage); labels stay available to screen readers */
+@media(max-width:600px) {
+  .epj-stages {
+    --icon: clamp(36px, 11vw, 44px);
+    margin-bottom: 28px
+  }
+
+  .epj-stage {
+    min-height: 44px
+  }
+
+  .epj-stage-icon {
+    margin-bottom: 0
+  }
+
+  .epj-stage-icon svg {
+    width: 18px;
+    height: 18px
+  }
+
+  .epj-stage small,
+  .epj-stage b {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap
+  }
+
+  .epj-stage.is-active .epj-stage-icon {
+    box-shadow: 0 0 0 4px rgba(22, 132, 232, .18), 0 6px 16px rgba(11, 102, 195, .4)
+  }
+
+  /* The selected stage shows its number and name above the icon */
+  .epj-head {
+    margin-bottom: 72px
+  }
+
+  .epj-stage.is-active small,
+  .epj-stage.is-active b {
+    left: 50%;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip-path: none;
+    line-height: 1.2;
+    transform: translateX(-50%)
+  }
+
+  .epj-stage.is-active small {
+    bottom: calc(100% + 30px)
+  }
+
+  .epj-stage.is-active b {
+    bottom: calc(100% + 10px)
+  }
+
+  /* First and last labels line up with the outer edge of their icon so they stay on screen */
+  .epj-stages li:first-child .epj-stage.is-active :is(small, b) {
+    left: calc(50% - var(--icon) / 2);
+    transform: none
+  }
+
+  .epj-stages li:last-child .epj-stage.is-active :is(small, b) {
+    left: auto;
+    right: calc(50% - var(--icon) / 2);
+    transform: none
+  }
+}
+
 /* Eprium , Assessment & debrief (dark theme) */
 .epd {
   background: radial-gradient(ellipse at 20% 40%, rgba(22, 132, 232, .14), transparent 55%), var(--color-dark);
