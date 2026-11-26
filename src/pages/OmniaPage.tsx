@@ -25,7 +25,7 @@ const featureTabs = [
     title: 'A space shaped around your scenario.',
     description: 'Design environments in 2D or 3D, select equipment and furniture, and position objects with precise editing controls. Save your room and continue refining it later.',
     points: ['2D floor plan and 3D room views', 'Equipment, furniture and object libraries', 'Move, rotate, resize, snap and undo'],
-    image: 'room-editor.webp', alt: 'Omnia scenario editor in a clinical room with equipment panel and an avatar', Icon: Move3D,
+    image: 'scenario-studio.webp', alt: 'Omnia scenario editor showing an outpatient room with an avatar beside a drag-and-drop human anatomy quiz', Icon: Move3D,
   },
   {
     label: 'AI Characters', kicker: 'HUMAN INTERACTION',
@@ -108,7 +108,7 @@ export default function OmniaPage() {
               <h3>{active.title}</h3><p>{active.description}</p>
               <ul>{active.points.map(point => <li key={point}><span aria-hidden="true" />{point}</li>)}</ul>
             </div>
-            <div className="om-feature-media"><img src={`${media}${active.image}`} alt={active.alt} loading="lazy" /><span className="om-image-caption"><ScanLine size={15} aria-hidden="true" /> Actual Omnia application screen</span></div>
+            <div className="om-feature-media"><img src={`${media}${active.image}`} alt={active.alt} loading="lazy" /></div>
           </div>
         </div>
       </section>

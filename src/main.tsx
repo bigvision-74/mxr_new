@@ -24,14 +24,4 @@ import './assets/css/ai-solutions.css'
 import './assets/css/simulator-development.css'
 import './assets/css/icons.css'
 
-// HubSpot chat widget. Loaded here, not in index.html, so it appears on every page whichever HTML file serves it.
-if (!document.getElementById('hs-script-loader')) {
-  const hs = document.createElement('script')
-  hs.id = 'hs-script-loader'
-  hs.async = true
-  hs.defer = true
-  hs.src = '//js-eu1.hs-scripts.com/143987629.js'
-  document.body.appendChild(hs)
-}
-
 createRoot(document.getElementById('root')!).render(<App />)

@@ -248,7 +248,7 @@ body,
 /* Scroll-to-top button, fixed to the left edge. Colours match the site's primary button (see buttons.css). */
 body .scroll-top {
   position: fixed;
-  left: 20px;
+  left: var(--footer-inset-left, 20px);
   bottom: calc(24px + var(--footer-bottom-offset, 0px));
   z-index: 60;
   width: 48px;
@@ -285,14 +285,20 @@ body .scroll-top:focus-visible {
 
 @media (max-width: 640px) {
   body .scroll-top {
-    left: 14px;
     bottom: calc(16px + var(--footer-bottom-offset, 0px));
     width: 44px;
     height: 44px;
   }
 }
 
-/* HubSpot chat bubble: lift it above the footer's bottom bar (its position is set inline, hence !important) */
-#hubspot-messages-iframe-container {
+/* HubSpot chat bubble: lift it above the footer's bottom bar. HubSpot adds its own "bottom: 0 !important"
+   rule at runtime, so the ID is repeated here to take priority over it. */
+html body #hubspot-messages-iframe-container#hubspot-messages-iframe-container {
   bottom: var(--footer-bottom-offset, 0px) !important;
+  /* HubSpot draws the bubble 16px in from its container's edge, so subtract that to line the bubble up */
+  right: calc(var(--footer-inset-right, 16px) - 16px) !important;
+}
+
+html.cookie-banner-open body #hubspot-messages-iframe-container#hubspot-messages-iframe-container {
+  display: none !important;
 }

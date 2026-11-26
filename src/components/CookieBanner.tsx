@@ -57,6 +57,12 @@ export function CookieBanner() {
     return () => window.removeEventListener(OPEN_COOKIE_SETTINGS, show)
   }, [])
 
+  // Lets the stylesheet hide the chat widget while the banner is showing, so it cannot cover the choices
+  useEffect(() => {
+    document.documentElement.classList.toggle('cookie-banner-open', open)
+    return () => document.documentElement.classList.remove('cookie-banner-open')
+  }, [open])
+
   if (!open) return null
 
   const save = (value: boolean) => {

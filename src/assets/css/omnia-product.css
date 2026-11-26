@@ -396,8 +396,6 @@
 }
 
 .om-feature-media {
-  position: relative;
-  min-height: 310px;
   border-radius: 14px;
   background: #263b50;
   border: 1px solid #4c6478;
@@ -408,25 +406,9 @@
 .om-feature-media>img {
   display: block;
   width: 100%;
-  height: clamp(250px, 28vw, 400px);
-  object-fit: cover;
-  object-position: center;
+  /* Natural shape, so the application screenshots are never cropped */
+  height: auto;
   border-radius: 9px;
-}
-
-.om-image-caption {
-  position: absolute;
-  bottom: 22px;
-  left: 22px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  border-radius: 50px;
-  padding: 10px 12px;
-  background: #071625df;
-  color: #f7fbff;
-  font-size: .7rem;
-  font-weight: 650;
 }
 
 .om-capabilities {
@@ -694,10 +676,6 @@
     grid-template-columns: 1fr;
   }
 
-  .om-feature-media>img {
-    height: 350px;
-  }
-
   .om-page .ep2-hero-inner {
     width: 55% !important;
   }
@@ -820,14 +798,6 @@
 
   .om-feature-panel {
     padding: 25px 18px;
-  }
-
-  .om-feature-media {
-    min-height: 200px;
-  }
-
-  .om-feature-media>img {
-    height: 210px;
   }
 
   .om-scenario-img {

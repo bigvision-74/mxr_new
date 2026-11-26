@@ -6,12 +6,19 @@ export function ScrollToTop() {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
-    // Keep the floating buttons (this one and the HubSpot chat bubble) above the footer's bottom bar.
+    // Keep the floating buttons (this one and the HubSpot chat bubble) above the footer's bottom bar,
+    // and lined up with the left and right ends of its border.
     const onScroll = () => {
       setVisible(window.scrollY > 400)
       const bar = document.querySelector('.footer-bottom')
       const overlap = bar ? Math.max(0, window.innerHeight - bar.getBoundingClientRect().top) : 0
-      document.documentElement.style.setProperty('--footer-bottom-offset', `${Math.round(overlap)}px`)
+      const root = document.documentElement
+      root.style.setProperty('--footer-bottom-offset', `${Math.round(overlap)}px`)
+      if (bar) {
+        const { left, right } = bar.getBoundingClientRect()
+        root.style.setProperty('--footer-inset-left', `${Math.round(left)}px`)
+        root.style.setProperty('--footer-inset-right', `${Math.round(root.clientWidth - right)}px`)
+      }
     }
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
