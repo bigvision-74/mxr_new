@@ -4,6 +4,7 @@ import { Footer } from './components/Footer'
 import { CookieBanner } from './components/CookieBanner'
 import { ScrollToTop } from './components/ScrollToTop'
 import { pages, detailPages } from './page-manifest'
+import { canonicalUrl } from './page-meta'
 import BlogDetailPage from './pages/BlogDetailPage'
 import CaseStudyDetailPage from './pages/CaseStudyDetailPage'
 
@@ -27,6 +28,19 @@ export default function App() {
 
   useEffect(() => {
     const detail = (isBlogDetail || isCaseStudyDetail) ? detailPages[segments.slice(0, 2).join('/')] : undefined
+    // Matches the tag written at build time; removed for unknown URLs, which are served the home page's HTML
+    const canonicalRoute = detail ? segments.slice(0, 2).join('/') : page ? filename : null
+    let canonical = document.querySelector('link[rel="canonical"]')
+    if (canonicalRoute) {
+      if (!canonical) {
+        canonical = document.createElement('link')
+        canonical.setAttribute('rel', 'canonical')
+        document.head.appendChild(canonical)
+      }
+      canonical.setAttribute('href', canonicalUrl(canonicalRoute))
+    } else {
+      canonical?.remove()
+    }
     if ((isBlogDetail || isCaseStudyDetail) && !detail) return
     const meta = detail ?? page
     document.title = meta?.title ?? 'Page not found | MXR'

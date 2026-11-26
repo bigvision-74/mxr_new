@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { resolve } from 'node:path'
+import { pageMetaPlugin } from './scripts/page-meta-plugin'
 
 function cleanUrlsPlugin() {
   const redirect = (req: any, res: any, next: any) => {
@@ -26,7 +27,7 @@ export default defineConfig({
   server: {
     allowedHosts: ['terminal.local'],
   },
-  plugins: [react(), tailwindcss(), cleanUrlsPlugin()],
+  plugins: [react(), tailwindcss(), cleanUrlsPlugin(), pageMetaPlugin()],
   publicDir: 'public',
   build: {
     outDir: 'build',

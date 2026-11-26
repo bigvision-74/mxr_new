@@ -19,7 +19,7 @@ npm run build
 npm run preview
 ```
 
-Upload the contents of `build/` to your web host. All fourteen pages have their own HTML entry point, so `/about.html`, `/eprium.html`, and the other page links work on ordinary static hosting without a server-side framework.
+Upload the contents of `build/` to your web host. The build writes an HTML file for every page, blog article and case study, each with its own title, description and keywords. Serve it with Nginx using `deploy/nginx.conf`, so that clean URLs such as `/about` return `about.html`.
 
 ## Project structure
 
@@ -27,7 +27,8 @@ Upload the contents of `build/` to your web host. All fourteen pages have their 
 - `src/pages/`: editable React pages for Home, About, products, services, defence and the case study.
 - `src/components/`: shared navigation, footer, typography/theme controls, immersive hero and headset viewer.
 - `src/data/navigation.ts`: service and product navigation data.
-- `src/page-manifest.ts`: page components, titles and descriptions.
+- `src/page-manifest.ts`: page components.
+- `src/page-meta.ts`: page titles, descriptions and keywords.
 - `src/styles/` and page CSS files: shared and page-specific styles.
 - `public/assets/`: images, video and other public media.
 - `vite.config.ts`: Vite configuration and static page entry points.
