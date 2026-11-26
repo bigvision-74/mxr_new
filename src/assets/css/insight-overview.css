@@ -1268,3 +1268,28 @@ body .pp .ix-feature-grid p {
     color: #4e6378;
     line-height: 1.7
 }
+
+/* Wide product mockups: show the whole image instead of cropping it to fill the panel */
+.ixm-feature-visual.ixm-visual-contain {
+    background: #fff
+}
+
+.ixm-feature-visual.ixm-visual-contain img {
+    inset: 0;
+    box-sizing: border-box;
+    padding: clamp(12px, 2vw, 32px);
+    object-fit: contain
+}
+
+/* Stacked layout: size the box to the image, so there are no large gaps above and below */
+@media(max-width:700px) {
+    .ixm-feature-visual.ixm-visual-contain {
+        min-height: 0
+    }
+
+    .ixm-feature-visual.ixm-visual-contain img {
+        position: static;
+        display: block;
+        height: auto
+    }
+}

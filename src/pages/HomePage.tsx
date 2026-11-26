@@ -1,5 +1,5 @@
 ﻿import epriumDebriefImage from '../assets/images/eprium/eprium-devices.png'
-import type { CSSProperties } from 'react'
+import type { CSSProperties, TouchEvent } from 'react'
 import { ArrowRight, Printer, ScanLine, Glasses, ClipboardList, Users, ShieldCheck, ChartNoAxesCombined } from 'lucide-react'
 import { useState, useRef, useEffect } from 'react'
 import { ImmersiveHero } from '../components/ImmersiveHero'
@@ -11,6 +11,25 @@ import '@google/model-viewer'
 
 export default function HomePage() {
   const [activeProduct, setActiveProduct] = useState(0)
+  const productNames = ['MODAL3D', 'EPRium', ...extraProducts.map(p => p.name)]
+  const stepProduct = (step: number) => setActiveProduct(p => (p + step + productNames.length) % productNames.length)
+
+  // Phones: a mostly horizontal swipe across the featured products changes the slide
+  const swipeStart = useRef<{ x: number, y: number } | null>(null)
+  const onSwipeStart = (e: TouchEvent) => {
+    swipeStart.current = e.touches.length === 1 && window.matchMedia('(max-width: 640px)').matches
+      ? { x: e.touches[0].clientX, y: e.touches[0].clientY }
+      : null
+  }
+  const onSwipeEnd = (e: TouchEvent) => {
+    const start = swipeStart.current
+    swipeStart.current = null
+    if (!start) return
+    const dx = e.changedTouches[0].clientX - start.x
+    const dy = e.changedTouches[0].clientY - start.y
+    // Ignore taps and vertical scrolling
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) stepProduct(dx < 0 ? 1 : -1)
+  }
   const [modelLoaded, setModelLoaded] = useState(false)
   const [isExploded, setIsExploded] = useState(false)
   const modelViewerRef = useRef<HTMLElement>(null)
@@ -411,7 +430,7 @@ export default function HomePage() {
           </article>
         </div>
       </section>
-      <section className={"featured-products home-wave-section"} id={"products"} aria-label={"Featured products"} style={{ background: "linear-gradient(135deg, #0a0f1a 0%, #0d1f35 50%, #0a1628 100%)" }}>
+      <section className={"featured-products home-wave-section"} id={"products"} aria-label={"Featured products"} onTouchStart={onSwipeStart} onTouchEnd={onSwipeEnd} onTouchCancel={() => { swipeStart.current = null }} style={{ background: "linear-gradient(135deg, #0a0f1a 0%, #0d1f35 50%, #0a1628 100%)" }}>
         <div className={"home-wave-media"} aria-hidden={"true"}>
           <video autoPlay={true} muted={true} loop={true} playsInline={true} preload={"metadata"}>
             <source src={"https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260815_034306_165449ef-7d2e-4e81-850f-1939c5cb442d.mp4"} type={"video/mp4"} />
@@ -507,11 +526,12 @@ export default function HomePage() {
         </article>
         <AdditionalFeaturedProducts active={activeProduct} />
         <div className={"product-slider-controls"}>
-          <button onClick={() => setActiveProduct(p => (p - 1 + 5) % 5)} className={"product-arrow product-prev"} aria-label={"Previous featured product"}>{"←"}</button>
+          <button onClick={() => stepProduct(-1)} className={"product-arrow product-prev"} aria-label={"Previous featured product"}>{"←"}</button>
           <div className="product-dots" role="tablist" aria-label="Choose featured product">
-            {['MODAL3D', 'EPRium', ...extraProducts.map(p => p.name)].map((name, index) => <button key={name} onClick={() => setActiveProduct(index)} aria-selected={activeProduct === index} className={`product-name-tab${activeProduct === index ? ' active' : ''}`} role="tab" aria-label={`Show ${name}`} data-product-go={index}>{name}</button>)}
+            {productNames.map((name, index) => <button key={name} onClick={() => setActiveProduct(index)} aria-selected={activeProduct === index} className={`product-name-tab${activeProduct === index ? ' active' : ''}`} role="tab" aria-label={`Show ${name}`} data-product-go={index}>{name}</button>)}
           </div>
-          <button onClick={() => setActiveProduct(p => (p + 1) % 5)} className={"product-arrow product-next"} aria-label={"Next featured product"}>{"→"}</button>
+          <p className="product-current" aria-live="polite">{activeProduct + 1} / {productNames.length}</p>
+          <button onClick={() => stepProduct(1)} className={"product-arrow product-next"} aria-label={"Next featured product"}>{"→"}</button>
         </div>
       </section>
 

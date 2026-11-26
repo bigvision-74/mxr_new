@@ -243,7 +243,6 @@
       },
       {
         "type": "title",
-        "paraImg": "immersiveBlogImage.jpg",
         "content": "Lessons from the Past"
       },
       {
@@ -484,7 +483,6 @@
       },
       {
         "type": "title",
-        "paraImg": "Innovative-Anxiety-Solutions5.jpg",
         "content": "What MXR is Doing: Partnering for Impact"
       },
       {
@@ -545,7 +543,6 @@
       },
       {
         "type": "title",
-        "paraImg": "immersiveTechT.jpg",
         "content": "Immersive Learning in Health T Levels"
       },
       {
@@ -609,7 +606,6 @@
         ]
       },
       {
-        "paraImg": "colleges-revolution2.jpg",
         "type": "title",
         "content": "The Benefits of Immersive Content in T Level Training"
       },
@@ -684,7 +680,6 @@
       },
       {
         "type": "title",
-        "paraImg": "Understanding-Generative-AI.jpg",
         "content": "The Rise of T-levels and Apprenticeships in the UK"
       },
       {
@@ -732,7 +727,6 @@
         ]
       },
       {
-        "paraImg": "education-revolution2.jpg",
         "type": "title",
         "content": "Supporting Universities and Colleges in the Transition to New Qualifications"
       },
@@ -819,7 +813,6 @@
         ]
       },
       {
-        "paraImg": "immersive-technology.jpg",
         "type": "title",
         "content": "What We Offer"
       },
@@ -875,7 +868,6 @@
         ]
       },
       {
-        "paraImg": "Ar1Image.jpg",
         "type": "title",
         "content": "Understanding Augmented Reality"
       },
@@ -941,7 +933,6 @@
         ]
       },
       {
-        "paraImg": "Ar2Image.jpg",
         "type": "title",
         "content": "How AR Can Support Your Business in the UK"
       },
@@ -1073,7 +1064,7 @@
         ]
       },
       {
-        "paraImg": "ArVrShaping.jpg",
+        
         "type": "title",
         "content": "The Necessity of Adapting Technology in Business"
       },
@@ -1124,7 +1115,6 @@
         ]
       },
       {
-        "paraImg": "ArVrShaping2.jpg",
         "type": "title",
         "content": "Faster Industrial Maintenance with XR"
       },
@@ -1203,7 +1193,7 @@
         ]
       },
       {
-        "paraImg": "ConstructionImage.jpg",
+     
         "type": "title",
         "content": "Saving Time and Money"
       },
@@ -1274,7 +1264,6 @@
         ]
       },
       {
-        "paraImg": "Reduced-Training-Time-and-Costs.jpg",
         "type": "title",
         "content": "Project Planning"
       },
@@ -1395,7 +1384,6 @@
         ]
       },
       {
-        "paraImg": "mixed-reality-training.jpg",
         "type": "title",
         "content": "Mixed Reality’s Training Benefits"
       },
@@ -1457,7 +1445,6 @@
         ]
       },
       {
-        "paraImg": "specific-Mixed.jpg",
         "type": "title",
         "content": "Welcome to the future of MR training!"
       },
@@ -1515,7 +1502,6 @@
         ]
       },
       {
-        "paraImg": "vrImage1.jpg",
         "type": "title",
         "content": "Immersive Videos as a Form of VR"
       },
@@ -1538,7 +1524,6 @@
         ]
       },
       {
-        "paraImg": "vrImage2.jpg",
         "type": "title",
         "content": "Education"
       },
@@ -1605,7 +1590,6 @@
         ]
       },
       {
-        "paraImg": "ARImage1.jpg",
         "type": "title",
         "content": "Portable devices"
       },
@@ -1669,7 +1653,6 @@
         ]
       },
       {
-        "paraImg": "ARImage2.jpg",
         "type": "title",
         "content": "Maintenance and Repairs"
       },

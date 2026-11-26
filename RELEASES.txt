@@ -1,6 +1,12 @@
 MXR Website — Release Log
 =========================
 
+v1.0.4 — 2026-11-26 13:29
+Commit: 8590633
+Changes:
+  - responsive menu changes
+  - Add per-page meta tags and canonical URLs at build time
+
 v1.0.3 — 2026-11-26 11:45
 Commit: 52a1027
 Changes:

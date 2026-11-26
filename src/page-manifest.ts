@@ -14,7 +14,6 @@ import DrivexrPage from './pages/DriveXR2Page'
 import InsightxrPage from './pages/InsightxrPage'
 import OmniaPage from './pages/OmniaPage'
 import ContactPage from './pages/ContactPage'
-import PlatformDevelopmentPage from './pages/PlatformDevelopmentPage'
 import PoliciesPage from './pages/PoliciesPage'
 import TermsPage from './pages/TermsPage'
 import CookiePolicyPage from './pages/CookiePolicyPage'
@@ -56,7 +55,6 @@ export const pages: Record<string, { Component: () => any; title: string; descri
     "drivexr.html": { Component: DrivexrPage, ...pageMeta["drivexr.html"], bodyClass: "drivexr2-page" },
     "insightxr.html": { Component: InsightxrPage, ...pageMeta["insightxr.html"], bodyClass: "" },
     "omnia.html": { Component: OmniaPage, ...pageMeta["omnia.html"], bodyClass: "" },
-    "platform-development.html": { Component: PlatformDevelopmentPage, ...pageMeta["platform-development.html"], bodyClass: "" },
     "contact.html": { Component: ContactPage, ...pageMeta["contact.html"], bodyClass: "" },
     "blog.html": { Component: BlogPage, ...pageMeta["blog.html"], bodyClass: "" },
     "case-studies.html": { Component: CaseStudiesPage, ...pageMeta["case-studies.html"], bodyClass: "" },

@@ -51,3 +51,41 @@
 
 
 .featured-products .insight-feature-video{width:100%;height:auto;max-height:34rem;object-fit:contain;display:block;background:transparent;mask-image:none;filter:none;transform:none}@media(max-width:820px){.featured-products .insight-feature-video{max-height:26rem}}
+
+
+/* Slide position (1 / 5), used instead of the tabs on phones */
+.featured-products .product-current { display: none }
+
+/* Phones: arrows either side of the slide position; the slide can also be swiped */
+@media (max-width: 640px) {
+  .mxr-react-page .featured-products {
+    touch-action: pan-y pinch-zoom;
+  }
+
+  .mxr-react-page .featured-products .product-slider-controls {
+    left: var(--page-gutter);
+    right: var(--page-gutter);
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .featured-products .product-slider-controls .product-dots {
+    display: none;
+  }
+
+  .featured-products .product-current {
+    display: block;
+    margin: 0;
+    color: #fff;
+    font-size: .95rem;
+    font-weight: 600;
+  }
+
+  .featured-products .product-arrow {
+    flex: 0 0 44px;
+  }
+
+  .mxr-react-page .featured-products .modal-showcase {
+    padding-top: 96px;
+  }
+}
