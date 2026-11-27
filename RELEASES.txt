@@ -1,6 +1,12 @@
 MXR Website — Release Log
 =========================
 
+v1.0.5 — 2026-11-26 23:33
+Commit: 5eb02e5
+Changes:
+  - responsive fixes
+  - responsive and remove unused files
+
 v1.0.4 — 2026-11-26 13:29
 Commit: 8590633
 Changes:

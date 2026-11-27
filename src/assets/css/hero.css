@@ -4678,3 +4678,35 @@ section.why .pillars p {
     transition: none
   }
 }
+
+/* Home hero on portrait screens: show the video as a band above the text, so the 16:9 frame is not cropped to a narrow slice */
+@media (max-width: 900px) and (orientation: portrait) {
+  section.mxr-immersive-hero {
+    height: auto !important;
+    min-height: 0 !important
+  }
+
+  section.mxr-immersive-hero>div:first-child {
+    position: relative;
+    order: 1;
+    aspect-ratio: 4 / 3
+  }
+
+  section.mxr-immersive-hero .mxr-immersive-hero__video {
+    object-position: 70% 50%
+  }
+
+  /* The hero copy */
+  section.mxr-immersive-hero>div:nth-child(4) {
+    order: 2;
+    flex: none;
+    padding-top: 28px;
+    padding-bottom: 32px
+  }
+
+  section.mxr-immersive-hero .hv-tabs {
+    position: static;
+    order: 3;
+    margin: 0 16px 28px
+  }
+}
